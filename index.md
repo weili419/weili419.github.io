@@ -10,7 +10,9 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span>
 
-Welcome to my homepage.
+I am a Ph.D. student in the College of Computer Science at Zhejiang University of Technology, working with Prof. [Chunhua Shen (沈春华)](https://scholar.google.com/citations?user=Ljk2BvIAAAAJ&hl=en)'s team under the supervision of Prof. [Jianwei Zheng (郑建炜)](https://scholar.google.com/citations?hl=en&user=X0wntOEAAAAJ). I expect to graduate in June 2028.
+
+<strong style="color: red;">I am currently seeking long-term internship opportunities through graduation, with a focus on multimodal large models.</strong>
 
 # Honors and Awards
 
