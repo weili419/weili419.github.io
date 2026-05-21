@@ -23,7 +23,7 @@ baidu_site_verification  :  # get baidu_site_verification from https://ziyuan.ba
 author:
   name             : "Wei Li"
   avatar           : "images/liwei.jpg"
-  bio              : "Focusing on multimodal image fusion and multimodal large models, with the goal of learning embodied intelligence."
+  bio              :
   location         :
   employer         :
   pubmed           : 
