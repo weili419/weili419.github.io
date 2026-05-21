@@ -14,12 +14,24 @@ Welcome to my homepage.
 
 # Honors and Awards
 
-- 2025, Doctoral Student Special Program of the China Association for Science and Technology Young Talent Support Project
-- 2025, National Scholarship for Doctoral Students
-- 2025, Academic Star of Zhejiang University of Technology
+- 2025年中国科协青年人才托举工程博士生专项计划
+- 2025年博士国家奖学金
+- 2025年浙江工业大学学术之星
 
 # Educations
 
 - 2019.09 - 2023.06, Undergraduate, Zhejiang University of Technology, Computer Science and Technology + Intelligent Science and Technology, double major; CPC member.
 - 2023.09 - 2025.06, M.S., Zhejiang University of Technology, Computer Science and Technology (081200); GPA and comprehensive evaluation ranked in the top 1%.
 - 2025.09 - Present, Ph.D., Zhejiang University of Technology, Computer Science and Technology (081200).
+
+# Internships
+
+## 2026.03.09 - Present, 阿里巴巴虎鲸文娱, 视频渲染去噪
+
+- 蒙特卡洛采样渲染成像会产生长尾分布噪声，从成像角度出发，利用成像时的统计量解决视频渲染时出现的噪声及伪影。预计投稿 AAAI。
+
+## 2025.08.04 - 2026.02.04, 同花顺AIGC算法部门, 图像编辑 & 理解与生成编辑统一模型
+
+- FreeEraser: Mask-Free Object Removal via Attention Regularization. (ECCV 在审，初始分数 442)
+- 利用 NanoBanana 构建数据集，LoRA 微调 Flux-Kontext 模型用于图像擦除。图像编辑
+- LongCat, Qwen-image, Qwen-vl, Flux-Kontext, Flux-fill, 理解与生成统一模型
