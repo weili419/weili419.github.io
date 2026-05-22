@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Latent Spectral Operators | ICML 2026</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="theme-color" content="#161616" />
+<meta name="description" content="Project page for Latent Spectral Operators (LSO): solving spatial-spectral fusion as a mapping between spectral functions via a trigonometric basis solver." />
+<meta name="author" content="Wei Li, Jieyuan Pei, Junnan Xu, Xuanfeng Ding, Junwei Zhu, Wanjun Chen, Jianwei Zheng" />
+<meta property="og:title" content="Latent Spectral Operators" />
+<meta property="og:description" content="LSO learns spatial-spectral fusion as a mapping between spectral functions in a compact latent space." />
+<meta property="og:image" content="https://weili419.github.io/latent-spectral-operators/assets/overall.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #121214;
+    --bg-2: #17171a;
+    --panel: #1c1c20;
+    --panel-2: #222228;
+    --border: #2a2a31;
+    --border-2: #353541;
+    --text: #e8e8ee;
+    --text-2: #b6b6c0;
+    --text-3: #7d7d88;
+    --accent: #4fd1c5;        /* teal-cyan */
+    --accent-2: #8a7dff;      /* violet, for highlights */
+    --accent-soft: rgba(79, 209, 197, 0.12);
+    --accent-line: rgba(79, 209, 197, 0.32);
+    --good: #4ade80;
+    --bold-row: rgba(79, 209, 197, 0.08);
+    --shadow: 0 1px 0 rgba(255,255,255,0.03), 0 12px 36px rgba(0,0,0,0.35);
+    --radius: 14px;
+    --radius-sm: 10px;
+    --maxw: 1100px;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  a { color: var(--accent); text-decoration: none; transition: color .15s ease; }
+  a:hover { color: #7be7dc; }
+  img { max-width: 100%; height: auto; display: block; }
+  code, pre, .mono { font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace; }
+
+  /* ---------- Top Nav ---------- */
+  .nav {
+    position: sticky; top: 0; z-index: 50;
+    backdrop-filter: saturate(140%) blur(14px);
+    background: rgba(18,18,20,0.78);
+    border-bottom: 1px solid var(--border);
+  }
+  .nav-inner {
+    max-width: var(--maxw); margin: 0 auto;
+    padding: 14px 24px;
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 24px;
+  }
+  .brand {
+    display: inline-flex; align-items: center; gap: 10px;
+    font-weight: 700; letter-spacing: 0.02em; color: var(--text);
+  }
+  .brand-mark {
+    width: 26px; height: 26px; border-radius: 7px;
+    background: linear-gradient(135deg, var(--accent) 0%, var(--accent-2) 100%);
+    display: inline-flex; align-items: center; justify-content: center;
+    color: #11131a; font-weight: 800; font-size: 12px;
+    box-shadow: 0 4px 18px rgba(79, 209, 197, 0.25);
+  }
+  .nav-links { display: flex; gap: 22px; flex-wrap: wrap; }
+  .nav-links a {
+    color: var(--text-2); font-size: 14px; font-weight: 500;
+    padding: 6px 0; position: relative;
+  }
+  .nav-links a:hover { color: var(--text); }
+
+  /* ---------- Containers ---------- */
+  .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
+  section { padding: 72px 0; border-bottom: 1px solid var(--border); }
+  section:last-of-type { border-bottom: none; }
+
+  .eyebrow {
+    text-transform: uppercase; letter-spacing: 0.22em;
+    font-size: 12px; font-weight: 600;
+    color: var(--accent); margin-bottom: 14px;
+  }
+  h1, h2, h3 { color: var(--text); font-weight: 700; letter-spacing: -0.01em; }
+  h1 { font-size: clamp(34px, 5vw, 54px); line-height: 1.08; margin: 0 0 18px; letter-spacing: -0.025em; }
+  h2 { font-size: clamp(26px, 3.2vw, 34px); line-height: 1.2; margin: 0 0 22px; letter-spacing: -0.015em; }
+  h3 { font-size: 18px; margin: 0 0 8px; }
+  p { color: var(--text-2); margin: 0 0 14px; }
+  .lead { font-size: 18px; color: var(--text-2); max-width: 720px; }
+
+  /* ---------- Hero ---------- */
+  .hero {
+    padding: 84px 0 64px;
+    border-bottom: 1px solid var(--border);
+    background:
+      radial-gradient(1100px 600px at 8% -10%, rgba(79,209,197,0.10) 0%, transparent 60%),
+      radial-gradient(900px 500px at 100% 0%, rgba(138,125,255,0.10) 0%, transparent 55%);
+  }
+  .chip {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: var(--accent-soft);
+    border: 1px solid var(--accent-line);
+    color: var(--accent);
+    font-size: 12px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase;
+    padding: 6px 12px; border-radius: 999px;
+    margin-bottom: 22px;
+  }
+  .chip-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 10px var(--accent); }
+  .authors { font-size: 16px; color: var(--text); margin-bottom: 6px; font-weight: 500; }
+  .authors sup { color: var(--accent); }
+  .affil { color: var(--text-3); font-size: 14px; margin-bottom: 22px; }
+  .pitch { color: var(--text-2); max-width: 740px; font-size: 17px; margin: 0 0 26px; }
+  .btns { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 32px; }
+  .btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 10px 16px;
+    border-radius: 10px;
+    font-size: 14px; font-weight: 500;
+    border: 1px solid var(--border-2);
+    background: var(--panel);
+    color: var(--text);
+    transition: all .15s ease;
+  }
+  .btn:hover { background: var(--panel-2); border-color: var(--accent-line); color: var(--text); }
+  .btn.primary {
+    background: linear-gradient(180deg, rgba(79,209,197,0.18), rgba(79,209,197,0.06));
+    border-color: var(--accent-line);
+    color: var(--accent);
+  }
+  .btn.primary:hover { color: #7be7dc; border-color: var(--accent); }
+  .btn svg { width: 14px; height: 14px; }
+
+  .stat-strip {
+    display: flex; flex-wrap: wrap; gap: 18px 28px;
+    padding: 16px 20px;
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+  }
+  .stat-strip .item {
+    display: inline-flex; align-items: baseline; gap: 8px;
+    font-size: 14px; color: var(--text-2);
+  }
+  .stat-strip .num { color: var(--text); font-weight: 700; font-size: 16px; }
+  .stat-strip .sep { color: var(--border-2); }
+
+  /* ---------- Section header ---------- */
+  .section-head { margin-bottom: 28px; }
+  .section-head p { max-width: 760px; }
+
+  /* ---------- Cards (3-col motivation) ---------- */
+  .grid-3 {
+    display: grid; gap: 16px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .card {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 22px 22px 20px;
+    transition: border-color .15s ease, transform .15s ease;
+  }
+  .card:hover { border-color: var(--border-2); }
+  .card .num {
+    color: var(--accent); font-family: 'JetBrains Mono', monospace;
+    font-size: 13px; letter-spacing: 0.18em; margin-bottom: 14px;
+    display: block;
+  }
+  .card h3 { margin-bottom: 6px; }
+  .card p { font-size: 14px; margin: 0; color: var(--text-2); }
+
+  /* ---------- Method ---------- */
+  .figure {
+    margin: 8px 0 6px;
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 18px;
+  }
+  .figure img { border-radius: 8px; }
+  .caption { color: var(--text-3); font-size: 13px; margin-top: 12px; text-align: center; font-style: italic; }
+
+  .stat-panels {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 22px;
+  }
+  .panel {
+    background: var(--panel); border: 1px solid var(--border); border-radius: var(--radius-sm);
+    padding: 16px 18px;
+  }
+  .panel .label { color: var(--text-3); font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 6px; }
+  .panel .val { color: var(--text); font-weight: 600; font-size: 15px; }
+
+  .eq {
+    display: block;
+    margin: 18px 0 6px;
+    padding: 14px 18px;
+    background: #101013;
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent);
+    border-radius: 8px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 14px;
+    color: var(--text);
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  .eq .var { color: var(--accent); }
+  .eq .op  { color: var(--accent-2); }
+
+  /* ---------- Two-col layout ---------- */
+  .two-col {
+    display: grid; grid-template-columns: 1.1fr 1fr; gap: 28px; align-items: start;
+  }
+
+  /* ---------- Results tabs + table ---------- */
+  .tabs {
+    display: flex; flex-wrap: wrap; gap: 6px;
+    background: var(--panel);
+    padding: 6px; border-radius: 12px;
+    border: 1px solid var(--border);
+    width: max-content;
+    margin-bottom: 20px;
+  }
+  .tab {
+    background: transparent; border: 0;
+    color: var(--text-2);
+    padding: 8px 14px; font-size: 13px; font-weight: 500;
+    border-radius: 8px; cursor: pointer;
+    font-family: inherit;
+    transition: all .15s ease;
+  }
+  .tab:hover { color: var(--text); }
+  .tab.active {
+    background: var(--accent-soft);
+    color: var(--accent);
+    box-shadow: inset 0 0 0 1px var(--accent-line);
+  }
+
+  .summary-row {
+    display: flex; flex-wrap: wrap; gap: 12px;
+    margin-bottom: 18px;
+  }
+  .summary-card {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 14px 18px;
+    flex: 1 1 200px;
+  }
+  .summary-card .label { color: var(--text-3); font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; margin-bottom: 4px; }
+  .summary-card .val { color: var(--text); font-weight: 700; font-size: 20px; font-family: 'JetBrains Mono', monospace; }
+  .summary-card .val small { color: var(--accent); font-size: 12px; font-weight: 600; letter-spacing: 0.1em; margin-left: 6px; }
+
+  .table-wrap { overflow-x: auto; border: 1px solid var(--border); border-radius: var(--radius); background: var(--panel); }
+  table {
+    width: 100%; border-collapse: collapse;
+    font-size: 14px;
+  }
+  th, td {
+    padding: 12px 16px;
+    text-align: right;
+    border-bottom: 1px solid var(--border);
+    font-family: 'JetBrains Mono', monospace;
+    color: var(--text-2);
+  }
+  th:first-child, td:first-child { text-align: left; font-family: 'Inter', sans-serif; }
+  th {
+    background: #1a1a1f;
+    color: var(--text-3);
+    text-transform: uppercase; font-size: 11px; letter-spacing: 0.14em;
+    font-weight: 600;
+  }
+  tbody tr:last-child td { border-bottom: none; }
+  tbody tr:hover { background: rgba(255,255,255,0.02); }
+  tr.ours {
+    background: var(--bold-row);
+  }
+  tr.ours td { color: var(--text); font-weight: 700; }
+  tr.ours td:first-child { color: var(--accent); }
+  .arrow { color: var(--text-3); font-size: 11px; margin-left: 4px; }
+
+  .vis-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 24px;
+  }
+
+  /* ---------- Efficiency ---------- */
+  .efficiency {
+    display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px;
+    margin-bottom: 22px;
+  }
+  .big-stat {
+    background: var(--panel); border: 1px solid var(--border);
+    border-radius: var(--radius); padding: 22px;
+  }
+  .big-stat .label { color: var(--text-3); font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; margin-bottom: 8px; }
+  .big-stat .num { color: var(--text); font-weight: 700; font-size: 30px; font-family: 'JetBrains Mono', monospace; line-height: 1; }
+  .big-stat .sub { color: var(--text-3); font-size: 13px; margin-top: 6px; }
+  .big-stat .num span.accent { color: var(--accent); }
+
+  /* ---------- Citation ---------- */
+  .cite {
+    background: #101013;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 18px 20px;
+    position: relative;
+  }
+  .cite pre {
+    margin: 0;
+    color: var(--text);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px; line-height: 1.6;
+    white-space: pre-wrap; word-break: break-word;
+  }
+  .copy-btn {
+    position: absolute; top: 14px; right: 14px;
+    background: var(--panel-2); border: 1px solid var(--border-2);
+    color: var(--text-2); font-size: 12px; font-weight: 500;
+    padding: 6px 12px; border-radius: 8px; cursor: pointer;
+    font-family: inherit;
+    transition: all .15s ease;
+  }
+  .copy-btn:hover { color: var(--accent); border-color: var(--accent-line); }
+  .copy-btn.done { color: var(--good); border-color: var(--good); }
+
+  /* ---------- Footer ---------- */
+  footer {
+    padding: 32px 0 48px;
+    color: var(--text-3); font-size: 13px;
+    border-top: 1px solid var(--border);
+  }
+  footer .row {
+    display: flex; flex-wrap: wrap; gap: 18px; align-items: center; justify-content: space-between;
+  }
+  footer a { color: var(--text-2); }
+  footer a:hover { color: var(--accent); }
+
+  /* ---------- Responsive ---------- */
+  @media (max-width: 820px) {
+    .grid-3 { grid-template-columns: 1fr; }
+    .two-col { grid-template-columns: 1fr; }
+    .stat-panels { grid-template-columns: 1fr; }
+    .efficiency { grid-template-columns: 1fr; }
+    .vis-grid { grid-template-columns: 1fr; }
+    .nav-links { gap: 14px; }
+    .nav-inner { padding: 12px 18px; }
+    .wrap { padding: 0 18px; }
+    section { padding: 56px 0; }
+    .hero { padding: 56px 0 40px; }
+  }
+  @media (max-width: 520px) {
+    .nav-links a { font-size: 13px; }
+    .tabs { width: 100%; overflow-x: auto; flex-wrap: nowrap; }
+    .tab { white-space: nowrap; }
+  }
+</style>
+</head>
+<body id="top">
+
+<!-- ============== NAV ============== -->
+<nav class="nav" aria-label="Primary">
+  <div class="nav-inner">
+    <a href="#top" class="brand">
+      <span class="brand-mark">L</span>
+      <span>LSO</span>
+    </a>
+    <div class="nav-links">
+      <a href="#method">Method</a>
+      <a href="#results">Results</a>
+      <a href="#generalization">Generalization</a>
+      <a href="#citation">Citation</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ============== HERO ============== -->
+<header class="hero">
+  <div class="wrap">
+    <span class="chip"><span class="chip-dot"></span>ICML 2026 &nbsp;/&nbsp; Spatial&ndash;Spectral Fusion</span>
+    <h1>Solving Spatial&ndash;Spectral Fusion with<br/>Latent Spectral Operators</h1>
+    <p class="authors">
+      Wei Li, Jieyuan Pei, Junnan Xu, Xuanfeng Ding, Junwei Zhu, Wanjun Chen, Jianwei Zheng<sup>*</sup>
+    </p>
+    <p class="affil">
+      College of Computer Science and Technology, Zhejiang University of Technology, Hangzhou &nbsp;&middot;&nbsp;
+      Zhejiang Key Laboratory of Visual Information Intelligent Processing
+      <br/><span style="color:var(--text-3); font-size: 12px;"><sup>*</sup>Corresponding author: zjw@zjut.edu.cn</span>
+    </p>
+    <p class="pitch">
+      LSO learns spatial&ndash;spectral fusion as a mapping between spectral functions in a compact latent space &mdash;
+      projected via cross-attention with spectral prompts and solved by a trigonometric basis solver.
+    </p>
+    <div class="btns">
+      <a class="btn primary" href="assets/paper.pdf">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg>
+        Paper PDF
+      </a>
+      <a class="btn" href="#">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+        Code
+      </a>
+      <a class="btn" href="#citation">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7h18M3 12h18M3 17h12"/></svg>
+        BibTeX
+      </a>
+    </div>
+    <div class="stat-strip">
+      <span class="item"><span class="num">2</span> benchmarks</span>
+      <span class="sep">|</span>
+      <span class="item">SOTA on <span class="num">CAVE</span> &amp; <span class="num">Harvard</span></span>
+      <span class="sep">|</span>
+      <span class="item"><span class="num">1.94 M</span> params</span>
+      <span class="sep">|</span>
+      <span class="item">Cross-scale <span class="num">&times;4 &rarr; &times;32</span> transfer</span>
+    </div>
+  </div>
+</header>
+
+<!-- ============== MOTIVATION ============== -->
+<section id="motivation">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">What We Learn</div>
+      <h2>From coordinate-bound convolutions to spectral-function operators.</h2>
+      <p>
+        Existing deep spatial&ndash;spectral fusion methods learn the fusion mapping directly in the coordinate domain
+        with convolutions and attentions. They are tied to a single spatial resolution and provide limited control
+        over the frequency content of reconstructions, often producing severe spectral distortion. LSO instead
+        treats fusion as an operator between spectral functions, learned in a compact latent space.
+      </p>
+    </div>
+    <div class="grid-3">
+      <div class="card">
+        <span class="num">01</span>
+        <h3>Coordinate-tied mapping</h3>
+        <p>Convolution and attention bake spatial coordinates into the operator, hurting scale transfer across &times;4, &times;8, &times;16, and &times;32.</p>
+      </div>
+      <div class="card">
+        <span class="num">02</span>
+        <h3>Uncontrolled frequency leakage</h3>
+        <p>Without an explicit frequency parameterization, networks cannot expose a clean capacity&ndash;stability trade-off for multi-frequency content.</p>
+      </div>
+      <div class="card">
+        <span class="num">03</span>
+        <h3>Spectral distortion</h3>
+        <p>Band-wise reconstruction error rises in narrow spectral regions, undermining downstream HSI analysis tasks.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== METHOD ============== -->
+<section id="method">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Method</div>
+      <h2>Latent Spectral Operators: project, solve, project back.</h2>
+      <p>
+        LSO compresses high-dimensional spatial&ndash;spectral observations into a compact latent representation through a
+        cross-attention projection, where learned latent tokens act as <em>spectral prompts</em>. A hierarchical,
+        patch-based architecture aggregates rich multi-scale cues before a structured operator solves the latent
+        fusion mapping.
+      </p>
+    </div>
+    <div class="figure">
+      <img src="assets/overall.png" alt="Overall LSO framework: cross-attention projection with spectral prompts feeds a hierarchical patch-based backbone and a trigonometric basis solver." />
+      <div class="caption">Overall LSO framework. Spectral prompts compress the observation into latent tokens; a hierarchical projection network aggregates multi-scale cues; a trigonometric basis solver performs the latent fusion.</div>
+    </div>
+    <div class="stat-panels">
+      <div class="panel">
+        <div class="label">Cross-Attention Projection</div>
+        <div class="val">Spectral prompts compress observations</div>
+      </div>
+      <div class="panel">
+        <div class="label">Hierarchical Patch-Based</div>
+        <div class="val">Multi-scale cues at varying resolutions</div>
+      </div>
+      <div class="panel">
+        <div class="label">Trigonometric Basis Solver</div>
+        <div class="val">Controllable multi-frequency operator</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== HIERARCHICAL PROJECTION NETWORK ============== -->
+<section id="hpn">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Hierarchical Projection Network</div>
+      <h2>CoordToLatent &rarr; Solve &rarr; LatentToCoord.</h2>
+      <p>
+        The spatial domain and the latent spectral domain are bridged by two complementary projections.
+        <strong>CoordToLatent</strong> uses cross-attention against learned spectral prompts to compress
+        high-resolution observations into a fixed-size latent. The <strong>Solver</strong> applies a
+        trigonometric basis expansion to the latent code, which naturally supports multi-frequency modeling
+        with a capacity&ndash;stability trade-off governed by the number of basis functions. Finally,
+        <strong>LatentToCoord</strong> projects the solved latent back to the coordinate domain to produce the
+        fused HSI.
+      </p>
+    </div>
+    <div class="figure">
+      <img src="assets/pipeline.png" alt="Hierarchical Projection Network: detailed CoordToLatent, Solve, and LatentToCoord blocks." />
+      <div class="caption">Hierarchical Projection Network. Patch-based encoders combine multi-scale cues; the trigonometric basis solver parameterises the latent operator.</div>
+    </div>
+    <code class="eq">
+      <span class="op">Solve</span>(<span class="var">z</span>) = <span class="var">z</span> + &gamma; + &Sigma;<sub>q</sub> &alpha;<sub>q</sub>&middot;sin(<span class="var">q&middot;z</span>) + &Sigma;<sub>q</sub> &beta;<sub>q</sub>&middot;cos(<span class="var">q&middot;z</span>)
+    </code>
+    <p style="font-size: 13px; color: var(--text-3); margin-top: 8px;">
+      The number of basis terms <em>q</em> controls capacity: more terms increase expressivity, fewer terms improve stability. This trade-off is supported by the theoretical analysis in the paper.
+    </p>
+  </div>
+</section>
+
+<!-- ============== RESULTS ============== -->
+<section id="results">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Results</div>
+      <h2>State-of-the-art on CAVE and Harvard, across scales.</h2>
+      <p>
+        LSO is evaluated against eight competitive baselines on the CAVE and Harvard benchmarks at &times;4 and &times;8
+        magnification. It is best on all three metrics: PSNR (higher is better), SAM and ERGAS (lower is better).
+      </p>
+    </div>
+
+    <div class="tabs" role="tablist">
+      <button class="tab active" data-target="cave4" role="tab">CAVE &times;4</button>
+      <button class="tab" data-target="cave8" role="tab">CAVE &times;8</button>
+      <button class="tab" data-target="harvard4" role="tab">Harvard &times;4</button>
+      <button class="tab" data-target="harvard8" role="tab">Harvard &times;8</button>
+    </div>
+
+    <div id="results-panels">
+      <!-- CAVE x4 -->
+      <div class="result-panel" data-key="cave4">
+        <div class="summary-row">
+          <div class="summary-card"><div class="label">PSNR</div><div class="val">50.728 <small>BEST</small></div></div>
+          <div class="summary-card"><div class="label">SAM</div><div class="val">2.381 <small>BEST</small></div></div>
+          <div class="summary-card"><div class="label">ERGAS</div><div class="val">1.170 <small>BEST</small></div></div>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Method</th><th>PSNR <span class="arrow">&uarr;</span></th><th>SAM <span class="arrow">&darr;</span></th><th>ERGAS <span class="arrow">&darr;</span></th></tr></thead>
+            <tbody>
+              <tr><td>Bicubic</td><td>31.175</td><td>4.683</td><td>9.629</td></tr>
+              <tr><td>DCT</td><td>50.196</td><td>2.486</td><td>1.198</td></tr>
+              <tr><td>LFormer</td><td>49.847</td><td>2.584</td><td>1.313</td></tr>
+              <tr><td>MIMO</td><td>50.101</td><td>2.767</td><td>1.237</td></tr>
+              <tr><td>FeINFN</td><td>50.358</td><td>2.537</td><td>1.210</td></tr>
+              <tr><td>KNLConv</td><td>48.570</td><td>2.790</td><td>1.557</td></tr>
+              <tr><td>SpecSolver</td><td>50.568</td><td>2.489</td><td>1.212</td></tr>
+              <tr><td>Otias</td><td>50.213</td><td>2.538</td><td>1.211</td></tr>
+              <tr class="ours"><td>Ours (LSO)</td><td>50.728</td><td>2.381</td><td>1.170</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- CAVE x8 -->
+      <div class="result-panel" data-key="cave8" hidden>
+        <div class="summary-row">
+          <div class="summary-card"><div class="label">PSNR</div><div class="val">48.118 <small>BEST</small></div></div>
+          <div class="summary-card"><div class="label">SAM</div><div class="val">2.961 <small>BEST</small></div></div>
+          <div class="summary-card"><div class="label">ERGAS</div><div class="val">1.675 <small>BEST</small></div></div>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Method</th><th>PSNR <span class="arrow">&uarr;</span></th><th>SAM <span class="arrow">&darr;</span></th><th>ERGAS <span class="arrow">&darr;</span></th></tr></thead>
+            <tbody>
+              <tr><td>Bicubic</td><td>27.383</td><td>6.449</td><td>14.349</td></tr>
+              <tr><td>DCT</td><td>47.441</td><td>3.164</td><td>1.791</td></tr>
+              <tr><td>LFormer</td><td>47.302</td><td>3.474</td><td>1.813</td></tr>
+              <tr><td>MIMO</td><td>47.442</td><td>3.985</td><td>1.758</td></tr>
+              <tr><td>FeINFN</td><td>47.476</td><td>3.565</td><td>1.755</td></tr>
+              <tr><td>KNLConv</td><td>46.150</td><td>3.639</td><td>1.989</td></tr>
+              <tr><td>SpecSolver</td><td>47.831</td><td>3.527</td><td>1.805</td></tr>
+              <tr><td>Otias</td><td>47.769</td><td>3.201</td><td>1.757</td></tr>
+              <tr class="ours"><td>Ours (LSO)</td><td>48.118</td><td>2.961</td><td>1.675</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Harvard x4 -->
+      <div class="result-panel" data-key="harvard4" hidden>
+        <div class="summary-row">
+          <div class="summary-card"><div class="label">PSNR</div><div class="val">49.182 <small>BEST</small></div></div>
+          <div class="summary-card"><div class="label">SAM</div><div class="val">2.144 <small>BEST</small></div></div>
+          <div class="summary-card"><div class="label">ERGAS</div><div class="val">1.658 <small>BEST</small></div></div>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Method</th><th>PSNR <span class="arrow">&uarr;</span></th><th>SAM <span class="arrow">&darr;</span></th><th>ERGAS <span class="arrow">&darr;</span></th></tr></thead>
+            <tbody>
+              <tr><td>Bicubic</td><td>37.173</td><td>2.645</td><td>5.445</td></tr>
+              <tr><td>DCT</td><td>49.068</td><td>2.163</td><td>1.756</td></tr>
+              <tr><td>LFormer</td><td>48.938</td><td>2.182</td><td>1.706</td></tr>
+              <tr><td>MIMO</td><td>49.019</td><td>2.179</td><td>1.688</td></tr>
+              <tr><td>FeINFN</td><td>49.001</td><td>2.155</td><td>1.683</td></tr>
+              <tr><td>KNLConv</td><td>48.536</td><td>2.203</td><td>1.940</td></tr>
+              <tr><td>SpecSolver</td><td>48.919</td><td>2.169</td><td>1.771</td></tr>
+              <tr><td>Otias</td><td>49.046</td><td>2.151</td><td>1.728</td></tr>
+              <tr class="ours"><td>Ours (LSO)</td><td>49.182</td><td>2.144</td><td>1.658</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Harvard x8 -->
+      <div class="result-panel" data-key="harvard8" hidden>
+        <div class="summary-row">
+          <div class="summary-card"><div class="label">PSNR</div><div class="val">47.957 <small>BEST</small></div></div>
+          <div class="summary-card"><div class="label">SAM</div><div class="val">2.438 <small>BEST</small></div></div>
+          <div class="summary-card"><div class="label">ERGAS</div><div class="val">1.879 <small>BEST</small></div></div>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Method</th><th>PSNR <span class="arrow">&uarr;</span></th><th>SAM <span class="arrow">&darr;</span></th><th>ERGAS <span class="arrow">&darr;</span></th></tr></thead>
+            <tbody>
+              <tr><td>Bicubic</td><td>34.051</td><td>3.186</td><td>7.587</td></tr>
+              <tr><td>DCT</td><td>47.836</td><td>2.578</td><td>2.088</td></tr>
+              <tr><td>LFormer</td><td>46.651</td><td>2.742</td><td>2.305</td></tr>
+              <tr><td>MIMO</td><td>47.839</td><td>2.475</td><td>1.958</td></tr>
+              <tr><td>FeINFN</td><td>47.833</td><td>2.466</td><td>1.933</td></tr>
+              <tr><td>KNLConv</td><td>46.706</td><td>2.588</td><td>2.487</td></tr>
+              <tr><td>SpecSolver</td><td>47.652</td><td>2.533</td><td>2.052</td></tr>
+              <tr><td>Otias</td><td>47.848</td><td>2.459</td><td>1.907</td></tr>
+              <tr class="ours"><td>Ours (LSO)</td><td>47.957</td><td>2.438</td><td>1.879</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div class="vis-grid">
+      <div class="figure">
+        <img src="assets/cave_vis.png" alt="CAVE qualitative results at x4 and x8 with band-wise error maps." />
+        <div class="caption">CAVE qualitative results with error maps &mdash; LSO yields the cleanest residuals.</div>
+      </div>
+      <div class="figure">
+        <img src="assets/harvard_vis.png" alt="Harvard qualitative results with error maps." />
+        <div class="caption">Harvard qualitative results with error maps.</div>
+      </div>
+    </div>
+
+    <div class="figure" style="margin-top: 18px;">
+      <img src="assets/error_vs_band.png" alt="Per-band spectral error: CAVE (left) and Harvard (right)." />
+      <div class="caption">Per-band spectral error on CAVE (left) and Harvard (right). LSO suppresses error across the full spectrum.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== EFFICIENCY ============== -->
+<section id="efficiency">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Efficiency</div>
+      <h2>Compact operators without giving up accuracy.</h2>
+      <p>
+        LSO is significantly more compact than most competitors while still being state-of-the-art on every metric.
+        The latent operator design keeps the parameter budget below 2 M without sacrificing reconstruction quality.
+      </p>
+    </div>
+    <div class="efficiency">
+      <div class="big-stat">
+        <div class="label">Parameters</div>
+        <div class="num"><span class="accent">1.94</span> M</div>
+        <div class="sub">Compact latent design</div>
+      </div>
+      <div class="big-stat">
+        <div class="label">FLOPs</div>
+        <div class="num"><span class="accent">222.85</span> G</div>
+        <div class="sub">Measured at CAVE &times;4</div>
+      </div>
+      <div class="big-stat">
+        <div class="label">Best Metrics</div>
+        <div class="num"><span class="accent">12 / 12</span></div>
+        <div class="sub">Across CAVE &amp; Harvard at &times;4 and &times;8</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== GENERALIZATION ============== -->
+<section id="generalization">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Generalization</div>
+      <h2>Trained at &times;4, stable at &times;8 / &times;16 / &times;32.</h2>
+      <p>
+        Decoupling features from the coordinate space lets the operator transfer across spatial resolutions.
+        Trained on CAVE at &times;4, LSO maintains stable PSNR when tested at &times;8, &times;16, and &times;32 &mdash; substantially
+        reducing the resolution-induced degradation observed in coordinate-domain baselines.
+      </p>
+    </div>
+    <div class="figure">
+      <img src="assets/scale_vary.png" alt="PSNR vs magnification factor for cross-scale generalization." />
+      <div class="caption">Cross-scale generalization: PSNR as a function of magnification factor. LSO degrades more gracefully than coordinate-domain baselines.</div>
+    </div>
+
+    <div class="section-head" style="margin-top: 48px;">
+      <div class="eyebrow">Real Data</div>
+      <h2>Blind real HSI recovery.</h2>
+      <p>
+        On real hyperspectral acquisitions, LSO produces the sharpest reconstructions with the fewest spectral artifacts,
+        confirming that the latent operator generalizes beyond simulated degradations.
+      </p>
+    </div>
+    <div class="figure">
+      <img src="assets/real_dataset.png" alt="Blind real HSI recovery comparisons." />
+      <div class="caption">Blind real HSI recovery &mdash; LSO produces the sharpest reconstructions.</div>
+    </div>
+    <div class="figure" style="margin-top: 16px;">
+      <img src="assets/more_realdata.png" alt="Additional real-data comparisons." />
+      <div class="caption">Additional real-data comparisons across diverse scenes.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== CITATION ============== -->
+<section id="citation">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Citation</div>
+      <h2>Reference</h2>
+      <p>
+        Wei Li, Jieyuan Pei, Junnan Xu, Xuanfeng Ding, Junwei Zhu, Wanjun Chen, and Jianwei Zheng.
+        Zhejiang University of Technology. Correspondence: Jianwei Zheng (zjw@zjut.edu.cn).
+      </p>
+    </div>
+    <div class="cite">
+      <button class="copy-btn" id="copy-btn" type="button" aria-label="Copy BibTeX">Copy BibTeX</button>
+<pre id="bibtex">@inproceedings{lso2026,
+  title     = {Solving Spatial-Spectral Fusion with Latent Spectral Operators},
+  author    = {Li, Wei and Pei, Jieyuan and Xu, Junnan and Ding, Xuanfeng and Zhu, Junwei and Chen, Wanjun and Zheng, Jianwei},
+  booktitle = {Proceedings of the 43rd International Conference on Machine Learning},
+  series    = {Proceedings of Machine Learning Research},
+  publisher = {PMLR},
+  year      = {2026}
+}</pre>
+    </div>
+  </div>
+</section>
+
+<!-- ============== FOOTER ============== -->
+<footer>
+  <div class="wrap">
+    <div class="row">
+      <div>
+        Latent Spectral Operators &middot; ICML 2026<br/>
+        <span style="color: var(--text-3);">College of Computer Science and Technology, Zhejiang University of Technology</span>
+      </div>
+      <div style="display:flex; gap: 18px;">
+        <a href="assets/paper.pdf">Paper PDF</a>
+        <a href="#">Code</a>
+        <a href="#citation">BibTeX</a>
+        <a href="#top">Top</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Tab switching
+  (function() {
+    var tabs = document.querySelectorAll('.tab');
+    var panels = document.querySelectorAll('.result-panel');
+    tabs.forEach(function(tab) {
+      tab.addEventListener('click', function() {
+        var target = tab.getAttribute('data-target');
+        tabs.forEach(function(t) { t.classList.remove('active'); });
+        tab.classList.add('active');
+        panels.forEach(function(p) {
+          if (p.getAttribute('data-key') === target) p.removeAttribute('hidden');
+          else p.setAttribute('hidden', '');
+        });
+      });
+    });
+  })();
+
+  // Copy BibTeX
+  (function() {
+    var btn = document.getElementById('copy-btn');
+    var pre = document.getElementById('bibtex');
+    if (!btn || !pre) return;
+    btn.addEventListener('click', function() {
+      var text = pre.textContent;
+      var done = function() {
+        var original = 'Copy BibTeX';
+        btn.textContent = 'Copied!';
+        btn.classList.add('done');
+        setTimeout(function() {
+          btn.textContent = original;
+          btn.classList.remove('done');
+        }, 1600);
+      };
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(done, function() {
+          // fallback
+          var ta = document.createElement('textarea');
+          ta.value = text; document.body.appendChild(ta);
+          ta.select(); try { document.execCommand('copy'); } catch(e) {}
+          document.body.removeChild(ta); done();
+        });
+      } else {
+        var ta = document.createElement('textarea');
+        ta.value = text; document.body.appendChild(ta);
+        ta.select(); try { document.execCommand('copy'); } catch(e) {}
+        document.body.removeChild(ta); done();
+      }
+    });
+  })();
+</script>
+
+</body>
+</html>
