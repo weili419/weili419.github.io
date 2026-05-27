@@ -14,6 +14,26 @@ I am a Ph.D. student in the College of Computer Science at Zhejiang University o
 
 <strong style="color: red;">I am currently seeking long-term internship opportunities through graduation, with a focus on multimodal large models.</strong>
 
+# 📝 Publications
+
+<div class='paper-box'>
+  <div class='paper-box-image'>
+    <div>
+      <div class="badge">ICML 2026</div>
+      <img src='images/publications/lso_pipeline.png' alt="Latent Spectral Operators pipeline">
+    </div>
+  </div>
+  <div class='paper-box-text' markdown="1">
+
+[**Solving Spatial-Spectral Fusion with Latent Spectral Operators**](https://weili419.github.io/latent-spectral-operators/)
+
+**Wei Li**, Jieyuan Pei, Junnan Xu, Xuanfeng Ding, Junwei Zhu, Wanjun Chen, Jianwei Zheng
+
+[Project](https://weili419.github.io/latent-spectral-operators/) / [Code](https://github.com/weili419/LSO) / [Dataset](https://www.modelscope.cn/datasets/WeiLi419/Latent_Spectral_Operators_Cave_and_Harvard)
+
+  </div>
+</div>
+
 # Honors and Awards
 
 - 2025年中国科协青年人才托举工程博士生专项计划
