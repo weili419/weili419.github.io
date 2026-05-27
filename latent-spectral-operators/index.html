@@ -189,6 +189,16 @@
     padding: 18px;
   }
   .figure img { border-radius: 8px; }
+  .paper-figure {
+    background: transparent;
+    border: 0;
+    padding: 0;
+  }
+  .paper-figure img {
+    background: #fff;
+    border-radius: 6px;
+    width: 100%;
+  }
   .caption { color: var(--text-3); font-size: 13px; margin-top: 12px; text-align: center; font-style: italic; }
 
   .stat-panels {
@@ -484,7 +494,7 @@
         fusion mapping.
       </p>
     </div>
-    <div class="figure">
+    <div class="figure paper-figure">
       <img src="assets/overall.png" alt="Overall LSO framework: cross-attention projection with spectral prompts feeds a hierarchical patch-based backbone and a trigonometric basis solver." />
       <div class="caption">Overall design of Latent Spectral Operator.</div>
     </div>
@@ -521,7 +531,7 @@
         fused HSI.
       </p>
     </div>
-    <div class="figure">
+    <div class="figure paper-figure">
       <img src="assets/pipeline.png" alt="Hierarchical Projection Network: detailed CoordToLatent, Solve, and LatentToCoord blocks." />
       <div class="caption">Overall design of the Hierarchical Projection Network.</div>
     </div>
