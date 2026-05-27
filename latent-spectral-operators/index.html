@@ -288,6 +288,13 @@
   }
   tr.ours td { color: var(--text); font-weight: 700; }
   tr.ours td:first-child { color: var(--accent); }
+  .metric-best { color: var(--accent); font-weight: 700; }
+  .metric-second {
+    color: var(--text);
+    text-decoration: underline;
+    text-decoration-color: var(--accent-line);
+    text-underline-offset: 3px;
+  }
   .arrow { color: var(--text-3); font-size: 11px; margin-left: 4px; }
 
   .vis-grid {
@@ -402,13 +409,17 @@
       projected via cross-attention with spectral prompts and solved by a trigonometric basis solver.
     </p>
     <div class="btns">
-      <a class="btn primary" href="assets/paper.pdf">
+      <a class="btn primary" href="assets/Solving_Spatial_Spectral_Fusion_with_Latent_Spectral_Operators_ICML2026_compressed.pdf">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg>
         Paper PDF
       </a>
-      <a class="btn" href="#">
+      <a class="btn" href="https://github.com/weili419/LSO">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
         Code
+      </a>
+      <a class="btn" href="https://www.modelscope.cn/datasets/WeiLi419/Latent_Spectral_Operators_Cave_and_Harvard">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73L13 2.27a2 2 0 0 0-2 0L4 6.27A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><path d="M3.27 6.96 12 12.01l8.73-5.05"/><path d="M12 22.08V12"/></svg>
+        Dataset
       </a>
       <a class="btn" href="#citation">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7h18M3 12h18M3 17h12"/></svg>
@@ -475,7 +486,7 @@
     </div>
     <div class="figure">
       <img src="assets/overall.png" alt="Overall LSO framework: cross-attention projection with spectral prompts feeds a hierarchical patch-based backbone and a trigonometric basis solver." />
-      <div class="caption">Overall LSO framework. Spectral prompts compress the observation into latent tokens; a hierarchical projection network aggregates multi-scale cues; a trigonometric basis solver performs the latent fusion.</div>
+      <div class="caption">Overall design of Latent Spectral Operator.</div>
     </div>
     <div class="stat-panels">
       <div class="panel">
@@ -512,7 +523,7 @@
     </div>
     <div class="figure">
       <img src="assets/pipeline.png" alt="Hierarchical Projection Network: detailed CoordToLatent, Solve, and LatentToCoord blocks." />
-      <div class="caption">Hierarchical Projection Network. Patch-based encoders combine multi-scale cues; the trigonometric basis solver parameterises the latent operator.</div>
+      <div class="caption">Overall design of the Hierarchical Projection Network.</div>
     </div>
     <code class="eq">
       <span class="op">Solve</span>(<span class="var">z</span>) = <span class="var">z</span> + &gamma; + &Sigma;<sub>q</sub> &alpha;<sub>q</sub>&middot;sin(<span class="var">q&middot;z</span>) + &Sigma;<sub>q</sub> &beta;<sub>q</sub>&middot;cos(<span class="var">q&middot;z</span>)
@@ -531,7 +542,7 @@
       <h2>State-of-the-art on CAVE and Harvard, across scales.</h2>
       <p>
         LSO is evaluated against eight competitive baselines on the CAVE and Harvard benchmarks at &times;4 and &times;8
-        magnification. It is best on all three metrics: PSNR (higher is better), SAM and ERGAS (lower is better).
+        magnification. Mean values from the paper are shown: PSNR is higher better, while SAM and ERGAS are lower better.
       </p>
     </div>
 
@@ -552,17 +563,17 @@
         </div>
         <div class="table-wrap">
           <table>
-            <thead><tr><th>Method</th><th>PSNR <span class="arrow">&uarr;</span></th><th>SAM <span class="arrow">&darr;</span></th><th>ERGAS <span class="arrow">&darr;</span></th></tr></thead>
+            <thead><tr><th>Method</th><th>Params</th><th>FLOPs</th><th>PSNR <span class="arrow">&uarr;</span></th><th>SAM <span class="arrow">&darr;</span></th><th>ERGAS <span class="arrow">&darr;</span></th></tr></thead>
             <tbody>
-              <tr><td>Bicubic</td><td>31.175</td><td>4.683</td><td>9.629</td></tr>
-              <tr><td>DCT</td><td>50.196</td><td>2.486</td><td>1.198</td></tr>
-              <tr><td>LFormer</td><td>49.847</td><td>2.584</td><td>1.313</td></tr>
-              <tr><td>MIMO</td><td>50.101</td><td>2.767</td><td>1.237</td></tr>
-              <tr><td>FeINFN</td><td>50.358</td><td>2.537</td><td>1.210</td></tr>
-              <tr><td>KNLConv</td><td>48.570</td><td>2.790</td><td>1.557</td></tr>
-              <tr><td>SpecSolver</td><td>50.568</td><td>2.489</td><td>1.212</td></tr>
-              <tr><td>Otias</td><td>50.213</td><td>2.538</td><td>1.211</td></tr>
-              <tr class="ours"><td>Ours (LSO)</td><td>50.728</td><td>2.381</td><td>1.170</td></tr>
+              <tr><td>Bicubic</td><td>-</td><td>-</td><td>31.175</td><td>4.683</td><td>9.629</td></tr>
+              <tr><td>DCT</td><td>8.15</td><td>2457.43</td><td>50.196</td><td><span class="metric-second">2.486</span></td><td><span class="metric-second">1.198</span></td></tr>
+              <tr><td>LFormer</td><td>2.28</td><td>306.94</td><td>49.847</td><td>2.584</td><td>1.313</td></tr>
+              <tr><td>MIMO</td><td>4.98</td><td><span class="metric-best">49.08</span></td><td>50.101</td><td>2.767</td><td>1.237</td></tr>
+              <tr><td>FeINFN</td><td>3.17</td><td>382.72</td><td>50.358</td><td>2.537</td><td>1.210</td></tr>
+              <tr><td>KNLConv</td><td><span class="metric-best">1.73</span></td><td><span class="metric-second">114.04</span></td><td>48.570</td><td>2.790</td><td>1.557</td></tr>
+              <tr><td>SpecSolver</td><td>3.10</td><td>364.75</td><td><span class="metric-second">50.568</span></td><td>2.489</td><td>1.212</td></tr>
+              <tr><td>Otias</td><td>2.99</td><td>278.35</td><td>50.213</td><td>2.538</td><td>1.211</td></tr>
+              <tr class="ours"><td>Ours (LSO)</td><td><span class="metric-second">1.94</span></td><td>222.85</td><td>50.728</td><td>2.381</td><td>1.170</td></tr>
             </tbody>
           </table>
         </div>
@@ -577,17 +588,17 @@
         </div>
         <div class="table-wrap">
           <table>
-            <thead><tr><th>Method</th><th>PSNR <span class="arrow">&uarr;</span></th><th>SAM <span class="arrow">&darr;</span></th><th>ERGAS <span class="arrow">&darr;</span></th></tr></thead>
+            <thead><tr><th>Method</th><th>Params</th><th>FLOPs</th><th>PSNR <span class="arrow">&uarr;</span></th><th>SAM <span class="arrow">&darr;</span></th><th>ERGAS <span class="arrow">&darr;</span></th></tr></thead>
             <tbody>
-              <tr><td>Bicubic</td><td>27.383</td><td>6.449</td><td>14.349</td></tr>
-              <tr><td>DCT</td><td>47.441</td><td>3.164</td><td>1.791</td></tr>
-              <tr><td>LFormer</td><td>47.302</td><td>3.474</td><td>1.813</td></tr>
-              <tr><td>MIMO</td><td>47.442</td><td>3.985</td><td>1.758</td></tr>
-              <tr><td>FeINFN</td><td>47.476</td><td>3.565</td><td>1.755</td></tr>
-              <tr><td>KNLConv</td><td>46.150</td><td>3.639</td><td>1.989</td></tr>
-              <tr><td>SpecSolver</td><td>47.831</td><td>3.527</td><td>1.805</td></tr>
-              <tr><td>Otias</td><td>47.769</td><td>3.201</td><td>1.757</td></tr>
-              <tr class="ours"><td>Ours (LSO)</td><td>48.118</td><td>2.961</td><td>1.675</td></tr>
+              <tr><td>Bicubic</td><td>-</td><td>-</td><td>27.383</td><td>6.449</td><td>14.349</td></tr>
+              <tr><td>DCT</td><td>8.15</td><td>2457.43</td><td>47.441</td><td><span class="metric-second">3.164</span></td><td>1.791</td></tr>
+              <tr><td>LFormer</td><td>2.28</td><td>306.94</td><td>47.302</td><td>3.474</td><td>1.813</td></tr>
+              <tr><td>MIMO</td><td>4.98</td><td><span class="metric-best">49.08</span></td><td>47.442</td><td>3.985</td><td>1.758</td></tr>
+              <tr><td>FeINFN</td><td>3.17</td><td>382.72</td><td>47.476</td><td>3.565</td><td><span class="metric-second">1.755</span></td></tr>
+              <tr><td>KNLConv</td><td><span class="metric-best">1.73</span></td><td><span class="metric-second">114.04</span></td><td>46.150</td><td>3.639</td><td>1.989</td></tr>
+              <tr><td>SpecSolver</td><td>3.10</td><td>364.75</td><td><span class="metric-second">47.831</span></td><td>3.527</td><td>1.805</td></tr>
+              <tr><td>Otias</td><td>2.99</td><td>278.35</td><td>47.769</td><td>3.201</td><td>1.757</td></tr>
+              <tr class="ours"><td>Ours (LSO)</td><td><span class="metric-second">1.94</span></td><td>222.85</td><td>48.118</td><td>2.961</td><td>1.675</td></tr>
             </tbody>
           </table>
         </div>
@@ -602,17 +613,17 @@
         </div>
         <div class="table-wrap">
           <table>
-            <thead><tr><th>Method</th><th>PSNR <span class="arrow">&uarr;</span></th><th>SAM <span class="arrow">&darr;</span></th><th>ERGAS <span class="arrow">&darr;</span></th></tr></thead>
+            <thead><tr><th>Method</th><th>Params</th><th>FLOPs</th><th>PSNR <span class="arrow">&uarr;</span></th><th>SAM <span class="arrow">&darr;</span></th><th>ERGAS <span class="arrow">&darr;</span></th></tr></thead>
             <tbody>
-              <tr><td>Bicubic</td><td>37.173</td><td>2.645</td><td>5.445</td></tr>
-              <tr><td>DCT</td><td>49.068</td><td>2.163</td><td>1.756</td></tr>
-              <tr><td>LFormer</td><td>48.938</td><td>2.182</td><td>1.706</td></tr>
-              <tr><td>MIMO</td><td>49.019</td><td>2.179</td><td>1.688</td></tr>
-              <tr><td>FeINFN</td><td>49.001</td><td>2.155</td><td>1.683</td></tr>
-              <tr><td>KNLConv</td><td>48.536</td><td>2.203</td><td>1.940</td></tr>
-              <tr><td>SpecSolver</td><td>48.919</td><td>2.169</td><td>1.771</td></tr>
-              <tr><td>Otias</td><td>49.046</td><td>2.151</td><td>1.728</td></tr>
-              <tr class="ours"><td>Ours (LSO)</td><td>49.182</td><td>2.144</td><td>1.658</td></tr>
+              <tr><td>Bicubic</td><td>-</td><td>-</td><td>37.173</td><td>2.645</td><td>5.445</td></tr>
+              <tr><td>DCT</td><td>8.15</td><td>2457.43</td><td><span class="metric-second">49.068</span></td><td><span class="metric-second">2.163</span></td><td>1.756</td></tr>
+              <tr><td>LFormer</td><td>2.28</td><td>306.94</td><td>48.938</td><td>2.182</td><td>1.706</td></tr>
+              <tr><td>MIMO</td><td>4.98</td><td><span class="metric-best">49.08</span></td><td>49.019</td><td>2.179</td><td>1.688</td></tr>
+              <tr><td>FeINFN</td><td>3.17</td><td>382.72</td><td>49.001</td><td>2.155</td><td><span class="metric-second">1.683</span></td></tr>
+              <tr><td>KNLConv</td><td><span class="metric-best">1.73</span></td><td><span class="metric-second">114.04</span></td><td>48.536</td><td>2.203</td><td>1.940</td></tr>
+              <tr><td>SpecSolver</td><td>3.10</td><td>364.75</td><td>48.919</td><td>2.169</td><td>1.771</td></tr>
+              <tr><td>Otias</td><td>2.99</td><td>278.35</td><td>49.046</td><td>2.151</td><td>1.728</td></tr>
+              <tr class="ours"><td>Ours (LSO)</td><td><span class="metric-second">1.94</span></td><td>222.85</td><td>49.182</td><td>2.144</td><td>1.658</td></tr>
             </tbody>
           </table>
         </div>
@@ -627,17 +638,17 @@
         </div>
         <div class="table-wrap">
           <table>
-            <thead><tr><th>Method</th><th>PSNR <span class="arrow">&uarr;</span></th><th>SAM <span class="arrow">&darr;</span></th><th>ERGAS <span class="arrow">&darr;</span></th></tr></thead>
+            <thead><tr><th>Method</th><th>Params</th><th>FLOPs</th><th>PSNR <span class="arrow">&uarr;</span></th><th>SAM <span class="arrow">&darr;</span></th><th>ERGAS <span class="arrow">&darr;</span></th></tr></thead>
             <tbody>
-              <tr><td>Bicubic</td><td>34.051</td><td>3.186</td><td>7.587</td></tr>
-              <tr><td>DCT</td><td>47.836</td><td>2.578</td><td>2.088</td></tr>
-              <tr><td>LFormer</td><td>46.651</td><td>2.742</td><td>2.305</td></tr>
-              <tr><td>MIMO</td><td>47.839</td><td>2.475</td><td>1.958</td></tr>
-              <tr><td>FeINFN</td><td>47.833</td><td>2.466</td><td>1.933</td></tr>
-              <tr><td>KNLConv</td><td>46.706</td><td>2.588</td><td>2.487</td></tr>
-              <tr><td>SpecSolver</td><td>47.652</td><td>2.533</td><td>2.052</td></tr>
-              <tr><td>Otias</td><td>47.848</td><td>2.459</td><td>1.907</td></tr>
-              <tr class="ours"><td>Ours (LSO)</td><td>47.957</td><td>2.438</td><td>1.879</td></tr>
+              <tr><td>Bicubic</td><td>-</td><td>-</td><td>34.051</td><td>3.186</td><td>7.587</td></tr>
+              <tr><td>DCT</td><td>8.15</td><td>2457.43</td><td>47.836</td><td>2.578</td><td>2.088</td></tr>
+              <tr><td>LFormer</td><td>2.28</td><td>306.94</td><td>46.651</td><td>2.742</td><td>2.305</td></tr>
+              <tr><td>MIMO</td><td>4.98</td><td><span class="metric-best">49.08</span></td><td>47.839</td><td>2.475</td><td>1.958</td></tr>
+              <tr><td>FeINFN</td><td>3.17</td><td>382.72</td><td>47.833</td><td>2.466</td><td>1.933</td></tr>
+              <tr><td>KNLConv</td><td><span class="metric-best">1.73</span></td><td><span class="metric-second">114.04</span></td><td>46.706</td><td>2.588</td><td>2.487</td></tr>
+              <tr><td>SpecSolver</td><td>3.10</td><td>364.75</td><td>47.652</td><td>2.533</td><td>2.052</td></tr>
+              <tr><td>Otias</td><td>2.99</td><td>278.35</td><td><span class="metric-second">47.848</span></td><td><span class="metric-second">2.459</span></td><td><span class="metric-second">1.907</span></td></tr>
+              <tr class="ours"><td>Ours (LSO)</td><td><span class="metric-second">1.94</span></td><td>222.85</td><td>47.957</td><td>2.438</td><td>1.879</td></tr>
             </tbody>
           </table>
         </div>
@@ -682,7 +693,7 @@
       <div class="big-stat">
         <div class="label">FLOPs</div>
         <div class="num"><span class="accent">222.85</span> G</div>
-        <div class="sub">Measured at CAVE &times;4</div>
+        <div class="sub">Default configuration in the paper</div>
       </div>
       <div class="big-stat">
         <div class="label">Best Metrics</div>
@@ -763,8 +774,9 @@
         <span style="color: var(--text-3);">College of Computer Science and Technology, Zhejiang University of Technology</span>
       </div>
       <div style="display:flex; gap: 18px;">
-        <a href="assets/paper.pdf">Paper PDF</a>
-        <a href="#">Code</a>
+        <a href="assets/Solving_Spatial_Spectral_Fusion_with_Latent_Spectral_Operators_ICML2026_compressed.pdf">Paper PDF</a>
+        <a href="https://github.com/weili419/LSO">Code</a>
+        <a href="https://www.modelscope.cn/datasets/WeiLi419/Latent_Spectral_Operators_Cave_and_Harvard">Dataset</a>
         <a href="#citation">BibTeX</a>
         <a href="#top">Top</a>
       </div>
