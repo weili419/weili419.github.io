@@ -34,6 +34,14 @@ I am a Ph.D. student in the College of Computer Science at Zhejiang University o
   </div>
 </div>
 
+- **Wei Li**, Jiawei Jiang, Jie Wu, Kaihao Yu, Jianwei Zheng\*. LMO: Linear Mamba Operator for MRI Reconstruction. In The Conference on Computer Vision and Pattern Recognition, 2025. (<strong><em><span style="color: red;">CVPR 2025</span></em></strong>, 2025-2-26, <span style="color: orange;">医学图像</span>)
+- **Wei Li**, Junwei Zhu, Honghui Xu, Jiawei Jiang, Jianwei Zheng\*. SpecSolver: Solving Spatial-Spectral Fusion via Semantic Transformer. ACM Multimedia 2025. (<strong><em><span style="color: red;">ACMMM 2025</span></em></strong>, 2025-7-5, <span style="color: orange;">图像融合</span>)
+- Jianwei Zheng, **Wei Li**, Ni Xu, Junwei Zhu, Xuxiao Lin, Xiaoqin Zhang\*. Alias-Free Mamba Neural Operator. In The Thirty-eighth Annual Conference on Neural Information Processing Systems, 2024. (<strong><em><span style="color: red;">NeurIPS 2024</span></em></strong>, 学生一作, 2024-9-26, <span style="color: orange;">偏微分方程</span>)
+- **Wei Li**, Honghui Xu, Yueqian Quan, Zhe Chen, Jianwei Zheng\*. Arbitrary-Scale Spatial-Spectral Fusion using Kernel Integral and Progressive Resampling. (<strong><em><span style="color: red;">Information Fusion 2026</span></em></strong>, 2026-1-8, <span style="color: orange;">图像融合</span>, IF:15.5, 中科院1区Top)
+- **Wei Li**, Jiawei Jiang, Ni Xu, Ying Cui, Yan Li\*, Jianwei Zheng\*. Spatial-Spectral Fusion Neural Operator. IEEE International Conference on Multimedia & Expo (ICME), 2025. (<strong><em><span style="color: red;">ICME 2025</span></em></strong>, 2025-3-18, <span style="color: orange;">图像融合</span>)
+- Jiawei Jiang, **Wei Li**, Jieyuan Pei, Junwei Zhu, Honghui Xu, Yuchao Feng, Jianwei Zheng. S²TA-Fuse: Semantic-Superpixel Tokenized Attention for Spatial Spectral Fusion. (<strong><em><span style="color: red;">TGRS 2026</span></em></strong>, 共一第二, 2026-1-19, <span style="color: orange;">图像融合</span>, 中科院1区Top)
+- 郑建炜, **李卫**, 严亦东, 徐妮, 余凯豪. 一种基于神经算子和渐进重采样的光谱图像融合方法。(专利授权, CN118735805A[P], 2024-10-01).
+
 # Honors and Awards
 
 - 2025年中国科协青年人才托举工程博士生专项计划
