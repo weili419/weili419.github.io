@@ -10,9 +10,18 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span>
 
-I am a Ph.D. student in the College of Computer Science at Zhejiang University of Technology, working with Prof. [Chunhua Shen (沈春华)](https://scholar.google.com/citations?user=Ljk2BvIAAAAJ&hl=en)'s team under the supervision of Prof. [Jianwei Zheng (郑建炜)](https://scholar.google.com/citations?hl=en&user=X0wntOEAAAAJ). I expect to graduate in June 2028.
-
-<strong style="color: red;">I am currently seeking long-term internship opportunities through graduation, with a focus on multimodal large models.</strong>
+<div class="homepage-intro">
+  <div class="homepage-intro__text">
+    <p>I am a Ph.D. student in the College of Computer Science at Zhejiang University of Technology, working with Prof. <a href="https://scholar.google.com/citations?user=Ljk2BvIAAAAJ&hl=en">Chunhua Shen (沈春华)</a>'s team under the supervision of Prof. <a href="https://scholar.google.com/citations?hl=en&user=X0wntOEAAAAJ">Jianwei Zheng (郑建炜)</a>. I expect to graduate in June 2028.</p>
+    <p><strong style="color: red;">I am currently seeking long-term internship opportunities through graduation, with a focus on multimodal large models.</strong></p>
+  </div>
+  <a class="wechat-card" href="images/wechat.png" aria-label="Open Wei Li WeChat QR code">
+    <span class="wechat-card__qr">
+      <img src="images/wechat.png" alt="Wei Li WeChat QR code">
+    </span>
+    <span class="wechat-card__label">WeChat</span>
+  </a>
+</div>
 
 # 📝 Publications
 
