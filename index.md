@@ -56,12 +56,12 @@ I am a Ph.D. student in the College of Computer Science at Zhejiang University o
 
 # Internships
 
-## 2026.03.09 - Present, 阿里巴巴虎鲸文娱, 视频渲染去噪
+## 2026.03.09 - Present, 阿里巴巴, 视频渲染去噪
 
 - 蒙特卡洛采样渲染成像会产生长尾分布噪声，从成像角度出发，利用成像时的统计量解决视频渲染时出现的噪声及伪影。预计投稿 AAAI。
 
 ## 2025.08.04 - 2026.02.04, 同花顺AIGC算法部门, 图像编辑 & 理解与生成编辑统一模型
 
-- FreeEraser: Mask-Free Object Removal via Attention Regularization. (ECCV 在审，初始分数 442)
+- FreeEraser: Mask-Free Object Removal via Attention Regularization.
 - 利用 NanoBanana 构建数据集，LoRA 微调 Flux-Kontext 模型用于图像擦除。图像编辑
 - LongCat, Qwen-image, Qwen-vl, Flux-Kontext, Flux-fill, 理解与生成统一模型
