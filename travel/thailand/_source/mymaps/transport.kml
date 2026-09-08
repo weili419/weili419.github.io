@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?><kml xmlns="http://www.opengis.net/kml/2.2"><Document><name>01 共同行程｜机场与跨城交通</name><description>共用一张地图；蓝线 A 9/29 返程，红线 B 延长至 10/1；F 餐厅，H 候选酒店。</description><Style id="airport"><IconStyle><color>ffc95d26</color><scale>1.1</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle><LineStyle><color>ffc95d26</color><width>3</width></LineStyle></Style><Style id="sight"><IconStyle><color>ff848c00</color><scale>1.1</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle><LineStyle><color>ff848c00</color><width>3</width></LineStyle></Style><Style id="stay"><IconStyle><color>ff856957</color><scale>1.1</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle><LineStyle><color>ff856957</color><width>3</width></LineStyle></Style><Style id="pier"><IconStyle><color>ff967808</color><scale>1.1</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle><LineStyle><color>ff967808</color><width>3</width></LineStyle></Style><Style id="bus"><IconStyle><color>ff256199</color><scale>1.1</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle><LineStyle><color>ff256199</color><width>3</width></LineStyle></Style><Style id="food"><IconStyle><color>ff2e58c8</color><scale>1.1</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle><LineStyle><color>ff2e58c8</color><width>3</width></LineStyle></Style><Style id="hotel"><IconStyle><color>ffb95680</color><scale>1.1</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle><LineStyle><color>ffb95680</color><width>3</width></LineStyle></Style><Style id="route"><IconStyle><color>ff9b826c</color><scale>1.1</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle><LineStyle><color>ff9b826c</color><width>3</width></LineStyle></Style><Style id="blue"><IconStyle><color>ffe36d1a</color><scale>1.1</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle><LineStyle><color>ffe36d1a</color><width>7</width></LineStyle></Style><Style id="red"><IconStyle><color>ff3539e5</color><scale>1.1</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle><LineStyle><color>ff3539e5</color><width>3</width></LineStyle></Style><Placemark id="pvg"><name>9/20、A 9/29、B 10/1｜上海浦东机场 PVG</name><description>机场
+上海浦东机场；最终抵达日期按机票确认。
+9/20 按航班时间：上海直飞普吉，核对行李额度与落地日期。
+A 9/29 按实际航班：返回上海，结束旅行。
+B 10/1 按实际航班：返回上海，结束旅行。
+参考位置，入口和营业安排出发前复核。
+坐标来源：https://www.wikidata.org/wiki/Q36420</description><styleUrl>#airport</styleUrl><Point><coordinates>121.80528,31.14333,0</coordinates></Point></Placemark><Placemark id="hkt"><name>9/20、9/24｜普吉机场 HKT</name><description>机场
+9/20 抵达后：入境、取行李，乘已确认的接机车辆去酒店。
+9/24 上午：按航班倒推，国内段提前约 2 小时到机场；酒店到机场时间另算。
+参考位置，入口和营业安排出发前复核。
+坐标来源：https://www.openstreetmap.org/relation/20416548</description><styleUrl>#airport</styleUrl><Point><coordinates>98.3177466,8.1100064,0</coordinates></Point></Placemark><Placemark id="bkk"><name>9/24、A 9/29、B 10/1｜素万那普机场 BKK</name><description>机场
+素万那普 BKK 与廊曼 DMK 二选一，以各段机票为准，并非两座机场都要去。
+9/24 上午—中午：BKK 1 层 8 号门确认去芭提雅北站的大巴；DMK 另用其机场直达车或包车，不能套用 BKK 站点。
+A 9/29 国际航班起飞前：确认正确机场、航站楼与值机柜台。
+B 10/1 国际航班起飞前：确认正确机场、航站楼与值机柜台。
+曼谷机场二选一，以机票为准。9/24 优先 BKK，当天乘车去芭提雅；DMK 需另核巴士候车及下客点。
+参考位置，入口和营业安排出发前复核。
+坐标来源：https://www.openstreetmap.org/relation/6641648</description><styleUrl>#airport</styleUrl><Point><coordinates>100.7523198,13.6816744,0</coordinates></Point></Placemark><Placemark id="dmk"><name>9/24、A 9/29、B 10/1｜廊曼机场 DMK</name><description>机场
+廊曼 DMK 与素万那普 BKK 二选一，以各段机票为准，并非两座机场都要去。
+9/24 上午—中午：BKK 1 层 8 号门确认去芭提雅北站的大巴；DMK 另用其机场直达车或包车，不能套用 BKK 站点。
+A 9/29 国际航班起飞前：确认正确机场、航站楼与值机柜台。
+B 10/1 国际航班起飞前：确认正确机场、航站楼与值机柜台。
+曼谷机场二选一，以机票为准。9/24 优先 BKK，当天乘车去芭提雅；DMK 需另核巴士候车及下客点。
+参考位置，入口和营业安排出发前复核。
+坐标来源：https://www.openstreetmap.org/way/159466978</description><styleUrl>#airport</styleUrl><Point><coordinates>100.6040594,13.9126385,0</coordinates></Point></Placemark><Placemark id="route-common-20"><name>9/20｜上海 → 普吉岛（顺序示意）</name><description>先安顿下来，把海岛的第一晚留给休息。
+航班尚未预订。地图默认展示普吉当地，点上海机场可查看出发地。晚到就不加景点。
+连线只表示行程先后，不是实际道路、航线或导航。曼谷机场按 BKK 举例。A/B 返程路径重合，可取消勾选另一分支查看。</description><styleUrl>#route</styleUrl><LineString><tessellate>1</tessellate><coordinates>121.80528,31.14333,0 98.3177466,8.1100064,0 98.2924294,7.8964014,0</coordinates></LineString></Placemark><Placemark id="route-common-24"><name>9/24｜普吉 → 曼谷机场 → 芭提雅（顺序示意）</name><description>优先选上午飞抵 BKK 的航班，取行李后在机场换乘去芭提雅的车。
+9/24 只在曼谷机场中转地面交通，不进曼谷市区入住。BKK 优先；若选 DMK，先核实直达巴士实际班次和下客点，错过则使用已确认的包车。国内航班落地到巴士预留约 1.5—2 小时弹性，不是联程保障。
+连线只表示行程先后，不是实际道路、航线或导航。曼谷机场按 BKK 举例。A/B 返程路径重合，可取消勾选另一分支查看。</description><styleUrl>#route</styleUrl><LineString><tessellate>1</tessellate><coordinates>98.3177466,8.1100064,0 100.7523198,13.6816744,0 100.9034026,12.9497299,0 100.8896924,12.9498403,0</coordinates></LineString></Placemark><Placemark id="route-common-26"><name>9/26｜芭提雅 → 曼谷（顺序示意）</name><description>上午乘大巴回曼谷，下午入住，傍晚河畔慢游。
+曼谷从今天起连住同一家。市场放到明天周日，今天不赶市场与宫殿。酒店未定，Asok 为住宿区域参考。
+连线只表示行程先后，不是实际道路、航线或导航。曼谷机场按 BKK 举例。A/B 返程路径重合，可取消勾选另一分支查看。</description><styleUrl>#route</styleUrl><LineString><tessellate>1</tessellate><coordinates>100.9034026,12.9497299,0 100.5840204,13.7194034,0 100.5603142,13.7370043,0 100.5103251,13.7268256,0</coordinates></LineString></Placemark></Document></kml>

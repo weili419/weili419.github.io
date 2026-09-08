@@ -1,0 +1,54 @@
+{
+  "mapId": "1m9-sFljOdplY_kBAH0FWX09AC2BiCms",
+  "mode": "single-map",
+  "pointCount": 79,
+  "colors": {
+    "common": "#6c829b",
+    "A": "#1a6de3",
+    "B": "#e53935"
+  },
+  "layers": [
+    {
+      "key": "transport",
+      "name": "01 共同行程｜机场与跨城交通",
+      "file": "transport.kml",
+      "features": 7,
+      "bytes": 7608
+    },
+    {
+      "key": "phuket",
+      "name": "02 普吉｜9/20—24",
+      "file": "phuket.kml",
+      "features": 27,
+      "bytes": 24453
+    },
+    {
+      "key": "pattaya",
+      "name": "03 芭提雅｜9/24—26",
+      "file": "pattaya.kml",
+      "features": 17,
+      "bytes": 15789
+    },
+    {
+      "key": "bangkok",
+      "name": "04 曼谷｜共用地点",
+      "file": "bangkok.kml",
+      "features": 34,
+      "bytes": 32071
+    },
+    {
+      "key": "A",
+      "name": "05 蓝线 A｜9/29 返程",
+      "file": "A.kml",
+      "features": 1,
+      "bytes": 3317
+    },
+    {
+      "key": "B",
+      "name": "06 红线 B｜9/29—10/1",
+      "file": "B.kml",
+      "features": 6,
+      "bytes": 6604
+    }
+  ]
+}

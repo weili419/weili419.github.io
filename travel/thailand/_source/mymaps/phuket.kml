@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?><kml xmlns="http://www.opengis.net/kml/2.2"><Document><name>02 普吉｜9/20—24</name><description>共用一张地图；蓝线 A 9/29 返程，红线 B 延长至 10/1；F 餐厅，H 候选酒店。</description><Style id="airport"><IconStyle><color>ffc95d26</color><scale>1.1</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle><LineStyle><color>ffc95d26</color><width>3</width></LineStyle></Style><Style id="sight"><IconStyle><color>ff848c00</color><scale>1.1</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle><LineStyle><color>ff848c00</color><width>3</width></LineStyle></Style><Style id="stay"><IconStyle><color>ff856957</color><scale>1.1</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle><LineStyle><color>ff856957</color><width>3</width></LineStyle></Style><Style id="pier"><IconStyle><color>ff967808</color><scale>1.1</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle><LineStyle><color>ff967808</color><width>3</width></LineStyle></Style><Style id="bus"><IconStyle><color>ff256199</color><scale>1.1</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle><LineStyle><color>ff256199</color><width>3</width></LineStyle></Style><Style id="food"><IconStyle><color>ff2e58c8</color><scale>1.1</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle><LineStyle><color>ff2e58c8</color><width>3</width></LineStyle></Style><Style id="hotel"><IconStyle><color>ffb95680</color><scale>1.1</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle><LineStyle><color>ffb95680</color><width>3</width></LineStyle></Style><Style id="route"><IconStyle><color>ff9b826c</color><scale>1.1</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle><LineStyle><color>ff9b826c</color><width>3</width></LineStyle></Style><Style id="blue"><IconStyle><color>ffe36d1a</color><scale>1.1</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle><LineStyle><color>ffe36d1a</color><width>7</width></LineStyle></Style><Style id="red"><IconStyle><color>ff3539e5</color><scale>1.1</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle><LineStyle><color>ff3539e5</color><width>3</width></LineStyle></Style><Placemark id="patong"><name>9/20—9/24 · 4 晚｜芭东海滩／住宿区</name><description>住宿区域
+建议住宿区域，尚未确定酒店。
+9/20 晚上：在住宿附近吃饭、补水、休息。芭东只是住宿区域建议。
+9/22 傍晚：返回普吉，接送回酒店，晚餐后休息。
+9/23 晚上：回酒店整理行李，核对明天航班与接机。
+参考位置，入口和营业安排出发前复核。
+坐标来源：https://www.openstreetmap.org/relation/14018589</description><styleUrl>#stay</styleUrl><Point><coordinates>98.2924294,7.8964014,0</coordinates></Point></Placemark><Placemark id="karon"><name>9/21｜卡伦海滩</name><description>景点
+9/21 上午偏晚：卡伦海边散步，找地方吃午餐。
+参考位置，入口和营业安排出发前复核。
+坐标来源：https://www.openstreetmap.org/way/134394729</description><styleUrl>#sight</styleUrl><Point><coordinates>98.2917816,7.8439856,0</coordinates></Point></Placemark><Placemark id="kata"><name>9/21｜卡塔海滩</name><description>景点
+9/21 下午：卡塔海滩、咖啡店，天气不好就延长室内休息。
+参考位置，入口和营业安排出发前复核。
+坐标来源：https://www.openstreetmap.org/relation/4235947</description><styleUrl>#sight</styleUrl><Point><coordinates>98.2960258,7.8193895,0</coordinates></Point></Placemark><Placemark id="viewpoint"><name>9/21｜卡伦观景台</name><description>景点
+9/21 傍晚 · 可取舍：乘车去观景台看三湾，不安排步行串联所有景点。
+参考位置，入口和营业安排出发前复核。
+坐标来源：https://www.openstreetmap.org/node/1562239992</description><styleUrl>#sight</styleUrl><Point><coordinates>98.3021839,7.7972523,0</coordinates></Point></Placemark><Placemark id="chalongpier"><name>9/22｜查龙码头</name><description>码头
+实际码头与集合点以团方通知为准。
+9/22 早上 · 以团方为准：查龙码头作为出发区域参考，实际集合点以运营方通知为准。
+参考位置，入口和营业安排出发前复核。
+坐标来源：https://www.openstreetmap.org/node/270986823</description><styleUrl>#pier</styleUrl><Point><coordinates>98.350993,7.8193895,0</coordinates></Point></Placemark><Placemark id="racha"><name>9/22｜皇帝岛 · Racha Yai</name><description>景点
+9/21—23 按海况互换；岛屿参考位置，不是指定入水点。
+9/22 上午—下午 · 暂定主选：皇帝岛浮潜，水中向导带队。岛上区域参考点，并非指定入水点。
+参考位置，入口和营业安排出发前复核。
+坐标来源：https://www.openstreetmap.org/relation/5660749</description><styleUrl>#sight</styleUrl><Point><coordinates>98.3663641,7.6024567,0</coordinates></Point></Placemark><Placemark id="coral"><name>浮潜日备选 · 非必去｜备选 · 珊瑚岛 · Banana Beach</name><description>景点
+珊瑚岛 Banana Beach，替代皇帝岛的备选方案。
+参考位置，入口和营业安排出发前复核。
+坐标来源：https://www.openstreetmap.org/relation/5660833</description><styleUrl>#sight</styleUrl><Point><coordinates>98.3820778,7.7451031,0</coordinates></Point></Placemark><Placemark id="oldtown"><name>9/23｜普吉老街</name><description>景点
+9/23 上午—午后：老街建筑、街边小吃与咖啡店，午餐就近解决。
+参考位置，入口和营业安排出发前复核。
+坐标来源：https://www.openstreetmap.org/node/4395955589</description><styleUrl>#sight</styleUrl><Point><coordinates>98.3892206,7.8847774,0</coordinates></Point></Placemark><Placemark id="chalong"><name>9/23｜查龙寺</name><description>景点
+9/23 下午：查龙寺，穿有袖上衣与过膝下装，按现场要求脱鞋。
+参考位置，入口和营业安排出发前复核。
+坐标来源：https://www.openstreetmap.org/way/242673271</description><styleUrl>#sight</styleUrl><Point><coordinates>98.3370972,7.8462522,0</coordinates></Point></Placemark><Placemark id="food-briley"><name>9/20、9/21、9/22、9/23、9/24｜F1 Briley Chicken Rice</name><description>F1 · 普吉 · 芭东 Nanai 路（地址待核实）
+地址待再次核实：Google 当前列 17 Nanai Rd；旧游记列 Rat-U-Thit 路。本标记按当前 Google 店铺点。
+每餐三选一，不代表这些餐都必须来此店。
+9/20 午餐 选项A：鸡饭；也可选猪脚饭；฿80–160／人（规划额）。仅午后较早到芭东才选；HKT 到酒店还有接驳。
+9/20 晚餐 选项C：鸡饭；也可选猪脚饭；฿80–160／人（规划额）。仅较早入住且店铺仍营业时选；夜间到达改住宿旁热食。
+9/21 早餐 选项A：鸡饭；也可选猪脚饭；฿80–160／人（规划额）。适合早餐、午餐；Google 当前列 17 Nanai Rd，与旧游记 Rat-U-Thit 路地址不同，先确认门店再出发。
+9/22 早餐 选项B：鸡饭；也可选猪脚饭；฿80–130／人（规划额）。接送较晚且来得及时可吃小份鸡饭；赶时间就选早餐盒。
+9/22 午餐 选项C：鸡饭；也可选猪脚饭；฿80–160／人（规划额）。仅停航并留在芭东的陆地备用午餐；正常出海时不适用。 这里是 3 个条件方案，不是岛上 3 家可随意走到的餐馆。
+9/22 晚餐 选项C：鸡饭；也可选猪脚饭；฿80–160／人（规划额）。返程早、仍营业时选鸡饭；不为赶店催促船程。
+9/23 早餐 选项C：鸡饭；也可选猪脚饭；฿80–160／人（规划额）。想睡到自然醒就在芭东吃，再去老街；不必专程赶早茶。
+9/24 早餐 选项A：鸡饭；也可选猪脚饭；฿80–160／人（规划额）。适合早餐、午餐；Google 当前列 17 Nanai Rd，与旧游记 Rat-U-Thit 路地址不同，先确认门店再出发。
+位置来源：https://www.google.com/maps/place/%E9%B8%A1%E9%A5%AD%E5%BA%97/@7.8946925,98.3052574,17z/data=!3m1!4b1!4m6!3m5!1s0x30503a985da43c21:0x19a8e2e84c747b66!8m2!3d7.8946925!4d98.3052574!16s%2Fg%2F11b769bpzm
+Phuket 101｜Briley：https://www.phuket101.net/briley-chicken-rice/
+大众点评｜Briley 历史图片页：https://www.dianping.com/shop/21961199/photos?pg=239</description><styleUrl>#food</styleUrl><Point><coordinates>98.3052574,7.8946925,0</coordinates></Point></Placemark><Placemark id="food-no6"><name>9/20、9/21、9/22、9/23｜F2 No.6 Restaurant 原店</name><description>F2 · 普吉 · 芭东 Rat-U-Thit 路
+Rat-U-Thit 路 186 号原店，非山上店。
+每餐三选一，不代表这些餐都必须来此店。
+9/20 晚餐 选项A：泰式炒粉、冬阴功、炒空心菜；฿200–350／人（规划额）。原店公开时间 07:00–23:30；排队超过 20 分钟就换备选。
+9/21 早餐 选项B：炒面／炒饭＋热茶；฿120–220／人（规划额）。原店公开时间 07:00–23:30；排队超过 20 分钟就换备选。
+9/21 晚餐 选项C：泰式炒粉、冬阴功、炒空心菜；฿200–350／人（规划额）。已回到芭东酒店后选择。
+9/22 晚餐 选项A：泰式炒粉、冬阴功、炒空心菜；฿200–350／人（规划额）。回芭东后吃饭；疲劳就直接选最近的一家。
+9/23 晚餐 选项B：泰式炒粉、冬阴功、炒空心菜；฿200–350／人（规划额）。原店公开时间 07:00–23:30；排队超过 20 分钟就换备选。
+位置来源：https://www.google.com/maps/place/No.6+Restaurant/data=!4m7!3m6!1s0x30503a9d39d7987d:0xd3fdd7c85dc2fde!8m2!3d7.8939023!4d98.2984316!16s%2Fg%2F1q2v_6wv5!19sChIJfZjXOZ06UDAR3i_chXzdPw0
+Phuket 101｜No.6 原店：https://www.phuket101.net/no-6-restaurant-patong-beach/</description><styleUrl>#food</styleUrl><Point><coordinates>98.2984316,7.8939023,0</coordinates></Point></Placemark><Placemark id="food-no9"><name>9/20、9/22、9/23｜F3 No.9 Restaurant</name><description>F3 · 普吉 · 芭东北端
+芭东北端原店，非 No.9 2nd 分店。
+每餐三选一，不代表这些餐都必须来此店。
+9/20 晚餐 选项B：泰式家常炒菜＋米饭；฿200–350／人（规划额）。靠近海滩北端；从南芭东出发需考虑接驳。
+9/22 晚餐 选项B：泰式家常炒菜＋米饭；฿200–350／人（规划额）。靠近海滩北端；从南芭东出发需考虑接驳。
+9/23 晚餐 选项A：泰式家常炒菜＋米饭；฿200–350／人（规划额）。查龙寺后回芭东再吃。
+位置来源：https://www.google.com/maps/place/No.9+Restaurant/data=!4m7!3m6!1s0x30503a9a70eed5a5:0x441bcc545d0d50bd!8m2!3d7.905803!4d98.2981798!16s%2Fg%2F1q5bkpb1n!19sChIJpdXucJo6UDARvVANXVTMG0Q
+Phuket 101｜No.9：https://www.phuket101.net/no-9-restaurant-in-patong-beach-phuket/</description><styleUrl>#food</styleUrl><Point><coordinates>98.2981798,7.905803,0</coordinates></Point></Placemark><Placemark id="food-khrua"><name>9/21｜F4 Khrua Nong Bio</name><description>F4 · 普吉 · 卡伦 Patak Soi 14
+Google 地图店铺参考位置；入口请按现场确认。
+每餐三选一，不代表这些餐都必须来此店。
+9/21 午餐 选项A：Pad Thai 炒河粉＋泰式炒菜；฿180–300／人（规划额）。小红书有正面体验；地图资料列 12:00–22:00，适合卡伦当天。
+9/21 晚餐 选项B：Pad Thai 炒河粉＋泰式炒菜；฿180–300／人（规划额）。仍在卡伦时选择，12:00 后营业。
+位置来源：https://www.google.com/maps/place/Khrua+Nong+Bio/@7.8274422,98.3017303,17z/data=!3m1!4b1!4m6!3m5!1s0x305025846db65ba5:0x233541c584e77e11!8m2!3d7.8274422!4d98.3017303!16s%2Fg%2F1hfpkrh5w
+小红书｜普吉三家泰餐体验：https://www.xiaohongshu.com/explore/6a9aac4000000000260308f0
+Waze｜Khrua Nong Bio 位置与时间：https://www.waze.com/live-map/directions/th/%E0%B8%88.%E0%B8%A0%E0%B8%B9%E0%B9%80%E0%B8%81%E0%B9%87%E0%B8%95/tambon-karon/khrua-nong-bio?to=place.ChIJpVu2bYQlUDAREX7nhMVBNSM</description><styleUrl>#food</styleUrl><Point><coordinates>98.3017303,7.8274422,0</coordinates></Point></Placemark><Placemark id="food-red"><name>9/21｜F5 Red Chair Restaurant</name><description>F5 · 普吉 · 卡塔 89 Koktanod 路
+Google 地图店铺参考位置；入口请按现场确认。
+每餐三选一，不代表这些餐都必须来此店。
+9/21 午餐 选项B：玛莎曼鸡肉咖喱、冬阴功；฿200–350／人（规划额）。资料列 11:00–21:00；从海边到内街，先看步行路线。
+9/21 晚餐 选项A：玛莎曼鸡肉咖喱、冬阴功；฿200–350／人（规划额）。如果中午吃过这家，换另两项；吃完再回芭东。
+位置来源：https://www.google.com/maps/place/Red+Chair/@7.8164794,98.3072083,17z/data=!3m1!4b1!4m6!3m5!1s0x3050258a158bbd39:0x6bafa556f6857dcf!8m2!3d7.8164794!4d98.3072083!16s%2Fg%2F11b7k0bcy1
+Tripadvisor｜Red Chair 店铺资料：https://www.tripadvisor.com/Restaurant_Review-g1210687-d1791984-Reviews-Red_Chair_Restaurant-Kata_Beach_Karon_Phuket.html</description><styleUrl>#food</styleUrl><Point><coordinates>98.3072083,7.8164794,0</coordinates></Point></Placemark><Placemark id="food-sugar"><name>9/21｜F6 Sugar and Spice</name><description>F6 · 普吉 · 卡塔 98/7 Kata Road
+Google 当前列 98/7 Kata Rd；已按此处标记，旧资料 Patak Road 地址未沿用。
+每餐三选一，不代表这些餐都必须来此店。
+9/21 午餐 选项C：青咖喱鸡＋米饭、泰式炒粉；฿200–350／人（规划额）。用于卡塔海边的午晚餐；具体点菜以当天菜单为准。
+位置来源：https://www.google.com/maps/place/Sugar+and+Spice+Restaurant+and+Inn/@7.8236717,98.2982515,17z/data=!4m9!3m8!1s0x3050258545558fd7:0xc5dd056818c4ce72!5m2!4m1!1i2!8m2!3d7.8236717!4d98.2982515!16s%2Fg%2F1w6gn87h
+Joey Santini｜卡塔餐饮：https://www.joeysantini.com/kata-beach/</description><styleUrl>#food</styleUrl><Point><coordinates>98.2982515,7.8236717,0</coordinates></Point></Placemark><Placemark id="food-roti"><name>9/23｜F7 Roti Thaew Nam</name><description>F7 · 普吉 · 老街 Thep Krasattri 路
+Google 地图店铺参考位置；入口请按现场确认。
+每餐三选一，不代表这些餐都必须来此店。
+9/23 早餐 选项A：鸡蛋薄饼配咖喱、泰式热茶；฿80–160／人（规划额）。早上去，公开资料约 07:00–12:00。
+位置来源：https://www.google.com/maps/place/Roti+Thaew+Nam/@7.8848203,98.3908541,17z/data=!3m1!4b1!4m6!3m5!1s0x3050313f9a49a29b:0x81d9950aa85ef8c4!8m2!3d7.8848203!4d98.3908541!16s%2Fg%2F11fjvv75wz
+Phuket 101｜Roti Thaew Nam：https://www.phuket101.net/roti-thaew-nam/</description><styleUrl>#food</styleUrl><Point><coordinates>98.3908541,7.8848203,0</coordinates></Point></Placemark><Placemark id="food-boon"><name>9/23｜F8 Boonrat Dim Sum 老城店</name><description>F8 · 普吉 · Bangkok Road
+Bangkok Road 老城店，非其他 Boonrat 分店。
+每餐三选一，不代表这些餐都必须来此店。
+9/23 早餐 选项B：普吉式早茶、烧卖和蒸点；฿120–220／人（规划额）。官网列老城 Bangkok Road 店；早点前往，出发前确认售完时间。
+位置来源：https://www.google.com/maps/place/Boonrat+Dim+Sum/@7.8822707,98.3870894,17z/data=!3m1!4b1!4m6!3m5!1s0x305031e36e0fc4d7:0x7de99d2a7a03cfc8!8m2!3d7.8822707!4d98.3870894!16s%2Fg%2F1hc2c8xrt
+Boonrat 官方｜分店：https://www.boonratdimsum.com/</description><styleUrl>#food</styleUrl><Point><coordinates>98.3870894,7.8822707,0</coordinates></Point></Placemark><Placemark id="food-mee"><name>9/23｜F9 Mee Ton Poe 钟楼店</name><description>F9 · 普吉 · 老城钟楼环岛
+钟楼旁 Phuket Town 店，非 2 店或 3 店。
+每餐三选一，不代表这些餐都必须来此店。
+9/23 午餐 选项A：福建炒面＋蛋；沙爹分着吃；฿100–180／人（规划额）。当地泰华饮食代表，安排白天吃。
+位置来源：https://www.google.com/maps/place/MeeTonPoe+Phuket+Town/data=!4m7!3m6!1s0x30502fc6bbe419d5:0xfdc7ae5c8e7d9daf!8m2!3d7.8800408!4d98.3920927!16s%2Fg%2F1hc2jsczg!19sChIJ1Rnku8YvUDARr519jlyux_0
+Phuket 101｜Mee Ton Poe：https://www.phuket101.net/mee-ton-poe-hokkien-noodles-phuket/</description><styleUrl>#food</styleUrl><Point><coordinates>98.3920927,7.8800408,0</coordinates></Point></Placemark><Placemark id="food-chuan"><name>9/23｜F10 Chuan Chim</name><description>F10 · 普吉 · 老城 Montri 路
+Google 地图店铺参考位置；入口请按现场确认。
+每餐三选一，不代表这些餐都必须来此店。
+9/23 午餐 选项C：蒜椒鱿鱼、海鲜冬阴功配饭；฿250–450／人（规划额）。参考午市 11:30–13:30，周日休；现炒可能较慢，周三到店先问等候时间。
+位置来源：https://www.google.com/maps/place/Chuan+Chim/@7.8828319,98.3928032,17z/data=!3m1!4b1!4m6!3m5!1s0x305031f90c41fea3:0xfec1e72037903b63!8m2!3d7.8828319!4d98.3928032!16s%2Fg%2F11cn93yzk0
+Apple Maps／米其林｜Chuan Chim：https://maps.apple.com/place?place-id=I3AACF16E366A9F00</description><styleUrl>#food</styleUrl><Point><coordinates>98.3928032,7.8828319,0</coordinates></Point></Placemark><Placemark id="food-one"><name>9/23｜F11 One Chun 一纯</name><description>F11 · 普吉 · 老街 Thep Krasattri 路
+Google 地图店铺参考位置；入口请按现场确认。
+每餐三选一，不代表这些餐都必须来此店。
+9/23 午餐 选项B：Mu Hong 炖猪肉、泰南菜；฿300–500／人（规划额）。三人分享 3–4 道菜。小红书口味评价有分歧，先少点；10:00–22:00 为公开参考。
+位置来源：https://www.google.com/maps/place/One+Chun+Cafe+%26+Restaurant/@7.8858088,98.3907123,17z/data=!3m1!4b1!4m6!3m5!1s0x305031fa0136f989:0xf3042f816ed20bf4!8m2!3d7.8858088!4d98.3907123!16s%2Fg%2F12cp005bx
+米其林｜One Chun：https://guide.michelin.com/us/en/phuket-region/phuket/restaurant/one-chun
+小红书｜One Chun 近期口味反馈：https://www.xiaohongshu.com/explore/6a8ffcde00000000210273fb</description><styleUrl>#food</styleUrl><Point><coordinates>98.3907123,7.8858088,0</coordinates></Point></Placemark><Placemark id="food-gobenz"><name>9/23｜F12 Go Benz</name><description>F12 · 普吉 · 老城 Krabi 路
+Google 地图店铺参考位置；入口请按现场确认。
+每餐三选一，不代表这些餐都必须来此店。
+9/23 晚餐 选项C：干粥饭 Khao Tom Haeng、脆皮猪肉；฿100–180／人（规划额）。想吃这家，需愿意查龙寺后回老城、等到晚间营业；会增加折返。
+位置来源：https://www.google.com/maps/place/Go+Benz+Rice+Porridge+Phuket/@7.8847328,98.3825828,17z/data=!3m1!4b1!4m6!3m5!1s0x305031e5906dc545:0xc039ca4579378a4!8m2!3d7.8847328!4d98.3825828!16s%2Fg%2F11b6bpqz9k
+Phuket 101｜老城餐饮：https://www.phuket101.net/best-thai-restaurants-in-phuket-town/</description><styleUrl>#food</styleUrl><Point><coordinates>98.3825828,7.8847328,0</coordinates></Point></Placemark><Placemark id="hotel-andakira"><name>9/20—24 · 4 晚｜H1 安达凯拉酒店</name><description>H1 · 候选酒店，未预订
+Andakira Hotel Patong
+芭东中心 · Phangmuang Sai Gor Road
+Deluxe Triple Room｜豪华三人房
+3 张单人床；44㎡
+共用：9/20—24 · 4 晚；9/6 历史展示价 ¥445，计价口径及新订单总额待核实。
+飞猪查询：https://hotel.fliggy.com/hotel_detail2.htm?shid=50390338&amp;city=904986&amp;checkIn=2026-09-20&amp;checkOut=2026-09-24&amp;roomNum=1&amp;aNum_1=3&amp;cNum_1=0
+四晚住同一家，方便芭东吃饭、逛江西冷与班赞市场，也方便向出海团确认酒店接送。
+离海滩有一段步行距离；官网同名房型也可能是大床＋单床，务必选择飞猪明确写「3 张单人床」的报价。
+酒店资料：https://andakirapatong.andakiragroup.com/deluxe-triple.html
+坐标来源：https://mapcarta.com/32117668</description><styleUrl>#hotel</styleUrl><Point><coordinates>98.30276,7.89411,0</coordinates></Point></Placemark><Placemark id="hotel-lantern"><name>9/20—24 · 4 晚｜H2 芭东彩灯度假村</name><description>H2 · 候选酒店，未预订
+The Lantern Resorts Patong Phuket
+芭东中心 · Soi Sansabai
+View Pent Triple｜景观三人房
+3 张单人床；44㎡
+共用：9/20—24 · 4 晚；9/6 历史展示价 ¥470，计价口径及新订单总额待核实。
+飞猪查询：https://hotel.fliggy.com/hotel_detail2.htm?shid=50390837&amp;city=904986&amp;checkIn=2026-09-20&amp;checkOut=2026-09-24&amp;roomNum=1&amp;aNum_1=3&amp;cNum_1=0
+在 Sansabai 巷，适合把江西冷、班赞市场和芭东晚餐放在一起安排。
+靠近热闹街区，选房时关注朝向与夜间噪音。官网床型摘要有混写，优先以具体订单的三单床说明为准。
+酒店资料：https://www.lantern-resorts.com/rooms/view-pent-triple/
+坐标来源：https://www.yellowpages.co.th/profile/เดอะ-แลนเทิร์น-รีสอร์ท-ป่าตอง-dUJvHXYmi</description><styleUrl>#hotel</styleUrl><Point><coordinates>98.30017,7.892596,0</coordinates></Point></Placemark><Placemark id="hotel-koko-patong"><name>9/20—24 · 4 晚｜H3 普吉岛可可酒店 · 芭东店</name><description>H3 · 候选酒店，未预订
+Kokotel Phuket Patong
+芭东北段 · Sawasdirak Road
+Koko Family Room｜可可家庭房
+3 张单人床；飞猪标注 48㎡
+共用：9/20—24 · 4 晚；9/6 历史展示价 ¥499，计价口径及新订单总额待核实。
+飞猪查询：https://hotel.fliggy.com/hotel_detail2.htm?shid=55570065&amp;city=904986&amp;checkIn=2026-09-20&amp;checkOut=2026-09-24&amp;roomNum=1&amp;aNum_1=3&amp;cNum_1=0
+位于芭东北段、靠近海滩的 Sawasdirak 路，适合早晚散步后就近吃饭。
+同品牌还有奈阳海滩店，订房时认准 Phuket Patong；Koko Party 是上下铺房，这里推荐的是三单床 Family。
+酒店资料：https://www.kokotel.com/phuket-patong/
+坐标来源：https://fromto.travel/en/thailand/kokotel-phuket-patong-patong-beach</description><styleUrl>#hotel</styleUrl><Point><coordinates>98.29707,7.89781,0</coordinates></Point></Placemark><Placemark id="route-common-21"><name>9/21｜卡伦、卡塔与海景（顺序示意）</name><description>不赶早。海边走走，傍晚看景，再回酒店。
+今天与 9/22、9/23 可以按海况互换。红旗时不上水；海滩散步不等于安排岸边浮潜。
+连线只表示行程先后，不是实际道路、航线或导航。曼谷机场按 BKK 举例。A/B 返程路径重合，可取消勾选另一分支查看。</description><styleUrl>#route</styleUrl><LineString><tessellate>1</tessellate><coordinates>98.2917816,7.8439856,0 98.2960258,7.8193895,0 98.3021839,7.7972523,0</coordinates></LineString></Placemark><Placemark id="route-common-22"><name>9/22｜第一次浮潜，去皇帝岛（顺序示意）</name><description>暂定一日游：酒店接送、向导带队、先练习再浮潜。
+岛屿标记只帮助理解位置，不是可以自行下水的浮潜点。具体海湾、上岛点与下水安排由持牌团方依当天海况决定。停航则改陆地行程。
+连线只表示行程先后，不是实际道路、航线或导航。曼谷机场按 BKK 举例。A/B 返程路径重合，可取消勾选另一分支查看。</description><styleUrl>#route</styleUrl><LineString><tessellate>1</tessellate><coordinates>98.350993,7.8193895,0 98.3663641,7.6024567,0 98.2924294,7.8964014,0</coordinates></LineString></Placemark><Placemark id="route-common-23"><name>9/23｜普吉老街与查龙寺（顺序示意）</name><description>逛吃、喝咖啡，留出一日可调整的陆地安排。
+这是第二个浮潜备用日期。若改到今天出海，把老街与寺庙移到此前取消出海的那一天。
+连线只表示行程先后，不是实际道路、航线或导航。曼谷机场按 BKK 举例。A/B 返程路径重合，可取消勾选另一分支查看。</description><styleUrl>#route</styleUrl><LineString><tessellate>1</tessellate><coordinates>98.3892206,7.8847774,0 98.3370972,7.8462522,0 98.2924294,7.8964014,0</coordinates></LineString></Placemark></Document></kml>

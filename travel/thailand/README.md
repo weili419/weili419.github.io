@@ -6,7 +6,7 @@
 - `_source/public/trip.json`：共同日期、A/B 返程方案、景点坐标。
 - `_source/app/food-data.ts`：每天三餐及餐厅推荐；`public/food-locations.json`：餐厅坐标。
 - `_source/public/hotels.json`：酒店、床型与方案日期；历史报价仅供追溯。
-- `_source/public/trip-map.js`：互动地图；`trip-guide.js`：主页面与地图的方案联动。
+- `_source/public/trip-map.js`：互动地图，默认共用一图对比蓝色 A 和红色 B，可分别隐藏分支；`trip-guide.js`：主页面与地图的方案联动。
 - `index.html`、`map.html`、`assets/`：生成的发布文件，请通过源码修改。
 
 在本目录的 `_source` 中执行（Node 22.13+、Python 3）：
@@ -28,3 +28,5 @@ node --experimental-strip-types scripts/check-plans.mjs
 静态发布不依赖桌面原目录或 Node 服务。地图街道图需要联网，加载失败时显示内置地理概览。Jekyll 不会发布以下划线开头的源码目录。
 
 行程：9/20—24 普吉 4 晚；9/24 机场直达芭提雅，住至 9/26；曼谷 A 住至 9/29，B 住至 10/1。餐饮和酒店均为候选，机票、酒店及团均未预订。新日期酒店报价需重新查询。
+
+Google My Maps 尚未接入：文件选择器被安全页面拦截。`_source/mymaps/README.md` 记录同一张地图的六个 KML 图层、待完成步骤与数据生成方式。当前线上地图保持 MapLibre/OpenFreeMap，不声称已完成 Google 替换。静态导出为地图与资源 URL 添加内容版本，避免缓存混用旧文件。

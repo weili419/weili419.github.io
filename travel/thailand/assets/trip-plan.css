@@ -2,3 +2,5 @@
 .map-plan button{border:1px solid #cbd5e1;border-radius:9px;background:#fff;padding:10px 12px;font:inherit;font-size:12px;cursor:pointer;color:#334155}
 .map-plan button[aria-pressed=true]{background:#185adb;color:#fff;border-color:#185adb}
 @media(max-width:680px){.map-heading{flex-wrap:wrap;gap:12px}.map-plan{width:100%}.map-plan button{flex:1}.map-heading h1{font-size:22px}}
+
+.branch-toggles{display:grid;gap:8px;margin:12px 0 18px}.branch-toggles button{text-align:left;border:1px solid var(--branch);border-left:5px solid var(--branch);border-radius:7px;padding:10px 12px;color:var(--branch);font-size:12px;background:white}.branch-toggles button[aria-pressed=false]{opacity:.55;border-style:dashed}.map-caption{top:110px;z-index:2}.map-plan #plan-B[aria-pressed=true]{background:#e53935;border-color:#e53935}@media(max-width:760px){.map-caption{top:110px}.map-tools button{padding:8px;font-size:10px}.workspace{height:auto}}

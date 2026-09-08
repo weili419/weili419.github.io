@@ -3,6 +3,7 @@
 import os
 import shutil
 import html
+import hashlib
 from html.parser import HTMLParser
 from pathlib import Path
 from urllib.request import urlopen
@@ -82,6 +83,16 @@ assert 'src="map.html"' in result and '普吉岛：把一天留给浮潜' in res
 assert '三个人，三张床，住哪里？' in result and result.count('data-hotel-map=')==9
 assert 'data-plan-switch="A"' in result and 'data-plan-switch="B"' in result
 assert 'assets/trip-guide.js' in result
+# Give changed assets new URLs so a refresh cannot mix old map code with new HTML.
+for name in names + ['guide.css']:
+    version = hashlib.sha256((ASSETS / name).read_bytes()).hexdigest()[:12]
+    for attr in ['src', 'href']:
+        old = attr + '="assets/' + name + '"'
+        new = attr + '="assets/' + name + '?v=' + version + '"'
+        result = result.replace(old, new)
+        map_html = map_html.replace(old, new)
+map_version = hashlib.sha256(map_html.encode()).hexdigest()[:12]
+result = result.replace('src="map.html"', 'src="map.html?v=' + map_version + '"')
 OUTPUT.write_text(result)
 MAP_OUTPUT.write_text(map_html)
 print(f'Exported {OUTPUT.name}: {OUTPUT.stat().st_size:,} bytes; {MAP_OUTPUT.name}; {len(names)+1} assets; {parser.count} packing checkboxes.')

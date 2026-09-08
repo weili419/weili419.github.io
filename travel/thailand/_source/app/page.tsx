@@ -26,7 +26,7 @@ export default function Home() {
   <header className="topbar"><a href="#" className="brand"><Waves size={23}/><span>THAILAND <b>旅行手记</b></span></a><span className="edition">2026 / SEPTEMBER</span></header>
   <main>
    <TripPlan/>
-   <section id="travel-map" className="travel-map-section"><iframe title="泰国旅行 A／B 方案每日行程地图" src="/trip-map.html" className="travel-map-frame" /></section>
+   <section id="travel-map" className="travel-map-section"><p className="map-version-note">地图已更新为蓝红分支对比。当前仍使用原有底图；Google 我的地图版本待数据导入后接入。</p><iframe title="泰国旅行 A／B 方案每日行程地图" src="/trip-map.html" className="travel-map-frame" /></section>
    <nav className="section-nav" aria-label="攻略导航"><a href="#travel-map">旅行地图</a><a href="#food">每天吃什么 <ArrowUpRight size={15}/></a><a href="#hotels">三人酒店 <ArrowUpRight size={15}/></a><a href="#itinerary">每日行程</a><a href="#snorkeling">普吉浮潜 <ArrowUpRight size={15}/></a><a href="#transport">交通与住宿</a><a href="#budget">旅行预算</a><a href="#packing">出发准备</a></nav>
    <section className="trip-heading guide-heading"><div><p className="eyebrow"><span data-plan-only="A">09.20 — 09.29 · 10 天 9 晚</span><span data-plan-only="B">09.20 — 10.01 · 12 天 11 晚</span></p><h1>泰国旅行手记<span>先普吉，再芭提雅，最后曼谷</span></h1><p className="intro">3 人同行 · 各睡一张床 · 普吉进，曼谷出</p></div><div className="date-stamp"><CalendarDays/><span>START</span><strong>09.20</strong></div></section>
    <div className="route-strip"><span>上海 <Plane size={15}/></span><span><b>普吉岛</b><small>4 晚</small></span><i>→</i><span><b>曼谷机场</b><small>当天转车</small></span><i>→</i><span><b>芭提雅</b><small>2 晚</small></span><i>→</i><span><b>曼谷</b><small data-plan-only="A">3 晚</small><small data-plan-only="B">5 晚</small></span><span><Plane size={15}/> 上海</span></div>

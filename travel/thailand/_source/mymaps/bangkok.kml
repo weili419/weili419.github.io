@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?><kml xmlns="http://www.opengis.net/kml/2.2"><Document><name>04 曼谷｜共用地点</name><description>共用一张地图；蓝线 A 9/29 返程，红线 B 延长至 10/1；F 餐厅，H 候选酒店。</description><Style id="airport"><IconStyle><color>ffc95d26</color><scale>1.1</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle><LineStyle><color>ffc95d26</color><width>3</width></LineStyle></Style><Style id="sight"><IconStyle><color>ff848c00</color><scale>1.1</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle><LineStyle><color>ff848c00</color><width>3</width></LineStyle></Style><Style id="stay"><IconStyle><color>ff856957</color><scale>1.1</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle><LineStyle><color>ff856957</color><width>3</width></LineStyle></Style><Style id="pier"><IconStyle><color>ff967808</color><scale>1.1</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle><LineStyle><color>ff967808</color><width>3</width></LineStyle></Style><Style id="bus"><IconStyle><color>ff256199</color><scale>1.1</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle><LineStyle><color>ff256199</color><width>3</width></LineStyle></Style><Style id="food"><IconStyle><color>ff2e58c8</color><scale>1.1</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle><LineStyle><color>ff2e58c8</color><width>3</width></LineStyle></Style><Style id="hotel"><IconStyle><color>ffb95680</color><scale>1.1</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle><LineStyle><color>ffb95680</color><width>3</width></LineStyle></Style><Style id="route"><IconStyle><color>ff9b826c</color><scale>1.1</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle><LineStyle><color>ff9b826c</color><width>3</width></LineStyle></Style><Style id="blue"><IconStyle><color>ffe36d1a</color><scale>1.1</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle><LineStyle><color>ffe36d1a</color><width>7</width></LineStyle></Style><Style id="red"><IconStyle><color>ff3539e5</color><scale>1.1</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle><LineStyle><color>ff3539e5</color><width>3</width></LineStyle></Style><Placemark id="asok"><name>9/26—29 · A 3 晚／9/26—10/1 · B 5 晚｜Asok／Sukhumvit 住宿区</name><description>住宿区域
+建议住宿区域，尚未确定酒店。
+9/26 下午：入住、午休；堵车或疲劳时延后河边活动。
+9/27 下午：回酒店午休、洗衣和整理行李。
+A 9/29 按航班倒推：酒店退房、检查证件和行李。早班机可调整为机场住宿。
+B 9/30 午后：回住宿区吃午餐、休息、收拾行李。
+B 10/1 按航班倒推：酒店退房、检查证件和行李。早班机可调整为机场住宿。
+参考位置，入口和营业安排出发前复核。
+坐标来源：https://www.openstreetmap.org/relation/2108210</description><styleUrl>#stay</styleUrl><Point><coordinates>100.5603142,13.7370043,0</coordinates></Point></Placemark><Placemark id="terminal21"><name>B 9/30｜Terminal 21 Asok</name><description>景点
+B 9/30 傍晚：就近晚餐和最后的购物，早点休息。
+参考位置，入口和营业安排出发前复核。
+坐标来源：https://www.openstreetmap.org/way/157656710</description><styleUrl>#sight</styleUrl><Point><coordinates>100.5604208,13.7379237,0</coordinates></Point></Placemark><Placemark id="palace"><name>9/28｜大皇宫／玉佛寺</name><description>景点
+9/28 上午：大皇宫与玉佛寺，留意防晒和着装。
+参考位置，入口和营业安排出发前复核。
+坐标来源：https://www.openstreetmap.org/way/23482754</description><styleUrl>#sight</styleUrl><Point><coordinates>100.4917924,13.7495708,0</coordinates></Point></Placemark><Placemark id="watarun"><name>9/28｜郑王庙</name><description>景点
+9/28 下午：午餐休息后过河参观郑王庙，按现场渡船安排走。
+参考位置，入口和营业安排出发前复核。
+坐标来源：https://www.openstreetmap.org/way/23481741</description><styleUrl>#sight</styleUrl><Point><coordinates>100.4884885,13.7438235,0</coordinates></Point></Placemark><Placemark id="chinatown"><name>9/28｜唐人街 · 耀华力路</name><description>景点
+9/28 晚上：耀华力路逛吃；人多路窄，三人约好集合位置。
+参考位置，入口和营业安排出发前复核。
+坐标来源：https://www.openstreetmap.org/node/340165036</description><styleUrl>#sight</styleUrl><Point><coordinates>100.5089484,13.741907,0</coordinates></Point></Placemark><Placemark id="chatuchak"><name>9/27｜乍都乍周末市场</name><description>景点
+9/27 上午 · 约 2—3 小时：乍都乍市场，边逛边吃，记得喝水与防晒。
+参考位置，入口和营业安排出发前复核。
+坐标来源：https://www.openstreetmap.org/way/37911198</description><styleUrl>#sight</styleUrl><Point><coordinates>100.5503771,13.8003894,0</coordinates></Point></Placemark><Placemark id="siam"><name>9/27、B 9/29｜Siam 商圈 · 暹罗百丽宫</name><description>景点
+9/27 晚上：Siam 商圈晚餐、商场与购物，按预算控制消费。
+B 9/29 下午—晚上：Siam 商圈、咖啡、泰餐；想休息就回酒店。
+参考位置，入口和营业安排出发前复核。
+坐标来源：https://www.openstreetmap.org/way/781138575</description><styleUrl>#sight</styleUrl><Point><coordinates>100.5349375,13.7468007,0</coordinates></Point></Placemark><Placemark id="ekkamai"><name>9/26｜曼谷 Ekkamai 汽车站</name><description>汽车站
+9/26 中午前后：抵达后接驳酒店，先放行李和吃午餐。
+参考位置，入口和营业安排出发前复核。
+坐标来源：https://www.openstreetmap.org/relation/20443105</description><styleUrl>#bus</styleUrl><Point><coordinates>100.5840204,13.7194034,0</coordinates></Point></Placemark><Placemark id="iconsiam"><name>9/26｜ICONSIAM 河畔商场</name><description>景点
+9/26 傍晚—晚上：河畔散步、晚餐与伴手礼。
+参考位置，入口和营业安排出发前复核。
+坐标来源：https://www.openstreetmap.org/way/680735864</description><styleUrl>#sight</styleUrl><Point><coordinates>100.5103251,13.7268256,0</coordinates></Point></Placemark><Placemark id="food-jok"><name>9/28、9/29、9/30、10/1｜F13 Jok Ruam Jai</name><description>F13 · 曼谷 · Asok，Sukhumvit 23
+Google 地图店铺参考位置；入口请按现场确认。
+每餐三选一，不代表这些餐都必须来此店。
+9/28 早餐 选项A：肉末粥加蛋；฿80–150／人（规划额）。公开资料列周一至周六 07:30 起、周日休；适合住宿附近早餐。
+A 9/29 早餐 选项A：肉末粥加蛋；฿80–150／人（规划额）。非早班机、仍在 Asok 时适用。
+B 9/29 早餐 选项A：肉末粥加蛋；฿80–150／人（规划额）。公开资料列周一至周六 07:30 起、周日休；适合住宿附近早餐。
+B 9/30 早餐 选项A：肉末粥加蛋；฿80–150／人（规划额）。可吃完再去公园，不是公园内门店。
+B 10/1 早餐 选项A：肉末粥加蛋；฿80–150／人（规划额）。非早班机、仍在 Asok 时适用。
+位置来源：https://www.google.com/maps/place/Jok+Ruam+Jai/@13.7361706,100.5626605,17z/data=!3m1!4b1!4m6!3m5!1s0x30e29ee2d83cb519:0x6cac1a0132c83b1f!8m2!3d13.7361706!4d100.5626605!16s%2Fg%2F1tz73d_5
+食べログ｜Jok Ruam Jai：https://tabelog.com/thailand/A5601/A560113/56003278/</description><styleUrl>#food</styleUrl><Point><coordinates>100.5626605,13.7361706,0</coordinates></Point></Placemark><Placemark id="food-took"><name>9/27、9/28、9/29、9/30、10/1｜F14 Took Lae Dee · Soi 16</name><description>F14 · 曼谷 · Asok，Foodland Sukhumvit 16
+Google 地图店铺参考位置；入口请按现场确认。
+每餐三选一，不代表这些餐都必须来此店。
+9/27 早餐 选项A：打抛饭加蛋、泰式汤饭；฿120–220／人（规划额）。Foodland 内的简餐店；可作早出发用餐备选，前一晚核实营业。
+9/28 早餐 选项B：打抛饭加蛋、泰式汤饭；฿120–220／人（规划额）。Foodland 内的简餐店；可作早出发用餐备选，前一晚核实营业。
+A 9/29 早餐 选项B：打抛饭加蛋、泰式汤饭；฿120–220／人（规划额）。按实际出发时间选择，国际段仍须提前到机场。
+B 9/29 早餐 选项B：打抛饭加蛋、泰式汤饭；฿120–220／人（规划额）。Foodland 内的简餐店；可作早出发用餐备选，前一晚核实营业。
+B 9/30 早餐 选项B：打抛饭加蛋、泰式汤饭；฿120–220／人（规划额）。Foodland 内的简餐店；可作早出发用餐备选，前一晚核实营业。
+B 10/1 早餐 选项B：打抛饭加蛋、泰式汤饭；฿120–220／人（规划额）。按实际出发时间选择，国际段仍须提前到机场。
+位置来源：https://www.google.com/maps/place/Took+Lae+Dee/@13.7326725,100.5608772,17z/data=!3m1!4b1!4m6!3m5!1s0x30e29f1d70bbe083:0x27986adb81cc632e!8m2!3d13.7326725!4d100.5608772!16s%2Fg%2F11cn6jsvs0
+食记｜Foodland Sukhumvit 16：https://pengu777.com/took-lae-dee/</description><styleUrl>#food</styleUrl><Point><coordinates>100.5608772,13.7326725,0</coordinates></Point></Placemark><Placemark id="food-rung"><name>9/26、9/30｜F15 Rung Rueang Pork Noodle 左店</name><description>F15 · 曼谷 · Phrom Phong，Sukhumvit 26
+Sukhumvit 26 左店；紧邻 Right shop，注意店名。
+每餐三选一，不代表这些餐都必须来此店。
+9/26 午餐 选项C：冬阴功猪肉粉／清汤粉；฿80–150／人（规划额）。需在 17:00 收档前到；不想拉行李绕路就先回酒店。
+B 9/30 午餐 选项A：冬阴功猪肉粉／清汤粉；฿80–150／人（规划额）。公开资料 08:00–17:00；Asok 搭 BTS 一站再步行，不是酒店楼下。
+位置来源：https://www.google.com/maps/place/Rung+Rueang+Pork+Noodles/data=!4m7!3m6!1s0x30e29f013f990233:0xcfa088d942a40c92!8m2!3d13.7284371!4d100.5706724!16s%2Fg%2F1tfglvmk!19sChIJMwKZPwGf4jARkgykQtmIoM8
+米其林｜曼谷街头美食路线：https://guide.michelin.com/kr/en/article/travel/2-days-in-bangkok-for-street-food-lovers
+Wanderlog｜Rung Rueang 左店：https://wanderlog.com/place/details/6213217/rung-rueang-pork-noodle-left-shop</description><styleUrl>#food</styleUrl><Point><coordinates>100.5706724,13.7284371,0</coordinates></Point></Placemark><Placemark id="food-pierb"><name>9/26、9/29、9/30、10/1｜F16 Pier 21 · Asok</name><description>F16 · 曼谷 · Terminal 21 Asok 5 楼
+Terminal 21 Asok 商场参考位置 · 5 楼。
+每餐三选一，不代表这些餐都必须来此店。
+9/26 午餐 选项A：打抛饭、鸡饭、泰式粉面摊任选；฿70–140／人（规划额）。美食广场，按摊位菜单选；需等商场开门，通常先充值餐卡。
+A 9/29 午餐 选项A：打抛饭、鸡饭、泰式粉面摊任选；฿70–140／人（规划额）。午后或晚班机、尚未离开市区时适用。
+B 9/29 午餐 选项A：打抛饭、鸡饭、泰式粉面摊任选；฿70–140／人（规划额）。出发前在 Asok 吃完再去 BACC。
+B 9/30 午餐 选项B：打抛饭、鸡饭、泰式粉面摊任选；฿70–140／人（规划额）。美食广场，按摊位菜单选；需等商场开门，通常先充值餐卡。
+B 9/30 晚餐 选项C：打抛饭、鸡饭、泰式粉面摊任选；฿70–140／人（规划额）。美食广场，按摊位菜单选；需等商场开门，通常先充值餐卡。
+B 10/1 午餐 选项A：打抛饭、鸡饭、泰式粉面摊任选；฿70–140／人（规划额）。午后或晚班机、尚未离开市区时适用。
+位置来源：https://www.openstreetmap.org/way/157656710
+Terminal 21 Asok 官方：https://www.terminal21.co.th/asok/</description><styleUrl>#food</styleUrl><Point><coordinates>100.5604208,13.7379237,0</coordinates></Point></Placemark><Placemark id="food-suda"><name>9/26、9/29、9/30、10/1｜F17 Suda Restaurant</name><description>F17 · 曼谷 · Asok，Sukhumvit 14
+Google 地图店铺参考位置；入口请按现场确认。
+每餐三选一，不代表这些餐都必须来此店。
+9/26 午餐 选项B：冬阴功、青咖喱、打抛肉；฿180–300／人（规划额）。Asok 站旁家常泰餐；只排午晚餐。
+A 9/29 午餐 选项B：冬阴功、青咖喱、打抛肉；฿180–300／人（规划额）。只在有充足时间的午后／晚班机适用。
+B 9/30 午餐 选项C：冬阴功、青咖喱、打抛肉；฿180–300／人（规划额）。Asok 站旁家常泰餐；只排午晚餐。
+B 9/30 晚餐 选项B：冬阴功、青咖喱、打抛肉；฿180–300／人（规划额）。Asok 站旁家常泰餐；只排午晚餐。
+B 10/1 午餐 选项B：冬阴功、青咖喱、打抛肉；฿180–300／人（规划额）。只在有充足时间的午后／晚班机适用。
+位置来源：https://www.google.com/maps/place/Suda+Restaurant/@13.7367327,100.5600329,17z/data=!3m1!4b1!4m6!3m5!1s0x30e29ee3aef66a1d:0x20c2c8ffb5e82ab3!8m2!3d13.7367327!4d100.5600329!16s%2Fg%2F1tm_znyx
+Tripadvisor｜Suda 店铺资料：https://www.tripadvisor.ca/Restaurant_Review-g293916-d797986-Reviews-Suda_Restaurant-Bangkok.html</description><styleUrl>#food</styleUrl><Point><coordinates>100.5600329,13.7367327,0</coordinates></Point></Placemark><Placemark id="food-savoth"><name>9/28｜F19 Savoey · Tha Maharaj</name><description>F19 · 曼谷 · 大皇宫北侧 Tha Maharaj
+Google 地图店铺参考位置；入口请按现场确认。
+每餐三选一，不代表这些餐都必须来此店。
+9/28 午餐 选项B：泰式炒粉、咖喱海鲜配饭；฿300–500／人（规划额）。官网有此分店，安排宫殿参观后；吃完再去 Tha Tien／郑王庙。
+位置来源：https://www.google.com/maps/place/Savoey+@Tha+Maharaj/@13.7553002,100.4887332,17z/data=!3m1!4b1!4m6!3m5!1s0x30e2990bbd0dc489:0x95bb80e546c2164b!8m2!3d13.7553002!4d100.4887332!16s%2Fg%2F11byl1l09r
+Savoey 官方｜分店：https://www.savoey.co.th/th/branches/</description><styleUrl>#food</styleUrl><Point><coordinates>100.4887332,13.7553002,0</coordinates></Point></Placemark><Placemark id="food-sae"><name>9/28｜F20 Sae Phun</name><description>F20 · 曼谷 · 老城 Mahannop 一带
+Google 地图店铺参考位置；入口请按现场确认。
+每餐三选一，不代表这些餐都必须来此店。
+9/28 午餐 选项A：鸡肉烩饭／烩面、虾云吞；฿100–180／人（规划额）。较早收档，尽量 13:00 前到；从大皇宫需一小段接驳，不在郑王庙门口。
+位置来源：https://www.google.com/maps/place/Sae+Phun+%E0%B8%82%E0%B9%89%E0%B8%B2%E0%B8%A7%E0%B8%AB%E0%B8%99%E0%B9%89%E0%B8%B2%E0%B9%84%E0%B8%81%E0%B9%88%E0%B9%81%E0%B8%8B%E0%B9%88%E0%B8%9E%E0%B8%B8%E0%B9%89%E0%B8%99/@13.7534266,100.4983761,17z/data=!3m1!4b1!4m6!3m5!1s0x30e2993808f11e4d:0xa5cb6c6daa9c1e5c!8m2!3d13.7534266!4d100.4983761!16s%2Fg%2F11f8l3ccmb
+米其林｜曼谷街头美食路线：https://guide.michelin.com/kr/en/article/travel/2-days-in-bangkok-for-street-food-lovers
+Friday Bangkok｜Sae Phun：https://fridaybangkok.com/v/sae-phun</description><styleUrl>#food</styleUrl><Point><coordinates>100.4983761,13.7534266,0</coordinates></Point></Placemark><Placemark id="food-naiek"><name>9/28｜F21 Nai Ek Roll Noodles</name><description>F21 · 曼谷 · 唐人街 Yaowarat Soi 9
+Google 地图店铺参考位置；入口请按现场确认。
+每餐三选一，不代表这些餐都必须来此店。
+9/28 晚餐 选项A：胡椒卷粉汤＋脆皮猪肉；฿120–220／人（规划额）。胡椒味重，适合晚饭；与另外两家均在唐人街区域。
+位置来源：https://www.google.com/maps/place/Nai+Ek+Roll+Noodle/@13.7401053,100.5099369,17z/data=!3m1!4b1!4m6!3m5!1s0x30e2992175e2fda9:0x694279ae73a6b2da!8m2!3d13.7401053!4d100.5099369!16s%2Fg%2F1tj6r85r
+Phuket 101｜Nai Ek：https://www.phuket101.net/nai-ek-roll-noodle/</description><styleUrl>#food</styleUrl><Point><coordinates>100.5099369,13.7401053,0</coordinates></Point></Placemark><Placemark id="food-tk"><name>9/28｜F22 T&amp;K Seafood</name><description>F22 · 曼谷 · 唐人街 Phadung Dao 路口
+Google 地图店铺参考位置；入口请按现场确认。
+每餐三选一，不代表这些餐都必须来此店。
+9/28 晚餐 选项B：烤虾、冬阴功、炒青菜；฿350–600／人（规划额）。绿衣海鲜店；三人合点，先核对重量、加工费和整桌总价。
+位置来源：https://www.google.com/maps/place/T+%26+K+Seafood/@13.7400778,100.510636,17z/data=!3m1!4b1!4m6!3m5!1s0x30e29921726b262f:0xe57403745890580b!8m2!3d13.7400778!4d100.510636!16s%2Fg%2F11d_9f8n_v
+泰国旅游资料｜唐人街食店地图：https://wisatathailand.id/images/booklet/Yaowarat%20Map_compressed.pdf</description><styleUrl>#food</styleUrl><Point><coordinates>100.510636,13.7400778,0</coordinates></Point></Placemark><Placemark id="food-lek"><name>9/28｜F23 Lek &amp; Rut Seafood</name><description>F23 · 曼谷 · 唐人街 Phadung Dao 路口
+Google 地图店铺参考位置；入口请按现场确认。
+每餐三选一，不代表这些餐都必须来此店。
+9/28 晚餐 选项C：海鲜汤、炒鱿鱼配米饭；฿300–550／人（规划额）。与 T&amp;K 同一区域，排队太久可互换；优先明码标价菜品。
+位置来源：https://www.google.com/maps/place/Lek+Seafood/@13.7401367,100.5104983,17z/data=!3m1!4b1!4m6!3m5!1s0x30e29921719428f7:0xa91cf6ee6ee790d7!8m2!3d13.7401367!4d100.5104983!16s%2Fg%2F1hdyy428d
+泰国旅游资料｜唐人街食店地图：https://wisatathailand.id/images/booklet/Yaowarat%20Map_compressed.pdf</description><styleUrl>#food</styleUrl><Point><coordinates>100.5104983,13.7401367,0</coordinates></Point></Placemark><Placemark id="food-ortor"><name>9/27｜F24 Or Tor Kor 市场熟食区</name><description>F24 · 曼谷 · Kamphaeng Phet 站旁
+市场参考位置，熟食摊在市场内按现场选择。
+每餐三选一，不代表这些餐都必须来此店。
+9/27 早餐 选项C：烤猪肉串＋糯米饭／咖喱饭；฿100–200／人（规划额）。先去市场熟食区吃，再逛乍都乍，按当天开档摊位选择。
+9/27 午餐 选项A：烤猪肉串＋糯米饭／咖喱饭；฿100–200／人（规划额）。逛乍都乍时顺路；是市场用餐方案，现场选有价签的熟食摊。
+位置来源：https://www.google.com/maps/place/Or+Tor+Kor+Market/@13.7971283,100.5475328,17z/data=!3m1!4b1!4m6!3m5!1s0x30e29c141ea782c3:0xef703d7f3769af76!8m2!3d13.7971283!4d100.5475328!16s%2Fg%2F11b621yr9l
+泰国旅游局｜Or Tor Kor 市场：https://www.thailandtravel.or.jp/or-tor-kor-market/</description><styleUrl>#food</styleUrl><Point><coordinates>100.5475328,13.7971283,0</coordinates></Point></Placemark><Placemark id="food-lay"><name>9/27｜F25 Lay Lao · Ari</name><description>F25 · 曼谷 · Ari，Phahon Yothin 7
+Google 地图店铺参考位置；入口请按现场确认。
+每餐三选一，不代表这些餐都必须来此店。
+9/27 午餐 选项C：木瓜沙拉、烤肉、糯米饭；฿300–450／人（规划额）。伊桑风味；乍都乍回程可经 Ari，需多一段 BTS 和步行。
+位置来源：https://www.google.com/maps/place/Lay+Lao/@13.7817476,100.5437851,17z/data=!3m1!4b1!4m6!3m5!1s0x30e29c1da70480e3:0x21df567d78ca664!8m2!3d13.7817476!4d100.5437851!16s%2Fg%2F11b7gmtffx
+米其林｜Lay Lao Ari：https://guide.michelin.com/se/en/bangkok-region/bangkok/restaurant/lay-lao</description><styleUrl>#food</styleUrl><Point><coordinates>100.5437851,13.7817476,0</coordinates></Point></Placemark><Placemark id="food-ruathong"><name>9/27｜F26 Baan Kuay Tiew Ruathong</name><description>F26 · 曼谷 · 胜利纪念碑船面区
+Google 地图店铺参考位置；入口请按现场确认。
+每餐三选一，不代表这些餐都必须来此店。
+9/27 午餐 选项B：牛肉船面、冬阴功干面；฿100–180／人（规划额）。小碗可追加。笔记提到周一休；本计划放周六，离市场需乘 BTS。
+位置来源：https://www.google.com/maps/place/Baan+Kuay+Tiew+Ruathong/@13.7657518,100.5394974,17z/data=!3m1!4b1!4m6!3m5!1s0x30e29eb0601aa3e3:0x8c31c0b08db10262!8m2!3d13.7657518!4d100.5394974!16s%2Fg%2F1vkxjqgg
+小红书｜Ruathong 船面体验：https://www.xiaohongshu.com/explore/6a03391c000000003700fbc0
+大众点评｜曼谷可读榜单：https://plat.dianping.com/app/femember-musteat-web/musteat-rank?cityid=2342&amp;latitude=%2A&amp;longitude=%2A&amp;mina_name=dianping-wxapp&amp;notitlebar=1&amp;ranktype=3&amp;token=%2A</description><styleUrl>#food</styleUrl><Point><coordinates>100.5394974,13.7657518,0</coordinates></Point></Placemark><Placemark id="food-somtam"><name>9/27、9/29｜F27 Somtam Nua · Siam Square</name><description>F27 · 曼谷 · Siam Square Soi 5
+Google 地图店铺参考位置；入口请按现场确认。
+每餐三选一，不代表这些餐都必须来此店。
+9/27 晚餐 选项A：青木瓜沙拉、鸡肉、糯米饭；฿250–400／人（规划额）。用一餐体验伊桑酸辣味；参考 11:00–21:00，晚饭早点去。
+B 9/29 午餐 选项B：青木瓜沙拉、鸡肉、糯米饭；฿250–400／人（规划额）。已到 Siam 后吃午餐。
+B 9/29 晚餐 选项B：青木瓜沙拉、鸡肉、糯米饭；฿250–400／人（规划额）。午餐没吃过时选。
+位置来源：https://www.google.com/maps/place/Somtam+Nua/@13.7444073,100.5342979,17z/data=!3m1!4b1!4m6!3m5!1s0x30e299d798dd987b:0xb0fdd04ebf73637!8m2!3d13.7444073!4d100.5342979!16s%2Fg%2F11g1kmy724
+Time Out｜Somtam Nua Siam Square：https://www.timeout.com/bangkok/restaurants/somtam-nua-siam-square</description><styleUrl>#food</styleUrl><Point><coordinates>100.5342979,13.7444073,0</coordinates></Point></Placemark><Placemark id="food-thongsiam"><name>9/27、9/29｜F28 ThongSmith · Siam Paragon</name><description>F28 · 曼谷 · Siam Paragon G 层
+Siam Paragon 商场参考位置 · G 层。
+每餐三选一，不代表这些餐都必须来此店。
+9/27 晚餐 选项B：猪肉／普通牛肉船面；฿220–380／人（规划额）。品牌分店表已列出；避开和牛升级款更适合学生预算。
+B 9/29 晚餐 选项A：猪肉／普通牛肉船面；฿220–380／人（规划额）。品牌分店表已列出；避开和牛升级款更适合学生预算。
+位置来源：https://www.openstreetmap.org/way/781138575
+ThongSmith 官方账号｜分店与菜单：https://linktr.ee/thongsmith</description><styleUrl>#food</styleUrl><Point><coordinates>100.5349375,13.7468007,0</coordinates></Point></Placemark><Placemark id="food-thongicon"><name>9/26｜F29 ThongSmith · ICONSIAM</name><description>F29 · 曼谷 · ICONSIAM 4 楼
+ICONSIAM 商场参考位置；各店所在楼层见卡片。
+每餐三选一，不代表这些餐都必须来此店。
+9/26 晚餐 选项C：泰式船面、椰香小甜品；฿220–380／人（规划额）。官方分店表列 4 楼，与 G 层 SOOKSIAM 分开。
+位置来源：https://www.openstreetmap.org/way/680735864
+ThongSmith 官方账号｜分店与菜单：https://linktr.ee/thongsmith</description><styleUrl>#food</styleUrl><Point><coordinates>100.5103251,13.7268256,0</coordinates></Point></Placemark><Placemark id="food-sook"><name>9/26｜F30 SOOKSIAM 熟食区</name><description>F30 · 曼谷 · ICONSIAM G 层
+ICONSIAM 商场参考位置；各店所在楼层见卡片。
+每餐三选一，不代表这些餐都必须来此店。
+9/26 晚餐 选项A：泰北咖喱面／香肠＋糯米饭；฿150–280／人（规划额）。各地区摊位会轮换；到场按菜单选这一组风味，不锁定摊号。
+位置来源：https://www.openstreetmap.org/way/680735864
+ICONSIAM 官方｜SOOKSIAM：https://campaign.iconsiam.com/wondrous-dining-zones/cn/sooksiam.html</description><styleUrl>#food</styleUrl><Point><coordinates>100.5103251,13.7268256,0</coordinates></Point></Placemark><Placemark id="food-thip"><name>9/26｜F31 Thipsamai · ICONSIAM</name><description>F31 · 曼谷 · ICONSIAM 6 楼
+ICONSIAM 商场参考位置；各店所在楼层见卡片。
+每餐三选一，不代表这些餐都必须来此店。
+9/26 晚餐 选项B：虾油蛋包泰式炒粉；฿220–380／人（规划额）。商场名录有此分店；饮料另计，橙汁可只点一瓶三人分享。
+位置来源：https://www.openstreetmap.org/way/680735864
+ICONSIAM 官方｜餐厅名录（2025）：https://campaign.iconsiam.com/downloads/pdf/ParticipateShopof_travel_tax_deduction2025.pdf</description><styleUrl>#food</styleUrl><Point><coordinates>100.5103251,13.7268256,0</coordinates></Point></Placemark><Placemark id="food-thamafood"><name>9/28｜F39 Tha Maharaj 商场内泰式饭面</name><description>F39 · 曼谷 · Tha Maharaj 商场餐饮区
+商场参考位置，具体餐饮商户到场再选；不是一家固定餐厅。
+每餐三选一，不代表这些餐都必须来此店。
+9/28 午餐 选项C：现场有明码价的鸡饭／炒粉套餐；฿150–280／人（规划额）。宫殿附近就近方案，先看现场餐饮目录；具体商户未锁定。
+位置来源：https://www.google.com/maps/place/Tha+Maharaj/@13.754733,100.488722,17z/data=!3m1!4b1!4m6!3m5!1s0x30e2990b0d2e6785:0xf7901dd07c06cdf1!8m2!3d13.754733!4d100.488722!16s%2Fg%2F11b7v_pn66</description><styleUrl>#food</styleUrl><Point><coordinates>100.488722,13.754733,0</coordinates></Point></Placemark><Placemark id="food-siamfood"><name>9/27、9/29｜F40 Siam Paragon 美食广场</name><description>F40 · 曼谷 · Siam Paragon 商场内
+Siam Paragon 商场参考位置，美食广场内按现场菜单选摊位。
+每餐三选一，不代表这些餐都必须来此店。
+9/27 晚餐 选项C：泰式烩面／咖喱饭＋泰奶；฿150–250／人（规划额）。同在 Siam 商圈，按当日营业摊位选；排队累了就近坐下吃。
+B 9/29 午餐 选项C：泰式烩面／咖喱饭＋泰奶；฿150–250／人（规划额）。在 Siam 商场按现场菜单选。
+B 9/29 晚餐 选项C：泰式烩面／咖喱饭＋泰奶；฿150–250／人（规划额）。同在 Siam 商圈，按当日营业摊位选；排队累了就近坐下吃。
+位置来源：https://www.openstreetmap.org/way/781138575</description><styleUrl>#food</styleUrl><Point><coordinates>100.5349375,13.7468007,0</coordinates></Point></Placemark><Placemark id="hotel-koko-surawong"><name>A 9/26—29 · 3 晚／B 9/26—10/1 · 5 晚｜H4 素里翁可可特尔酒店</name><description>H4 · 候选酒店，未预订
+Kokotel Bangkok Surawong
+是隆／素里翁 · 非 Asok 区
+Koko Family – Triple｜家庭三人房
+3 张单人床，通常紧邻摆放；19—21㎡
+A：9/26—29 · 3 晚；新日期待询价
+飞猪查询：https://hotel.fliggy.com/hotel_detail2.htm?shid=52196020&amp;city=904976&amp;checkIn=2026-09-26&amp;checkOut=2026-09-29&amp;roomNum=1&amp;aNum_1=3&amp;cNum_1=0
+B：9/26—10/1 · 5 晚；新日期待询价
+飞猪查询：https://hotel.fliggy.com/hotel_detail2.htm?shid=52196020&amp;city=904976&amp;checkIn=2026-09-26&amp;checkOut=2026-10-01&amp;roomNum=1&amp;aNum_1=3&amp;cNum_1=0
+旧日期查到三单床房型线索；新日期价格和余房待重新查询。附近有素里翁本地餐饮，去唐人街和河岸方向也可安排。
+房间紧凑，官网另有三床垫的 Ryokan 版本；请选常规单人床，若要床间有空隙需再确认。到轨道站需步行，去 Asok 吃饭要另计交通。
+酒店资料：https://www.kokotel.com/surawong/rooms/
+坐标来源：https://www.thaihotels.com/hotels/kokotel-surawong-hotel-bangkok-485921</description><styleUrl>#hotel</styleUrl><Point><coordinates>100.524505,13.727546,0</coordinates></Point></Placemark><Placemark id="hotel-arte"><name>A 9/26—29 · 3 晚／B 9/26—10/1 · 5 晚｜H5 艺术酒店 · Arte</name><description>H5 · 候选酒店，未预订
+Arte Hotel Bangkok Sukhumvit 19
+Asok · Sukhumvit Soi 19
+Premier Triple Bed｜尊贵三床房
+3 张单人床；42㎡
+A：9/26—29 · 3 晚；新日期待询价
+飞猪查询：https://hotel.fliggy.com/hotel_detail2.htm?shid=52220382&amp;city=904976&amp;checkIn=2026-09-26&amp;checkOut=2026-09-29&amp;roomNum=1&amp;aNum_1=3&amp;cNum_1=0
+B：9/26—10/1 · 5 晚；新日期待询价
+飞猪查询：https://hotel.fliggy.com/hotel_detail2.htm?shid=52220382&amp;city=904976&amp;checkIn=2026-09-26&amp;checkOut=2026-10-01&amp;roomNum=1&amp;aNum_1=3&amp;cNum_1=0
+靠近原计划的 Asok 住宿区域，方便衔接 Terminal 21、BTS／MRT 与前往 Ekkamai 的交通。
+9/6 查询的旧日期仅看到家庭房／套房报价，没有看到 Premier Triple 对应报价。新日期待重新询价；不能据此认定三床已满，也不能承诺可订。
+酒店资料：https://www.artehotelbangkok.com/accommodations/premier-triple-bed
+坐标来源：https://findit.city/en/thailand/bangkok/places/hotels/arte-hotel-4956171632</description><styleUrl>#hotel</styleUrl><Point><coordinates>100.55954,13.74001,0</coordinates></Point></Placemark><Placemark id="hotel-jasmine"><name>A 9/26—29 · 3 晚／B 9/26—10/1 · 5 晚｜H6 茉莉城市酒店</name><description>H6 · 候选酒店，未预订
+Jasmine City Hotel Bangkok
+Asok · Sukhumvit Soi 23
+Deluxe Triple Studio｜豪华三床一室房
+3 张单人床；40㎡
+A：9/26—29 · 3 晚；新日期待询价
+飞猪查询：https://hotel.fliggy.com/hotel_detail2.htm?shid=50345129&amp;city=904976&amp;checkIn=2026-09-26&amp;checkOut=2026-09-29&amp;roomNum=1&amp;aNum_1=3&amp;cNum_1=0
+B：9/26—10/1 · 5 晚；新日期待询价
+飞猪查询：https://hotel.fliggy.com/hotel_detail2.htm?shid=50345129&amp;city=904976&amp;checkIn=2026-09-26&amp;checkOut=2026-10-01&amp;roomNum=1&amp;aNum_1=3&amp;cNum_1=0
+适合想住 Asok、又希望三人房空间宽裕些的组合；靠近原计划中的交通换乘点和晚餐区域。
+官网明确有三单床房，但 9/6 查询的旧日期未显示该房型报价，新日期待重新询价。普通 Deluxe Studio 的双床说明不能当作已经含成人加床。
+酒店资料：https://jasminehotelgroup.com/jasmine-city-hotel-bangkok/accommodation/
+坐标来源：https://www.thaihotels.com/hotels/jasmine-city-hotel-bangkok-100673</description><styleUrl>#hotel</styleUrl><Point><coordinates>100.562778,13.73562,0</coordinates></Point></Placemark><Placemark id="route-common-27"><name>9/27｜乍都乍与 Siam 商圈（顺序示意）</name><description>把周末留给市场，下午回酒店休息洗衣。
+乍都乍安排在周日。Jok Ruam Jai 的既有资料列周日休息，早餐改为 Took Lae Dee、酒店或市场。上午逛 2—3 小时，午后休息再去 Siam。
+连线只表示行程先后，不是实际道路、航线或导航。曼谷机场按 BKK 举例。A/B 返程路径重合，可取消勾选另一分支查看。</description><styleUrl>#route</styleUrl><LineString><tessellate>1</tessellate><coordinates>100.5503771,13.8003894,0 100.5603142,13.7370043,0 100.5349375,13.7468007,0</coordinates></LineString></Placemark><Placemark id="route-common-28"><name>9/28｜宫殿、寺庙与唐人街（顺序示意）</name><description>同一区域慢慢看。上午早点到，午间安排休息。
+上午宫殿、午后郑王庙、晚上唐人街，按体力取舍。周一以固定餐厅的实际营业为准，不依赖街边摊全部出摊。A 方案今晚整理返程行李。
+连线只表示行程先后，不是实际道路、航线或导航。曼谷机场按 BKK 举例。A/B 返程路径重合，可取消勾选另一分支查看。</description><styleUrl>#route</styleUrl><LineString><tessellate>1</tessellate><coordinates>100.4917924,13.7495708,0 100.4884885,13.7438235,0 100.5089484,13.741907,0</coordinates></LineString></Placemark></Document></kml>

@@ -46,9 +46,25 @@ const context=vm.createContext({window,document,console,URLSearchParams,URL,hist
 for(const file of ['trip-data.js','hotel-data.js','food-data.js'])vm.runInContext(read('public/'+file),context);
 let script=read('public/trip-map.js');
 for(const id of ['plan-A','plan-B','map-period'])assert.ok(read('public/trip-map.html').includes('id="'+id+'"'));
-script=script.replace(/\}\)\(\);\s*$/,'window.test={state,setPlan,showDay,showHotels,showFoods,getStops,foodUses,catalogEntries,quotesFor,dateLabel};})();');
+script=script.replace(/\}\)\(\);\s*$/,'window.test={state,setPlan,showDay,showHotels,showFoods,getStops,foodUses,catalogEntries,quotesFor,dateLabel,comparison};})();');
 vm.runInContext(script,context);
 const t=window.test;assert.equal(t.state.plan,'B');assert.ok(node('dates').innerHTML.includes('10/1'));
+assert.equal(t.state.mode,'comparison');
+for(const plan of ['A','B']){
+ t.setPlan(plan);t.comparison('international');
+ assert.equal(t.state.lines.length,13);
+ assert.equal(t.state.lines.filter(l=>l.properties.branch==='common').length,9);
+ assert.deepEqual(Array.from(t.state.lines.filter(l=>l.properties.branch==='A'),l=>l.properties.date),[29]);
+ assert.deepEqual(Array.from(t.state.lines.filter(l=>l.properties.branch==='B'),l=>l.properties.date),[29,30,1001]);
+ assert.ok(t.state.lines.filter(l=>l.properties.branch==='A').every(l=>l.properties.color==='#1a6de3'&&l.properties.width===7));
+ assert.ok(t.state.lines.filter(l=>l.properties.branch==='B').every(l=>l.properties.color==='#e53935'&&l.properties.width===3));
+ assert.ok(t.state.bounds.every(ll=>ll.length===2&&ll.every(Number.isFinite)));
+ assert.ok(!node('stops').innerHTML.includes('undefined'));
+}
+t.state.branches.B=false;t.comparison();assert.ok(t.state.lines.every(l=>l.properties.branch!=='B'));
+t.state.branches.B=true;t.state.branches.A=false;t.comparison();assert.ok(t.state.lines.every(l=>l.properties.branch!=='A'));
+t.state.branches.A=true;t.comparison();
+
 for(const plan of ['A','B']){
  t.setPlan(plan);
  assert.equal(window.TRIP.days.length,plan==='A'?10:12);
@@ -79,4 +95,4 @@ frame.events.load();assert.equal(messages.at(-1).plan,'B');
 winEvents.message({source:frame.contentWindow,data:{type:'trip-plan-change',plan:'A'}});
 assert.equal(root.dataset.tripPlan,'A');assert.ok(links[0].href.includes('plan=A'));assert.ok(loc.href.endsWith('#food'));
 events.click({target:{closest:()=>buttons[1]}});assert.equal(root.dataset.tripPlan,'B');assert.equal(messages.at(-1).plan,'B');
-console.log('PASS: A/B dates, 90/108 meal options, hotel dates, route pins, return-day boundaries, airport choices and two-way iframe synchronisation.');
+console.log('PASS: single-map comparison, blue/red branch toggles, A/B dates, 90/108 meal options, hotel dates, route pins, return-day boundaries, airport choices and two-way iframe synchronisation.');
