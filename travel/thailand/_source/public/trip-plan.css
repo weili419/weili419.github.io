@@ -1,0 +1,4 @@
+.map-plan{display:flex;gap:6px;flex-wrap:wrap}
+.map-plan button{border:1px solid #cbd5e1;border-radius:9px;background:#fff;padding:10px 12px;font:inherit;font-size:12px;cursor:pointer;color:#334155}
+.map-plan button[aria-pressed=true]{background:#185adb;color:#fff;border-color:#185adb}
+@media(max-width:680px){.map-heading{flex-wrap:wrap;gap:12px}.map-plan{width:100%}.map-plan button{flex:1}.map-heading h1{font-size:22px}}

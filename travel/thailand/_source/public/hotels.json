@@ -1,0 +1,392 @@
+[
+  {
+    "id": "hotel-andakira",
+    "number": 1,
+    "city": "phuket",
+    "name": "安达凯拉酒店",
+    "en": "Andakira Hotel Patong",
+    "area": "芭东中心 · Phangmuang Sai Gor Road",
+    "room": "Deluxe Triple Room｜豪华三人房",
+    "beds": "3 张单人床",
+    "size": "44㎡",
+    "badge": "普吉优先比较",
+    "why": "四晚住同一家，方便芭东吃饭、逛江西冷与班赞市场，也方便向出海团确认酒店接送。",
+    "tradeoff": "离海滩有一段步行距离；官网同名房型也可能是大床＋单床，务必选择飞猪明确写「3 张单人床」的报价。",
+    "food": "No.6、班赞市场、江西冷一带",
+    "ll": [
+      98.30276,
+      7.89411
+    ],
+    "coordSource": "https://mapcarta.com/32117668",
+    "official": "https://andakirapatong.andakiragroup.com/deluxe-triple.html",
+    "bedSource": "https://andakirapatong.andakiragroup.com/deluxe-triple.html",
+    "quotes": [
+      {
+        "dates": "9/20—24 · 4 晚",
+        "price": 445,
+        "cancel": "不可取消",
+        "url": "https://hotel.fliggy.com/hotel_detail2.htm?shid=50390338&city=904986&checkIn=2026-09-20&checkOut=2026-09-24&roomNum=1&aNum_1=3&cNum_1=0",
+        "plan": "common"
+      }
+    ],
+    "historicalQuotes": [
+      {
+        "dates": "9/20—24 · 4 晚",
+        "price": 445,
+        "cancel": "不可取消",
+        "url": "https://hotel.fliggy.com/hotel_detail2.htm?shid=50390338&city=904986&checkIn=2026-09-20&checkOut=2026-09-24&roomNum=1&aNum_1=3&cNum_1=0"
+      }
+    ]
+  },
+  {
+    "id": "hotel-lantern",
+    "number": 2,
+    "city": "phuket",
+    "name": "芭东彩灯度假村",
+    "en": "The Lantern Resorts Patong Phuket",
+    "area": "芭东中心 · Soi Sansabai",
+    "room": "View Pent Triple｜景观三人房",
+    "beds": "3 张单人床",
+    "size": "44㎡",
+    "badge": "逛吃方便",
+    "why": "在 Sansabai 巷，适合把江西冷、班赞市场和芭东晚餐放在一起安排。",
+    "tradeoff": "靠近热闹街区，选房时关注朝向与夜间噪音。官网床型摘要有混写，优先以具体订单的三单床说明为准。",
+    "food": "班赞市场、江西冷与 No.6 一带",
+    "ll": [
+      98.30017,
+      7.892596
+    ],
+    "coordSource": "https://www.yellowpages.co.th/profile/เดอะ-แลนเทิร์น-รีสอร์ท-ป่าตอง-dUJvHXYmi",
+    "official": "https://www.lantern-resorts.com/rooms/view-pent-triple/",
+    "bedSource": "https://www.lantern-resorts.com/rooms/view-pent-triple/",
+    "quotes": [
+      {
+        "dates": "9/20—24 · 4 晚",
+        "price": 470,
+        "cancel": "不可取消",
+        "url": "https://hotel.fliggy.com/hotel_detail2.htm?shid=50390837&city=904986&checkIn=2026-09-20&checkOut=2026-09-24&roomNum=1&aNum_1=3&cNum_1=0",
+        "plan": "common"
+      }
+    ],
+    "historicalQuotes": [
+      {
+        "dates": "9/20—24 · 4 晚",
+        "price": 470,
+        "cancel": "不可取消",
+        "url": "https://hotel.fliggy.com/hotel_detail2.htm?shid=50390837&city=904986&checkIn=2026-09-20&checkOut=2026-09-24&roomNum=1&aNum_1=3&cNum_1=0"
+      }
+    ]
+  },
+  {
+    "id": "hotel-koko-patong",
+    "number": 3,
+    "city": "phuket",
+    "name": "普吉岛可可酒店 · 芭东店",
+    "en": "Kokotel Phuket Patong",
+    "area": "芭东北段 · Sawasdirak Road",
+    "room": "Koko Family Room｜可可家庭房",
+    "beds": "3 张单人床",
+    "size": "飞猪标注 48㎡",
+    "badge": "靠近海滩",
+    "why": "位于芭东北段、靠近海滩的 Sawasdirak 路，适合早晚散步后就近吃饭。",
+    "tradeoff": "同品牌还有奈阳海滩店，订房时认准 Phuket Patong；Koko Party 是上下铺房，这里推荐的是三单床 Family。",
+    "food": "芭东海边小店、No.6 一带",
+    "ll": [
+      98.29707,
+      7.89781
+    ],
+    "coordSource": "https://fromto.travel/en/thailand/kokotel-phuket-patong-patong-beach",
+    "official": "https://www.kokotel.com/phuket-patong/",
+    "bedSource": "https://hotel.fliggy.com/hotel_detail2.htm?shid=55570065&city=904986&checkIn=2026-09-20&checkOut=2026-09-24&roomNum=1&aNum_1=3&cNum_1=0",
+    "quotes": [
+      {
+        "dates": "9/20—24 · 4 晚",
+        "price": 499,
+        "cancel": "限时取消，期限待核",
+        "url": "https://hotel.fliggy.com/hotel_detail2.htm?shid=55570065&city=904986&checkIn=2026-09-20&checkOut=2026-09-24&roomNum=1&aNum_1=3&cNum_1=0",
+        "plan": "common"
+      }
+    ],
+    "historicalQuotes": [
+      {
+        "dates": "9/20—24 · 4 晚",
+        "price": 499,
+        "cancel": "限时取消，期限待核",
+        "url": "https://hotel.fliggy.com/hotel_detail2.htm?shid=55570065&city=904986&checkIn=2026-09-20&checkOut=2026-09-24&roomNum=1&aNum_1=3&cNum_1=0"
+      }
+    ]
+  },
+  {
+    "id": "hotel-koko-surawong",
+    "number": 4,
+    "city": "bangkok",
+    "name": "素里翁可可特尔酒店",
+    "en": "Kokotel Bangkok Surawong",
+    "area": "是隆／素里翁 · 非 Asok 区",
+    "room": "Koko Family – Triple｜家庭三人房",
+    "beds": "3 张单人床，通常紧邻摆放",
+    "size": "19—21㎡",
+    "badge": "曼谷预算备选",
+    "why": "旧日期查到三单床房型线索；新日期价格和余房待重新查询。附近有素里翁本地餐饮，去唐人街和河岸方向也可安排。",
+    "tradeoff": "房间紧凑，官网另有三床垫的 Ryokan 版本；请选常规单人床，若要床间有空隙需再确认。到轨道站需步行，去 Asok 吃饭要另计交通。",
+    "food": "素里翁周边；原 Asok 早餐可改酒店附近，勿为吃早餐横穿城区",
+    "ll": [
+      100.524505,
+      13.727546
+    ],
+    "coordSource": "https://www.thaihotels.com/hotels/kokotel-surawong-hotel-bangkok-485921",
+    "official": "https://www.kokotel.com/surawong/rooms/",
+    "bedSource": "https://www.kokotel.com/surawong/rooms/",
+    "quotes": [
+      {
+        "plan": "A",
+        "dates": "9/26—29 · 3 晚",
+        "price": null,
+        "cancel": "新日期待询价；取消条款须重查",
+        "url": "https://hotel.fliggy.com/hotel_detail2.htm?shid=52196020&city=904976&checkIn=2026-09-26&checkOut=2026-09-29&roomNum=1&aNum_1=3&cNum_1=0"
+      },
+      {
+        "plan": "B",
+        "dates": "9/26—10/1 · 5 晚",
+        "price": null,
+        "cancel": "新日期待询价；取消条款须重查",
+        "url": "https://hotel.fliggy.com/hotel_detail2.htm?shid=52196020&city=904976&checkIn=2026-09-26&checkOut=2026-10-01&roomNum=1&aNum_1=3&cNum_1=0"
+      }
+    ],
+    "historicalQuotes": [
+      {
+        "dates": "9/24—27 · 3 晚",
+        "price": 338,
+        "cancel": "限时取消，期限待核",
+        "url": "https://hotel.fliggy.com/hotel_detail2.htm?shid=52196020&city=904976&checkIn=2026-09-24&checkOut=2026-09-27&roomNum=1&aNum_1=3&cNum_1=0"
+      },
+      {
+        "dates": "9/29—30 · 1 晚",
+        "price": 337,
+        "cancel": "限时取消，期限待核",
+        "url": "https://hotel.fliggy.com/hotel_detail2.htm?shid=52196020&city=904976&checkIn=2026-09-29&checkOut=2026-09-30&roomNum=1&aNum_1=3&cNum_1=0"
+      }
+    ]
+  },
+  {
+    "id": "hotel-arte",
+    "number": 5,
+    "city": "bangkok",
+    "name": "艺术酒店 · Arte",
+    "en": "Arte Hotel Bangkok Sukhumvit 19",
+    "area": "Asok · Sukhumvit Soi 19",
+    "room": "Premier Triple Bed｜尊贵三床房",
+    "beds": "3 张单人床",
+    "size": "42㎡",
+    "badge": "Asok 备选 · 待询价",
+    "why": "靠近原计划的 Asok 住宿区域，方便衔接 Terminal 21、BTS／MRT 与前往 Ekkamai 的交通。",
+    "tradeoff": "9/6 查询的旧日期仅看到家庭房／套房报价，没有看到 Premier Triple 对应报价。新日期待重新询价；不能据此认定三床已满，也不能承诺可订。",
+    "food": "Pier 21、Soi 19 小店；沿用原 Asok 美食安排",
+    "ll": [
+      100.55954,
+      13.74001
+    ],
+    "coordSource": "https://findit.city/en/thailand/bangkok/places/hotels/arte-hotel-4956171632",
+    "official": "https://www.artehotelbangkok.com/accommodations/premier-triple-bed",
+    "bedSource": "https://www.agoda.com/arte-hotel/hotel/bangkok-th.html",
+    "quotes": [
+      {
+        "plan": "A",
+        "dates": "9/26—29 · 3 晚",
+        "price": null,
+        "cancel": "新日期待询价；取消条款须重查",
+        "url": "https://hotel.fliggy.com/hotel_detail2.htm?shid=52220382&city=904976&checkIn=2026-09-26&checkOut=2026-09-29&roomNum=1&aNum_1=3&cNum_1=0"
+      },
+      {
+        "plan": "B",
+        "dates": "9/26—10/1 · 5 晚",
+        "price": null,
+        "cancel": "新日期待询价；取消条款须重查",
+        "url": "https://hotel.fliggy.com/hotel_detail2.htm?shid=52220382&city=904976&checkIn=2026-09-26&checkOut=2026-10-01&roomNum=1&aNum_1=3&cNum_1=0"
+      }
+    ],
+    "historicalQuotes": [
+      {
+        "dates": "9/24—27 · 3 晚",
+        "price": null,
+        "cancel": "未看到三单床报价",
+        "url": "https://hotel.fliggy.com/hotel_detail2.htm?shid=52220382&city=904976&checkIn=2026-09-24&checkOut=2026-09-27&roomNum=1&aNum_1=3&cNum_1=0"
+      },
+      {
+        "dates": "9/29—30 · 1 晚",
+        "price": null,
+        "cancel": "该段尚未核得报价",
+        "url": "https://hotel.fliggy.com/hotel_detail2.htm?shid=52220382&city=904976&checkIn=2026-09-29&checkOut=2026-09-30&roomNum=1&aNum_1=3&cNum_1=0"
+      }
+    ]
+  },
+  {
+    "id": "hotel-jasmine",
+    "number": 6,
+    "city": "bangkok",
+    "name": "茉莉城市酒店",
+    "en": "Jasmine City Hotel Bangkok",
+    "area": "Asok · Sukhumvit Soi 23",
+    "room": "Deluxe Triple Studio｜豪华三床一室房",
+    "beds": "3 张单人床",
+    "size": "40㎡",
+    "badge": "Asok 备选 · 待询价",
+    "why": "适合想住 Asok、又希望三人房空间宽裕些的组合；靠近原计划中的交通换乘点和晚餐区域。",
+    "tradeoff": "官网明确有三单床房，但 9/6 查询的旧日期未显示该房型报价，新日期待重新询价。普通 Deluxe Studio 的双床说明不能当作已经含成人加床。",
+    "food": "Jok Ruam Jai、Pier 21、Soi 16 的 Took Lae Dee 一带",
+    "ll": [
+      100.562778,
+      13.73562
+    ],
+    "coordSource": "https://www.thaihotels.com/hotels/jasmine-city-hotel-bangkok-100673",
+    "official": "https://jasminehotelgroup.com/jasmine-city-hotel-bangkok/accommodation/",
+    "bedSource": "https://jasminehotelgroup.com/jasmine-city-hotel-bangkok/accommodation/",
+    "quotes": [
+      {
+        "plan": "A",
+        "dates": "9/26—29 · 3 晚",
+        "price": null,
+        "cancel": "新日期待询价；取消条款须重查",
+        "url": "https://hotel.fliggy.com/hotel_detail2.htm?shid=50345129&city=904976&checkIn=2026-09-26&checkOut=2026-09-29&roomNum=1&aNum_1=3&cNum_1=0"
+      },
+      {
+        "plan": "B",
+        "dates": "9/26—10/1 · 5 晚",
+        "price": null,
+        "cancel": "新日期待询价；取消条款须重查",
+        "url": "https://hotel.fliggy.com/hotel_detail2.htm?shid=50345129&city=904976&checkIn=2026-09-26&checkOut=2026-10-01&roomNum=1&aNum_1=3&cNum_1=0"
+      }
+    ],
+    "historicalQuotes": [
+      {
+        "dates": "9/24—27 · 3 晚",
+        "price": null,
+        "cancel": "未看到三单床报价",
+        "url": "https://hotel.fliggy.com/hotel_detail2.htm?shid=50345129&city=904976&checkIn=2026-09-24&checkOut=2026-09-27&roomNum=1&aNum_1=3&cNum_1=0"
+      },
+      {
+        "dates": "9/29—30 · 1 晚",
+        "price": null,
+        "cancel": "该段尚未核得报价",
+        "url": "https://hotel.fliggy.com/hotel_detail2.htm?shid=50345129&city=904976&checkIn=2026-09-29&checkOut=2026-09-30&roomNum=1&aNum_1=3&cNum_1=0"
+      }
+    ]
+  },
+  {
+    "id": "hotel-j-residence",
+    "number": 7,
+    "city": "pattaya",
+    "name": "J 住宅酒店",
+    "en": "Hotel J Residence Pattaya",
+    "area": "芭提雅北部 · North Pattaya Road",
+    "room": "Deluxe Triple Room｜豪华三人房",
+    "beds": "3 张单人床",
+    "size": "36㎡",
+    "badge": "芭提雅优先比较",
+    "why": "三床配置清楚，位于北部，适合去北站、Terminal 21 和真理寺的行程组合。",
+    "tradeoff": "J Main、J Inspired、J Residence 是不同楼栋，认准 Residence 的房型与入口；前往海滩和中天仍要安排交通。",
+    "food": "Terminal 21／Pier 21、北部餐饮区域",
+    "ll": [
+      100.895349,
+      12.9497355
+    ],
+    "coordSource": "https://www.google.com/maps/place/Hotel+J+Residence/data=!4m10!3m9!1s0x3102bfc69f202063:0x8eb738fcc0451ca2!5m2!4m1!1i2!8m2!3d12.9497355!4d100.895349!16s%2Fg%2F11vylh087b",
+    "official": "https://www.hoteljpattaya.com/accommodation/deluxe-tripple-room-jresidence/",
+    "bedSource": "https://www.hoteljpattaya.com/accommodation/deluxe-tripple-room-jresidence/",
+    "quotes": [
+      {
+        "plan": "common",
+        "dates": "9/24—26 · 2 晚",
+        "price": null,
+        "cancel": "新日期待询价；取消条款须重查",
+        "url": "https://hotel.fliggy.com/hotel_detail2.htm?shid=52007088&city=904974&checkIn=2026-09-24&checkOut=2026-09-26&roomNum=1&aNum_1=3&cNum_1=0"
+      }
+    ],
+    "historicalQuotes": [
+      {
+        "dates": "9/27—29 · 2 晚",
+        "price": 260,
+        "cancel": "限时取消，期限待核",
+        "url": "https://hotel.fliggy.com/hotel_detail2.htm?shid=52007088&city=904974&checkIn=2026-09-27&checkOut=2026-09-29&roomNum=1&aNum_1=3&cNum_1=0"
+      }
+    ]
+  },
+  {
+    "id": "hotel-grand-bella",
+    "number": 8,
+    "city": "pattaya",
+    "name": "格兰德贝拉酒店",
+    "en": "Grand Bella Hotel Pattaya",
+    "area": "芭提雅中部 · Pattaya Klang",
+    "room": "Superior Triple Room｜高级三人房",
+    "beds": "3 张单人床",
+    "size": "32㎡",
+    "badge": "市中心备选",
+    "why": "在市中心，方便串联 Central Pattaya 与海滩路周边吃饭，适合更看重步行逛吃的选择。",
+    "tradeoff": "相比北部酒店，去北站和真理寺更依赖接驳；挑最近的房间与隔音评价，不只看总分。",
+    "food": "Central Pattaya、海滩路餐饮一带",
+    "ll": [
+      100.887199,
+      12.935298
+    ],
+    "coordSource": "https://www.thaihotels.com/hotels/grand-bella-hotel-pattaya-chonburi-364501",
+    "official": "https://www.booking.com/hotel/th/grand-bella.html",
+    "bedSource": "https://hotel.fliggy.com/hotel_detail2.htm?shid=50372937&city=904974&checkIn=2026-09-27&checkOut=2026-09-29&roomNum=1&aNum_1=3&cNum_1=0",
+    "quotes": [
+      {
+        "plan": "common",
+        "dates": "9/24—26 · 2 晚",
+        "price": null,
+        "cancel": "新日期待询价；取消条款须重查",
+        "url": "https://hotel.fliggy.com/hotel_detail2.htm?shid=50372937&city=904974&checkIn=2026-09-24&checkOut=2026-09-26&roomNum=1&aNum_1=3&cNum_1=0"
+      }
+    ],
+    "historicalQuotes": [
+      {
+        "dates": "9/27—29 · 2 晚",
+        "price": 330,
+        "cancel": "不可取消",
+        "url": "https://hotel.fliggy.com/hotel_detail2.htm?shid=50372937&city=904974&checkIn=2026-09-27&checkOut=2026-09-29&roomNum=1&aNum_1=3&cNum_1=0"
+      }
+    ]
+  },
+  {
+    "id": "hotel-siam-siam",
+    "number": 9,
+    "city": "pattaya",
+    "name": "芭提雅暹罗设计酒店",
+    "en": "Siam@Siam Design Hotel Pattaya",
+    "area": "芭提雅北部 · Central Marina 周边",
+    "room": "Deluxe Triple 3 Singles｜豪华三人房",
+    "beds": "3 张单人床",
+    "size": "43㎡",
+    "badge": "增加预算再考虑",
+    "why": "适合把芭提雅的两晚当作酒店休闲时间，位置也方便北部商场和海边活动。",
+    "tradeoff": "三单床展示价明显高于前两家。飞猪该报价窗型写「暗窗」，介意采光应核对具体房间；不要误选价格更低的双床房。",
+    "food": "Central Marina、Terminal 21 周边",
+    "ll": [
+      100.8887009,
+      12.9457203
+    ],
+    "coordSource": "https://www.google.com/maps/place/芭提雅暹罗设计酒店/@12.9457203,100.8887009,17z/data=!4m9!3m8!1s0x3102bdffeb53c6af:0x40fc00c40fbdf873!5m2!4m1!1i2!8m2!3d12.9457203!4d100.8887009!16s%2Fg%2F1ptyqht0h",
+    "official": "https://www.siamatsiam.com/pattaya/rooms/",
+    "bedSource": "https://www.siamatsiam.com/wp-content/uploads/2025/09/SSPTY_Factsheet.pdf",
+    "quotes": [
+      {
+        "plan": "common",
+        "dates": "9/24—26 · 2 晚",
+        "price": null,
+        "cancel": "新日期待询价；取消条款须重查",
+        "url": "https://hotel.fliggy.com/hotel_detail2.htm?shid=50373079&city=904974&checkIn=2026-09-24&checkOut=2026-09-26&roomNum=1&aNum_1=3&cNum_1=0"
+      }
+    ],
+    "historicalQuotes": [
+      {
+        "dates": "9/27—29 · 2 晚",
+        "price": 893,
+        "cancel": "限时取消，期限待核",
+        "url": "https://hotel.fliggy.com/hotel_detail2.htm?shid=50373079&city=904974&checkIn=2026-09-27&checkOut=2026-09-29&roomNum=1&aNum_1=3&cNum_1=0"
+      }
+    ]
+  }
+]

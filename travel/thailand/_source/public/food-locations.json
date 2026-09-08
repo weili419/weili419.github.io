@@ -1,0 +1,357 @@
+{
+  "thamafood": {
+    "ll": [100.488722,13.754733],
+    "city": "bangkok",
+    "source": "https://www.google.com/maps/place/Tha+Maharaj/@13.754733,100.488722,17z/data=!3m1!4b1!4m6!3m5!1s0x30e2990b0d2e6785:0xf7901dd07c06cdf1!8m2!3d13.754733!4d100.488722!16s%2Fg%2F11b7v_pn66",
+    "locationNote": "商场参考位置，具体餐饮商户到场再选；不是一家固定餐厅。"
+  },
+  "siamfood": {
+    "ll": [100.5349375,13.7468007],
+    "city": "bangkok",
+    "source": "https://www.openstreetmap.org/way/781138575",
+    "locationNote": "Siam Paragon 商场参考位置，美食广场内按现场菜单选摊位。"
+  },
+  "no6": {
+    "ll": [
+      98.2984316,
+      7.8939023
+    ],
+    "source": "https://www.google.com/maps/place/No.6+Restaurant/data=!4m7!3m6!1s0x30503a9d39d7987d:0xd3fdd7c85dc2fde!8m2!3d7.8939023!4d98.2984316!16s%2Fg%2F1q2v_6wv5!19sChIJfZjXOZ06UDAR3i_chXzdPw0",
+    "city": "phuket",
+    "locationNote": "Rat-U-Thit 路 186 号原店，非山上店。"
+  },
+  "briley": {
+    "ll": [
+      98.3052574,
+      7.8946925
+    ],
+    "source": "https://www.google.com/maps/place/%E9%B8%A1%E9%A5%AD%E5%BA%97/@7.8946925,98.3052574,17z/data=!3m1!4b1!4m6!3m5!1s0x30503a985da43c21:0x19a8e2e84c747b66!8m2!3d7.8946925!4d98.3052574!16s%2Fg%2F11b769bpzm",
+    "city": "phuket",
+    "locationNote": "地址待再次核实：Google 当前列 17 Nanai Rd；旧游记列 Rat-U-Thit 路。本标记按当前 Google 店铺点。"
+  },
+  "no9": {
+    "ll": [
+      98.2981798,
+      7.905803
+    ],
+    "source": "https://www.google.com/maps/place/No.9+Restaurant/data=!4m7!3m6!1s0x30503a9a70eed5a5:0x441bcc545d0d50bd!8m2!3d7.905803!4d98.2981798!16s%2Fg%2F1q5bkpb1n!19sChIJpdXucJo6UDARvVANXVTMG0Q",
+    "city": "phuket",
+    "locationNote": "芭东北端原店，非 No.9 2nd 分店。"
+  },
+  "khrua": {
+    "ll": [
+      98.3017303,
+      7.8274422
+    ],
+    "source": "https://www.google.com/maps/place/Khrua+Nong+Bio/@7.8274422,98.3017303,17z/data=!3m1!4b1!4m6!3m5!1s0x305025846db65ba5:0x233541c584e77e11!8m2!3d7.8274422!4d98.3017303!16s%2Fg%2F1hfpkrh5w",
+    "city": "phuket",
+    "locationNote": "Google 地图店铺参考位置；入口请按现场确认。"
+  },
+  "red": {
+    "ll": [
+      98.3072083,
+      7.8164794
+    ],
+    "source": "https://www.google.com/maps/place/Red+Chair/@7.8164794,98.3072083,17z/data=!3m1!4b1!4m6!3m5!1s0x3050258a158bbd39:0x6bafa556f6857dcf!8m2!3d7.8164794!4d98.3072083!16s%2Fg%2F11b7k0bcy1",
+    "city": "phuket",
+    "locationNote": "Google 地图店铺参考位置；入口请按现场确认。"
+  },
+  "sugar": {
+    "ll": [
+      98.2982515,
+      7.8236717
+    ],
+    "source": "https://www.google.com/maps/place/Sugar+and+Spice+Restaurant+and+Inn/@7.8236717,98.2982515,17z/data=!4m9!3m8!1s0x3050258545558fd7:0xc5dd056818c4ce72!5m2!4m1!1i2!8m2!3d7.8236717!4d98.2982515!16s%2Fg%2F1w6gn87h",
+    "city": "phuket",
+    "locationNote": "Google 当前列 98/7 Kata Rd；已按此处标记，旧资料 Patak Road 地址未沿用。"
+  },
+  "roti": {
+    "ll": [
+      98.3908541,
+      7.8848203
+    ],
+    "source": "https://www.google.com/maps/place/Roti+Thaew+Nam/@7.8848203,98.3908541,17z/data=!3m1!4b1!4m6!3m5!1s0x3050313f9a49a29b:0x81d9950aa85ef8c4!8m2!3d7.8848203!4d98.3908541!16s%2Fg%2F11fjvv75wz",
+    "city": "phuket",
+    "locationNote": "Google 地图店铺参考位置；入口请按现场确认。"
+  },
+  "boon": {
+    "ll": [
+      98.3870894,
+      7.8822707
+    ],
+    "source": "https://www.google.com/maps/place/Boonrat+Dim+Sum/@7.8822707,98.3870894,17z/data=!3m1!4b1!4m6!3m5!1s0x305031e36e0fc4d7:0x7de99d2a7a03cfc8!8m2!3d7.8822707!4d98.3870894!16s%2Fg%2F1hc2c8xrt",
+    "city": "phuket",
+    "locationNote": "Bangkok Road 老城店，非其他 Boonrat 分店。"
+  },
+  "mee": {
+    "ll": [
+      98.3920927,
+      7.8800408
+    ],
+    "source": "https://www.google.com/maps/place/MeeTonPoe+Phuket+Town/data=!4m7!3m6!1s0x30502fc6bbe419d5:0xfdc7ae5c8e7d9daf!8m2!3d7.8800408!4d98.3920927!16s%2Fg%2F1hc2jsczg!19sChIJ1Rnku8YvUDARr519jlyux_0",
+    "city": "phuket",
+    "locationNote": "钟楼旁 Phuket Town 店，非 2 店或 3 店。"
+  },
+  "chuan": {
+    "ll": [
+      98.3928032,
+      7.8828319
+    ],
+    "source": "https://www.google.com/maps/place/Chuan+Chim/@7.8828319,98.3928032,17z/data=!3m1!4b1!4m6!3m5!1s0x305031f90c41fea3:0xfec1e72037903b63!8m2!3d7.8828319!4d98.3928032!16s%2Fg%2F11cn93yzk0",
+    "city": "phuket",
+    "locationNote": "Google 地图店铺参考位置；入口请按现场确认。"
+  },
+  "one": {
+    "ll": [
+      98.3907123,
+      7.8858088
+    ],
+    "source": "https://www.google.com/maps/place/One+Chun+Cafe+%26+Restaurant/@7.8858088,98.3907123,17z/data=!3m1!4b1!4m6!3m5!1s0x305031fa0136f989:0xf3042f816ed20bf4!8m2!3d7.8858088!4d98.3907123!16s%2Fg%2F12cp005bx",
+    "city": "phuket",
+    "locationNote": "Google 地图店铺参考位置；入口请按现场确认。"
+  },
+  "gobenz": {
+    "ll": [
+      98.3825828,
+      7.8847328
+    ],
+    "source": "https://www.google.com/maps/place/Go+Benz+Rice+Porridge+Phuket/@7.8847328,98.3825828,17z/data=!3m1!4b1!4m6!3m5!1s0x305031e5906dc545:0xc039ca4579378a4!8m2!3d7.8847328!4d98.3825828!16s%2Fg%2F11b6bpqz9k",
+    "city": "phuket",
+    "locationNote": "Google 地图店铺参考位置；入口请按现场确认。"
+  },
+  "jok": {
+    "ll": [
+      100.5626605,
+      13.7361706
+    ],
+    "source": "https://www.google.com/maps/place/Jok+Ruam+Jai/@13.7361706,100.5626605,17z/data=!3m1!4b1!4m6!3m5!1s0x30e29ee2d83cb519:0x6cac1a0132c83b1f!8m2!3d13.7361706!4d100.5626605!16s%2Fg%2F1tz73d_5",
+    "city": "bangkok",
+    "locationNote": "Google 地图店铺参考位置；入口请按现场确认。"
+  },
+  "took": {
+    "ll": [
+      100.5608772,
+      13.7326725
+    ],
+    "source": "https://www.google.com/maps/place/Took+Lae+Dee/@13.7326725,100.5608772,17z/data=!3m1!4b1!4m6!3m5!1s0x30e29f1d70bbe083:0x27986adb81cc632e!8m2!3d13.7326725!4d100.5608772!16s%2Fg%2F11cn6jsvs0",
+    "city": "bangkok",
+    "locationNote": "Google 地图店铺参考位置；入口请按现场确认。"
+  },
+  "rung": {
+    "ll": [
+      100.5706724,
+      13.7284371
+    ],
+    "source": "https://www.google.com/maps/place/Rung+Rueang+Pork+Noodles/data=!4m7!3m6!1s0x30e29f013f990233:0xcfa088d942a40c92!8m2!3d13.7284371!4d100.5706724!16s%2Fg%2F1tfglvmk!19sChIJMwKZPwGf4jARkgykQtmIoM8",
+    "city": "bangkok",
+    "locationNote": "Sukhumvit 26 左店；紧邻 Right shop，注意店名。"
+  },
+  "suda": {
+    "ll": [
+      100.5600329,
+      13.7367327
+    ],
+    "source": "https://www.google.com/maps/place/Suda+Restaurant/@13.7367327,100.5600329,17z/data=!3m1!4b1!4m6!3m5!1s0x30e29ee3aef66a1d:0x20c2c8ffb5e82ab3!8m2!3d13.7367327!4d100.5600329!16s%2Fg%2F1tm_znyx",
+    "city": "bangkok",
+    "locationNote": "Google 地图店铺参考位置；入口请按现场确认。"
+  },
+  "savoth": {
+    "ll": [
+      100.4887332,
+      13.7553002
+    ],
+    "source": "https://www.google.com/maps/place/Savoey+@Tha+Maharaj/@13.7553002,100.4887332,17z/data=!3m1!4b1!4m6!3m5!1s0x30e2990bbd0dc489:0x95bb80e546c2164b!8m2!3d13.7553002!4d100.4887332!16s%2Fg%2F11byl1l09r",
+    "city": "bangkok",
+    "locationNote": "Google 地图店铺参考位置；入口请按现场确认。"
+  },
+  "sae": {
+    "ll": [
+      100.4983761,
+      13.7534266
+    ],
+    "source": "https://www.google.com/maps/place/Sae+Phun+%E0%B8%82%E0%B9%89%E0%B8%B2%E0%B8%A7%E0%B8%AB%E0%B8%99%E0%B9%89%E0%B8%B2%E0%B9%84%E0%B8%81%E0%B9%88%E0%B9%81%E0%B8%8B%E0%B9%88%E0%B8%9E%E0%B8%B8%E0%B9%89%E0%B8%99/@13.7534266,100.4983761,17z/data=!3m1!4b1!4m6!3m5!1s0x30e2993808f11e4d:0xa5cb6c6daa9c1e5c!8m2!3d13.7534266!4d100.4983761!16s%2Fg%2F11f8l3ccmb",
+    "city": "bangkok",
+    "locationNote": "Google 地图店铺参考位置；入口请按现场确认。"
+  },
+  "naiek": {
+    "ll": [
+      100.5099369,
+      13.7401053
+    ],
+    "source": "https://www.google.com/maps/place/Nai+Ek+Roll+Noodle/@13.7401053,100.5099369,17z/data=!3m1!4b1!4m6!3m5!1s0x30e2992175e2fda9:0x694279ae73a6b2da!8m2!3d13.7401053!4d100.5099369!16s%2Fg%2F1tj6r85r",
+    "city": "bangkok",
+    "locationNote": "Google 地图店铺参考位置；入口请按现场确认。"
+  },
+  "tk": {
+    "ll": [
+      100.510636,
+      13.7400778
+    ],
+    "source": "https://www.google.com/maps/place/T+%26+K+Seafood/@13.7400778,100.510636,17z/data=!3m1!4b1!4m6!3m5!1s0x30e29921726b262f:0xe57403745890580b!8m2!3d13.7400778!4d100.510636!16s%2Fg%2F11d_9f8n_v",
+    "city": "bangkok",
+    "locationNote": "Google 地图店铺参考位置；入口请按现场确认。"
+  },
+  "lek": {
+    "ll": [
+      100.5104983,
+      13.7401367
+    ],
+    "source": "https://www.google.com/maps/place/Lek+Seafood/@13.7401367,100.5104983,17z/data=!3m1!4b1!4m6!3m5!1s0x30e29921719428f7:0xa91cf6ee6ee790d7!8m2!3d13.7401367!4d100.5104983!16s%2Fg%2F1hdyy428d",
+    "city": "bangkok",
+    "locationNote": "Google 地图店铺参考位置；入口请按现场确认。"
+  },
+  "ortor": {
+    "ll": [
+      100.5475328,
+      13.7971283
+    ],
+    "source": "https://www.google.com/maps/place/Or+Tor+Kor+Market/@13.7971283,100.5475328,17z/data=!3m1!4b1!4m6!3m5!1s0x30e29c141ea782c3:0xef703d7f3769af76!8m2!3d13.7971283!4d100.5475328!16s%2Fg%2F11b621yr9l",
+    "city": "bangkok",
+    "locationNote": "市场参考位置，熟食摊在市场内按现场选择。"
+  },
+  "lay": {
+    "ll": [
+      100.5437851,
+      13.7817476
+    ],
+    "source": "https://www.google.com/maps/place/Lay+Lao/@13.7817476,100.5437851,17z/data=!3m1!4b1!4m6!3m5!1s0x30e29c1da70480e3:0x21df567d78ca664!8m2!3d13.7817476!4d100.5437851!16s%2Fg%2F11b7gmtffx",
+    "city": "bangkok",
+    "locationNote": "Google 地图店铺参考位置；入口请按现场确认。"
+  },
+  "ruathong": {
+    "ll": [
+      100.5394974,
+      13.7657518
+    ],
+    "source": "https://www.google.com/maps/place/Baan+Kuay+Tiew+Ruathong/@13.7657518,100.5394974,17z/data=!3m1!4b1!4m6!3m5!1s0x30e29eb0601aa3e3:0x8c31c0b08db10262!8m2!3d13.7657518!4d100.5394974!16s%2Fg%2F1vkxjqgg",
+    "city": "bangkok",
+    "locationNote": "Google 地图店铺参考位置；入口请按现场确认。"
+  },
+  "somtam": {
+    "ll": [
+      100.5342979,
+      13.7444073
+    ],
+    "source": "https://www.google.com/maps/place/Somtam+Nua/@13.7444073,100.5342979,17z/data=!3m1!4b1!4m6!3m5!1s0x30e299d798dd987b:0xb0fdd04ebf73637!8m2!3d13.7444073!4d100.5342979!16s%2Fg%2F11g1kmy724",
+    "city": "bangkok",
+    "locationNote": "Google 地图店铺参考位置；入口请按现场确认。"
+  },
+  "mum": {
+    "ll": [
+      100.9114344,
+      12.9787319
+    ],
+    "source": "https://www.google.com/maps/place/Moom+Aroi+Na+Kluea/@12.9787319,100.9114344,17z/data=!3m1!4b1!4m6!3m5!1s0x3102be67c2ab706f:0xc575ce80f0e49d69!8m2!3d12.9787319!4d100.9114344!16s%2Fg%2F11cs38zqqb",
+    "city": "pattaya",
+    "locationNote": "Google 地图店铺参考位置；入口请按现场确认。"
+  },
+  "lan": {
+    "ll": [
+      100.9061836,
+      12.9732081
+    ],
+    "source": "https://www.google.com/maps/place/Lan+Pho+Na+Kluea+Market/@12.9732081,100.9061836,17z/data=!3m1!4b1!4m6!3m5!1s0x3102be6ebef4be31:0x8a93fc3ef02ca31c!8m2!3d12.9732081!4d100.9061836!16s%2Fg%2F11f3jmys25",
+    "city": "pattaya",
+    "locationNote": "兰坡海鲜市场参考位置，非指定加工摊。"
+  },
+  "dek": {
+    "ll": [
+      100.8793417,
+      12.906589
+    ],
+    "source": "https://www.google.com/maps/place/Dek+Sen+Noodles/data=!4m7!3m6!1s0x3102971c6eee3c2d:0x3b41c7acff34856e!8m2!3d12.906589!4d100.8793417!16s%2Fg%2F11lh2dwxpl!19sChIJLTzubhyXAjERboU0_6zHQTs",
+    "city": "pattaya",
+    "locationNote": "229/64 门店位置；地图有同址泰文条目，营业时间资料不一致，出发前确认。"
+  },
+  "pupen": {
+    "ll": [
+      100.895524,
+      12.861438
+    ],
+    "source": "https://www.google.com/maps/place/Pupen+Seafood/@12.861438,100.895524,17z/data=!3m1!4b1!4m6!3m5!1s0x3102940477d1dee9:0x74db886f251470ae!8m2!3d12.861438!4d100.895524!16s%2Fg%2F1td_w0_z",
+    "city": "pattaya",
+    "locationNote": "Google 地图店铺参考位置；入口请按现场确认。"
+  },
+  "kiss": {
+    "ll": [
+      100.891103,
+      12.9559389
+    ],
+    "city": "pattaya",
+    "source": "https://www.wongnai.com/restaurants/220092LC-kiss-food-drink-pattaya-%E0%B8%99%E0%B8%B2%E0%B9%80%E0%B8%81%E0%B8%A5%E0%B8%B7%E0%B8%AD",
+    "locationNote": "待核实：Wongnai「路线」所指 Naklua 27 北部分店参考点。Google 当前未搜到同一门店，先确认仍营业再前往。",
+    "unverified": true
+  },
+  "pierb": {
+    "ll": [
+      100.5604208,
+      13.7379237
+    ],
+    "city": "bangkok",
+    "source": "https://www.openstreetmap.org/way/157656710",
+    "locationNote": "Terminal 21 Asok 商场参考位置 · 5 楼。"
+  },
+  "savoey": {
+    "ll": [
+      100.5604208,
+      13.7379237
+    ],
+    "city": "bangkok",
+    "source": "https://www.openstreetmap.org/way/157656710",
+    "locationNote": "Terminal 21 Asok 商场参考位置 · 5 楼。"
+  },
+  "thongsiam": {
+    "ll": [
+      100.5349375,
+      13.7468007
+    ],
+    "city": "bangkok",
+    "source": "https://www.openstreetmap.org/way/781138575",
+    "locationNote": "Siam Paragon 商场参考位置 · G 层。"
+  },
+  "thongicon": {
+    "ll": [
+      100.5103251,
+      13.7268256
+    ],
+    "city": "bangkok",
+    "source": "https://www.openstreetmap.org/way/680735864",
+    "locationNote": "ICONSIAM 商场参考位置；各店所在楼层见卡片。"
+  },
+  "sook": {
+    "ll": [
+      100.5103251,
+      13.7268256
+    ],
+    "city": "bangkok",
+    "source": "https://www.openstreetmap.org/way/680735864",
+    "locationNote": "ICONSIAM 商场参考位置；各店所在楼层见卡片。"
+  },
+  "thip": {
+    "ll": [
+      100.5103251,
+      13.7268256
+    ],
+    "city": "bangkok",
+    "source": "https://www.openstreetmap.org/way/680735864",
+    "locationNote": "ICONSIAM 商场参考位置；各店所在楼层见卡片。"
+  },
+  "pierp": {
+    "ll": [
+      100.8896924,
+      12.9498403
+    ],
+    "city": "pattaya",
+    "source": "https://www.openstreetmap.org/way/651015521",
+    "locationNote": "Terminal 21 Pattaya 商场参考位置；各店所在楼层见卡片。"
+  },
+  "tookp": {
+    "ll": [
+      100.8896924,
+      12.9498403
+    ],
+    "city": "pattaya",
+    "source": "https://www.openstreetmap.org/way/651015521",
+    "locationNote": "Terminal 21 Pattaya 商场参考位置；各店所在楼层见卡片。"
+  }
+}

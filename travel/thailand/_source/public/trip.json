@@ -1,0 +1,909 @@
+{
+  "colors": {
+    "phuket": "#008c84",
+    "bangkok": "#3268d8",
+    "pattaya": "#ab7134",
+    "shanghai": "#586b86"
+  },
+  "categories": {
+    "airport": {
+      "symbol": "✈",
+      "name": "机场",
+      "color": "#265dc9"
+    },
+    "sight": {
+      "symbol": "◆",
+      "name": "景点",
+      "color": "#008c84"
+    },
+    "pier": {
+      "symbol": "⚓",
+      "name": "码头",
+      "color": "#087896"
+    },
+    "bus": {
+      "symbol": "巴",
+      "name": "汽车站",
+      "color": "#996125"
+    },
+    "stay": {
+      "symbol": "宿",
+      "name": "住宿区域",
+      "color": "#657285"
+    }
+  },
+  "catalog": [
+    {
+      "id": "pvg",
+      "city": "shanghai",
+      "kind": "airport",
+      "when": "9/20 出发 · A 9/29／B 10/1 返程",
+      "note": "上海浦东机场；最终抵达日期按机票确认。"
+    },
+    {
+      "id": "hkt",
+      "city": "phuket",
+      "kind": "airport",
+      "when": "9/20 抵达 · 9/24 出发"
+    },
+    {
+      "id": "bkk",
+      "city": "bangkok",
+      "kind": "airport",
+      "when": "9/24 中转地面交通 · A 9/29／B 10/1 返程候选",
+      "note": "素万那普 BKK 与廊曼 DMK 二选一，以各段机票为准，并非两座机场都要去。"
+    },
+    {
+      "id": "dmk",
+      "city": "bangkok",
+      "kind": "airport",
+      "when": "9/24 中转地面交通 · A 9/29／B 10/1 返程候选",
+      "note": "廊曼 DMK 与素万那普 BKK 二选一，以各段机票为准，并非两座机场都要去。"
+    },
+    {
+      "id": "patong",
+      "city": "phuket",
+      "kind": "stay",
+      "when": "9/20—9/24 · 4 晚",
+      "note": "建议住宿区域，尚未确定酒店。"
+    },
+    {
+      "id": "karon",
+      "city": "phuket",
+      "kind": "sight",
+      "when": "9/21"
+    },
+    {
+      "id": "kata",
+      "city": "phuket",
+      "kind": "sight",
+      "when": "9/21"
+    },
+    {
+      "id": "viewpoint",
+      "city": "phuket",
+      "kind": "sight",
+      "when": "9/21 · 按体力取舍"
+    },
+    {
+      "id": "chalongpier",
+      "city": "phuket",
+      "kind": "pier",
+      "when": "9/22 · 浮潜出发区域",
+      "note": "实际码头与集合点以团方通知为准。"
+    },
+    {
+      "id": "racha",
+      "city": "phuket",
+      "kind": "sight",
+      "when": "9/22 · 浮潜主选",
+      "note": "9/21—23 按海况互换；岛屿参考位置，不是指定入水点。"
+    },
+    {
+      "id": "coral",
+      "city": "phuket",
+      "kind": "sight",
+      "when": "浮潜日备选 · 非必去",
+      "optional": true,
+      "note": "珊瑚岛 Banana Beach，替代皇帝岛的备选方案。"
+    },
+    {
+      "id": "oldtown",
+      "city": "phuket",
+      "kind": "sight",
+      "when": "9/23"
+    },
+    {
+      "id": "chalong",
+      "city": "phuket",
+      "kind": "sight",
+      "when": "9/23"
+    },
+    {
+      "id": "asok",
+      "city": "bangkok",
+      "kind": "stay",
+      "when": "9/26—29 · A 3 晚／9/26—10/1 · B 5 晚",
+      "note": "建议住宿区域，尚未确定酒店。"
+    },
+    {
+      "id": "terminal21",
+      "city": "bangkok",
+      "kind": "sight",
+      "when": "9/26 起用餐备选 · B 9/30"
+    },
+    {
+      "id": "palace",
+      "city": "bangkok",
+      "kind": "sight",
+      "when": "9/28 周一上午"
+    },
+    {
+      "id": "watarun",
+      "city": "bangkok",
+      "kind": "sight",
+      "when": "9/28 下午"
+    },
+    {
+      "id": "chinatown",
+      "city": "bangkok",
+      "kind": "sight",
+      "when": "9/28 晚上"
+    },
+    {
+      "id": "chatuchak",
+      "city": "bangkok",
+      "kind": "sight",
+      "when": "9/27 周日上午"
+    },
+    {
+      "id": "siam",
+      "city": "bangkok",
+      "kind": "sight",
+      "when": "9/27 晚上 · B 9/29"
+    },
+    {
+      "id": "ekkamai",
+      "city": "bangkok",
+      "kind": "bus",
+      "when": "9/26 从芭提雅抵达"
+    },
+    {
+      "id": "pattayabus",
+      "city": "pattaya",
+      "kind": "bus",
+      "when": "9/24 BKK 北站线路抵达 · 9/26 出发"
+    },
+    {
+      "id": "pattayastay",
+      "city": "pattaya",
+      "kind": "stay",
+      "when": "9/24—26 · 2 晚",
+      "note": "Terminal 21 周边建议住宿区域，尚未确定酒店。"
+    },
+    {
+      "id": "truth",
+      "city": "pattaya",
+      "kind": "sight",
+      "when": "9/25 上午"
+    },
+    {
+      "id": "jomtien",
+      "city": "pattaya",
+      "kind": "sight",
+      "when": "9/25 午后"
+    },
+    {
+      "id": "balihai",
+      "city": "pattaya",
+      "kind": "pier",
+      "when": "9/25 上岛备选",
+      "optional": true
+    },
+    {
+      "id": "kolan",
+      "city": "pattaya",
+      "kind": "sight",
+      "when": "9/25 上岛备选",
+      "optional": true,
+      "note": "格兰岛为备选，需替换当天大部分陆地活动；岛屿参考点不是具体码头或下水点。"
+    },
+    {
+      "id": "iconsiam",
+      "city": "bangkok",
+      "kind": "sight",
+      "when": "9/26 傍晚—晚上"
+    },
+    {
+      "id": "bacc",
+      "city": "bangkok",
+      "kind": "sight",
+      "plan": "B",
+      "when": "B 方案 · 9/29",
+      "note": "文化艺术中心，看当天开放的展览。"
+    },
+    {
+      "id": "lumphini",
+      "city": "bangkok",
+      "kind": "sight",
+      "plan": "B",
+      "when": "B 方案 · 9/30",
+      "note": "公园散步；高温或下雨改室内。"
+    }
+  ],
+  "places": {
+    "pvg": {
+      "name": "上海浦东机场 PVG",
+      "en": "Shanghai Pudong International Airport",
+      "ll": [
+        121.80528,
+        31.14333
+      ],
+      "source": "https://www.wikidata.org/wiki/Q36420"
+    },
+    "hkt": {
+      "name": "普吉机场 HKT",
+      "en": "Phuket International Airport",
+      "ll": [
+        98.3177466,
+        8.1100064
+      ],
+      "osm": "relation/20416548"
+    },
+    "bkk": {
+      "name": "素万那普机场 BKK",
+      "en": "Suvarnabhumi Airport",
+      "ll": [
+        100.7523198,
+        13.6816744
+      ],
+      "osm": "relation/6641648"
+    },
+    "dmk": {
+      "name": "廊曼机场 DMK",
+      "en": "Don Mueang International Airport",
+      "ll": [
+        100.6040594,
+        13.9126385
+      ],
+      "osm": "way/159466978"
+    },
+    "patong": {
+      "name": "芭东海滩／住宿区",
+      "en": "Patong Beach Phuket",
+      "ll": [
+        98.2924294,
+        7.8964014
+      ],
+      "osm": "relation/14018589"
+    },
+    "kata": {
+      "name": "卡塔海滩",
+      "en": "Kata Beach Phuket",
+      "ll": [
+        98.2960258,
+        7.8193895
+      ],
+      "osm": "relation/4235947"
+    },
+    "karon": {
+      "name": "卡伦海滩",
+      "en": "Karon Beach Phuket",
+      "ll": [
+        98.2917816,
+        7.8439856
+      ],
+      "osm": "way/134394729"
+    },
+    "viewpoint": {
+      "name": "卡伦观景台",
+      "en": "Karon View Point Phuket",
+      "ll": [
+        98.3021839,
+        7.7972523
+      ],
+      "osm": "node/1562239992"
+    },
+    "chalongpier": {
+      "name": "查龙码头",
+      "en": "Chalong Pier Phuket",
+      "ll": [
+        98.350993,
+        7.8193895
+      ],
+      "osm": "node/270986823"
+    },
+    "racha": {
+      "name": "皇帝岛 · Racha Yai",
+      "en": "Ko Racha Yai Phuket",
+      "ll": [
+        98.3663641,
+        7.6024567
+      ],
+      "osm": "relation/5660749"
+    },
+    "coral": {
+      "name": "珊瑚岛 · Banana Beach",
+      "en": "Banana Beach Koh Hey Phuket",
+      "ll": [
+        98.3820778,
+        7.7451031
+      ],
+      "osm": "relation/5660833"
+    },
+    "oldtown": {
+      "name": "普吉老街",
+      "en": "Phuket Old Town",
+      "ll": [
+        98.3892206,
+        7.8847774
+      ],
+      "osm": "node/4395955589"
+    },
+    "chalong": {
+      "name": "查龙寺",
+      "en": "Wat Chalong Phuket",
+      "ll": [
+        98.3370972,
+        7.8462522
+      ],
+      "osm": "way/242673271"
+    },
+    "asok": {
+      "name": "Asok／Sukhumvit 住宿区",
+      "en": "Asok BTS Station Bangkok",
+      "ll": [
+        100.5603142,
+        13.7370043
+      ],
+      "osm": "relation/2108210"
+    },
+    "terminal21": {
+      "name": "Terminal 21 Asok",
+      "en": "Terminal 21 Asok Bangkok",
+      "ll": [
+        100.5604208,
+        13.7379237
+      ],
+      "osm": "way/157656710"
+    },
+    "palace": {
+      "name": "大皇宫／玉佛寺",
+      "en": "Grand Palace Bangkok",
+      "ll": [
+        100.4917924,
+        13.7495708
+      ],
+      "osm": "way/23482754"
+    },
+    "watarun": {
+      "name": "郑王庙",
+      "en": "Wat Arun Bangkok",
+      "ll": [
+        100.4884885,
+        13.7438235
+      ],
+      "osm": "way/23481741"
+    },
+    "chinatown": {
+      "name": "唐人街 · 耀华力路",
+      "en": "Yaowarat Road Bangkok Chinatown",
+      "ll": [
+        100.5089484,
+        13.741907
+      ],
+      "osm": "node/340165036"
+    },
+    "chatuchak": {
+      "name": "乍都乍周末市场",
+      "en": "Chatuchak Market Bangkok",
+      "ll": [
+        100.5503771,
+        13.8003894
+      ],
+      "osm": "way/37911198"
+    },
+    "siam": {
+      "name": "Siam 商圈 · 暹罗百丽宫",
+      "en": "Siam Paragon Bangkok",
+      "ll": [
+        100.5349375,
+        13.7468007
+      ],
+      "osm": "way/781138575"
+    },
+    "ekkamai": {
+      "name": "曼谷 Ekkamai 汽车站",
+      "en": "Bangkok Bus Terminal Eastern Ekkamai",
+      "ll": [
+        100.5840204,
+        13.7194034
+      ],
+      "osm": "relation/20443105"
+    },
+    "pattayabus": {
+      "name": "芭提雅北汽车站",
+      "en": "Air Conditioned Bus Terminal North Pattaya Bangkok",
+      "ll": [
+        100.9034026,
+        12.9497299
+      ],
+      "osm": "way/195004474"
+    },
+    "pattayastay": {
+      "name": "芭提雅 Terminal 21 周边",
+      "en": "Terminal 21 Pattaya",
+      "ll": [
+        100.8896924,
+        12.9498403
+      ],
+      "osm": "way/651015521"
+    },
+    "truth": {
+      "name": "真理寺",
+      "en": "Sanctuary of Truth Pattaya",
+      "ll": [
+        100.8891366,
+        12.9727895
+      ],
+      "osm": "way/223698118"
+    },
+    "jomtien": {
+      "name": "中天海滩",
+      "en": "Jomtien Beach Pattaya",
+      "ll": [
+        100.8826011,
+        12.8768835
+      ],
+      "osm": "way/1297672173"
+    },
+    "balihai": {
+      "name": "Bali Hai 码头",
+      "en": "Bali Hai Pier Pattaya",
+      "ll": [
+        100.8675573,
+        12.9278203
+      ],
+      "osm": "way/504916659"
+    },
+    "kolan": {
+      "name": "格兰岛 · Koh Larn",
+      "en": "Ko Lan Pattaya",
+      "ll": [
+        100.7783262,
+        12.9174911
+      ],
+      "osm": "way/23484541"
+    },
+    "iconsiam": {
+      "name": "ICONSIAM 河畔商场",
+      "en": "ICONSIAM Bangkok",
+      "ll": [
+        100.5103251,
+        13.7268256
+      ],
+      "osm": "way/680735864"
+    },
+    "bacc": {
+      "name": "曼谷文化艺术中心 BACC",
+      "en": "Bangkok Art and Culture Centre",
+      "ll": [
+        100.5302168,
+        13.7467339
+      ],
+      "source": "https://www.google.com/maps/place/%E6%9B%BC%E8%B0%B7%E6%96%87%E5%8C%96%E8%89%BA%E6%9C%AF%E4%B8%AD%E5%BF%83/@13.7467339,100.5302168,17z/data=!4m6!3m5!1s0x30e29ecd506f6c7d:0x1ed0028ba796150b!8m2!3d13.7467339!4d100.5302168!16s%2Fm%2F043rs1m"
+    },
+    "lumphini": {
+      "name": "伦披尼公园",
+      "en": "Lumphini Park Bangkok",
+      "ll": [
+        100.5416984,
+        13.7314281
+      ],
+      "source": "https://www.google.com/maps/place/%E4%BC%A6%E6%8A%AB%E5%B0%BC%E5%85%AC%E5%9B%AD/@13.7314281,100.5416984,17z/data=!4m6!3m5!1s0x30e29f26ed4bb01b:0xac01b20801f96936!8m2!3d13.7314281!4d100.5416984!16zL20vMDlyeGN6"
+    }
+  },
+  "commonDays": [
+    {
+      "date": 20,
+      "week": "周日",
+      "city": "phuket",
+      "short": "抵达普吉",
+      "title": "上海 → 普吉岛",
+      "intro": "先安顿下来，把海岛的第一晚留给休息。",
+      "stay": "patong",
+      "stayText": "普吉 · 第 1 晚／共 4 晚",
+      "note": "航班尚未预订。地图默认展示普吉当地，点上海机场可查看出发地。晚到就不加景点。",
+      "stops": [
+        {
+          "id": "pvg",
+          "time": "按航班时间",
+          "text": "上海直飞普吉，核对行李额度与落地日期。"
+        },
+        {
+          "id": "hkt",
+          "time": "抵达后",
+          "text": "入境、取行李，乘已确认的接机车辆去酒店。"
+        },
+        {
+          "id": "patong",
+          "time": "晚上",
+          "text": "在住宿附近吃饭、补水、休息。芭东只是住宿区域建议。"
+        }
+      ]
+    },
+    {
+      "date": 21,
+      "week": "周一",
+      "city": "phuket",
+      "short": "海边慢游",
+      "title": "卡伦、卡塔与海景",
+      "intro": "不赶早。海边走走，傍晚看景，再回酒店。",
+      "stay": "patong",
+      "stayText": "普吉 · 第 2 晚",
+      "note": "今天与 9/22、9/23 可以按海况互换。红旗时不上水；海滩散步不等于安排岸边浮潜。",
+      "stops": [
+        {
+          "id": "karon",
+          "time": "上午偏晚",
+          "text": "卡伦海边散步，找地方吃午餐。"
+        },
+        {
+          "id": "kata",
+          "time": "下午",
+          "text": "卡塔海滩、咖啡店，天气不好就延长室内休息。"
+        },
+        {
+          "id": "viewpoint",
+          "time": "傍晚 · 可取舍",
+          "text": "乘车去观景台看三湾，不安排步行串联所有景点。"
+        }
+      ]
+    },
+    {
+      "date": 22,
+      "week": "周二",
+      "city": "phuket",
+      "short": "皇帝岛浮潜",
+      "title": "第一次浮潜，去皇帝岛",
+      "intro": "暂定一日游：酒店接送、向导带队、先练习再浮潜。",
+      "stay": "patong",
+      "stayText": "普吉 · 第 3 晚",
+      "note": "岛屿标记只帮助理解位置，不是可以自行下水的浮潜点。具体海湾、上岛点与下水安排由持牌团方依当天海况决定。停航则改陆地行程。",
+      "stops": [
+        {
+          "id": "chalongpier",
+          "time": "早上 · 以团方为准",
+          "text": "查龙码头作为出发区域参考，实际集合点以运营方通知为准。"
+        },
+        {
+          "id": "racha",
+          "time": "上午—下午 · 暂定主选",
+          "text": "皇帝岛浮潜，水中向导带队。岛上区域参考点，并非指定入水点。"
+        },
+        {
+          "id": "patong",
+          "time": "傍晚",
+          "text": "返回普吉，接送回酒店，晚餐后休息。"
+        }
+      ]
+    },
+    {
+      "date": 23,
+      "week": "周三",
+      "city": "phuket",
+      "short": "老街与寺庙",
+      "title": "普吉老街与查龙寺",
+      "intro": "逛吃、喝咖啡，留出一日可调整的陆地安排。",
+      "stay": "patong",
+      "stayText": "普吉 · 第 4 晚",
+      "note": "这是第二个浮潜备用日期。若改到今天出海，把老街与寺庙移到此前取消出海的那一天。",
+      "stops": [
+        {
+          "id": "oldtown",
+          "time": "上午—午后",
+          "text": "老街建筑、街边小吃与咖啡店，午餐就近解决。"
+        },
+        {
+          "id": "chalong",
+          "time": "下午",
+          "text": "查龙寺，穿有袖上衣与过膝下装，按现场要求脱鞋。"
+        },
+        {
+          "id": "patong",
+          "time": "晚上",
+          "text": "回酒店整理行李，核对明天航班与接机。"
+        }
+      ]
+    },
+    {
+      "date": 24,
+      "week": "周四",
+      "city": "pattaya",
+      "short": "直达芭提雅",
+      "title": "普吉 → 曼谷机场 → 芭提雅",
+      "intro": "优先选上午飞抵 BKK 的航班，取行李后在机场换乘去芭提雅的车。",
+      "stay": "pattayastay",
+      "stayText": "芭提雅 · 第 1 晚／共 2 晚",
+      "note": "9/24 只在曼谷机场中转地面交通，不进曼谷市区入住。BKK 优先；若选 DMK，先核实直达巴士实际班次和下客点，错过则使用已确认的包车。国内航班落地到巴士预留约 1.5—2 小时弹性，不是联程保障。",
+      "stops": [
+        {
+          "id": "hkt",
+          "time": "上午",
+          "text": "按航班倒推，国内段提前约 2 小时到机场；酒店到机场时间另算。"
+        },
+        {
+          "id": "airport",
+          "time": "上午—中午",
+          "text": "BKK 1 层 8 号门确认去芭提雅北站的大巴；DMK 另用其机场直达车或包车，不能套用 BKK 站点。"
+        },
+        {
+          "id": "arrivalbus",
+          "time": "下午",
+          "text": "BKK 北站线路参考约 2 小时车程，按票面下车点接驳酒店。DMK 线路下车点以出票通知为准。"
+        },
+        {
+          "id": "pattayastay",
+          "time": "晚上",
+          "text": "入住北部酒店，就近吃饭；晚到不加真理寺。"
+        }
+      ],
+      "airport": true
+    },
+    {
+      "date": 25,
+      "week": "周五",
+      "city": "pattaya",
+      "short": "真理寺与海边",
+      "title": "真理寺 → 中天海滩",
+      "intro": "早上参观，下午海边和咖啡店，晚上回北部住宿。",
+      "stay": "pattayastay",
+      "stayText": "芭提雅 · 第 2 晚",
+      "note": "若很想去格兰岛且海况允许，需替换今天大部分真理寺／中天安排，不默认把三处塞进一天。格兰岛是可选项目。",
+      "stops": [
+        {
+          "id": "truth",
+          "time": "上午",
+          "text": "按现场导览和安全安排参观真理寺。"
+        },
+        {
+          "id": "jomtien",
+          "time": "午后",
+          "text": "中天海滩散步、午餐、咖啡与休息；来回接驳另留时间。"
+        },
+        {
+          "id": "balihai",
+          "time": "可选 · 上岛码头",
+          "text": "只在决定用格兰岛替换当天陆地活动时前往。",
+          "optional": true
+        },
+        {
+          "id": "kolan",
+          "time": "可选 · 替换陆地行程",
+          "text": "格兰岛天气与运营允许才去；参考点不是入水点。",
+          "optional": true
+        }
+      ]
+    },
+    {
+      "date": 26,
+      "week": "周六",
+      "city": "bangkok",
+      "short": "回曼谷住下",
+      "title": "芭提雅 → 曼谷",
+      "intro": "上午乘大巴回曼谷，下午入住，傍晚河畔慢游。",
+      "stay": "asok",
+      "stayText": "曼谷 · 第 1 晚；A 共 3 晚／B 共 5 晚",
+      "note": "曼谷从今天起连住同一家。市场放到明天周日，今天不赶市场与宫殿。酒店未定，Asok 为住宿区域参考。",
+      "stops": [
+        {
+          "id": "pattayabus",
+          "time": "上午",
+          "text": "芭提雅北汽车站 → 曼谷 Ekkamai，预留候车与行李时间。"
+        },
+        {
+          "id": "ekkamai",
+          "time": "中午前后",
+          "text": "抵达后接驳酒店，先放行李和吃午餐。"
+        },
+        {
+          "id": "asok",
+          "time": "下午",
+          "text": "入住、午休；堵车或疲劳时延后河边活动。"
+        },
+        {
+          "id": "iconsiam",
+          "time": "傍晚—晚上",
+          "text": "河畔散步、晚餐与伴手礼。"
+        }
+      ]
+    },
+    {
+      "date": 27,
+      "week": "周日",
+      "city": "bangkok",
+      "short": "周末市场",
+      "title": "乍都乍与 Siam 商圈",
+      "intro": "把周末留给市场，下午回酒店休息洗衣。",
+      "stay": "asok",
+      "stayText": "曼谷 · 第 2 晚",
+      "note": "乍都乍安排在周日。Jok Ruam Jai 的既有资料列周日休息，早餐改为 Took Lae Dee、酒店或市场。上午逛 2—3 小时，午后休息再去 Siam。",
+      "stops": [
+        {
+          "id": "chatuchak",
+          "time": "上午 · 约 2—3 小时",
+          "text": "乍都乍市场，边逛边吃，记得喝水与防晒。"
+        },
+        {
+          "id": "asok",
+          "time": "下午",
+          "text": "回酒店午休、洗衣和整理行李。"
+        },
+        {
+          "id": "siam",
+          "time": "晚上",
+          "text": "Siam 商圈晚餐、商场与购物，按预算控制消费。"
+        }
+      ]
+    },
+    {
+      "date": 28,
+      "week": "周一",
+      "city": "bangkok",
+      "short": "曼谷老城",
+      "title": "宫殿、寺庙与唐人街",
+      "intro": "同一区域慢慢看。上午早点到，午间安排休息。",
+      "stay": "asok",
+      "stayText": "曼谷 · 第 3 晚",
+      "note": "上午宫殿、午后郑王庙、晚上唐人街，按体力取舍。周一以固定餐厅的实际营业为准，不依赖街边摊全部出摊。A 方案今晚整理返程行李。",
+      "stops": [
+        {
+          "id": "palace",
+          "time": "上午",
+          "text": "大皇宫与玉佛寺，留意防晒和着装。"
+        },
+        {
+          "id": "watarun",
+          "time": "下午",
+          "text": "午餐休息后过河参观郑王庙，按现场渡船安排走。"
+        },
+        {
+          "id": "chinatown",
+          "time": "晚上",
+          "text": "耀华力路逛吃；人多路窄，三人约好集合位置。"
+        }
+      ]
+    }
+  ],
+  "plans": {
+    "A": {
+      "label": "9/29 曼谷 → 上海",
+      "returnDate": 29,
+      "dayCount": 10,
+      "nights": 9,
+      "bangkokNights": 3,
+      "budget": 6800,
+      "days": [
+        {
+          "date": 29,
+          "week": "周二",
+          "city": "bangkok",
+          "short": "返回上海",
+          "title": "曼谷 → 上海",
+          "intro": "今天以返程为主，按机票确认机场和出发日期。",
+          "airport": true,
+          "note": "国际航班提前约 3 小时到正确机场，市区接驳另算。若是凌晨起飞，需要前一晚离开酒店；上海抵达日期按机票，不默认与起飞日相同。",
+          "stops": [
+            {
+              "id": "asok",
+              "time": "按航班倒推",
+              "text": "酒店退房、检查证件和行李。早班机可调整为机场住宿。"
+            },
+            {
+              "id": "airport",
+              "time": "国际航班起飞前",
+              "text": "确认正确机场、航站楼与值机柜台。"
+            },
+            {
+              "id": "pvg",
+              "time": "按实际航班",
+              "text": "返回上海，结束旅行。"
+            }
+          ],
+          "stay": null,
+          "stayText": "返程，不安排泰国住宿"
+        }
+      ]
+    },
+    "B": {
+      "label": "10/1 曼谷 → 上海",
+      "returnDate": 1001,
+      "dayCount": 12,
+      "nights": 11,
+      "bangkokNights": 5,
+      "budget": 7450,
+      "days": [
+        {
+          "date": 29,
+          "week": "周二",
+          "city": "bangkok",
+          "short": "艺术与商圈",
+          "title": "曼谷文化艺术中心与 Siam",
+          "intro": "睡到自然醒，下午看展、咖啡店和商圈慢逛。",
+          "stay": "asok",
+          "stayText": "曼谷 · 第 4 晚／共 5 晚",
+          "note": "B 方案专属。BACC 公开常规时间为周二至周日 10:00—21:00；实际展览、票价及临时闭馆出发前确认。A 方案今天返程。",
+          "stops": [
+            {
+              "id": "bacc",
+              "time": "上午偏晚—下午",
+              "text": "看当天开放的展览，按兴趣逛 1—2 小时。"
+            },
+            {
+              "id": "siam",
+              "time": "下午—晚上",
+              "text": "Siam 商圈、咖啡、泰餐；想休息就回酒店。"
+            }
+          ]
+        },
+        {
+          "date": 30,
+          "week": "周三",
+          "city": "bangkok",
+          "short": "公园与休息",
+          "title": "伦披尼公园与出发前休整",
+          "intro": "早上公园散步，午后回 Asok 休息、正规按摩或补买用品。",
+          "stay": "asok",
+          "stayText": "曼谷 · 第 5 晚／最后一晚",
+          "note": "B 方案专属。雨大改室内，不再跨城；按摩等自选消费另计。今晚核对 10/1 的机场、起飞时刻和上海落地日；凌晨航班今晚就出发。",
+          "stops": [
+            {
+              "id": "lumphini",
+              "time": "清晨—上午",
+              "text": "公园步行，避开正午暴晒；雨天不勉强。"
+            },
+            {
+              "id": "asok",
+              "time": "午后",
+              "text": "回住宿区吃午餐、休息、收拾行李。"
+            },
+            {
+              "id": "terminal21",
+              "time": "傍晚",
+              "text": "就近晚餐和最后的购物，早点休息。"
+            }
+          ]
+        },
+        {
+          "date": 1001,
+          "week": "周四",
+          "city": "bangkok",
+          "short": "返回上海",
+          "title": "曼谷 → 上海",
+          "intro": "今天以返程为主，按机票确认机场和出发日期。",
+          "airport": true,
+          "note": "国际航班提前约 3 小时到正确机场，市区接驳另算。若是凌晨起飞，需要前一晚离开酒店；上海抵达日期按机票，不默认与起飞日相同。",
+          "stops": [
+            {
+              "id": "asok",
+              "time": "按航班倒推",
+              "text": "酒店退房、检查证件和行李。早班机可调整为机场住宿。"
+            },
+            {
+              "id": "airport",
+              "time": "国际航班起飞前",
+              "text": "确认正确机场、航站楼与值机柜台。"
+            },
+            {
+              "id": "pvg",
+              "time": "按实际航班",
+              "text": "返回上海，结束旅行。"
+            }
+          ],
+          "stay": null,
+          "stayText": "返程，不安排泰国住宿"
+        }
+      ]
+    }
+  }
+}
