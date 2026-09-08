@@ -30,3 +30,5 @@ node --experimental-strip-types scripts/check-plans.mjs
 行程：9/20—24 普吉 4 晚；9/24 机场直达芭提雅，住至 9/26；曼谷 A 住至 9/29，B 住至 10/1。餐饮和酒店均为候选，机票、酒店及团均未预订。新日期酒店报价需重新查询。
 
 Google My Maps 尚未接入：文件选择器被安全页面拦截。`_source/mymaps/README.md` 记录同一张地图的六个 KML 图层、待完成步骤与数据生成方式。当前线上地图保持 MapLibre/OpenFreeMap，不声称已完成 Google 替换。静态导出为地图与资源 URL 添加内容版本，避免缓存混用旧文件。
+
+9/25 增加 99 Show Pattaya 成人演出，约 19:30 为计划抵达时间（未订票，并非固定开演场次）。北部晚餐与秀场地图位置已同步；A/B 均增加 ¥350／人门票及新增晚间接驳规划额。`_source/app/show-guide.tsx` 保存入场须知和公开资料来源。

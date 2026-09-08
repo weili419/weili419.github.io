@@ -22,9 +22,13 @@ for(const [id,p] of Object.entries(trip.plans)){
   assert.ok(encoded.includes(h.city==='phuket'?'2026-09-24':h.city==='pattaya'?'2026-09-26':id==='A'?'2026-09-29':'2026-10-01'));
  }
 }
-assert.equal(2600+1350+1000+450+550+300+150+400,trip.plans.A.budget);
-assert.equal(2600+1650+1200+500+550+300+150+500,trip.plans.B.budget);
+assert.equal(2600+1350+1000+450+550+300+350+150+400,trip.plans.A.budget);
+assert.equal(2600+1650+1200+500+550+300+350+150+500,trip.plans.B.budget);
 assert.equal(Object.keys(venues).length,40);assert.equal(hotels.length,9);
+for(const id of ['A','B']){const showDay=[...trip.commonDays,...trip.plans[id].days].find(d=>d.date===25);assert.ok(showDay.stops.some(s=>s.id==='show99'));assert.ok(showDay.intro.includes('19:30'));}
+for(const id of ['show99']){assert.ok(trip.places[id].ll.every(Number.isFinite));assert.equal(trip.catalog.find(c=>c.id===id).kind,'show');}
+const showDinner=foodDays.find(d=>Number(d.date)===25).meals.find(m=>m.name==='晚餐');assert.ok(!showDinner.options.some(o=>o.venue==='pupen'));
+
 
 // Exercise the real map script with a minimal DOM/MapLibre adapter.
 // This checks state, routes and rendered text without a browser or network.

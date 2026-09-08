@@ -7,7 +7,7 @@ const output=new URL('mymaps/',root);fs.mkdirSync(output,{recursive:true});
 const xml=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&apos;'}[c]));
 const date=d=>Number(d)===1001?'10/1':'9/'+d;
 const when=values=>[...new Set(values)].map(date).join('、');
-const colors={airport:'ffc95d26',sight:'ff848c00',stay:'ff856957',pier:'ff967808',bus:'ff256199',food:'ff2e58c8',hotel:'ffb95680',route:'ff9b826c',blue:'ffe36d1a',red:'ff3539e5'};
+const colors={airport:'ffc95d26',sight:'ff848c00',stay:'ff856957',pier:'ff967808',bus:'ff256199',food:'ff2e58c8',hotel:'ffb95680',show:'ffad448e',route:'ff9b826c',blue:'ffe36d1a',red:'ff3539e5'};
 const styles=Object.entries(colors).map(([key,color])=>'<Style id="'+key+'"><IconStyle><color>'+color+'</color><scale>1.1</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle><LineStyle><color>'+color+'</color><width>'+(key==='blue'?7:3)+'</width></LineStyle></Style>').join('');
 function feature(id,name,description,kind,ll,points){
  assert.ok((points??[ll]).every(p=>p.length===2&&p.every(Number.isFinite)));

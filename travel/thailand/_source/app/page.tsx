@@ -5,6 +5,7 @@ import { Checkbox } from '@/components/ui/checkbox';
 import FoodGuide from './food-guide';
 import HotelGuide from './hotel-guide';
 import TripPlan from './trip-plan';
+import ShowGuide from './show-guide';
 import trip from '../public/trip.json';
 
 const sources = [["weather","9 月季风与出海","https://www.tourismthailand.org/Articles/thailand-september"],["racha","皇帝岛官方介绍","https://www.thailandtravel.or.jp/mu-ko-racha/"],["coral","珊瑚岛官方介绍","https://www.thailandtravel.or.jp/coral-island-ko-hey/"],["safety","首次浮潜安全要点","https://oceansafety.hawaii.gov/snorkeling-safety/"],["banana","Banana Beach 浮潜套餐","https://bananabeachkohhey.com/packages/snorkeling"],["visa","2026 年 9 月免签调整","https://th.china-embassy.gov.cn/sgxw/202609/t20260902_12014753.html"],["entry","中国使馆入境准备提醒","https://th.china-embassy.gov.cn/zgqz/1w1/202606/t20260609_11940509.html"],["tdac","TDAC 官方填写与规则","https://tdac.immigration.go.th/manual/en/faq.html"],["bus","曼谷—芭提雅大巴官网","https://airportpattayabus.com/bangkok-terminal-pattaya/"],["grand","大皇宫票价与时间","https://www.royalgrandpalace.th/en/visit/faq"],["truth","真理寺票价与时间","https://sanctuaryoftruthmuseum.com/visit-us/?lang=th"],["market","乍都乍周末市场","https://www.tourismthailand.org/Articles/get-unique-experience-with-5-wallet-friendly-shopping-hubs"],["similan","斯米兰开放季","https://thai.tourismthailand.org/Articles/similan-th"],["maya","2026 玛雅湾关闭通知（运营方）","https://www.asiantrails.travel/latest-news/annual-closure-of-iconic-island-bay/"],["travel","中国使馆旅游提醒","https://th.china-embassy.gov.cn/chn/sgxw/202407/t20240730_11463065.html"],["power","泰国民航局充电宝规定","https://www.caat.or.th/caat-media/203652/"],["dress","宫殿着装要求","https://www.tourismthailand.org/Articles/dressing-to-visit-royal-palaces-in-thailand"],["funds","泰国使馆免签资金说明","https://doha.thaiembassy.org/en/publicservice/tourist-visa-exemption-visa-on-arrival"]];
@@ -17,8 +18,8 @@ const packing = [
  ['电子与洗护',['手机、充电线、旅行转换插头','手机卡／漫游覆盖 A 10 天或 B 12 天；先确认 eSIM 支持','合规充电宝随身携带，标识清晰且不超过 100Wh','牙刷、剃须用品、雨衣／伞、纸巾和洗衣片','个人常备药及必要处方、创可贴']]
 ];
 const budget = {
- A:[['三段机票（含税与所需行李）',2600],['9 晚住宿分摊',1350],['吃饭与饮水',1000],['机场、市内交通与大巴',450],['一次有向导的浮潜',550],['宫殿、寺庙等门票',300],['手机卡与旅行保险等',150],['机动金',400]],
- B:[['三段机票基准；10/1 差价另计',2600],['11 晚住宿分摊',1650],['吃饭与饮水',1200],['机场、市内交通与大巴',500],['一次有向导的浮潜',550],['宫殿、寺庙等门票',300],['手机卡与旅行保险等',150],['机动金',500]],
+ A:[['三段机票（含税与所需行李）',2600],['9 晚住宿分摊',1350],['吃饭与饮水',1000],['机场、市内交通与大巴',450],['一次有向导的浮潜',550],['宫殿、寺庙等门票',300],['一场99秀＋新增晚间接驳',350],['手机卡与旅行保险等',150],['机动金',400]],
+ B:[['三段机票基准；10/1 差价另计',2600],['11 晚住宿分摊',1650],['吃饭与饮水',1200],['机场、市内交通与大巴',500],['一次有向导的浮潜',550],['宫殿、寺庙等门票',300],['一场99秀＋新增晚间接驳',350],['手机卡与旅行保险等',150],['机动金',500]],
 } as const;
 const days = trip.commonDays;
 export default function Home() {
@@ -27,7 +28,7 @@ export default function Home() {
   <main>
    <TripPlan/>
    <section id="travel-map" className="travel-map-section"><p className="map-version-note">地图已更新为蓝红分支对比。当前仍使用原有底图；Google 我的地图版本待数据导入后接入。</p><iframe title="泰国旅行 A／B 方案每日行程地图" src="/trip-map.html" className="travel-map-frame" /></section>
-   <nav className="section-nav" aria-label="攻略导航"><a href="#travel-map">旅行地图</a><a href="#food">每天吃什么 <ArrowUpRight size={15}/></a><a href="#hotels">三人酒店 <ArrowUpRight size={15}/></a><a href="#itinerary">每日行程</a><a href="#snorkeling">普吉浮潜 <ArrowUpRight size={15}/></a><a href="#transport">交通与住宿</a><a href="#budget">旅行预算</a><a href="#packing">出发准备</a></nav>
+   <nav className="section-nav" aria-label="攻略导航"><a href="#travel-map">旅行地图</a><a href="#food">每天吃什么 <ArrowUpRight size={15}/></a><a href="#shows">99秀</a><a href="#hotels">三人酒店 <ArrowUpRight size={15}/></a><a href="#itinerary">每日行程</a><a href="#snorkeling">普吉浮潜 <ArrowUpRight size={15}/></a><a href="#transport">交通与住宿</a><a href="#budget">旅行预算</a><a href="#packing">出发准备</a></nav>
    <section className="trip-heading guide-heading"><div><p className="eyebrow"><span data-plan-only="A">09.20 — 09.29 · 10 天 9 晚</span><span data-plan-only="B">09.20 — 10.01 · 12 天 11 晚</span></p><h1>泰国旅行手记<span>先普吉，再芭提雅，最后曼谷</span></h1><p className="intro">3 人同行 · 各睡一张床 · 普吉进，曼谷出</p></div><div className="date-stamp"><CalendarDays/><span>START</span><strong>09.20</strong></div></section>
    <div className="route-strip"><span>上海 <Plane size={15}/></span><span><b>普吉岛</b><small>4 晚</small></span><i>→</i><span><b>曼谷机场</b><small>当天转车</small></span><i>→</i><span><b>芭提雅</b><small>2 晚</small></span><i>→</i><span><b>曼谷</b><small data-plan-only="A">3 晚</small><small data-plan-only="B">5 晚</small></span><span><Plane size={15}/> 上海</span></div>
    <section id="itinerary" className="section"><div className="section-title"><div><p className="eyebrow">THE ITINERARY</p><h2><span data-plan-only="A">A · 10 天每日安排</span><span data-plan-only="B">B · 12 天每日安排</span></h2></div><span className="subtle">泰国时间比北京时间慢 1 小时</span></div>
@@ -36,6 +37,7 @@ export default function Home() {
     <div className="quiet-note"><b>9/29 是两套预订方案的分界</b><p>A：9/29 从曼谷直接回上海。B：9/29 看展逛街，9/30 公园与休息，10/1 回上海。出发前选好对应机票、酒店和保险截止日；凌晨航班需从前一晚倒推。</p><a href="#plans">切换返程方案 ↑</a></div>
    </section>
 
+<ShowGuide/>
 <FoodGuide/>
 <HotelGuide/>
 <section id="snorkeling" className="section snorkel-section">
@@ -70,7 +72,7 @@ export default function Home() {
 </section>
 <section id="budget" className="section">
  <div className="section-title"><div><p className="eyebrow">THE BUDGET</p><h2>为浮潜多留一点预算</h2></div><span className="tag neutral">全部为人民币规划额</span></div>
- {(['A','B'] as const).map(id=><div className="budget-layout" key={id} data-plan-only={id}><div className="budget-total"><Wallet size={26}/><p>PLAN {id} · 每人参考总额</p><strong>¥{trip.plans[id].budget.toLocaleString()}</strong><span>三人合计 ¥{(trip.plans[id].budget*3).toLocaleString()}</span><hr/><p>住宿按 {trip.plans[id].nights} 晚、平均 ¥450／间／晚、三人分摊。一次浮潜已计入；机票只是统一基准，实际返程差价另算。</p></div><Table className="trip-table budget-table"><TableHeader><TableRow><TableHead>项目</TableHead><TableHead className="text-right">每人</TableHead></TableRow></TableHeader><TableBody>{budget[id].map(([name,amount])=><TableRow key={name}><TableCell>{name}</TableCell><TableCell className="text-right">¥{amount.toLocaleString()}</TableCell></TableRow>)}</TableBody></Table></div>)}
+ {(['A','B'] as const).map(id=><div className="budget-layout" key={id} data-plan-only={id}><div className="budget-total"><Wallet size={26}/><p>PLAN {id} · 每人参考总额</p><strong>¥{trip.plans[id].budget.toLocaleString()}</strong><span>三人合计 ¥{(trip.plans[id].budget*3).toLocaleString()}</span><hr/><p>住宿按 {trip.plans[id].nights} 晚、平均 ¥450／间／晚、三人分摊。一次浮潜和一场99秀（含新增晚间接驳 ¥350／人）已计入；机票只是统一基准，实际返程差价另算。</p></div><Table className="trip-table budget-table"><TableHeader><TableRow><TableHead>项目</TableHead><TableHead className="text-right">每人</TableHead></TableRow></TableHeader><TableBody>{budget[id].map(([name,amount])=><TableRow key={name}><TableCell>{name}</TableCell><TableCell className="text-right">¥{amount.toLocaleString()}</TableCell></TableRow>)}</TableBody></Table></div>)}
  <p className="footnote">B 比 A 的地面规划多 ¥650／人：两晚住宿 ¥300、餐饮 ¥200、市内交通 ¥50、机动金 ¥100。10/1 返程临近国庆假期，不能把延长的全部成本当作固定 ¥650；机票与实际酒店差价另计。购物、酒精和额外体验不包含。</p>
 </section>
 <section id="packing" className="section">

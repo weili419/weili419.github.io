@@ -45,6 +45,7 @@
   const entry=trip.catalog.find(item=>trip.places[item.id]===p);
   if(entry?.kind==='airport'){el.classList.add('airport-marker');color=trip.categories.airport.color;el.style.setProperty('--pin',color);label=options.number?String(options.number)+' ✈':'✈';}
   if(entry?.kind==='hotel'){el.classList.add('hotel-marker');el.style.setProperty('--pin',trip.categories.hotel.color);label='H'+entry.number;}
+  if(entry?.kind==='show'){el.style.setProperty('--pin',trip.categories.show.color);label=options.number?String(options.number)+' 秀':'秀';}
   if(p.foodId)el.classList.add('food-marker');
   if(options.catalog){el.classList.add('catalog-pin');el.dataset.priority=String(entry?.kind==='airport'?100:options.optional?0:10);}
   el.innerHTML='<span class="pin-head">'+escape(label)+'</span><span class="pin-label">'+escape(options.name||p.name)+(options.sub?'<small>'+escape(options.sub)+'</small>':'')+'</span>';
@@ -265,6 +266,6 @@
   map.on('moveend',layoutLabels);map.on('resize',layoutLabels);
   new ResizeObserver(()=>map.resize()).observe($('map'));
  }catch(error){$('map-message').textContent='当前浏览器未能启动互动底图。请用支持 WebGL 的浏览器打开；仍可点击日期看行程，或打开各地点的 Google 地图。';document.querySelector('.map-area').classList.add('map-unavailable');}
- function readLocation(){const hash=new URLSearchParams(location.hash.slice(1));setPlan(hash.get('plan')||new URLSearchParams(location.search).get('plan')||'A',false);const h=hotels.find(h=>h.id===hash.get('hotel')),f=foods.find(f=>f.id===hash.get('food'));if(f)showFoods(f.city,hash.get('date'),f.id);else if(hash.has('foods'))showFoods(hash.get('foods'),hash.get('date'));else if(h)showHotels(h.city,h.id);else if(hash.has('hotels'))showHotels(hash.get('hotels'));else comparison();}
+ function readLocation(){const hash=new URLSearchParams(location.hash.slice(1));setPlan(hash.get('plan')||new URLSearchParams(location.search).get('plan')||'A',false);const h=hotels.find(h=>h.id===hash.get('hotel')),f=foods.find(f=>f.id===hash.get('food'));if(f)showFoods(f.city,hash.get('date'),f.id);else if(hash.has('foods'))showFoods(hash.get('foods'),hash.get('date'));else if(h)showHotels(h.city,h.id);else if(hash.has('hotels'))showHotels(hash.get('hotels'));else if(hash.has('date')&&trip.days.some(d=>d.date===Number(hash.get('date'))))showDay(trip.days.findIndex(d=>d.date===Number(hash.get('date'))));else comparison();}
  window.addEventListener('hashchange',readLocation);readLocation();
 })();
