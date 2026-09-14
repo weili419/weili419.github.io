@@ -2,7 +2,7 @@ import './show-guide.css';
 
 export default function ShowGuide(){
  return <section id="shows" className="section show-guide">
-  <div className="section-title"><div><p className="eyebrow">PATTAYA / EVENING PLAN</p><h2>9/25 晚上，安排 99秀</h2></div><span className="subtle">A/B 方案共用 · 成人演出 · 尚未订票</span></div>
+  <div className="section-title"><div><p className="eyebrow">PATTAYA / EVENING PLAN</p><h2>9/25 晚上，安排 99秀</h2></div><span className="subtle">成人演出 · 尚未订票</span></div>
   <p className="show-intro">地点为 99 Show Pattaya，也称 Big Eye Show／99秀王。秀场在北芭提雅，安排在真理寺、中天海滩之后，先回北部吃晚饭，再前往场馆。约 19:30 是计划抵达时间，实际入场安排以票面和现场确认为准。</p>
   <div className="show-schedule">
    <div><small>约 16:00</small><strong>离开中天海滩</strong><p>按实际路况预留 45—60 分钟回北部，休息换衣服。</p></div>

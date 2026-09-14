@@ -81,7 +81,7 @@ result=''.join(parser.out)
 assert parser.count==14, f'Expected 14 packing checkboxes, got {parser.count}'
 assert 'src="map.html"' in result and '普吉岛：把一天留给浮潜' in result
 assert '三个人，三张床，住哪里？' in result and result.count('data-hotel-map=')==9
-assert 'data-plan-switch="A"' in result and 'data-plan-switch="B"' in result
+assert '9 月 30 日，从曼谷返回杭州' in result and '10/1 回上海' not in result
 assert 'assets/trip-guide.js' in result
 # Give changed assets new URLs so a refresh cannot mix old map code with new HTML.
 for name in names + ['guide.css']:

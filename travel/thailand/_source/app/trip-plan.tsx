@@ -1,11 +1,11 @@
 import trip from '../public/trip.json';
 import './trip-plan.css';
 
-export const dateLabel=(date:number|string)=>Number(date)===1001?'10/1':`9/${date}`;
+export const dateLabel=(date:number|string)=>`9/${date}`;
 export default function TripPlan(){
- return <section className="trip-plan" id="plans" aria-label="选择返程方案">
-  <div><p className="eyebrow">SAME JOURNEY, TWO ENDINGS</p><h2>9 月 29 日，回家还是再玩两天？</h2><p>9/20—28 行程相同：普吉 4 晚 → 芭提雅 2 晚 → 曼谷。地图默认同屏显示两种返程：蓝线 A，红线 B。这里的按钮切换每日详情、三餐、住宿日期与预算。</p></div>
-  <div className="plan-options">{Object.entries(trip.plans).map(([id,p])=><button key={id} type="button" data-plan-switch={id} aria-pressed={id==='A'}><span>PLAN {id}</span><strong>{p.label}</strong><small>{p.dayCount} 天 {p.nights} 晚 · 曼谷连住 {p.bangkokNights} 晚</small><b>约 ¥{p.budget.toLocaleString()}／人</b></button>)}</div>
-  <p className="plan-caveat">这是订票前的两套方案，需要提前选择返程机票和酒店，并非默认到 9/29 再免费改签。10/1 返程的机票差价另计，以实际含税含行李报价为准。</p>
+ return <section className="trip-plan" id="plans" aria-label="已确认返程计划">
+  <div><p className="eyebrow">RETURN PLAN CONFIRMED</p><h2>9 月 30 日，从曼谷返回杭州</h2><p>9/20—30：普吉 4 晚 → 芭提雅 2 晚 → 曼谷 4 晚，最后飞往杭州萧山国际机场 HGH。9/29 保留 BACC 与 Siam 的曼谷行程。</p></div>
+  <div className="plan-options"><div><span>返程</span><strong>{trip.plans.A.label}</strong><small>{trip.plans.A.dayCount} 天 {trip.plans.A.nights} 晚 · 曼谷连住 {trip.plans.A.bangkokNights} 晚</small><b>约 ¥{trip.plans.A.budget.toLocaleString()}／人</b></div></div>
+  <p className="plan-caveat">机票和酒店尚未预订；请按 9/30 的起飞日期查询曼谷 BKK／DMK 至杭州 HGH 的航班。</p>
  </section>;
 }

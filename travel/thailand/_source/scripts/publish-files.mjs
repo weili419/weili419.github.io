@@ -2,13 +2,16 @@ import { spawn, spawnSync } from 'node:child_process';
 import { createServer } from 'node:net';
 import { fileURLToPath } from 'node:url';
 process.chdir(fileURLToPath(new URL('..', import.meta.url)));
-const build=spawnSync('npm',['run','build'],{stdio:'inherit'});
+const packageManager=process.env.npm_execpath;
+const command=packageManager?process.execPath:'npm';
+const run=task=>packageManager?[packageManager,'run',task]:['run',task];
+const build=spawnSync(command,run('build'),{stdio:'inherit'});
 if(build.status!==0)process.exit(build.status??1);
 const socket=createServer();
 await new Promise(resolve=>socket.listen(0,'127.0.0.1',resolve));
 const port=socket.address().port;
 await new Promise(resolve=>socket.close(resolve));
-const server=spawn('npm',['run','dev','--','--port',String(port)],{stdio:'inherit',detached:true});
+const server=spawn(command,[...run('dev'),'--','--port',String(port)],{stdio:'inherit',detached:true});
 const url='http://localhost:'+port+'/';
 try {
  let ready=false;

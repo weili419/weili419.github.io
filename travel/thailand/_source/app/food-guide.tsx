@@ -21,14 +21,14 @@ function FoodOption({option,index,date}:{option:Option;index:number;date:string}
 
 export default function FoodGuide(){
  return <section id="food" className="section food-section">
-  <div className="section-title"><div><p className="eyebrow">EAT YOUR WAY THROUGH THAILAND</p><h2>每天三餐，顺着行程吃</h2></div><span className="tag"><Utensils size={16}/><span data-plan-only="A">A · 30 餐</span><span data-plan-only="B">B · 36 餐</span> · 每餐 3 选 1</span></div>
+  <div className="section-title"><div><p className="eyebrow">EAT YOUR WAY THROUGH THAILAND</p><h2>每天三餐，顺着行程吃</h2></div><span className="tag"><Utensils size={16}/>33 餐 · 每餐 3 选 1</span></div>
   <p className="food-intro">无忌口、能吃辣。先按芭东、曼谷 Asok、芭提雅北部住宿来挑；酒店确定后，优先选当天离你们最近的一项。</p>
-  <div className="food-overview"><div><strong data-plan-only="A">¥1,000</strong><strong data-plan-only="B">¥1,200</strong><span>每人餐饮与饮水参考预算</span></div><div><strong>฿ = 泰铢</strong><span>卡片是每人规划额，非实时菜单报价</span></div><div><strong>3 人合点</strong><span>海鲜餐：一份主菜＋一份肉菜＋青菜＋饭</span></div></div>
+  <div className="food-overview"><div><strong>¥1,100</strong><span>每人餐饮与饮水参考预算</span></div><div><strong>฿ = 泰铢</strong><span>卡片是每人规划额，非实时菜单报价</span></div><div><strong>3 人合点</strong><span>海鲜餐：一份主菜＋一份肉菜＋青菜＋饭</span></div></div>
   <p className="food-reading">点日期展开早、午、晚餐。A／B／C 是替代选择，不用三家都去。餐厅会合理复用；航班日、出海日包含按实际行程选择的条件方案。</p>
   <div className="food-map-entry"><div><strong><MapPin size={19}/> {Object.keys(foodLocations).length} 处美食，已经落在地图上</strong><p>橙色 F 编号对应具体店铺、市场或美食广场。点卡片直接定位，也可以按城市、日期筛选。</p></div><a href="/trip-map.html#foods=phuket" data-food-region="phuket">打开美食地图 →</a></div>
   <div className="food-days">
-   {foodDays.map(day=><details className="food-day" key={day.date+(day.plan??'common')} name="meal-date" open={day.date==='21'} data-food-date={day.date} data-plan-only={day.plan}>
-    <summary><span className="food-date">{day.date==='1001'?'10.':'09.'}<b>{day.date==='1001'?'01':day.date}</b></span><span className="food-day-title"><strong>{day.plan&&`PLAN ${day.plan} · `}{day.city}</strong><small>{day.route}</small></span><span className="food-day-count">早 · 午 · 晚<small>9 个选项</small></span><ChevronDown className="food-chevron" size={21}/></summary>
+   {foodDays.map(day=><details className="food-day" key={day.date} name="meal-date" open={day.date==='21'} data-food-date={day.date}>
+    <summary><span className="food-date">09.<b>{day.date}</b></span><span className="food-day-title"><strong>{day.city}</strong><small>{day.route}</small></span><span className="food-day-count">早 · 午 · 晚<small>9 个选项</small></span><ChevronDown className="food-chevron" size={21}/></summary>
     <div className="food-day-body"><p className="food-day-note">{day.note}</p><a className="food-day-map" href={`/trip-map.html#foods=all&date=${day.date}`} data-food-region="all" data-food-date={day.date}><MapPin size={15}/> 在地图上比较 {dateLabel(day.date)} 的吃饭备选 →</a>
      {day.meals.map(m=><section className="food-meal" key={m.name} data-meal-name={m.name}><div className="food-meal-label"><h3>{m.name}</h3><span>三选一</span></div>{m.note&&<p className="food-meal-note">{m.note}</p>}<div className="food-options">{m.options.map((option,i)=><FoodOption key={i} option={option} index={i} date={day.date}/>)}</div></section>)}
     </div>
