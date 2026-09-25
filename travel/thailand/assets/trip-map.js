@@ -76,7 +76,7 @@
   if(day.stay==='hotel-phuket-orchid'){const button=document.createElement('button');button.className='day-hotels';button.textContent='查看实际入住酒店 →';button.addEventListener('click',()=>showHotels('phuket'));$('stay').appendChild(button);}
   airportChooser(day);stopList(stops,color);
   const dayFood=foodEntries('all',day.date);
-  const foodButton=document.createElement('button');foodButton.className='day-foods';foodButton.textContent='比较今天 '+dayFood.length+' 处美食备选 →';foodButton.addEventListener('click',()=>showFoods('all',day.date));$('stay').appendChild(foodButton);
+  if(dayFood.length){const foodButton=document.createElement('button');foodButton.className='day-foods';foodButton.textContent='查看今天 '+dayFood.length+' 处实际用餐 →';foodButton.addEventListener('click',()=>showFoods('all',day.date));$('stay').appendChild(foodButton);}
   stops.forEach(s=>marker(s.p,s.optional?'选':s.number,color,{optional:s.optional,text:s.text,number:s.number}));
   const main=stops.filter(s=>!s.optional).map(s=>s.p.ll);if(main.length>1)state.lines.push(line(main,color));
   const optional=stops.filter(s=>s.optional).map(s=>s.p.ll);if(optional.length>1)state.lines.push(line(optional,'#b28440',true));

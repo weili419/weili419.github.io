@@ -92,7 +92,7 @@ export const venues: Record<string,Venue> = {
 export type Option = {venue?:string;name?:string;dish?:string;price?:string;tip?:string};
 export type Meal = {name:string;note?:string;options:Option[]};
 export type FoodDay = {date:string;plan?:'A'|'B';city:string;route:string;note:string;meals:Meal[]};
-export const foodDays:FoodDay[] = [
+const allFoodDays:FoodDay[] = [
   {
     "date": "20",
     "city": "上海 → 普吉",
@@ -162,43 +162,18 @@ export const foodDays:FoodDay[] = [
   },
   {
     "date": "21",
-    "city": "普吉海滩",
+    "city": "芭东实际用餐",
     "route": "班赞海鲜市场 → 川香居 → Let's Relax → 芭东海滩",
     "note": "实际经历：班赞市场海鲜可以砍价；川香居按 ฿200／公斤加工，麻辣口味，比市场二楼便宜。晚上吃打抛饭。",
     "meals": [
       {
-        "name": "早餐",
-        "options": [
-          {
-            "venue": "briley"
-          },
-          {
-            "venue": "no6",
-            "dish": "炒面／炒饭＋热茶",
-            "price": "฿120–220"
-          },
-          {
-            "name": "住宿处早餐／早餐盒",
-            "dish": "热粥、鸡蛋、吐司和水果",
-            "price": "已含则 ¥0；另付看酒店",
-            "tip": "在 Phuket Orchid Resort and Spa 用餐或按实际早餐安排。"
-          }
-        ]
-      },
-      {
-        "name": "午餐",
+        "name": "海鲜午餐",
         "options": [
           {
             "name": "班赞海鲜市场＋川香居加工",
             "dish": "市场砍价买海鲜，川香居麻辣加工",
             "price": "加工费 ฿200／公斤",
             "tip": "本次实际吃法；加工费比海鲜市场二楼便宜。"
-          },
-          {
-            "venue": "khrua"
-          },
-          {
-            "venue": "red"
           }
         ]
       },
@@ -210,14 +185,6 @@ export const foodDays:FoodDay[] = [
             "dish": "打抛饭",
             "price": "按实际消费",
             "tip": "本次实际晚餐；之后去 Patong Beach 拍照、看秀。"
-          },
-          {
-            "venue": "red",
-            "tip": "如果中午吃过这家，换另两项；吃完再回芭东。"
-          },
-          {
-            "venue": "khrua",
-            "tip": "仍在卡伦时选择，12:00 后营业。"
           }
         ]
       }
@@ -230,62 +197,13 @@ export const foodDays:FoodDay[] = [
     "note": "实际购买三人 ฿10,000 的皇帝岛水肺与珊瑚岛浮潜行程；回酒店后吃东西，再去酒吧小坐。",
     "meals": [
       {
-        "name": "早餐",
+        "name": "回程后",
         "options": [
           {
-            "name": "住宿处早餐／早餐盒",
-            "dish": "热粥、鸡蛋、吐司和水果",
-            "price": "已含则 ¥0；另付看酒店",
-            "tip": "从 Phuket Orchid Resort and Spa 出发，按当天接送时间安排。"
-          },
-          {
-            "venue": "briley",
-            "tip": "接送较晚且来得及时可吃小份鸡饭；赶时间就选早餐盒。",
-            "price": "฿80–130"
-          },
-          {
-            "name": "住宿旁便利店热食",
-            "dish": "热饭团／三明治＋牛奶",
-            "price": "฿60–120",
-            "tip": "就近应急方案；不是专程美食店，适合早出发或等接送。"
-          }
-        ]
-      },
-      {
-        "name": "午餐",
-        "options": [
-          {
-            "name": "首选：所订浮潜团的午餐",
-            "dish": "米饭、熟食和水",
-            "price": "含餐团内已计；加餐另问",
-            "tip": "皇帝岛路线订团时确认餐食地点、是否含餐；不要另订一顿重复付费。"
-          },
-          {
-            "name": "改选珊瑚岛：Banana Beach 含餐套餐",
-            "dish": "套餐内午餐",
-            "price": "已计入对应套餐",
-            "tip": "只在选择该官方浮潜套餐时适用，不能拿皇帝岛团票去兑换；内容按运营方。"
-          },
-          {
-            "venue": "briley",
-            "tip": "仅停航并留在芭东的陆地备用午餐；正常出海时不适用。"
-          }
-        ],
-        "note": "这里是 3 个条件方案，不是岛上 3 家可随意走到的餐馆。"
-      },
-      {
-        "name": "晚餐",
-        "options": [
-          {
-            "venue": "no6",
-            "tip": "回芭东后吃饭；疲劳就直接选最近的一家。"
-          },
-          {
-            "venue": "no9"
-          },
-          {
-            "venue": "briley",
-            "tip": "返程早、仍营业时选鸡饭；不为赶店催促船程。"
+            "name": "回酒店后吃东西",
+            "dish": "未记录具体店名和菜品",
+            "price": "按实际消费",
+            "tip": "吃完后去酒吧坐了一会儿。"
           }
         ]
       }
@@ -293,57 +211,29 @@ export const foodDays:FoodDay[] = [
   },
   {
     "date": "23",
-    "city": "普吉老街",
-    "route": "酒店休息／游泳 → The Pad Thai Shop → 琳的厨房 → Kata Beach",
-    "note": "实际体验：The Pad Thai Shop 非常推荐；琳的厨房一般。吃饭后在 Kata Beach 闲逛，再回酒店。",
+    "city": "卡伦实际用餐",
+    "route": "酒店休息／游泳 → The Pad Thai Shop → 琳的厨房 → Karon Beach",
+    "note": "实际体验：The Pad Thai Shop 非常推荐；琳的厨房一般。吃饭后在 Karon Beach 闲逛，再回酒店。",
     "meals": [
       {
-        "name": "早餐",
-        "options": [
-          {
-            "venue": "roti"
-          },
-          {
-            "venue": "boon"
-          },
-          {
-            "venue": "briley",
-            "tip": "想睡到自然醒就在芭东吃，再去老街；不必专程赶早茶。"
-          }
-        ]
-      },
-      {
-        "name": "午餐",
+        "name": "推荐",
         "options": [
           {
             "name": "The Pad Thai Shop",
             "dish": "Pad Thai",
             "price": "按实际消费",
             "tip": "本次实际用餐，非常推荐。"
-          },
-          {
-            "venue": "mee"
-          },
-          {
-            "venue": "one"
           }
         ]
       },
       {
-        "name": "晚餐",
+        "name": "另一餐",
         "options": [
           {
             "name": "琳的厨房",
             "dish": "按当天实际点餐",
             "price": "按实际消费",
             "tip": "本次实际体验，评价一般。"
-          },
-          {
-            "venue": "no9",
-            "tip": "查龙寺后回芭东再吃。"
-          },
-          {
-            "venue": "no6"
           }
         ]
       }
@@ -767,3 +657,4 @@ export const foodDays:FoodDay[] = [
     ]
   }
 ];
+export const foodDays=allFoodDays.filter(day=>['21','22','23'].includes(day.date));

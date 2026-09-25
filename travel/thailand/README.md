@@ -26,7 +26,7 @@ node --experimental-strip-types scripts/check-plans.mjs
 
 静态发布不依赖桌面原目录或 Node 服务。地图街道图需要联网，加载失败时显示内置地理概览。Jekyll 不会发布以下划线开头的源码目录。
 
-实际记录：9/20 搭乘 9C8521 到普吉，在 Phuket Orchid Resort and Spa 住 4 晚；9/21 到班赞市场、Let's Relax 与芭东；9/22 参加皇帝岛水肺和珊瑚岛浮潜；9/23 在酒店休息、到卡塔用餐闲逛；9/24 从 Kata Night Plaza 搭机场大巴，再乘 DD525、A1 和长途大巴前往芭提雅北站。页面只保留这家实际入住酒店。
+实际记录：9/20 搭乘 9C8521 到普吉，在 Phuket Orchid Resort and Spa 住 4 晚；9/21 到班赞市场、川香居、Let's Relax 与芭东；9/22 参加皇帝岛水肺和珊瑚岛浮潜；9/23 在酒店休息，到 The Pad Thai Shop、琳的厨房用餐并在卡伦海滩闲逛；9/24 从 Kata Night Plaza 搭机场大巴，再乘 DD525、A1 和长途大巴前往芭提雅北站。页面只保留这家实际入住酒店。
 
 Google My Maps 尚未接入：文件选择器被安全页面拦截。`_source/mymaps/README.md` 记录同一张地图的四个 KML 图层、待完成步骤与数据生成方式。当前线上地图保持 MapLibre/OpenFreeMap，不声称已完成 Google 替换。静态导出为地图与资源 URL 添加内容版本，避免缓存混用旧文件。
 

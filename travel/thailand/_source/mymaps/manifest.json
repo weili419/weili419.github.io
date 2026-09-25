@@ -1,7 +1,7 @@
 {
   "mapId": "1m9-sFljOdplY_kBAH0FWX09AC2BiCms",
   "mode": "single-itinerary",
-  "pointCount": 76,
+  "pointCount": 38,
   "colors": {
     "route": "#6c829b"
   },
@@ -17,22 +17,22 @@
       "key": "phuket",
       "name": "02 普吉｜9/20—24",
       "file": "phuket.kml",
-      "features": 28,
-      "bytes": 22182
+      "features": 18,
+      "bytes": 11078
     },
     {
       "key": "pattaya",
       "name": "03 芭提雅｜9/24—26",
       "file": "pattaya.kml",
-      "features": 15,
-      "bytes": 13808
+      "features": 8,
+      "bytes": 7183
     },
     {
       "key": "bangkok",
       "name": "04 曼谷｜9/26—30",
       "file": "bangkok.kml",
-      "features": 35,
-      "bytes": 28236
+      "features": 14,
+      "bytes": 9294
     }
   ]
 }

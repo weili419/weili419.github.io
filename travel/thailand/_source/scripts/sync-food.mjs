@@ -12,6 +12,6 @@ const items = Object.entries(venues).map(([key, venue], index) => {
   }] : [])));
   return { ...venue, ...location, id: `food-${key}`, key, number: index + 1, en: venue.query ?? venue.name, uses,
     refs: venue.refs.map(id => foodSources[id]), checked: '2026-09-06' };
-});
+}).filter(item=>item.uses.length).map((item,index)=>({...item,number:index+1}));
 writeFileSync(new URL('../public/food-data.js', import.meta.url), 'window.TRIP_FOOD = ' + JSON.stringify(items).replace(/</g, '\\u003c') + ';\n');
-console.log(`Synced ${items.length} food locations and ${items.reduce((n, item) => n + item.uses.length, 0)} meal choices.`);
+console.log(`Synced ${items.length} mapped food locations; actual inline food notes remain in the guide.`);
