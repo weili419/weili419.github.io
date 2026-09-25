@@ -113,7 +113,7 @@
       "city": "phuket",
       "kind": "sight",
       "when": "9/23 · 实际用餐",
-      "note": "琳的厨房；实际体验评价一般。"
+      "note": "ร้านก๋วยเรือนรกแตก（Rin’s Kitchen）；实际体验评价一般。"
     },
     {
       "id": "katanight",
@@ -353,9 +353,9 @@
     },
     "chuanxiangju": {
       "name": "川香居（四川菜馆）",
-      "en": "Chuanxiangju Sichuan Restaurant",
-      "ll": [98.3023735, 7.8930356],
-      "source": "https://www.google.com/maps/search/?api=1&query=Chuanxiangju%20Sichuan%20Restaurant%20Phuket"
+      "en": "川香居（四川菜馆）Chinatown",
+      "ll": [98.299984375, 7.8884875],
+      "source": "https://www.waze.com/live-map/directions/th/จ.ภูเก็ต/pa-tong/川香居(四川菜馆)chinatown?to=place.ChIJ8TWCeqU6UDAR17GvUUq_nH0"
     },
     "letsrelax": {
       "name": "Let's Relax Spa · 芭东",
@@ -370,10 +370,10 @@
       "osm": "node/4172708889"
     },
     "linskitchen": {
-      "name": "琳的厨房",
-      "en": "Lin's Kitchen Phuket",
-      "ll": [98.2961731, 7.8343817],
-      "source": "https://www.google.com/maps/search/?api=1&query=%E7%90%B3%E7%9A%84%E5%8E%A8%E6%88%BF%20Phuket"
+      "name": "ร้านก๋วยเรือนรกแตก（Rin’s Kitchen）",
+      "en": "Rin’s Kitchen Karon",
+      "ll": [98.3014356, 7.8291012],
+      "source": "https://www.google.com/maps/search/?api=1&query=202%2F8%20Patak%20Rd%2C%20Karon%2C%20Phuket%2083100"
     },
     "katanight": {
       "name": "Kata Night Plaza · 机场大巴候车区域",
@@ -720,7 +720,7 @@
       "intro": "白天在酒店休息，下午游泳、躺椅放松，吃饭后去 Karon Beach 闲逛。",
       "stay": "hotel-phuket-orchid",
       "stayText": "Phuket Orchid Resort and Spa · 第 4 晚／最后一晚",
-      "note": "实际用餐：The Pad Thai Shop 非常推荐；琳的厨房感觉一般。之后在 Karon Beach 闲逛，再回酒店休息。",
+      "note": "实际用餐：The Pad Thai Shop 非常推荐；ร้านก๋วยเรือนรกแตก（Rin’s Kitchen）感觉一般。之后在 Karon Beach 闲逛，再回酒店休息。",
       "stops": [
         {
           "id": "hotel-phuket-orchid",
@@ -735,7 +735,7 @@
         {
           "id": "linskitchen",
           "time": "吃饭",
-          "text": "琳的厨房：实际体验感觉一般。"
+          "text": "ร้านก๋วยเรือนรกแตก（Rin’s Kitchen）：实际体验感觉一般。"
         },
         {
           "id": "karon",

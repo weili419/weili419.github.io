@@ -30,11 +30,11 @@ export const foodDays:FoodDay[]=[
  {
   date:'23',
   city:'卡伦实际用餐',
-  route:'酒店休息／游泳 → The Pad Thai Shop → 琳的厨房 → Karon Beach',
-  note:'实际体验：The Pad Thai Shop 非常推荐；琳的厨房一般。吃饭后在 Karon Beach 闲逛，再回酒店。',
+  route:'酒店休息／游泳 → The Pad Thai Shop → Rin’s Kitchen → Karon Beach',
+  note:'实际体验：The Pad Thai Shop 非常推荐；ร้านก๋วยเรือนรกแตก（Rin’s Kitchen）一般。吃饭后在 Karon Beach 闲逛，再回酒店。',
   meals:[
    {name:'推荐',options:[{name:'The Pad Thai Shop',dish:'Pad Thai',price:'按实际消费',tip:'本次实际用餐，非常推荐。'}]},
-   {name:'另一餐',options:[{name:'琳的厨房',dish:'按当天实际点餐',price:'按实际消费',tip:'本次实际体验，评价一般。'}]},
+   {name:'另一餐',options:[{name:'ร้านก๋วยเรือนรกแตก（Rin’s Kitchen）',dish:'按当天实际点餐',price:'按实际消费',tip:'本次实际体验，评价一般。'}]},
   ],
  },
 ];

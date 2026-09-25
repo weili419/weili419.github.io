@@ -14,8 +14,8 @@ MAP_OUTPUT = ROOT.parent / 'map.html'
 ASSETS = ROOT.parent / 'assets'
 ASSETS.mkdir(exist_ok=True)
 names = ['map-vendor/maplibre-gl.css', 'map-vendor/maplibre-gl.js',
-         'trip-map.css', 'trip-food.css', 'trip-plan.css', 'trip-data.js',
-         'hotel-data.js', 'food-data.js', 'trip-land.js', 'trip-map.js',
+         'trip-map.css', 'trip-plan.css', 'trip-data.js',
+         'hotel-data.js', 'trip-land.js', 'trip-map.js',
          'trip-guide.js', 'phi-phi-lay.jpg', 'favicon.svg']
 map_html = (ROOT / 'public/trip-map.html').read_text()
 for name in names:

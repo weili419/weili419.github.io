@@ -1,1 +1,0 @@
-window.TRIP_FOOD = [];

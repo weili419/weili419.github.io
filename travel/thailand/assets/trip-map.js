@@ -3,18 +3,15 @@
  const trip=window.TRIP, $=id=>document.getElementById(id);
  const dateLabel=date=>'9/'+date;
  const hotels=window.TRIP_HOTELS||[];
- const foods=window.TRIP_FOOD||[];
- const foodColor='#c8582e';
- foods.forEach(f=>{trip.places[f.id]={name:f.name,en:f.en,ll:f.ll,source:f.source,foodId:f.id};});
  trip.categories.hotel={symbol:'住',name:'实际住宿',color:'#8056b9'};
  hotels.forEach(h=>{
   trip.places[h.id]={name:h.name,en:h.en,ll:h.ll,source:h.coordSource,hotelId:h.id};
   trip.catalog.push({id:h.id,city:h.city,kind:'hotel',when:h.quotes.map(q=>q.dates).join('；'),note:h.why,number:h.number});
  });
  const escape=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
- const searchURL=p=>p.foodId&&p.source?.startsWith('https://www.google.com/maps')?p.source:'https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(p.en);
+ const searchURL=p=>p.source?.startsWith('https://www.google.com/maps')||p.source?.startsWith('https://www.waze.com')?p.source:'https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(p.en);
  const sourceURL=p=>p.source||'https://www.openstreetmap.org/'+p.osm;
- const state={plan:'A',mode:'overview',index:0,region:'phuket',hotelRegion:'phuket',foodRegion:'phuket',foodDate:0,airports:{30:'bkk'},markers:[],popup:null,lines:[],bounds:[]};
+ const state={plan:'A',mode:'overview',index:0,region:'phuket',hotelRegion:'phuket',airports:{30:'bkk'},markers:[],popup:null,lines:[],bounds:[]};
  const branchColors={A:'#3268d8',common:'#6c829b'};
  const currentPlan=()=>trip.plans[state.plan];
  const quotesFor=h=>h.quotes.filter(q=>q.plan==='common'||q.plan===state.plan);
@@ -37,7 +34,7 @@
   if(!map)return;
   if(state.popup)state.popup.remove();
   map.easeTo({center:p.ll,zoom:Math.max(map.getZoom(),p===trip.places.racha||p===trip.places.kolan?12:14),padding:{top:85,bottom:0,left:0,right:0},duration:reduce?0:550});
-  state.popup=new maplibregl.Popup({offset:22,maxWidth:'280px'}).setLngLat(p.ll).setHTML('<span class="popup-kicker">'+escape(kicker)+'</span><h3>'+escape(p.name)+'</h3><p>'+escape(text||'参考位置；实际入口、车站候车区和集合点请再次核对。')+'</p><a href="'+searchURL(p)+'" target="_blank" rel="noopener noreferrer">在 Google 地图查看 ↗</a><a class="coord-source" href="'+sourceURL(p)+'" target="_blank" rel="noopener noreferrer">坐标来源</a>').addTo(map);
+  state.popup=new maplibregl.Popup({offset:22,maxWidth:'280px'}).setLngLat(p.ll).setHTML('<span class="popup-kicker">'+escape(kicker)+'</span><h3>'+escape(p.name)+'</h3><p>'+escape(text||'参考位置；实际入口、车站候车区和集合点请再次核对。')+'</p><a href="'+searchURL(p)+'" target="_blank" rel="noopener noreferrer">打开地图导航 ↗</a><a class="coord-source" href="'+sourceURL(p)+'" target="_blank" rel="noopener noreferrer">坐标来源</a>').addTo(map);
  }
  function marker(p,label,color,options={}){
   if(!map)return;
@@ -46,7 +43,6 @@
   if(entry?.kind==='airport'){el.classList.add('airport-marker');color=trip.categories.airport.color;el.style.setProperty('--pin',color);label=options.number?String(options.number)+' ✈':'✈';}
   if(entry?.kind==='hotel'){el.classList.add('hotel-marker');el.style.setProperty('--pin',trip.categories.hotel.color);label='住';}
   if(entry?.kind==='show'){el.style.setProperty('--pin',trip.categories.show.color);label=options.number?String(options.number)+' 秀':'秀';}
-  if(p.foodId)el.classList.add('food-marker');
   if(options.catalog){el.classList.add('catalog-pin');el.dataset.priority=String(entry?.kind==='airport'?100:options.optional?0:10);}
   el.innerHTML='<span class="pin-head">'+escape(label)+'</span><span class="pin-label">'+escape(options.name||p.name)+(options.sub?'<small>'+escape(options.sub)+'</small>':'')+'</span>';
   el.title=p.name+(options.sub?' · '+options.sub:'');
@@ -56,11 +52,11 @@
  function caption(title,sub){$('map-caption').innerHTML='<b>'+escape(title)+'</b><span>'+escape(sub)+'</span>';}
  function activeControls(){
   document.querySelectorAll('.date').forEach((b,i)=>{const selected=state.mode==='day'&&i===state.index;b.classList.toggle('active',selected);b.setAttribute('aria-pressed',String(selected));});
-  ['places','hotels','foods','overview','international','snorkel'].forEach(id=>{const active=id===state.mode;$(id).classList.toggle('active',active);$(id).setAttribute('aria-pressed',String(active));});
+  ['places','hotels','overview','international','snorkel'].forEach(id=>{const active=id===state.mode;$(id).classList.toggle('active',active);$(id).setAttribute('aria-pressed',String(active));});
   $('previous').disabled=state.mode!=='day'||state.index===0;$('next').disabled=state.mode!=='day'||state.index===trip.days.length-1;
  }
  function stopList(stops,color){
-  $('stops').innerHTML=stops.map((s,i)=>'<article class="stop'+(s.optional?' optional':'')+'" style="--city:'+color+'"><span class="stop-number">'+(s.optional?'选':s.number||i+1)+'</span><div class="stop-copy"><small>'+escape(s.time)+'</small><button data-stop="'+i+'">'+escape(s.p.name)+'</button><p>'+escape(s.text)+'</p><a href="'+searchURL(s.p)+'" target="_blank" rel="noopener noreferrer">Google 地图 ↗</a></div></article>').join('');
+  $('stops').innerHTML=stops.map((s,i)=>'<article class="stop'+(s.optional?' optional':'')+'" style="--city:'+color+'"><span class="stop-number">'+(s.optional?'选':s.number||i+1)+'</span><div class="stop-copy"><small>'+escape(s.time)+'</small><button data-stop="'+i+'">'+escape(s.p.name)+'</button><p>'+escape(s.text)+'</p><a href="'+searchURL(s.p)+'" target="_blank" rel="noopener noreferrer">地图导航 ↗</a></div></article>').join('');
   $('stops').querySelectorAll('[data-stop]').forEach(b=>b.addEventListener('click',()=>{const s=stops[Number(b.dataset.stop)];focus(s.p,s.text,s.time);}));
  }
  function airportChooser(day){
@@ -75,16 +71,12 @@
   if(day.stay)$('stay-focus').addEventListener('click',()=>focus(trip.places[day.stay],day.stay==='hotel-phuket-orchid'?'9/20 入住，9/24 退房，共 4 晚。':'当晚住宿区域。','今晚住哪里'));
   if(day.stay==='hotel-phuket-orchid'){const button=document.createElement('button');button.className='day-hotels';button.textContent='查看实际入住酒店 →';button.addEventListener('click',()=>showHotels('phuket'));$('stay').appendChild(button);}
   airportChooser(day);stopList(stops,color);
-  const dayFood=foodEntries('all',day.date);
-  if(dayFood.length){const foodButton=document.createElement('button');foodButton.className='day-foods';foodButton.textContent='查看今天 '+dayFood.length+' 处实际用餐 →';foodButton.addEventListener('click',()=>showFoods('all',day.date));$('stay').appendChild(foodButton);}
   stops.forEach(s=>marker(s.p,s.optional?'选':s.number,color,{optional:s.optional,text:s.text,number:s.number}));
   const main=stops.filter(s=>!s.optional).map(s=>s.p.ll);if(main.length>1)state.lines.push(line(main,color));
   const optional=stops.filter(s=>s.optional).map(s=>s.p.ll);if(optional.length>1)state.lines.push(line(optional,'#b28440',true));
   state.bounds=stops.filter(s=>s.id!=='hgh').map(s=>s.p.ll);
   if(day.stay){const p=trip.places[day.stay];state.bounds.push(p.ll);if(!stops.some(s=>Math.hypot(s.p.ll[0]-p.ll[0],s.p.ll[1]-p.ll[1])<.004))marker(p,'宿','#566982',{text:day.stay==='hotel-phuket-orchid'?'9/20—23 实际入住，共 4 晚。':'当晚住宿区域。'});}
   if(day.stay)addCatalogMarkers(catalogEntries().filter(item=>item.kind==='hotel'&&item.city===day.city));
-  addFoodMarkers(dayFood,day.date,true);
-  state.bounds.push(...dayFood.map(f=>f.ll));
   caption(dateLabel(day.date)+' · '+day.title,day.stay?'今晚：'+day.stayText+' · 数字对应左侧顺序':'返程日 · 按实际航班倒推时间');
   activeControls();updateLines();fit();requestAnimationFrame(layoutLabels);$('dates').querySelector('.active')?.scrollIntoView({behavior:reduce?'auto':'smooth',block:'nearest',inline:'nearest'});document.querySelector('.sidebar-scroll').scrollTop=0;
  }
@@ -115,10 +107,10 @@
   state.mode='places';state.region=region;resetMap();
   const regions={all:'泰国全部地点',phuket:'普吉岛',bangkok:'曼谷',pattaya:'芭提雅',airports:'全部机场'};
   const entries=catalogEntries().filter(item=>region==='all'?!['shanghai','hangzhou'].includes(item.city):region==='airports'?item.kind==='airport':item.city===region);
-  $('day-kicker').textContent='AIRPORTS & PLACES';$('day-title').textContent=regions[region]+' · '+entries.length+' 个标记';$('day-intro').textContent='机场、景点、实际交通节点和实际入住酒店均已标出。「美食地图」可按城市和日期查看餐厅。';
+  $('day-kicker').textContent='ACTUAL PLACES';$('day-title').textContent=regions[region]+' · '+entries.length+' 个标记';$('day-intro').textContent='机场、景点、实际交通、实际用餐地点和实际入住酒店均标在同一张地图上。';
   $('stay').innerHTML='<nav class="place-regions" aria-label="按城市或机场查看">'+Object.entries(regions).map(([key,name])=>'<button data-region="'+key+'" aria-pressed="'+(key===region)+'" class="'+(key===region?'selected':'')+'">'+name+'</button>').join('')+'</nav><div class="place-key">'+Object.values(trip.categories).map(c=>'<span style="color:'+c.color+'">'+c.symbol+' '+c.name+'</span>').join('')+'</div>';
   $('stay').querySelectorAll('[data-region]').forEach(b=>b.addEventListener('click',()=>placesView(b.dataset.region)));
-  $('stops').innerHTML=entries.map(item=>{const p=trip.places[item.id],c=trip.categories[item.kind];return '<article class="catalog-item"><span class="catalog-icon'+(item.optional?' optional':'')+'" style="--pin:'+c.color+'">'+c.symbol+'</span><div><button data-place="'+item.id+'">'+escape(p.name)+'</button><small>'+escape(item.when)+'</small><a href="'+searchURL(p)+'" target="_blank" rel="noopener noreferrer">Google 地图 ↗</a></div></article>';}).join('');
+  $('stops').innerHTML=entries.map(item=>{const p=trip.places[item.id],c=trip.categories[item.kind];return '<article class="catalog-item"><span class="catalog-icon'+(item.optional?' optional':'')+'" style="--pin:'+c.color+'">'+c.symbol+'</span><div><button data-place="'+item.id+'">'+escape(p.name)+'</button><small>'+escape(item.when)+'</small><a href="'+searchURL(p)+'" target="_blank" rel="noopener noreferrer">地图导航 ↗</a></div></article>';}).join('');
   $('stops').querySelectorAll('[data-place]').forEach(b=>b.addEventListener('click',()=>{const item=trip.catalog.find(x=>x.id===b.dataset.place);focus(trip.places[item.id],item.note||'行程安排：'+item.when+'。参考位置，实际入口请核对。',trip.categories[item.kind].name+' · '+item.when);}));
   $('day-note').textContent=region==='airports'||region==='bangkok'?'9/24 已搭 DD525 抵达 DMK，并坐 A1 前往 Mo Chit；9/30 的返程机场仍按实际机票确认。':'标记位于参考坐标；密集处可放大或悬停查看名称。';
   addCatalogMarkers(entries);state.bounds=entries.map(item=>trip.places[item.id].ll);
@@ -141,56 +133,15 @@
   activeControls();updateLines();fit();requestAnimationFrame(layoutLabels);document.querySelector('.sidebar-scroll').scrollTop=0;
   if(selectedId)focusHotel(selectedId);
  }
- function validFoodDate(value){const date=Number(value);return trip.days.some(d=>d.date===date)?date:0;}
- function foodUses(f,date){return f.uses.filter(u=>(u.plan==='common'||u.plan===state.plan)&&(!date||u.date===date));}
- function foodEntries(region,date){return foods.filter(f=>(region==='all'||f.city===region)&&foodUses(f,date).length);}
- function foodDates(f,date){return [...new Set(foodUses(f,date).map(u=>dateLabel(u.date)))].join('、');}
- function foodUseText(u){return dateLabel(u.date)+' '+u.meal+' · 选项 '+u.option+'：'+u.dish+'（'+u.price+'/人，规划额）。'+u.tip+(u.mealNote?' '+u.mealNote:'');}
- function focusFood(f,date){
-  focus(trip.places[f.id],f.area+'。'+f.locationNote+'\n\n'+foodUses(f,date).map(foodUseText).join('\n\n'),'F'+f.number+' · 美食备选，三选一');
- }
- function addFoodMarkers(entries,date,withRoute=false){
-  const groups=new Map();
-  entries.forEach(f=>{const key=f.ll.join(',');if(!groups.has(key))groups.set(key,[]);groups.get(key).push(f);});
-  groups.forEach(group=>{
-   const f=group[0],multiple=group.length>1;
-   marker(trip.places[f.id],multiple?'食 '+group.length:'F'+f.number,foodColor,{catalog:true,optional:f.unverified,offset:withRoute?[0,19]:[0,-16],name:multiple?group.map(x=>'F'+x.number).join(' / ')+' · 同一商场':f.name,sub:f.unverified?'待核实门店':multiple?'点击查看各店与楼层':foodDates(f,date)+' · 用餐备选',onClick:()=>{
-    if(!multiple){focusFood(f,date);return;}
-    if(!map)return;if(state.popup)state.popup.remove();
-    map.easeTo({center:f.ll,zoom:Math.max(map.getZoom(),14),duration:reduce?0:550});
-    state.popup=new maplibregl.Popup({offset:22,maxWidth:'300px'}).setLngLat(f.ll).setHTML('<span class="popup-kicker">同一商场 · '+group.length+' 个吃饭备选</span><h3>点餐厅，查看日期与楼层</h3>'+group.map(x=>'<button class="popup-food-choice" data-food-choice="'+x.id+'">F'+x.number+' · '+escape(x.name)+'<small>'+escape(x.area)+'</small></button>').join('')).addTo(map);
-    state.popup.getElement().querySelectorAll('[data-food-choice]').forEach(b=>b.addEventListener('click',()=>focusFood(group.find(x=>x.id===b.dataset.foodChoice),date)));
-   }});
-  });
- }
- function showFoods(region='phuket',date=0,selectedId){
-  const regions={phuket:'普吉岛',bangkok:'曼谷',pattaya:'芭提雅',all:'全部城市'};
-  if(!regions[region])region='phuket';date=validFoodDate(date);
-  state.mode='foods';state.foodRegion=region;state.foodDate=date;resetMap();
-  const entries=foodEntries(region,date);
-  $('day-kicker').textContent='FOOD ON THE MAP';$('day-title').textContent=(date?dateLabel(date)+' · ':regions[region]+' · ')+entries.length+' 处美食备选';
-  $('day-intro').textContent='橙色 F 编号对应网页餐厅卡片；点名称定位。同一商场的餐厅合在「食」标记内，点击后分别选店。';
-  $('stay').innerHTML='<nav class="place-regions" aria-label="选择美食城市">'+Object.entries(regions).map(([id,name])=>'<button data-food-region="'+id+'" class="'+(region===id?'selected':'')+'" aria-pressed="'+(region===id)+'">'+name+'</button>').join('')+'</nav><label class="food-date-filter">用餐日期<select id="food-date-select"><option value="0">全部日期</option>'+trip.days.map(d=>'<option value="'+d.date+'"'+(date===d.date?' selected':'')+'>'+dateLabel(d.date)+' · '+escape(d.short)+'</option>').join('')+'</select></label>';
-  $('stay').querySelectorAll('[data-food-region]').forEach(b=>b.addEventListener('click',()=>showFoods(b.dataset.foodRegion,date)));
-  $('food-date-select').addEventListener('change',event=>showFoods('all',event.target.value));
-  $('stops').innerHTML=entries.length?entries.map(f=>'<article class="map-food-card"><span class="map-food-badge">F'+f.number+' · '+escape(foodDates(f,date))+'</span><button data-food="'+f.id+'">'+escape(f.name)+'</button><small>'+escape(f.area)+'</small><p>'+escape(f.locationNote)+'</p><div class="map-food-uses">'+foodUses(f,date).map(u=>'<details'+(date?' open':'')+'><summary>'+dateLabel(u.date)+' '+escape(u.meal)+' · '+u.option+'</summary><p>'+escape(u.dish)+'<br><b>'+escape(u.price)+'／人 · 规划额</b><br>'+escape(u.tip)+(u.mealNote?'<br>'+escape(u.mealNote):'')+'</p></details>').join('')+'</div><a href="'+searchURL(trip.places[f.id])+'" target="_blank" rel="noopener noreferrer">Google 地图查店 ↗</a><a href="'+escape(f.source)+'" target="_blank" rel="noopener noreferrer">位置来源 ↗</a></article>').join(''):'<p class="food-map-empty">这组筛选没有具体店铺。可选择「全部日期」或其他城市；出门前吃好、酒店早餐、团餐等方案保留在网页三餐卡片中。</p>';
-  $('stops').querySelectorAll('[data-food]').forEach(b=>b.addEventListener('click',()=>focusFood(foods.find(f=>f.id===b.dataset.food),date)));
-  addFoodMarkers(entries,date);state.bounds=entries.map(f=>f.ll);
-  if(!entries.length)state.bounds=[trip.places[region==='pattaya'?'pattayastay':region==='bangkok'?'asok':'hotel-phuket-orchid'].ll];
-  $('day-note').textContent='这些是每餐 A／B／C 备选，不是全部必去。市场定位到市场，商场餐厅定位到建筑；先看楼层、适用条件与当天营业。家附近早餐、酒店早餐和团餐不另设店铺标记。';
-  caption((date?dateLabel(date)+' · ':'')+regions[region]+' · 美食地图','F 编号对应餐厅 · 「食」可展开同一商场多家店 · 备选之间不连线');
-  activeControls();updateLines();fit();requestAnimationFrame(layoutLabels);document.querySelector('.sidebar-scroll').scrollTop=0;
-  const selected=entries.find(f=>f.id===selectedId);if(selected)focusFood(selected,date);
- }
  function snorkel(){
   state.mode='snorkel';resetMap();$('day-kicker').textContent='PHUKET / ACTUAL DIVING DAY';$('day-title').textContent='皇帝岛水肺＋珊瑚岛浮潜';$('day-intro').textContent='9/22 实际参加两岛行程：水肺很好玩，浮潜感觉比较一般。';
   $('stay').innerHTML='<div class="stay"><small>实际出海日</small>9/22 · 三人合计 ฿10,000</div>';
-  const stops=[{id:'chalongpier',number:'起',time:'出发区域参考',text:'查龙码头。集合地点和出发港以运营方通知为准。'},{id:'racha',number:'A',time:'主选 · 皇帝岛',text:'快艇约 40 分钟起的规划参考，实际由船型、路线与海况决定。岛屿标记不是入水点。'},{id:'coral',number:'B',time:'备选 · 珊瑚岛',text:'Banana Beach 区域，查龙出发通常约 15—20 分钟。短船程也不保证海况安全。',optional:true}].map(s=>({...s,p:trip.places[s.id]}));
+  const stops=[{id:'hotel-phuket-orchid',number:'起',time:'酒店对面旅行社',text:'在酒店对面的旅行社购买当天行程，三人共 10,000 泰铢。'},{id:'racha',number:'1',time:'皇帝岛 · 水肺潜水',text:'这次从岸边走到较深处进行水肺潜水，体验很好玩；下次更想尝试船潜找鱼。'},{id:'coral',number:'2',time:'珊瑚岛 · 浮潜',text:'当天参加了珊瑚岛浮潜，个人感受比较一般。'}].map(s=>({...s,p:trip.places[s.id]}));
   stopList(stops,trip.colors.phuket);stops.forEach(s=>marker(s.p,s.number,trip.colors.phuket,{optional:s.optional,text:s.text}));
   marker(trip.places['hotel-phuket-orchid'],'宿','#566982',{text:'9/20—23 实际入住 Phuket Orchid Resort and Spa。'});
-  state.lines=[line([trip.places.chalongpier.ll,trip.places.racha.ll],'#008c84'),line([trip.places.chalongpier.ll,trip.places.coral.ll],'#b28440',true)];state.bounds=[...stops.map(s=>s.p.ll),trip.places['hotel-phuket-orchid'].ll];
-  $('day-note').textContent='你们会游泳，但第一次浮潜：选有水中向导的团、穿救生衣、先练习。下水点由向导根据海况选定；不要拿地图岛屿坐标自行出海或下水。';
-  caption('A 皇帝岛 / B 珊瑚岛','两个方案分别选择 · 虚线只是位置关系，船程以运营方为准');activeControls();updateLines();fit();document.querySelector('.sidebar-scroll').scrollTop=0;
+  state.lines=[line([trip.places['hotel-phuket-orchid'].ll,trip.places.racha.ll,trip.places.coral.ll],'#008c84')];state.bounds=stops.map(s=>s.p.ll);
+  $('day-note').textContent='实际体验：浮潜没什么意思，水肺很好玩；这次只是岸潜，下次更想尝试从船上出发寻找鱼群。';
+  caption('9/22 · 皇帝岛水肺＋珊瑚岛浮潜','三人共 ฿10,000 · 连线仅表示当天地点顺序');activeControls();updateLines();fit();document.querySelector('.sidebar-scroll').scrollTop=0;
  }
  function renderDates(){
   $('dates').innerHTML=trip.days.map((d,i)=>'<button class="date" style="--city:'+trip.colors[d.city]+'" data-index="'+i+'" aria-pressed="false" aria-label="'+dateLabel(d.date)+' '+d.week+' '+escape(d.title)+'"><span class="week">'+d.week+'</span><strong>'+dateLabel(d.date)+'</strong><span class="city">'+escape(d.short)+'</span></button>').join('');
@@ -198,20 +149,18 @@
  }
  function setPlan(plan,render=true){
   plan='A';
-  state.plan=plan;trip.days=[...trip.commonDays,...currentPlan().days];state.index=Math.min(state.index,trip.days.length-1);state.foodDate=validFoodDate(state.foodDate);
+  state.plan=plan;trip.days=[...trip.commonDays,...currentPlan().days];state.index=Math.min(state.index,trip.days.length-1);
   trip.catalog.filter(c=>c.kind==='hotel').forEach(c=>{c.when=quotesFor(hotels.find(h=>h.id===c.id)).map(q=>q.dates).join('；');});
   renderDates();$('map-period').textContent='2026.9.20—'+dateLabel(currentPlan().returnDate)+' · '+currentPlan().dayCount+' 天 '+currentPlan().nights+' 晚 · 3 人';
   if(!render)return;
-  if(state.mode==='day')showDay(state.index);else if(state.mode==='foods')showFoods(state.foodRegion,state.foodDate);else if(state.mode==='hotels')showHotels(state.hotelRegion);else if(state.mode==='snorkel')snorkel();else if(state.mode==='overview'||state.mode==='international')overview(state.mode==='international');else placesView(state.region);
+  if(state.mode==='day')showDay(state.index);else if(state.mode==='hotels')showHotels(state.hotelRegion);else if(state.mode==='snorkel')snorkel();else if(state.mode==='overview'||state.mode==='international')overview(state.mode==='international');else placesView(state.region);
  }
  $('previous').addEventListener('click',()=>{if(state.index>0)showDay(state.index-1);});$('next').addEventListener('click',()=>{if(state.index<trip.days.length-1)showDay(state.index+1);});
  $('places').addEventListener('click',()=>placesView(state.region));$('overview').addEventListener('click',()=>overview());$('international').addEventListener('click',()=>overview(true));$('snorkel').addEventListener('click',snorkel);$('fit').addEventListener('click',fit);
  $('hotels').addEventListener('click',()=>showHotels(state.hotelRegion));
- $('foods').addEventListener('click',()=>state.mode==='day'?showFoods('all',trip.days[state.index].date):showFoods(state.foodRegion,state.foodDate));
  window.addEventListener('message',event=>{
   if(event.source!==window.parent)return;
   if(event.data?.type==='trip-hotel-focus'){const h=hotels.find(h=>h.id===event.data.id);if(h)showHotels(h.city,h.id);else if(event.data.region)showHotels(event.data.region);}
-  if(event.data?.type==='trip-food-focus'){const f=foods.find(f=>f.id===event.data.id);if(f)showFoods(f.city,event.data.date,f.id);else showFoods(event.data.region,event.data.date);}
  });
  try{
   map=new maplibregl.Map({container:'map',style:'https://tiles.openfreemap.org/styles/liberty',center:[100,11],zoom:5.4,attributionControl:false,renderWorldCopies:false,minZoom:2,maxZoom:18});
@@ -224,6 +173,6 @@
   map.on('moveend',layoutLabels);map.on('resize',layoutLabels);
   new ResizeObserver(()=>map.resize()).observe($('map'));
  }catch(error){$('map-message').textContent='当前浏览器未能启动互动底图。请用支持 WebGL 的浏览器打开；仍可点击日期看行程，或打开各地点的 Google 地图。';document.querySelector('.map-area').classList.add('map-unavailable');}
- function readLocation(){const hash=new URLSearchParams(location.hash.slice(1));setPlan('A',false);const h=hotels.find(h=>h.id===hash.get('hotel')),f=foods.find(f=>f.id===hash.get('food'));if(f)showFoods(f.city,hash.get('date'),f.id);else if(hash.has('foods'))showFoods(hash.get('foods'),hash.get('date'));else if(h)showHotels(h.city,h.id);else if(hash.has('hotels'))showHotels(hash.get('hotels'));else if(hash.has('date')&&trip.days.some(d=>d.date===Number(hash.get('date'))))showDay(trip.days.findIndex(d=>d.date===Number(hash.get('date'))));else overview();}
+ function readLocation(){const hash=new URLSearchParams(location.hash.slice(1));setPlan('A',false);const h=hotels.find(h=>h.id===hash.get('hotel'));if(h)showHotels(h.city,h.id);else if(hash.has('hotels'))showHotels(hash.get('hotels'));else if(hash.has('date')&&trip.days.some(d=>d.date===Number(hash.get('date'))))showDay(trip.days.findIndex(d=>d.date===Number(hash.get('date'))));else overview();}
  window.addEventListener('hashchange',readLocation);readLocation();
 })();
