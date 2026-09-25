@@ -163,8 +163,8 @@ export const foodDays:FoodDay[] = [
   {
     "date": "21",
     "city": "普吉海滩",
-    "route": "Phuket Orchid Resort → 卡伦／卡塔 → 酒店",
-    "note": "住宿在卡伦海滩，午餐和晚餐可留在卡伦／卡塔，减少往返芭东。",
+    "route": "班赞海鲜市场 → 川香居 → Let's Relax → 芭东海滩",
+    "note": "实际经历：班赞市场海鲜可以砍价；川香居按 ฿200／公斤加工，麻辣口味，比市场二楼便宜。晚上吃打抛饭。",
     "meals": [
       {
         "name": "早餐",
@@ -189,13 +189,16 @@ export const foodDays:FoodDay[] = [
         "name": "午餐",
         "options": [
           {
+            "name": "班赞海鲜市场＋川香居加工",
+            "dish": "市场砍价买海鲜，川香居麻辣加工",
+            "price": "加工费 ฿200／公斤",
+            "tip": "本次实际吃法；加工费比海鲜市场二楼便宜。"
+          },
+          {
             "venue": "khrua"
           },
           {
             "venue": "red"
-          },
-          {
-            "venue": "sugar"
           }
         ]
       },
@@ -203,16 +206,18 @@ export const foodDays:FoodDay[] = [
         "name": "晚餐",
         "options": [
           {
+            "name": "芭东打抛饭",
+            "dish": "打抛饭",
+            "price": "按实际消费",
+            "tip": "本次实际晚餐；之后去 Patong Beach 拍照、看秀。"
+          },
+          {
             "venue": "red",
             "tip": "如果中午吃过这家，换另两项；吃完再回芭东。"
           },
           {
             "venue": "khrua",
             "tip": "仍在卡伦时选择，12:00 后营业。"
-          },
-          {
-            "venue": "no6",
-            "tip": "从卡伦实际住宿前往芭东时选择。"
           }
         ]
       }
@@ -221,8 +226,8 @@ export const foodDays:FoodDay[] = [
   {
     "date": "22",
     "city": "普吉浮潜",
-    "route": "Phuket Orchid Resort → 查龙码头 → 皇帝岛／珊瑚岛",
-    "note": "早餐轻一点并留出接送时间。中午只有随所订路线可实现的方案；21—23 日换行程时，用餐安排一起换。",
+    "route": "酒店对面旅行社 → 皇帝岛水肺 → 珊瑚岛浮潜 → 酒店／酒吧",
+    "note": "实际购买三人 ฿10,000 的皇帝岛水肺与珊瑚岛浮潜行程；回酒店后吃东西，再去酒吧小坐。",
     "meals": [
       {
         "name": "早餐",
@@ -289,8 +294,8 @@ export const foodDays:FoodDay[] = [
   {
     "date": "23",
     "city": "普吉老街",
-    "route": "Phuket Orchid Resort → 老街 → 查龙寺 → 酒店",
-    "note": "想吃老街早餐就早出门，把早餐和逛老街连起来；晚上返回卡伦的实际住宿酒店。",
+    "route": "酒店休息／游泳 → The Pad Thai Shop → 琳的厨房 → Kata Beach",
+    "note": "实际体验：The Pad Thai Shop 非常推荐；琳的厨房一般。吃饭后在 Kata Beach 闲逛，再回酒店。",
     "meals": [
       {
         "name": "早餐",
@@ -311,13 +316,16 @@ export const foodDays:FoodDay[] = [
         "name": "午餐",
         "options": [
           {
+            "name": "The Pad Thai Shop",
+            "dish": "Pad Thai",
+            "price": "按实际消费",
+            "tip": "本次实际用餐，非常推荐。"
+          },
+          {
             "venue": "mee"
           },
           {
             "venue": "one"
-          },
-          {
-            "venue": "chuan"
           }
         ]
       },
@@ -325,15 +333,17 @@ export const foodDays:FoodDay[] = [
         "name": "晚餐",
         "options": [
           {
+            "name": "琳的厨房",
+            "dish": "按当天实际点餐",
+            "price": "按实际消费",
+            "tip": "本次实际体验，评价一般。"
+          },
+          {
             "venue": "no9",
             "tip": "查龙寺后回芭东再吃。"
           },
           {
             "venue": "no6"
-          },
-          {
-            "venue": "gobenz",
-            "tip": "想吃这家，需愿意查龙寺后回老城、等到晚间营业；会增加折返。"
           }
         ]
       }
@@ -342,8 +352,8 @@ export const foodDays:FoodDay[] = [
   {
     "date": "24",
     "city": "普吉 → 芭提雅",
-    "route": "DD525 · HKT → DMK → A1 → Mo Chit → 芭提雅北站",
-    "note": "实际搭乘 DD525 到廊曼机场，坐 A1 到 Mo Chit，在 1 号窗口买票前往 North Pattaya Bus Terminal。",
+    "route": "Kata Night Plaza → HKT → DD525 → DMK → A1 → Mo Chit → 芭提雅北站",
+    "note": "实际在 Kata Night Plaza 等机场大巴；可询问旁边酒店工作人员候车位置。之后搭 DD525 到廊曼，坐 A1 到 Mo Chit，在 1 号窗口买票前往 North Pattaya Bus Terminal。",
     "meals": [
       {
         "name": "早餐",

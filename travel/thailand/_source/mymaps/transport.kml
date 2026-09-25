@@ -8,7 +8,7 @@
 参考位置，入口和营业安排出发前复核。
 坐标来源：https://www.wikidata.org/wiki/Q1197691</description><styleUrl>#airport</styleUrl><Point><coordinates>120.434444,30.229444,0</coordinates></Point></Placemark><Placemark id="hkt"><name>9/20、9/24｜普吉机场 HKT</name><description>机场
 9/20 抵达后：入境、取行李，乘已确认的接机车辆去酒店。
-9/24 DD525：从 Phuket Orchid Resort and Spa 前往 HKT，搭乘 DD525。
+9/24 DD525：乘机场大巴到 HKT，搭乘 DD525。
 参考位置，入口和营业安排出发前复核。
 坐标来源：https://www.openstreetmap.org/relation/20416548</description><styleUrl>#airport</styleUrl><Point><coordinates>98.3177466,8.1100064,0</coordinates></Point></Placemark><Placemark id="bkk"><name>9/30｜素万那普机场 BKK</name><description>机场
 仅用于 9/30 曼谷返程参考；9/24 实际抵达机场为廊曼 DMK。
@@ -24,8 +24,8 @@
 坐标来源：https://www.openstreetmap.org/way/159466978</description><styleUrl>#airport</styleUrl><Point><coordinates>100.6040594,13.9126385,0</coordinates></Point></Placemark><Placemark id="route-20"><name>9/20｜9C8521 · 上海 → 普吉岛（顺序示意）</name><description>搭乘 9C8521 抵达普吉，入住 Phuket Orchid Resort and Spa。
 实际行程：9/20 搭乘 9C8521 从上海飞往普吉，抵达后前往卡伦海滩的酒店入住。
 连线只表示行程先后，不是实际道路、航线或导航。曼谷机场按 BKK 举例。</description><styleUrl>#route</styleUrl><LineString><tessellate>1</tessellate><coordinates>121.80528,31.14333,0 98.3177466,8.1100064,0 98.2961731,7.8343817,0</coordinates></LineString></Placemark><Placemark id="route-24"><name>9/24｜DD525 · 普吉 → 廊曼 → 芭提雅（顺序示意）</name><description>搭乘 DD525 抵达廊曼机场，再坐 A1 巴士到 Mo Chit，转车前往芭提雅北站。
-实际行程：DD525 抵达 DMK 后乘 A1 巴士到 Mo Chit Bus Terminal，在 1 号窗口购票，终点为 North Pattaya Bus Terminal。
-连线只表示行程先后，不是实际道路、航线或导航。曼谷机场按 BKK 举例。</description><styleUrl>#route</styleUrl><LineString><tessellate>1</tessellate><coordinates>98.3177466,8.1100064,0 100.6040594,13.9126385,0 100.5477552,13.8123644,0 100.9034026,12.9497299,0 100.8896924,12.9498403,0</coordinates></LineString></Placemark><Placemark id="route-26"><name>9/26｜芭提雅 → 曼谷（顺序示意）</name><description>上午乘大巴回曼谷，下午入住，傍晚河畔慢游。
+实际行程：先在 Kata Night Plaza 等机场大巴；旁边有酒店，可以询问酒店工作人员候车和上车位置。到 HKT 搭 DD525，抵达 DMK 后乘 A1 到 Mo Chit，在 1 号窗口购票前往 North Pattaya Bus Terminal。
+连线只表示行程先后，不是实际道路、航线或导航。曼谷机场按 BKK 举例。</description><styleUrl>#route</styleUrl><LineString><tessellate>1</tessellate><coordinates>98.2982168,7.8246443,0 98.3177466,8.1100064,0 100.6040594,13.9126385,0 100.5477552,13.8123644,0 100.9034026,12.9497299,0 100.8896924,12.9498403,0</coordinates></LineString></Placemark><Placemark id="route-26"><name>9/26｜芭提雅 → 曼谷（顺序示意）</name><description>上午乘大巴回曼谷，下午入住，傍晚河畔慢游。
 曼谷从今天起连住同一家。市场放到明天周日，今天不赶市场与宫殿。酒店未定，Asok 为住宿区域参考。
 连线只表示行程先后，不是实际道路、航线或导航。曼谷机场按 BKK 举例。</description><styleUrl>#route</styleUrl><LineString><tessellate>1</tessellate><coordinates>100.9034026,12.9497299,0 100.5840204,13.7194034,0 100.5603142,13.7370043,0 100.5103251,13.7268256,0</coordinates></LineString></Placemark><Placemark id="route-30"><name>9/30｜曼谷 → 杭州萧山机场（顺序示意）</name><description>今天以返程为主，按机票确认曼谷出发机场和航站楼。
 国际航班提前约 3 小时到正确机场，市区接驳另算。若是凌晨起飞，需要 9/29 晚离开酒店；杭州抵达日期按机票，不默认与起飞日相同。

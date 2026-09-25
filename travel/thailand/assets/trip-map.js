@@ -183,8 +183,8 @@
   const selected=entries.find(f=>f.id===selectedId);if(selected)focusFood(selected,date);
  }
  function snorkel(){
-  state.mode='snorkel';resetMap();$('day-kicker').textContent='PHUKET / FIRST SNORKEL';$('day-title').textContent='浮潜去哪里，看距离就懂';$('day-intro').textContent='主选皇帝岛，短船程备选珊瑚岛。两条路线分别比较，不默认一天跑两座岛。';
-  $('stay').innerHTML='<div class="stay"><small>暂定出海日</small>9/22 · 可与 9/21 或 9/23 互换</div>';
+  state.mode='snorkel';resetMap();$('day-kicker').textContent='PHUKET / ACTUAL DIVING DAY';$('day-title').textContent='皇帝岛水肺＋珊瑚岛浮潜';$('day-intro').textContent='9/22 实际参加两岛行程：水肺很好玩，浮潜感觉比较一般。';
+  $('stay').innerHTML='<div class="stay"><small>实际出海日</small>9/22 · 三人合计 ฿10,000</div>';
   const stops=[{id:'chalongpier',number:'起',time:'出发区域参考',text:'查龙码头。集合地点和出发港以运营方通知为准。'},{id:'racha',number:'A',time:'主选 · 皇帝岛',text:'快艇约 40 分钟起的规划参考，实际由船型、路线与海况决定。岛屿标记不是入水点。'},{id:'coral',number:'B',time:'备选 · 珊瑚岛',text:'Banana Beach 区域，查龙出发通常约 15—20 分钟。短船程也不保证海况安全。',optional:true}].map(s=>({...s,p:trip.places[s.id]}));
   stopList(stops,trip.colors.phuket);stops.forEach(s=>marker(s.p,s.number,trip.colors.phuket,{optional:s.optional,text:s.text}));
   marker(trip.places['hotel-phuket-orchid'],'宿','#566982',{text:'9/20—23 实际入住 Phuket Orchid Resort and Spa。'});
