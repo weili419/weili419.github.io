@@ -63,22 +63,22 @@
       "id": "bkk",
       "city": "bangkok",
       "kind": "airport",
-      "when": "9/24 中转地面交通 · 9/30 返程候选",
-      "note": "素万那普 BKK 与廊曼 DMK 二选一，以各段机票为准，并非两座机场都要去。"
+      "when": "9/30 返程候选",
+      "note": "仅用于 9/30 曼谷返程参考；9/24 实际抵达机场为廊曼 DMK。"
     },
     {
       "id": "dmk",
       "city": "bangkok",
       "kind": "airport",
-      "when": "9/24 中转地面交通 · 9/30 返程候选",
-      "note": "廊曼 DMK 与素万那普 BKK 二选一，以各段机票为准，并非两座机场都要去。"
+      "when": "9/24 · DD525 抵达",
+      "note": "9/24 搭乘 DD525 从普吉抵达廊曼机场，随后乘 A1 巴士前往 Mo Chit。"
     },
     {
-      "id": "patong",
-      "city": "phuket",
-      "kind": "stay",
-      "when": "9/20—9/24 · 4 晚",
-      "note": "建议住宿区域，尚未确定酒店。"
+      "id": "mochit",
+      "city": "bangkok",
+      "kind": "bus",
+      "when": "9/24 · A1 巴士抵达",
+      "note": "Mo Chit Bus Terminal／曼谷北部汽车站；在 1 号窗口购买前往 North Pattaya Bus Terminal 的车票。"
     },
     {
       "id": "karon",
@@ -287,6 +287,12 @@
         13.9126385
       ],
       "osm": "way/159466978"
+    },
+    "mochit": {
+      "name": "Mo Chit Bus Terminal · 曼谷北部汽车站",
+      "en": "Bangkok Bus Terminal Chatuchak Mo Chit 2",
+      "ll": [100.5477552, 13.8123644],
+      "osm": "way/31151623"
     },
     "patong": {
       "name": "芭东海滩／住宿区",
@@ -538,16 +544,16 @@
       "week": "周日",
       "city": "phuket",
       "short": "抵达普吉",
-      "title": "上海 → 普吉岛",
-      "intro": "先安顿下来，把海岛的第一晚留给休息。",
-      "stay": "patong",
-      "stayText": "普吉 · 第 1 晚／共 4 晚",
-      "note": "航班尚未预订。地图默认展示普吉当地，点上海机场可查看出发地。晚到就不加景点。",
+      "title": "9C8521 · 上海 → 普吉岛",
+      "intro": "搭乘 9C8521 抵达普吉，入住 Phuket Orchid Resort and Spa。",
+      "stay": "hotel-phuket-orchid",
+      "stayText": "Phuket Orchid Resort and Spa · 第 1 晚／共 4 晚",
+      "note": "实际行程：9/20 搭乘 9C8521 从上海飞往普吉，抵达后前往卡伦海滩的酒店入住。",
       "stops": [
         {
           "id": "pvg",
-          "time": "按航班时间",
-          "text": "上海直飞普吉，核对行李额度与落地日期。"
+          "time": "9C8521",
+          "text": "从上海搭乘 9C8521 飞往普吉。"
         },
         {
           "id": "hkt",
@@ -555,9 +561,9 @@
           "text": "入境、取行李，乘已确认的接机车辆去酒店。"
         },
         {
-          "id": "patong",
+          "id": "hotel-phuket-orchid",
           "time": "晚上",
-          "text": "在住宿附近吃饭、补水、休息。芭东只是住宿区域建议。"
+          "text": "入住 Phuket Orchid Resort and Spa；9/20—23 共住 4 晚。"
         }
       ]
     },
@@ -568,8 +574,8 @@
       "short": "海边慢游",
       "title": "卡伦、卡塔与海景",
       "intro": "不赶早。海边走走，傍晚看景，再回酒店。",
-      "stay": "patong",
-      "stayText": "普吉 · 第 2 晚",
+      "stay": "hotel-phuket-orchid",
+      "stayText": "Phuket Orchid Resort and Spa · 第 2 晚",
       "note": "今天与 9/22、9/23 可以按海况互换。红旗时不上水；海滩散步不等于安排岸边浮潜。",
       "stops": [
         {
@@ -596,8 +602,8 @@
       "short": "皇帝岛浮潜",
       "title": "第一次浮潜，去皇帝岛",
       "intro": "暂定一日游：酒店接送、向导带队、先练习再浮潜。",
-      "stay": "patong",
-      "stayText": "普吉 · 第 3 晚",
+      "stay": "hotel-phuket-orchid",
+      "stayText": "Phuket Orchid Resort and Spa · 第 3 晚",
       "note": "岛屿标记只帮助理解位置，不是可以自行下水的浮潜点。具体海湾、上岛点与下水安排由持牌团方依当天海况决定。停航则改陆地行程。",
       "stops": [
         {
@@ -611,7 +617,7 @@
           "text": "皇帝岛浮潜，水中向导带队。岛上区域参考点，并非指定入水点。"
         },
         {
-          "id": "patong",
+          "id": "hotel-phuket-orchid",
           "time": "傍晚",
           "text": "返回普吉，接送回酒店，晚餐后休息。"
         }
@@ -624,8 +630,8 @@
       "short": "老街与寺庙",
       "title": "普吉老街与查龙寺",
       "intro": "逛吃、喝咖啡，留出一日可调整的陆地安排。",
-      "stay": "patong",
-      "stayText": "普吉 · 第 4 晚",
+      "stay": "hotel-phuket-orchid",
+      "stayText": "Phuket Orchid Resort and Spa · 第 4 晚／最后一晚",
       "note": "这是第二个浮潜备用日期。若改到今天出海，把老街与寺庙移到此前取消出海的那一天。",
       "stops": [
         {
@@ -639,9 +645,9 @@
           "text": "查龙寺，穿有袖上衣与过膝下装，按现场要求脱鞋。"
         },
         {
-          "id": "patong",
+          "id": "hotel-phuket-orchid",
           "time": "晚上",
-          "text": "回酒店整理行李，核对明天航班与接机。"
+          "text": "回酒店整理行李，准备第二天搭乘 DD525。"
         }
       ]
     },
@@ -650,34 +656,38 @@
       "week": "周四",
       "city": "pattaya",
       "short": "直达芭提雅",
-      "title": "普吉 → 曼谷机场 → 芭提雅",
-      "intro": "优先选上午飞抵 BKK 的航班，取行李后在机场换乘去芭提雅的车。",
+      "title": "DD525 · 普吉 → 廊曼 → 芭提雅",
+      "intro": "搭乘 DD525 抵达廊曼机场，再坐 A1 巴士到 Mo Chit，转车前往芭提雅北站。",
       "stay": "pattayastay",
       "stayText": "芭提雅 · 第 1 晚／共 2 晚",
-      "note": "9/24 只在曼谷机场中转地面交通，不进曼谷市区入住。BKK 优先；若选 DMK，先核实直达巴士实际班次和下客点，错过则使用已确认的包车。国内航班落地到巴士预留约 1.5—2 小时弹性，不是联程保障。",
+      "note": "实际行程：DD525 抵达 DMK 后乘 A1 巴士到 Mo Chit Bus Terminal，在 1 号窗口购票，终点为 North Pattaya Bus Terminal。",
       "stops": [
         {
           "id": "hkt",
-          "time": "上午",
-          "text": "按航班倒推，国内段提前约 2 小时到机场；酒店到机场时间另算。"
+          "time": "DD525",
+          "text": "从 Phuket Orchid Resort and Spa 前往 HKT，搭乘 DD525。"
         },
         {
-          "id": "airport",
-          "time": "上午—中午",
-          "text": "BKK 1 层 8 号门确认去芭提雅北站的大巴；DMK 另用其机场直达车或包车，不能套用 BKK 站点。"
+          "id": "dmk",
+          "time": "航班抵达后",
+          "text": "在廊曼机场乘坐 A1 巴士前往 Mo Chit Bus Terminal。"
         },
         {
-          "id": "arrivalbus",
-          "time": "下午",
-          "text": "BKK 北站线路参考约 2 小时车程，按票面下车点接驳酒店。DMK 线路下车点以出票通知为准。"
+          "id": "mochit",
+          "time": "A1 巴士抵达后",
+          "text": "在 Mo Chit Bus Terminal 的 1 号窗口购买前往芭提雅北站的车票。"
+        },
+        {
+          "id": "pattayabus",
+          "time": "当天",
+          "text": "抵达 North Pattaya Bus Terminal。"
         },
         {
           "id": "pattayastay",
           "time": "晚上",
-          "text": "入住北部酒店，就近吃饭；晚到不加真理寺。"
+          "text": "从芭提雅北站前往当晚住宿地点。"
         }
-      ],
-      "airport": true
+      ]
     },
     {
       "date": 25,

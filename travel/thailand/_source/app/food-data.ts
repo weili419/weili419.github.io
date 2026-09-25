@@ -96,8 +96,8 @@ export const foodDays:FoodDay[] = [
   {
     "date": "20",
     "city": "上海 → 普吉",
-    "route": "PVG → HKT → 芭东",
-    "note": "航班未定。早餐留在上海；午餐按落地时间选，晚餐抵达芭东后再决定。",
+    "route": "9C8521 · PVG → HKT → Phuket Orchid Resort",
+    "note": "实际搭乘 9C8521 抵达普吉，随后入住卡伦海滩的 Phuket Orchid Resort and Spa。",
     "meals": [
       {
         "name": "早餐",
@@ -133,7 +133,7 @@ export const foodDays:FoodDay[] = [
             "name": "航班餐／预购机餐",
             "dish": "热米饭套餐",
             "price": "已含则 ¥0；否则约 ¥40–90",
-            "tip": "航司未定，订票时核对是否含餐；不默认廉航供餐。"
+            "tip": "按 9C8521 当天实际餐食安排。"
           },
           {
             "name": "HKT 航站楼内简餐",
@@ -163,8 +163,8 @@ export const foodDays:FoodDay[] = [
   {
     "date": "21",
     "city": "普吉海滩",
-    "route": "芭东 → 卡伦／卡塔 → 芭东",
-    "note": "早餐靠近住处，午餐留在卡塔／卡伦；晚饭也可在海滩区域吃完再回酒店。",
+    "route": "Phuket Orchid Resort → 卡伦／卡塔 → 酒店",
+    "note": "住宿在卡伦海滩，午餐和晚餐可留在卡伦／卡塔，减少往返芭东。",
     "meals": [
       {
         "name": "早餐",
@@ -181,7 +181,7 @@ export const foodDays:FoodDay[] = [
             "name": "住宿处早餐／早餐盒",
             "dish": "热粥、鸡蛋、吐司和水果",
             "price": "已含则 ¥0；另付看酒店",
-            "tip": "酒店尚未确定；有含早就优先利用，早出发需前晚确认能否打包。"
+            "tip": "在 Phuket Orchid Resort and Spa 用餐或按实际早餐安排。"
           }
         ]
       },
@@ -212,7 +212,7 @@ export const foodDays:FoodDay[] = [
           },
           {
             "venue": "no6",
-            "tip": "已回到芭东酒店后选择。"
+            "tip": "从卡伦实际住宿前往芭东时选择。"
           }
         ]
       }
@@ -221,7 +221,7 @@ export const foodDays:FoodDay[] = [
   {
     "date": "22",
     "city": "普吉浮潜",
-    "route": "芭东 → 查龙码头 → 皇帝岛／珊瑚岛",
+    "route": "Phuket Orchid Resort → 查龙码头 → 皇帝岛／珊瑚岛",
     "note": "早餐轻一点并留出接送时间。中午只有随所订路线可实现的方案；21—23 日换行程时，用餐安排一起换。",
     "meals": [
       {
@@ -231,7 +231,7 @@ export const foodDays:FoodDay[] = [
             "name": "住宿处早餐／早餐盒",
             "dish": "热粥、鸡蛋、吐司和水果",
             "price": "已含则 ¥0；另付看酒店",
-            "tip": "酒店尚未确定；有含早就优先利用，早出发需前晚确认能否打包。"
+            "tip": "从 Phuket Orchid Resort and Spa 出发，按当天接送时间安排。"
           },
           {
             "venue": "briley",
@@ -289,8 +289,8 @@ export const foodDays:FoodDay[] = [
   {
     "date": "23",
     "city": "普吉老街",
-    "route": "芭东 → 老街 → 查龙寺 → 芭东",
-    "note": "想吃老街早餐就早出门，把早餐和逛老街连起来。晚上默认回芭东；Go Benz 是愿意改变晚间顺序时的备选。",
+    "route": "Phuket Orchid Resort → 老街 → 查龙寺 → 酒店",
+    "note": "想吃老街早餐就早出门，把早餐和逛老街连起来；晚上返回卡伦的实际住宿酒店。",
     "meals": [
       {
         "name": "早餐",
@@ -342,8 +342,8 @@ export const foodDays:FoodDay[] = [
   {
     "date": "24",
     "city": "普吉 → 芭提雅",
-    "route": "HKT → BKK／DMK → 芭提雅酒店",
-    "note": "上午飞曼谷后直接转车去芭提雅，不去 Asok 吃午饭。餐食按实际航班、候车与酒店抵达时间选择。",
+    "route": "DD525 · HKT → DMK → A1 → Mo Chit → 芭提雅北站",
+    "note": "实际搭乘 DD525 到廊曼机场，坐 A1 到 Mo Chit，在 1 号窗口买票前往 North Pattaya Bus Terminal。",
     "meals": [
       {
         "name": "早餐",
@@ -355,7 +355,7 @@ export const foodDays:FoodDay[] = [
             "name": "住宿处早餐／早餐盒",
             "dish": "热粥、鸡蛋、吐司和水果",
             "price": "已含则 ¥0；另付看酒店",
-            "tip": "酒店尚未确定；有含早就优先利用，早出发需前晚确认能否打包。"
+            "tip": "从 Phuket Orchid Resort and Spa 退房后按实际出发时间安排。"
           },
           {
             "name": "住宿旁便利店热食",
@@ -375,10 +375,10 @@ export const foodDays:FoodDay[] = [
             "tip": "机场店铺按航站楼与安检区现场选，留够候机时间。"
           },
           {
-            "name": "曼谷机场候车前简餐",
+            "name": "廊曼机场／Mo Chit 转车简餐",
             "dish": "航站楼内鸡饭／粉面",
             "price": "฿180–350",
-            "tip": "只在换乘候车时间足够时吃，不跨机场或进城找店。"
+            "tip": "按 DD525 落地、A1 巴士和 Mo Chit 发车衔接时间选择。"
           },
           {
             "name": "提前预购航班热餐",
@@ -425,7 +425,7 @@ export const foodDays:FoodDay[] = [
             "name": "住宿处早餐／早餐盒",
             "dish": "热粥、鸡蛋、吐司和水果",
             "price": "已含则 ¥0；另付看酒店",
-            "tip": "酒店尚未确定；有含早就优先利用，早出发需前晚确认能否打包。"
+            "tip": "按当天实际住宿提供的早餐安排。"
           },
           {
             "name": "住宿旁便利店热食",
@@ -485,7 +485,7 @@ export const foodDays:FoodDay[] = [
             "name": "住宿处早餐／早餐盒",
             "dish": "热粥、鸡蛋、吐司和水果",
             "price": "已含则 ¥0；另付看酒店",
-            "tip": "酒店尚未确定；有含早就优先利用，早出发需前晚确认能否打包。"
+            "tip": "按当天实际住宿提供的早餐安排。"
           },
           {
             "name": "住宿旁便利店热食",
@@ -542,7 +542,7 @@ export const foodDays:FoodDay[] = [
             "name": "住宿处早餐／早餐盒",
             "dish": "热粥、鸡蛋、吐司和水果",
             "price": "已含则 ¥0；另付看酒店",
-            "tip": "酒店尚未确定；有含早就优先利用，早出发需前晚确认能否打包。"
+            "tip": "按当天实际住宿提供的早餐安排。"
           },
           {
             "venue": "ortor",
@@ -599,7 +599,7 @@ export const foodDays:FoodDay[] = [
             "name": "住宿处早餐／早餐盒",
             "dish": "热粥、鸡蛋、吐司和水果",
             "price": "已含则 ¥0；另付看酒店",
-            "tip": "酒店尚未确定；有含早就优先利用，早出发需前晚确认能否打包。"
+            "tip": "按当天实际住宿提供的早餐安排。"
           }
         ]
       },
@@ -652,7 +652,7 @@ export const foodDays:FoodDay[] = [
             "name": "住宿处早餐／早餐盒",
             "dish": "热粥、鸡蛋、吐司和水果",
             "price": "已含则 ¥0；另付看酒店",
-            "tip": "酒店尚未确定；有含早就优先利用，早出发需前晚确认能否打包。"
+            "tip": "按当天实际住宿提供的早餐安排。"
           }
         ]
       },
@@ -710,7 +710,7 @@ export const foodDays:FoodDay[] = [
             "name": "住宿处早餐／早餐盒",
             "dish": "热粥、鸡蛋、吐司和水果",
             "price": "已含则 ¥0；另付看酒店",
-            "tip": "酒店尚未确定；有含早就优先利用，早出发需前晚确认能否打包。"
+            "tip": "按当天实际住宿提供的早餐安排。"
           }
         ]
       },

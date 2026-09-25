@@ -9,7 +9,7 @@ import ShowGuide from './show-guide';
 import trip from '../public/trip.json';
 
 const sources = [["weather","9 月季风与出海","https://www.tourismthailand.org/Articles/thailand-september"],["racha","皇帝岛官方介绍","https://www.thailandtravel.or.jp/mu-ko-racha/"],["coral","珊瑚岛官方介绍","https://www.thailandtravel.or.jp/coral-island-ko-hey/"],["safety","首次浮潜安全要点","https://oceansafety.hawaii.gov/snorkeling-safety/"],["banana","Banana Beach 浮潜套餐","https://bananabeachkohhey.com/packages/snorkeling"],["visa","2026 年 9 月免签调整","https://th.china-embassy.gov.cn/sgxw/202609/t20260902_12014753.html"],["entry","中国使馆入境准备提醒","https://th.china-embassy.gov.cn/zgqz/1w1/202606/t20260609_11940509.html"],["tdac","TDAC 官方填写与规则","https://tdac.immigration.go.th/manual/en/faq.html"],["bus","曼谷—芭提雅大巴官网","https://airportpattayabus.com/bangkok-terminal-pattaya/"],["grand","大皇宫票价与时间","https://www.royalgrandpalace.th/en/visit/faq"],["truth","真理寺票价与时间","https://sanctuaryoftruthmuseum.com/visit-us/?lang=th"],["market","乍都乍周末市场","https://www.tourismthailand.org/Articles/get-unique-experience-with-5-wallet-friendly-shopping-hubs"],["similan","斯米兰开放季","https://thai.tourismthailand.org/Articles/similan-th"],["maya","2026 玛雅湾关闭通知（运营方）","https://www.asiantrails.travel/latest-news/annual-closure-of-iconic-island-bay/"],["travel","中国使馆旅游提醒","https://th.china-embassy.gov.cn/chn/sgxw/202407/t20240730_11463065.html"],["power","泰国民航局充电宝规定","https://www.caat.or.th/caat-media/203652/"],["dress","宫殿着装要求","https://www.tourismthailand.org/Articles/dressing-to-visit-royal-palaces-in-thailand"],["funds","泰国使馆免签资金说明","https://doha.thaiembassy.org/en/publicservice/tourist-visa-exemption-visa-on-arrival"]];
-sources.push(['airportbus','BKK 直达芭提雅北站','https://airportpattayabus.com/airport-pattaya/'],['dmkbus','DMK 机场直达巴士','https://donmueang.airportthai.co.th/service/transportation/detail/1290'],['bacc','BACC 常规开放说明','https://www.bacc.or.th/wp-content/uploads/2025/03/15.CROSSING-THE-DATELINE.pdf']);
+sources.push(['bacc','BACC 常规开放说明','https://www.bacc.or.th/wp-content/uploads/2025/03/15.CROSSING-THE-DATELINE.pdf']);
 function Ref({id,children}:{id:string;children?:React.ReactNode}) { const s=sources.find(s=>s[0]===id)!; return <a className="source-ref" href={s[2]} target="_blank" rel="noreferrer">{children || s[1]} ↗</a>; }
 const packing = [
  ['证件与支付',['护照原件、复印件与离线备份','TDAC 确认页、三段机票及全部酒店订单','旅行保险、救援电话、足额现金和银行卡']],
@@ -26,10 +26,10 @@ export default function Home() {
   <header className="topbar"><a href="#" className="brand"><Waves size={23}/><span>THAILAND <b>旅行手记</b></span></a><span className="edition">2026 / SEPTEMBER</span></header>
   <main>
    <TripPlan/>
-   <section id="travel-map" className="travel-map-section"><p className="map-version-note">地图已同步 9/30 返回杭州萧山机场的唯一行程。当前仍使用原有底图；Google 我的地图版本待数据导入后接入。</p><iframe title="泰国旅行每日行程地图" src="/trip-map.html" className="travel-map-frame" /></section>
-   <nav className="section-nav" aria-label="攻略导航"><a href="#travel-map">旅行地图</a><a href="#food">每天吃什么 <ArrowUpRight size={15}/></a><a href="#shows">99秀</a><a href="#hotels">三人酒店 <ArrowUpRight size={15}/></a><a href="#itinerary">每日行程</a><a href="#snorkeling">普吉浮潜 <ArrowUpRight size={15}/></a><a href="#transport">交通与住宿</a><a href="#budget">旅行预算</a><a href="#packing">出发准备</a></nav>
+   <section id="travel-map" className="travel-map-section"><p className="map-version-note">地图已加入实际乘坐的 9C8521、DD525、DMK A1 巴士、Mo Chit 转车路线和普吉实际入住酒店。</p><iframe title="泰国旅行每日行程地图" src="/trip-map.html" className="travel-map-frame" /></section>
+   <nav className="section-nav" aria-label="攻略导航"><a href="#travel-map">旅行地图</a><a href="#food">每天吃什么 <ArrowUpRight size={15}/></a><a href="#shows">99秀</a><a href="#hotels">实际住宿 <ArrowUpRight size={15}/></a><a href="#itinerary">每日行程</a><a href="#snorkeling">普吉浮潜 <ArrowUpRight size={15}/></a><a href="#transport">实际交通</a><a href="#budget">旅行预算</a><a href="#packing">出发准备</a></nav>
    <section className="trip-heading guide-heading"><div><p className="eyebrow">09.20 — 09.30 · 11 天 10 晚</p><h1>泰国旅行手记<span>先普吉，再芭提雅，最后曼谷</span></h1><p className="intro">3 人同行 · 各睡一张床 · 普吉进，曼谷出</p></div><div className="date-stamp"><CalendarDays/><span>START</span><strong>09.20</strong></div></section>
-   <div className="route-strip"><span>上海 <Plane size={15}/></span><span><b>普吉岛</b><small>4 晚</small></span><i>→</i><span><b>曼谷机场</b><small>当天转车</small></span><i>→</i><span><b>芭提雅</b><small>2 晚</small></span><i>→</i><span><b>曼谷</b><small>4 晚</small></span><span><Plane size={15}/> 杭州萧山</span></div>
+   <div className="route-strip"><span>上海 <Plane size={15}/><small>9C8521</small></span><span><b>普吉岛</b><small>Orchid · 4 晚</small></span><i>→</i><span><b>廊曼机场</b><small>DD525 · A1</small></span><i>→</i><span><b>Mo Chit</b><small>1 号窗口转车</small></span><i>→</i><span><b>芭提雅</b><small>北站抵达</small></span><i>→</i><span><b>曼谷</b><small>9/26 起</small></span><span><Plane size={15}/> 杭州萧山</span></div>
    <section id="itinerary" className="section"><div className="section-title"><div><p className="eyebrow">THE ITINERARY</p><h2>11 天每日安排</h2></div><span className="subtle">泰国时间比北京时间慢 1 小时</span></div>
     <div className="itinerary-layout"><div className="days">{[...days,...trip.plans.A.days].map(d=><article className="day" key={d.date}><div className="day-date"><strong>{d.date}</strong><span>9 月 · {d.week}</span></div><div className="day-content"><h3>{d.title}</h3><p>{d.intro}</p><small><MapPin size={13}/>{d.stayText}</small></div></article>)}</div><aside className="trip-note"><Waves size={32}/><p className="eyebrow">这次旅行的重点</p><h3>第一次浮潜，<br/>留给普吉。</h3><p>9 月 22 日暂定出海。21—23 日按海况互换，把最合适的一天留给海里。</p><a href="#snorkeling">看浮潜安排 <ArrowUpRight size={17}/></a><hr/><p>9 月仍是雨季。停航、红旗或向导判定不宜下水时，改为陆地活动。</p></aside></div>
     <p className="footnote">乍都乍安排在 9/27 周日；宫殿与郑王庙安排在 9/28。BACC 放在 9/29 周二，避开常规周一闭馆；展览及临时开放安排出发前复核。<Ref id="market"/> <Ref id="grand"/> <Ref id="truth"/> <Ref id="bacc"/></p>
@@ -54,20 +54,14 @@ export default function Home() {
  <article><p className="number-label">03 / 订团前问清楚</p><h3>花钱买到真正的浮潜体验</h3><ul className="plain-list"><li><b>带队：</b>向导是否全程下水？一位水中向导照顾几人？是否能照顾三位初次浮潜者？</li><li><b>时间：</b>几个下水点、实际水中时间多少？不是仅有“提供面镜，自行玩水”。</li><li><b>装备：</b>面镜、呼吸管、脚蹼、合身救生衣是否包含？近视面镜有无额外收费？</li><li><b>总价：</b>酒店往返接送、午餐、码头／上岛／公园费、保险是否包含？</li><li><b>天气：</b>停航怎样退款？改路线、取消浮潜但照常上岛时怎样处理？</li><li><b>资质与救援：</b>核实旅行社资质、船上救生设施、人员清点与应急联络方式。</li></ul><p className="footnote">“有导游”不一定等于“有水中向导”。上面列出的商家页面是询价参考，具体日期余位和服务安排仍需确认。</p></article>
  </div>
  <div className="safety-panel"><div><LifeBuoy size={28}/><h3>第一次下水，记住这六件事</h3></div><ol><li>先练习、再入海。优先用合适的传统面镜与独立呼吸管，先在水外试呼吸。</li><li>穿合身救生衣，三人保持可相互观察的距离，并始终跟随水中向导。</li><li>只做水面浮潜。不憋气比远、不自行下潜、不追鱼离队，不靠近船尾和螺旋桨。</li><li>不舒服就停止。面镜漏水、呛水、紧张、疲劳或呼吸异常时，立即示意向导协助返回。</li><li>不踩珊瑚、不喂鱼、不捡海洋生物。穿防晒泳衣，按当地要求使用防晒产品。</li><li>不在酒后或明显不适时下水。购买覆盖浮潜与紧急医疗救援的保险；团方保险不能代替自行核对保障。</li></ol><p className="footnote"><Ref id="safety"/> <Ref id="travel"/> 本页为水面浮潜攻略；若临时改成水肺潜水，需要另做健康评估、培训与飞行间隔安排。</p></div>
- <div className="quiet-note"><b>普吉陆地部分也留够时间</b><p>芭东住满 4 晚方便吃饭和接送；更想安静，可换卡塔／卡伦。9/21 海滩、观景、轻松晚餐；9/23 老街吃小吃、咖啡店、查龙寺。海滩不是默认浮潜点，雨季尤其不要自行游向离岸礁石。</p></div>
+ <div className="quiet-note"><b>普吉实际住宿</b><p>9/20—23 晚入住卡伦海滩的 Phuket Orchid Resort and Spa，9/24 退房后前往普吉机场。</p></div>
 </section>
 <section id="transport" className="section">
- <div className="section-title"><div><p className="eyebrow">MOVE & STAY</p><h2>交通与住宿，少一点折返</h2></div><Plane size={25}/></div>
+ <div className="section-title"><div><p className="eyebrow">ACTUAL TRANSFERS</p><h2>已经走过的航班与转车路线</h2></div><Plane size={25}/></div>
  <div className="transport-grid">
-  <article><h3>三段飞机，9/30 返回杭州</h3><ul className="plain-list"><li><b>9/20 上海 PVG → 普吉 HKT：</b>比较直飞含税含行李总价，晚到先确认接待与接机。</li><li><b>9/24 普吉 HKT → 曼谷机场：</b>优先上午起飞、午前后落地 BKK，给当天去芭提雅留余量。国内段提前约 2 小时到机场，酒店接驳另算。</li><li><b>9/30 曼谷 BKK／DMK → 杭州 HGH：</b>国际段提前约 3 小时到机场，市区交通另算；凌晨起飞需 9/29 晚出发。</li></ul><p className="footnote">这是选班建议，未锁定航班。BKK 与 DMK 分别确认；按 9/30 起飞日期订票，杭州落地日可能不同。</p></article>
-  <article><h3>9/24 机场直达，9/26 回曼谷</h3><p><b>BKK → 芭提雅北站：</b>官网参考 130 泰铢／人，机场 1 层 8 号门；所列下午班次包括 13:30、15:30、17:30、18:30，约 2 小时车程。落地到上车按约 1.5—2 小时弹性规划，取行李与延误另考虑。</p><p><b>9/26 芭提雅北站 → Ekkamai：</b>官网参考 148 泰铢／人。两段票面约 278 泰铢／人、三人 834 泰铢，不含酒店接驳、额外行李及订票费用。</p><p><b>若订 DMK：</b>机场官方列直达芭提雅约 155 泰铢，06:30—17:30 的班次信息需再确认。国内到达在 T2 一层 11 号门咨询，实际候车与下客点按出票通知；错过班次使用已确认的合规包车，不套用 BKK 站点。</p><p>交通资料核对于 9/8，班次与余座以出票为准。若只能晚到，先调整航班或确认晚间接送，再订芭提雅当晚酒店。</p><Ref id="airportbus"/> <Ref id="bus"/> <Ref id="dmkbus"/></article>
+  <article><h3>9/20 · 9C8521</h3><p><b>上海 → 普吉 HKT：</b>搭乘 9C8521 抵达普吉岛，随后前往卡伦海滩的 Phuket Orchid Resort and Spa。</p><p><b>住宿：</b>9/20 入住，9/20—23 晚连续住宿，9/24 退房，共 4 晚。</p></article>
+  <article><h3>9/24 · DD525、A1 与 Mo Chit</h3><p><b>HKT → DMK：</b>搭乘 DD525 从普吉飞抵廊曼机场。</p><p><b>DMK → Mo Chit：</b>从机场乘坐 A1 巴士到 Mo Chit Bus Terminal。</p><p><b>Mo Chit → 芭提雅：</b>在 1 号窗口购买前往 North Pattaya Bus Terminal 的车票，并抵达芭提雅北站。</p></article>
  </div>
- <Table className="trip-table"><TableHeader><TableRow><TableHead>日期</TableHead><TableHead>住宿区域</TableHead><TableHead>选择理由</TableHead></TableRow></TableHeader><TableBody>{[
- ['9/20—24 · 4 晚','普吉芭东；安静优先可选卡塔／卡伦','吃饭和出海接送方便，找正规的三人房'],
- ['9/24—26 · 2 晚','芭提雅中北部、Terminal 21 周边','机场抵达后直接入住；便于真理寺和北站'],
- ['9/26—30 · 4 晚','曼谷 Asok／Sukhumvit 换乘站附近','曼谷连住同一家；早班机可调整最后一晚到实际机场附近']
- ].map(row=><TableRow key={row[0]}>{row.map(cell=><TableCell key={cell}>{cell}</TableCell>)}</TableRow>)}</TableBody></Table>
- <p className="footnote">三位成人按真实人数订房，确认三床／双床加床、税费、第三人费用、押金及取消期限。住宿按平均 ¥450／间／晚作规划，不是已经核实的新日期房价。</p>
 </section>
 <section id="budget" className="section">
  <div className="section-title"><div><p className="eyebrow">THE BUDGET</p><h2>为浮潜多留一点预算</h2></div><span className="tag neutral">全部为人民币规划额</span></div>
@@ -84,9 +78,9 @@ export default function Home() {
  <div className="departure-order"><h3>订票与出发顺序</h3><ol><li><b>现在</b>按 9/30 返回杭州比三段机票 → 订三人房 → 保险与手机卡覆盖全程。</li><li><b>9/18—19</b>填 TDAC、保存订单，确认接机与入住。</li><li><b>9/21—23</b>按海况安排浮潜，确认天气退款规则。</li><li><b>9/23、9/25</b>分别确认次日机场去芭提雅、芭提雅回曼谷的车。</li><li><b>9/29</b>核对返程机场、起飞时刻与杭州抵达日期。</li></ol></div>
  <div className="emergency"><div><LifeBuoy size={24}/><h3>存好这几个电话</h3></div><div className="phone-grid"><a href="tel:1155"><b>1155</b><span>旅游警察 · 中文服务</span></a><a href="tel:191"><b>191</b><span>泰国报警</span></a><a href="tel:1669"><b>1669</b><span>泰国急救</span></a><a href="tel:+6622457010"><b>+66 2 245 7010</b><span>中国驻泰使馆领保</span></a><a href="tel:+66945956158"><b>+66 94 595 6158</b><span>驻普吉领事办公室</span></a></div><Ref id="visa">使馆联系信息</Ref> <Ref id="travel">急救电话来源</Ref></div>
 </section>
-<section id="sources" className="sources-section"><h2>查询来源</h2><p>行程与交通更新于 2026 年 9 月 8 日；其余资料保留 9 月 6 日查询记录。日程与预算是为你们制定的建议；交通、景点、入境及套餐信息以出发前最新公告和最终订单为准。这里的历史照片不代表 9 月实时水色或海况。</p><div>{sources.map(([id,title,url])=><a href={url} key={id} target="_blank" rel="noreferrer">{title} ↗</a>)}</div></section>
+<section id="sources" className="sources-section"><h2>查询来源</h2><p>实际航班、住宿和 9/24 转车路线根据本次亲历更新于 2026 年 9 月 25 日；其余未来安排仍以当天开放情况和最终订单为准。</p><div>{sources.map(([id,title,url])=><a href={url} key={id} target="_blank" rel="noreferrer">{title} ↗</a>)}</div></section>
 
-  </main><footer>泰国旅行计划 · 行程更新 2026.09.08 · 新住宿日期须重新询价，预算为规划额</footer>
+  </main><footer>泰国旅行手记 · 实际行程更新 2026.09.25</footer>
   <script src="/trip-guide.js" defer />
  </div>;
 }

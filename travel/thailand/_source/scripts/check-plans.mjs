@@ -35,23 +35,26 @@ for(const day of foodDays){
 }
 
 assert.equal(Object.keys(venues).length,40);
-assert.equal(hotels.length,9);
-for(const hotel of hotels){
- assert.equal(hotel.quotes.length,1);
- const quote=hotel.quotes[0];
- assert.equal(quote.plan,'common');
- const encoded=decodeURIComponent(quote.url);
- const checkIn=hotel.city==='phuket'?'2026-09-20':hotel.city==='pattaya'?'2026-09-24':'2026-09-26';
- const checkOut=hotel.city==='phuket'?'2026-09-24':hotel.city==='pattaya'?'2026-09-26':'2026-09-30';
- assert.ok(encoded.includes(checkIn));
- assert.ok(encoded.includes(checkOut));
- if(hotel.city==='bangkok')assert.equal(quote.dates,'9/26—30 · 4 晚');
-}
+assert.equal(hotels.length,1);
+const actualHotel=hotels[0];
+assert.equal(actualHotel.id,'hotel-phuket-orchid');
+assert.equal(actualHotel.status,'actual');
+assert.equal(actualHotel.en,'Phuket Orchid Resort and Spa');
+assert.equal(actualHotel.quotes.length,1);
+assert.equal(actualHotel.quotes[0].dates,'9/20 入住 · 9/24 退房 · 4 晚');
+assert.ok(actualHotel.ll.every(Number.isFinite));
 
 assert.ok(trip.places.hgh.ll.every(Number.isFinite));
 assert.equal(trip.places.hgh.name,'杭州萧山国际机场 HGH');
 assert.equal(trip.catalog.find(item=>item.id==='hgh').kind,'airport');
 assert.equal(trip.catalog.length,31);
+const arrivalDay=days.find(d=>d.date===20),transferDay=days.find(d=>d.date===24);
+assert.match(arrivalDay.title,/9C8521/);
+assert.equal(arrivalDay.stay,'hotel-phuket-orchid');
+assert.match(transferDay.title,/DD525/);
+assert.deepEqual(transferDay.stops.map(stop=>stop.id),['hkt','dmk','mochit','pattayabus','pattayastay']);
+assert.match(transferDay.note,/A1/);
+assert.match(transferDay.note,/1 号窗口/);
 const showDay=days.find(d=>d.date===25);
 assert.ok(showDay.stops.some(stop=>stop.id==='show99'));
 assert.ok(showDay.intro.includes('19:30'));
@@ -65,7 +68,9 @@ assert.ok(mapHtml.includes('id="map-period"'));
 assert.ok(!mapHtml.includes('id="plan-A"'));
 assert.ok(!mapHtml.includes('id="plan-B"'));
 assert.ok(mapHtml.includes('上海出发·杭州返程'));
-assert.ok(mapScript.includes("airports:{24:'bkk',30:'bkk'}"));
+assert.ok(mapScript.includes("airports:{30:'bkk'}"));
+assert.ok(mapScript.includes('trip.places.mochit.ll'));
+assert.ok(mapScript.includes("trip.places['hotel-phuket-orchid']"));
 assert.ok(mapScript.includes('trip.places.hgh.ll'));
 assert.ok(!mapScript.includes('comparison'));
 assert.ok(!mapScript.includes('state.branches'));
@@ -78,4 +83,4 @@ for(const file of ['public/trip.json','public/hotels.json','public/trip-map.html
  for(const text of forbidden)assert.ok(!content.includes(text),file+' still contains '+text);
 }
 
-console.log('PASS: one 9/20—9/30 itinerary, 33 meals, nine hotel candidates, HGH return route, map data and published scripts are consistent.');
+console.log('PASS: actual 9C8521 and DD525 legs, A1/Mo Chit transfer, one Phuket hotel stay, 33 meals and the HGH return plan are consistent.');

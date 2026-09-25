@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?><kml xmlns="http://www.opengis.net/kml/2.2"><Document><name>03 芭提雅｜9/24—26</name><description>9/20 上海出发，9/30 从曼谷返回杭州；F 为餐厅，H 为候选酒店。</description><Style id="airport"><IconStyle><color>ffc95d26</color><scale>1.1</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle><LineStyle><color>ffc95d26</color><width>3</width></LineStyle></Style><Style id="sight"><IconStyle><color>ff848c00</color><scale>1.1</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle><LineStyle><color>ff848c00</color><width>3</width></LineStyle></Style><Style id="stay"><IconStyle><color>ff856957</color><scale>1.1</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle><LineStyle><color>ff856957</color><width>3</width></LineStyle></Style><Style id="pier"><IconStyle><color>ff967808</color><scale>1.1</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle><LineStyle><color>ff967808</color><width>3</width></LineStyle></Style><Style id="bus"><IconStyle><color>ff256199</color><scale>1.1</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle><LineStyle><color>ff256199</color><width>3</width></LineStyle></Style><Style id="food"><IconStyle><color>ff2e58c8</color><scale>1.1</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle><LineStyle><color>ff2e58c8</color><width>3</width></LineStyle></Style><Style id="hotel"><IconStyle><color>ffb95680</color><scale>1.1</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle><LineStyle><color>ffb95680</color><width>3</width></LineStyle></Style><Style id="show"><IconStyle><color>ffad448e</color><scale>1.1</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle><LineStyle><color>ffad448e</color><width>3</width></LineStyle></Style><Style id="route"><IconStyle><color>ff9b826c</color><scale>1.1</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle><LineStyle><color>ff9b826c</color><width>3</width></LineStyle></Style><Placemark id="pattayabus"><name>9/24、9/26｜芭提雅北汽车站</name><description>汽车站
-9/24 下午：BKK 北站线路参考约 2 小时车程，按票面下车点接驳酒店。DMK 线路下车点以出票通知为准。
+<?xml version="1.0" encoding="UTF-8"?><kml xmlns="http://www.opengis.net/kml/2.2"><Document><name>03 芭提雅｜9/24—26</name><description>9/20 搭 9C8521 到普吉；9/24 搭 DD525 到 DMK，经 A1 与 Mo Chit 转车到芭提雅；9/30 返回杭州。F 为餐厅，住宿为实际入住记录。</description><Style id="airport"><IconStyle><color>ffc95d26</color><scale>1.1</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle><LineStyle><color>ffc95d26</color><width>3</width></LineStyle></Style><Style id="sight"><IconStyle><color>ff848c00</color><scale>1.1</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle><LineStyle><color>ff848c00</color><width>3</width></LineStyle></Style><Style id="stay"><IconStyle><color>ff856957</color><scale>1.1</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle><LineStyle><color>ff856957</color><width>3</width></LineStyle></Style><Style id="pier"><IconStyle><color>ff967808</color><scale>1.1</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle><LineStyle><color>ff967808</color><width>3</width></LineStyle></Style><Style id="bus"><IconStyle><color>ff256199</color><scale>1.1</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle><LineStyle><color>ff256199</color><width>3</width></LineStyle></Style><Style id="food"><IconStyle><color>ff2e58c8</color><scale>1.1</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle><LineStyle><color>ff2e58c8</color><width>3</width></LineStyle></Style><Style id="hotel"><IconStyle><color>ffb95680</color><scale>1.1</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle><LineStyle><color>ffb95680</color><width>3</width></LineStyle></Style><Style id="show"><IconStyle><color>ffad448e</color><scale>1.1</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle><LineStyle><color>ffad448e</color><width>3</width></LineStyle></Style><Style id="route"><IconStyle><color>ff9b826c</color><scale>1.1</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle><LineStyle><color>ff9b826c</color><width>3</width></LineStyle></Style><Placemark id="pattayabus"><name>9/24、9/26｜芭提雅北汽车站</name><description>汽车站
+9/24 当天：抵达 North Pattaya Bus Terminal。
 9/26 上午：芭提雅北汽车站 → 曼谷 Ekkamai，预留候车与行李时间。
 参考位置，入口和营业安排出发前复核。
 坐标来源：https://www.openstreetmap.org/way/195004474</description><styleUrl>#bus</styleUrl><Point><coordinates>100.9034026,12.9497299,0</coordinates></Point></Placemark><Placemark id="pattayastay"><name>9/24—26 · 2 晚｜芭提雅 Terminal 21 周边</name><description>住宿区域
 Terminal 21 周边建议住宿区域，尚未确定酒店。
-9/24 晚上：入住北部酒店，就近吃饭；晚到不加真理寺。
+9/24 晚上：从芭提雅北站前往当晚住宿地点。
 9/25 约 17:00—18:30：回酒店休息、换衣服；在 Terminal 21 或 Naklua 北部就近吃晚饭，18:30 前尽量吃完。
 参考位置，入口和营业安排出发前复核。
 坐标来源：https://www.openstreetmap.org/way/651015521</description><styleUrl>#stay</styleUrl><Point><coordinates>100.8896924,12.9498403,0</coordinates></Point></Placemark><Placemark id="truth"><name>9/25｜真理寺</name><description>景点
@@ -64,36 +64,6 @@ Google 地图店铺参考位置；入口请按现场确认。
 每餐三选一，不代表这些餐都必须来此店。
 9/25 午餐 选项B：泰式海鲜汤、蒸鱼配饭；฿350–600／人（规划额）。需到海滩南端，离北部住宿较远；仅在中天当天考虑，不专程来回。
 位置来源：https://www.google.com/maps/place/Pupen+Seafood/@12.861438,100.895524,17z/data=!3m1!4b1!4m6!3m5!1s0x3102940477d1dee9:0x74db886f251470ae!8m2!3d12.861438!4d100.895524!16s%2Fg%2F1td_w0_z
-春武里地方政府｜餐厅名录：https://nongsuachang.go.th/attachments/2088_files_2027_1.pdf</description><styleUrl>#food</styleUrl><Point><coordinates>100.895524,12.861438,0</coordinates></Point></Placemark><Placemark id="hotel-j-residence"><name>9/24—26 · 2 晚｜H7 J 住宅酒店</name><description>H7 · 候选酒店，未预订
-Hotel J Residence Pattaya
-芭提雅北部 · North Pattaya Road
-Deluxe Triple Room｜豪华三人房
-3 张单人床；36㎡
-9/24—26 · 2 晚；新日期待询价
-飞猪查询：https://hotel.fliggy.com/hotel_detail2.htm?shid=52007088&amp;city=904974&amp;checkIn=2026-09-24&amp;checkOut=2026-09-26&amp;roomNum=1&amp;aNum_1=3&amp;cNum_1=0
-三床配置清楚，位于北部，适合去北站、Terminal 21 和真理寺的行程组合。
-J Main、J Inspired、J Residence 是不同楼栋，认准 Residence 的房型与入口；前往海滩和中天仍要安排交通。
-酒店资料：https://www.hoteljpattaya.com/accommodation/deluxe-tripple-room-jresidence/
-坐标来源：https://www.google.com/maps/place/Hotel+J+Residence/data=!4m10!3m9!1s0x3102bfc69f202063:0x8eb738fcc0451ca2!5m2!4m1!1i2!8m2!3d12.9497355!4d100.895349!16s%2Fg%2F11vylh087b</description><styleUrl>#hotel</styleUrl><Point><coordinates>100.895349,12.9497355,0</coordinates></Point></Placemark><Placemark id="hotel-grand-bella"><name>9/24—26 · 2 晚｜H8 格兰德贝拉酒店</name><description>H8 · 候选酒店，未预订
-Grand Bella Hotel Pattaya
-芭提雅中部 · Pattaya Klang
-Superior Triple Room｜高级三人房
-3 张单人床；32㎡
-9/24—26 · 2 晚；新日期待询价
-飞猪查询：https://hotel.fliggy.com/hotel_detail2.htm?shid=50372937&amp;city=904974&amp;checkIn=2026-09-24&amp;checkOut=2026-09-26&amp;roomNum=1&amp;aNum_1=3&amp;cNum_1=0
-在市中心，方便串联 Central Pattaya 与海滩路周边吃饭，适合更看重步行逛吃的选择。
-相比北部酒店，去北站和真理寺更依赖接驳；挑最近的房间与隔音评价，不只看总分。
-酒店资料：https://www.booking.com/hotel/th/grand-bella.html
-坐标来源：https://www.thaihotels.com/hotels/grand-bella-hotel-pattaya-chonburi-364501</description><styleUrl>#hotel</styleUrl><Point><coordinates>100.887199,12.935298,0</coordinates></Point></Placemark><Placemark id="hotel-siam-siam"><name>9/24—26 · 2 晚｜H9 芭提雅暹罗设计酒店</name><description>H9 · 候选酒店，未预订
-Siam@Siam Design Hotel Pattaya
-芭提雅北部 · Central Marina 周边
-Deluxe Triple 3 Singles｜豪华三人房
-3 张单人床；43㎡
-9/24—26 · 2 晚；新日期待询价
-飞猪查询：https://hotel.fliggy.com/hotel_detail2.htm?shid=50373079&amp;city=904974&amp;checkIn=2026-09-24&amp;checkOut=2026-09-26&amp;roomNum=1&amp;aNum_1=3&amp;cNum_1=0
-适合把芭提雅的两晚当作酒店休闲时间，位置也方便北部商场和海边活动。
-三单床展示价明显高于前两家。飞猪该报价窗型写「暗窗」，介意采光应核对具体房间；不要误选价格更低的双床房。
-酒店资料：https://www.siamatsiam.com/pattaya/rooms/
-坐标来源：https://www.google.com/maps/place/芭提雅暹罗设计酒店/@12.9457203,100.8887009,17z/data=!4m9!3m8!1s0x3102bdffeb53c6af:0x40fc00c40fbdf873!5m2!4m1!1i2!8m2!3d12.9457203!4d100.8887009!16s%2Fg%2F1ptyqht0h</description><styleUrl>#hotel</styleUrl><Point><coordinates>100.8887009,12.9457203,0</coordinates></Point></Placemark><Placemark id="route-25"><name>9/25｜真理寺 → 中天海滩 → 99秀（顺序示意）</name><description>上午真理寺，午后中天海滩；16:00 左右离开海边，回北部吃晚饭，约 19:30 抵达 99秀场。
+春武里地方政府｜餐厅名录：https://nongsuachang.go.th/attachments/2088_files_2027_1.pdf</description><styleUrl>#food</styleUrl><Point><coordinates>100.895524,12.861438,0</coordinates></Point></Placemark><Placemark id="route-25"><name>9/25｜真理寺 → 中天海滩 → 99秀（顺序示意）</name><description>上午真理寺，午后中天海滩；16:00 左右离开海边，回北部吃晚饭，约 19:30 抵达 99秀场。
 99秀为成人演出，未订票；19:30 为计划抵达时间，不是固定开演场次。营业时间、最晚入场、年龄和证件要求以所选日期订单及场馆确认为准。每人新增 ¥350 门票及晚间接驳规划额，已计入总预算。若改格兰岛，替换白天大部分陆地活动并提前回大陆，给返酒店、晚饭和入场留缓冲。
 连线只表示行程先后，不是实际道路、航线或导航。曼谷机场按 BKK 举例。</description><styleUrl>#route</styleUrl><LineString><tessellate>1</tessellate><coordinates>100.8891366,12.9727895,0 100.8826011,12.8768835,0 100.8896924,12.9498403,0 100.8910291,12.9481946,0</coordinates></LineString></Placemark></Document></kml>

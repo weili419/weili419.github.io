@@ -1,10 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><kml xmlns="http://www.opengis.net/kml/2.2"><Document><name>02 普吉｜9/20—24</name><description>9/20 上海出发，9/30 从曼谷返回杭州；F 为餐厅，H 为候选酒店。</description><Style id="airport"><IconStyle><color>ffc95d26</color><scale>1.1</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle><LineStyle><color>ffc95d26</color><width>3</width></LineStyle></Style><Style id="sight"><IconStyle><color>ff848c00</color><scale>1.1</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle><LineStyle><color>ff848c00</color><width>3</width></LineStyle></Style><Style id="stay"><IconStyle><color>ff856957</color><scale>1.1</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle><LineStyle><color>ff856957</color><width>3</width></LineStyle></Style><Style id="pier"><IconStyle><color>ff967808</color><scale>1.1</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle><LineStyle><color>ff967808</color><width>3</width></LineStyle></Style><Style id="bus"><IconStyle><color>ff256199</color><scale>1.1</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle><LineStyle><color>ff256199</color><width>3</width></LineStyle></Style><Style id="food"><IconStyle><color>ff2e58c8</color><scale>1.1</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle><LineStyle><color>ff2e58c8</color><width>3</width></LineStyle></Style><Style id="hotel"><IconStyle><color>ffb95680</color><scale>1.1</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle><LineStyle><color>ffb95680</color><width>3</width></LineStyle></Style><Style id="show"><IconStyle><color>ffad448e</color><scale>1.1</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle><LineStyle><color>ffad448e</color><width>3</width></LineStyle></Style><Style id="route"><IconStyle><color>ff9b826c</color><scale>1.1</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle><LineStyle><color>ff9b826c</color><width>3</width></LineStyle></Style><Placemark id="patong"><name>9/20—9/24 · 4 晚｜芭东海滩／住宿区</name><description>住宿区域
-建议住宿区域，尚未确定酒店。
-9/20 晚上：在住宿附近吃饭、补水、休息。芭东只是住宿区域建议。
-9/22 傍晚：返回普吉，接送回酒店，晚餐后休息。
-9/23 晚上：回酒店整理行李，核对明天航班与接机。
-参考位置，入口和营业安排出发前复核。
-坐标来源：https://www.openstreetmap.org/relation/14018589</description><styleUrl>#stay</styleUrl><Point><coordinates>98.2924294,7.8964014,0</coordinates></Point></Placemark><Placemark id="karon"><name>9/21｜卡伦海滩</name><description>景点
+<?xml version="1.0" encoding="UTF-8"?><kml xmlns="http://www.opengis.net/kml/2.2"><Document><name>02 普吉｜9/20—24</name><description>9/20 搭 9C8521 到普吉；9/24 搭 DD525 到 DMK，经 A1 与 Mo Chit 转车到芭提雅；9/30 返回杭州。F 为餐厅，住宿为实际入住记录。</description><Style id="airport"><IconStyle><color>ffc95d26</color><scale>1.1</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle><LineStyle><color>ffc95d26</color><width>3</width></LineStyle></Style><Style id="sight"><IconStyle><color>ff848c00</color><scale>1.1</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle><LineStyle><color>ff848c00</color><width>3</width></LineStyle></Style><Style id="stay"><IconStyle><color>ff856957</color><scale>1.1</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle><LineStyle><color>ff856957</color><width>3</width></LineStyle></Style><Style id="pier"><IconStyle><color>ff967808</color><scale>1.1</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle><LineStyle><color>ff967808</color><width>3</width></LineStyle></Style><Style id="bus"><IconStyle><color>ff256199</color><scale>1.1</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle><LineStyle><color>ff256199</color><width>3</width></LineStyle></Style><Style id="food"><IconStyle><color>ff2e58c8</color><scale>1.1</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle><LineStyle><color>ff2e58c8</color><width>3</width></LineStyle></Style><Style id="hotel"><IconStyle><color>ffb95680</color><scale>1.1</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle><LineStyle><color>ffb95680</color><width>3</width></LineStyle></Style><Style id="show"><IconStyle><color>ffad448e</color><scale>1.1</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle><LineStyle><color>ffad448e</color><width>3</width></LineStyle></Style><Style id="route"><IconStyle><color>ff9b826c</color><scale>1.1</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle><LineStyle><color>ff9b826c</color><width>3</width></LineStyle></Style><Placemark id="karon"><name>9/21｜卡伦海滩</name><description>景点
 9/21 上午偏晚：卡伦海边散步，找地方吃午餐。
 参考位置，入口和营业安排出发前复核。
 坐标来源：https://www.openstreetmap.org/way/134394729</description><styleUrl>#sight</styleUrl><Point><coordinates>98.2917816,7.8439856,0</coordinates></Point></Placemark><Placemark id="kata"><name>9/21｜卡塔海滩</name><description>景点
@@ -48,7 +42,7 @@ Rat-U-Thit 路 186 号原店，非山上店。
 每餐三选一，不代表这些餐都必须来此店。
 9/20 晚餐 选项A：泰式炒粉、冬阴功、炒空心菜；฿200–350／人（规划额）。原店公开时间 07:00–23:30；排队超过 20 分钟就换备选。
 9/21 早餐 选项B：炒面／炒饭＋热茶；฿120–220／人（规划额）。原店公开时间 07:00–23:30；排队超过 20 分钟就换备选。
-9/21 晚餐 选项C：泰式炒粉、冬阴功、炒空心菜；฿200–350／人（规划额）。已回到芭东酒店后选择。
+9/21 晚餐 选项C：泰式炒粉、冬阴功、炒空心菜；฿200–350／人（规划额）。从卡伦实际住宿前往芭东时选择。
 9/22 晚餐 选项A：泰式炒粉、冬阴功、炒空心菜；฿200–350／人（规划额）。回芭东后吃饭；疲劳就直接选最近的一家。
 9/23 晚餐 选项B：泰式炒粉、冬阴功、炒空心菜；฿200–350／人（规划额）。原店公开时间 07:00–23:30；排队超过 20 分钟就换备选。
 位置来源：https://www.google.com/maps/place/No.6+Restaurant/data=!4m7!3m6!1s0x30503a9d39d7987d:0xd3fdd7c85dc2fde!8m2!3d7.8939023!4d98.2984316!16s%2Fg%2F1q2v_6wv5!19sChIJfZjXOZ06UDAR3i_chXzdPw0
@@ -108,40 +102,16 @@ Google 地图店铺参考位置；入口请按现场确认。
 每餐三选一，不代表这些餐都必须来此店。
 9/23 晚餐 选项C：干粥饭 Khao Tom Haeng、脆皮猪肉；฿100–180／人（规划额）。想吃这家，需愿意查龙寺后回老城、等到晚间营业；会增加折返。
 位置来源：https://www.google.com/maps/place/Go+Benz+Rice+Porridge+Phuket/@7.8847328,98.3825828,17z/data=!3m1!4b1!4m6!3m5!1s0x305031e5906dc545:0xc039ca4579378a4!8m2!3d7.8847328!4d98.3825828!16s%2Fg%2F11b6bpqz9k
-Phuket 101｜老城餐饮：https://www.phuket101.net/best-thai-restaurants-in-phuket-town/</description><styleUrl>#food</styleUrl><Point><coordinates>98.3825828,7.8847328,0</coordinates></Point></Placemark><Placemark id="hotel-andakira"><name>9/20—24 · 4 晚｜H1 安达凯拉酒店</name><description>H1 · 候选酒店，未预订
-Andakira Hotel Patong
-芭东中心 · Phangmuang Sai Gor Road
-Deluxe Triple Room｜豪华三人房
-3 张单人床；44㎡
-9/20—24 · 4 晚；9/6 历史展示价 ¥445，计价口径及新订单总额待核实。
-飞猪查询：https://hotel.fliggy.com/hotel_detail2.htm?shid=50390338&amp;city=904986&amp;checkIn=2026-09-20&amp;checkOut=2026-09-24&amp;roomNum=1&amp;aNum_1=3&amp;cNum_1=0
-四晚住同一家，方便芭东吃饭、逛江西冷与班赞市场，也方便向出海团确认酒店接送。
-离海滩有一段步行距离；官网同名房型也可能是大床＋单床，务必选择飞猪明确写「3 张单人床」的报价。
-酒店资料：https://andakirapatong.andakiragroup.com/deluxe-triple.html
-坐标来源：https://mapcarta.com/32117668</description><styleUrl>#hotel</styleUrl><Point><coordinates>98.30276,7.89411,0</coordinates></Point></Placemark><Placemark id="hotel-lantern"><name>9/20—24 · 4 晚｜H2 芭东彩灯度假村</name><description>H2 · 候选酒店，未预订
-The Lantern Resorts Patong Phuket
-芭东中心 · Soi Sansabai
-View Pent Triple｜景观三人房
-3 张单人床；44㎡
-9/20—24 · 4 晚；9/6 历史展示价 ¥470，计价口径及新订单总额待核实。
-飞猪查询：https://hotel.fliggy.com/hotel_detail2.htm?shid=50390837&amp;city=904986&amp;checkIn=2026-09-20&amp;checkOut=2026-09-24&amp;roomNum=1&amp;aNum_1=3&amp;cNum_1=0
-在 Sansabai 巷，适合把江西冷、班赞市场和芭东晚餐放在一起安排。
-靠近热闹街区，选房时关注朝向与夜间噪音。官网床型摘要有混写，优先以具体订单的三单床说明为准。
-酒店资料：https://www.lantern-resorts.com/rooms/view-pent-triple/
-坐标来源：https://www.yellowpages.co.th/profile/เดอะ-แลนเทิร์น-รีสอร์ท-ป่าตอง-dUJvHXYmi</description><styleUrl>#hotel</styleUrl><Point><coordinates>98.30017,7.892596,0</coordinates></Point></Placemark><Placemark id="hotel-koko-patong"><name>9/20—24 · 4 晚｜H3 普吉岛可可酒店 · 芭东店</name><description>H3 · 候选酒店，未预订
-Kokotel Phuket Patong
-芭东北段 · Sawasdirak Road
-Koko Family Room｜可可家庭房
-3 张单人床；飞猪标注 48㎡
-9/20—24 · 4 晚；9/6 历史展示价 ¥499，计价口径及新订单总额待核实。
-飞猪查询：https://hotel.fliggy.com/hotel_detail2.htm?shid=55570065&amp;city=904986&amp;checkIn=2026-09-20&amp;checkOut=2026-09-24&amp;roomNum=1&amp;aNum_1=3&amp;cNum_1=0
-位于芭东北段、靠近海滩的 Sawasdirak 路，适合早晚散步后就近吃饭。
-同品牌还有奈阳海滩店，订房时认准 Phuket Patong；Koko Party 是上下铺房，这里推荐的是三单床 Family。
-酒店资料：https://www.kokotel.com/phuket-patong/
-坐标来源：https://fromto.travel/en/thailand/kokotel-phuket-patong-patong-beach</description><styleUrl>#hotel</styleUrl><Point><coordinates>98.29707,7.89781,0</coordinates></Point></Placemark><Placemark id="route-21"><name>9/21｜卡伦、卡塔与海景（顺序示意）</name><description>不赶早。海边走走，傍晚看景，再回酒店。
+Phuket 101｜老城餐饮：https://www.phuket101.net/best-thai-restaurants-in-phuket-town/</description><styleUrl>#food</styleUrl><Point><coordinates>98.3825828,7.8847328,0</coordinates></Point></Placemark><Placemark id="hotel-phuket-orchid"><name>9/20 入住 · 9/24 退房 · 4 晚｜普吉岛兰花温泉度假酒店</name><description>实际入住酒店
+Phuket Orchid Resort and Spa
+卡伦海滩 · 34 Luang Por Chuan Road
+9/20 入住 · 9/24 退房 · 4 晚
+9/20、9/21、9/22、9/23 共住 4 晚，9/24 从酒店前往普吉机场。
+酒店官网：https://www.phuketorchid.com/
+坐标来源：https://www.openstreetmap.org/node/1868631486</description><styleUrl>#hotel</styleUrl><Point><coordinates>98.2961731,7.8343817,0</coordinates></Point></Placemark><Placemark id="route-21"><name>9/21｜卡伦、卡塔与海景（顺序示意）</name><description>不赶早。海边走走，傍晚看景，再回酒店。
 今天与 9/22、9/23 可以按海况互换。红旗时不上水；海滩散步不等于安排岸边浮潜。
 连线只表示行程先后，不是实际道路、航线或导航。曼谷机场按 BKK 举例。</description><styleUrl>#route</styleUrl><LineString><tessellate>1</tessellate><coordinates>98.2917816,7.8439856,0 98.2960258,7.8193895,0 98.3021839,7.7972523,0</coordinates></LineString></Placemark><Placemark id="route-22"><name>9/22｜第一次浮潜，去皇帝岛（顺序示意）</name><description>暂定一日游：酒店接送、向导带队、先练习再浮潜。
 岛屿标记只帮助理解位置，不是可以自行下水的浮潜点。具体海湾、上岛点与下水安排由持牌团方依当天海况决定。停航则改陆地行程。
-连线只表示行程先后，不是实际道路、航线或导航。曼谷机场按 BKK 举例。</description><styleUrl>#route</styleUrl><LineString><tessellate>1</tessellate><coordinates>98.350993,7.8193895,0 98.3663641,7.6024567,0 98.2924294,7.8964014,0</coordinates></LineString></Placemark><Placemark id="route-23"><name>9/23｜普吉老街与查龙寺（顺序示意）</name><description>逛吃、喝咖啡，留出一日可调整的陆地安排。
+连线只表示行程先后，不是实际道路、航线或导航。曼谷机场按 BKK 举例。</description><styleUrl>#route</styleUrl><LineString><tessellate>1</tessellate><coordinates>98.350993,7.8193895,0 98.3663641,7.6024567,0 98.2961731,7.8343817,0</coordinates></LineString></Placemark><Placemark id="route-23"><name>9/23｜普吉老街与查龙寺（顺序示意）</name><description>逛吃、喝咖啡，留出一日可调整的陆地安排。
 这是第二个浮潜备用日期。若改到今天出海，把老街与寺庙移到此前取消出海的那一天。
-连线只表示行程先后，不是实际道路、航线或导航。曼谷机场按 BKK 举例。</description><styleUrl>#route</styleUrl><LineString><tessellate>1</tessellate><coordinates>98.3892206,7.8847774,0 98.3370972,7.8462522,0 98.2924294,7.8964014,0</coordinates></LineString></Placemark></Document></kml>
+连线只表示行程先后，不是实际道路、航线或导航。曼谷机场按 BKK 举例。</description><styleUrl>#route</styleUrl><LineString><tessellate>1</tessellate><coordinates>98.3892206,7.8847774,0 98.3370972,7.8462522,0 98.2961731,7.8343817,0</coordinates></LineString></Placemark></Document></kml>

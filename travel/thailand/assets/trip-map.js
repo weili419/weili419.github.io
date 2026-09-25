@@ -6,15 +6,15 @@
  const foods=window.TRIP_FOOD||[];
  const foodColor='#c8582e';
  foods.forEach(f=>{trip.places[f.id]={name:f.name,en:f.en,ll:f.ll,source:f.source,foodId:f.id};});
- trip.categories.hotel={symbol:'H',name:'候选酒店',color:'#8056b9'};
+ trip.categories.hotel={symbol:'住',name:'实际住宿',color:'#8056b9'};
  hotels.forEach(h=>{
   trip.places[h.id]={name:h.name,en:h.en,ll:h.ll,source:h.coordSource,hotelId:h.id};
-  trip.catalog.push({id:h.id,city:h.city,kind:'hotel',when:h.quotes.map(q=>q.dates).join('；'),note:h.room+'；'+h.beds+'。'+h.tradeoff,number:h.number});
+  trip.catalog.push({id:h.id,city:h.city,kind:'hotel',when:h.quotes.map(q=>q.dates).join('；'),note:h.why,number:h.number});
  });
  const escape=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
  const searchURL=p=>p.foodId&&p.source?.startsWith('https://www.google.com/maps')?p.source:'https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(p.en);
  const sourceURL=p=>p.source||'https://www.openstreetmap.org/'+p.osm;
- const state={plan:'A',mode:'overview',index:0,region:'phuket',hotelRegion:'phuket',foodRegion:'phuket',foodDate:0,airports:{24:'bkk',30:'bkk'},markers:[],popup:null,lines:[],bounds:[]};
+ const state={plan:'A',mode:'overview',index:0,region:'phuket',hotelRegion:'phuket',foodRegion:'phuket',foodDate:0,airports:{30:'bkk'},markers:[],popup:null,lines:[],bounds:[]};
  const branchColors={A:'#3268d8',common:'#6c829b'};
  const currentPlan=()=>trip.plans[state.plan];
  const quotesFor=h=>h.quotes.filter(q=>q.plan==='common'||q.plan===state.plan);
@@ -23,8 +23,8 @@
  let map=null,loaded=false,loadingTimer,fallback=false;
  const fallbackStyle={version:8,sources:{land:{type:'geojson',data:window.TRIP_LAND,attribution:'地理概览 © <a href="https://www.naturalearthdata.com/" target="_blank">Natural Earth</a> · 地点 © <a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap</a>'}},layers:[{id:'ocean',type:'background',paint:{'background-color':'#d6eaf0'}},{id:'land',type:'fill',source:'land',paint:{'fill-color':'#efeee4'}},{id:'coast',type:'line',source:'land',paint:{'line-color':'#a8bec1','line-width':1}}]};
  function useFallback(){if(fallback||!map)return;fallback=true;clearTimeout(loadingTimer);$('map-message').textContent='街道图暂不可用，已切换内置地理概览（无道路，小岛轮廓可能简化）。日期与地点仍可查看；实际导航可打开 Google 地图。';map.setStyle(fallbackStyle,{diff:false});}
- function place(id){return trip.places[id==='airport'?state.airports[trip.days[state.index].date]:id==='arrivalbus'?'pattayabus':id];}
- function getStops(day){return day.stops.filter(s=>s.id!=='arrivalbus'||state.airports[24]==='bkk').map((s,i)=>({...s,number:i+1,p:place(s.id)}));}
+ function place(id){return trip.places[id==='airport'?state.airports[trip.days[state.index].date]:id];}
+ function getStops(day){return day.stops.map((s,i)=>({...s,number:i+1,p:place(s.id)}));}
  function line(points,color,optional=false){return {type:'Feature',properties:{color,optional},geometry:{type:'LineString',coordinates:points}};}
  function updateLines(){if(map&&map.getSource('trip-lines'))map.getSource('trip-lines').setData({type:'FeatureCollection',features:state.lines});}
  function fit(){
@@ -44,7 +44,7 @@
   const el=document.createElement('button');el.type='button';el.className='place-marker'+(options.city?' city-marker':'')+(options.optional?' optional':'');el.style.setProperty('--pin',color);el.setAttribute('aria-label',p.name+(options.sub?'，'+options.sub:''));
   const entry=trip.catalog.find(item=>trip.places[item.id]===p);
   if(entry?.kind==='airport'){el.classList.add('airport-marker');color=trip.categories.airport.color;el.style.setProperty('--pin',color);label=options.number?String(options.number)+' ✈':'✈';}
-  if(entry?.kind==='hotel'){el.classList.add('hotel-marker');el.style.setProperty('--pin',trip.categories.hotel.color);label='H'+entry.number;}
+  if(entry?.kind==='hotel'){el.classList.add('hotel-marker');el.style.setProperty('--pin',trip.categories.hotel.color);label='住';}
   if(entry?.kind==='show'){el.style.setProperty('--pin',trip.categories.show.color);label=options.number?String(options.number)+' 秀':'秀';}
   if(p.foodId)el.classList.add('food-marker');
   if(options.catalog){el.classList.add('catalog-pin');el.dataset.priority=String(entry?.kind==='airport'?100:options.optional?0:10);}
@@ -72,8 +72,8 @@
   state.mode='day';state.index=index;resetMap();const day=trip.days[index],color=index>=trip.commonDays.length?branchColors[state.plan]:trip.colors[day.city],stops=getStops(day);
   $('day-kicker').textContent='DAY '+String(index+1).padStart(2,'0')+' / '+dateLabel(day.date)+' '+day.week;$('day-title').textContent=day.title;$('day-intro').textContent=day.intro;$('day-note').textContent=day.note;
   $('stay').innerHTML=day.stay?'<div class="stay"><small>今晚住哪里 · '+escape(day.stayText)+'</small><button id="stay-focus">'+escape(trip.places[day.stay].name)+' ↗</button></div>':'<div class="stay"><small>今日住宿</small>返回杭州 · 不安排泰国住宿</div>';
-  if(day.stay)$('stay-focus').addEventListener('click',()=>focus(trip.places[day.stay],'建议住宿区域，尚未预订具体酒店。','今晚住哪里'));
-  if(day.stay){const button=document.createElement('button');button.className='day-hotels';button.textContent='比较本城 3 家候选酒店 →';button.addEventListener('click',()=>showHotels(day.city));$('stay').appendChild(button);}
+  if(day.stay)$('stay-focus').addEventListener('click',()=>focus(trip.places[day.stay],day.stay==='hotel-phuket-orchid'?'9/20 入住，9/24 退房，共 4 晚。':'当晚住宿区域。','今晚住哪里'));
+  if(day.stay==='hotel-phuket-orchid'){const button=document.createElement('button');button.className='day-hotels';button.textContent='查看实际入住酒店 →';button.addEventListener('click',()=>showHotels('phuket'));$('stay').appendChild(button);}
   airportChooser(day);stopList(stops,color);
   const dayFood=foodEntries('all',day.date);
   const foodButton=document.createElement('button');foodButton.className='day-foods';foodButton.textContent='比较今天 '+dayFood.length+' 处美食备选 →';foodButton.addEventListener('click',()=>showFoods('all',day.date));$('stay').appendChild(foodButton);
@@ -81,7 +81,7 @@
   const main=stops.filter(s=>!s.optional).map(s=>s.p.ll);if(main.length>1)state.lines.push(line(main,color));
   const optional=stops.filter(s=>s.optional).map(s=>s.p.ll);if(optional.length>1)state.lines.push(line(optional,'#b28440',true));
   state.bounds=stops.filter(s=>s.id!=='hgh').map(s=>s.p.ll);
-  if(day.stay){const p=trip.places[day.stay];state.bounds.push(p.ll);if(!stops.some(s=>Math.hypot(s.p.ll[0]-p.ll[0],s.p.ll[1]-p.ll[1])<.004))marker(p,'宿','#566982',{text:'建议住宿区域，不代表已预订酒店。'});}
+  if(day.stay){const p=trip.places[day.stay];state.bounds.push(p.ll);if(!stops.some(s=>Math.hypot(s.p.ll[0]-p.ll[0],s.p.ll[1]-p.ll[1])<.004))marker(p,'宿','#566982',{text:day.stay==='hotel-phuket-orchid'?'9/20—23 实际入住，共 4 晚。':'当晚住宿区域。'});}
   if(day.stay)addCatalogMarkers(catalogEntries().filter(item=>item.kind==='hotel'&&item.city===day.city));
   addFoodMarkers(dayFood,day.date,true);
   state.bounds.push(...dayFood.map(f=>f.ll));
@@ -90,16 +90,16 @@
  }
  function overview(international=false){
   state.mode=international?'international':'overview';resetMap();
-  $('day-kicker').textContent=currentPlan().dayCount+' DAYS / '+currentPlan().nights+' NIGHTS';$('day-title').textContent=international?'上海出发，杭州返程':'先看整趟路线';$('day-intro').textContent='普吉 4 晚 → 芭提雅 2 晚 → 曼谷 '+currentPlan().bangkokNights+' 晚。9/24 在曼谷机场换乘，9/26 才开始曼谷住宿。';
-  $('stay').innerHTML='<div class="stay"><small>路线选择</small>上海 → 普吉 → 曼谷机场 → 芭提雅 → 曼谷 → 杭州</div>';
-  const phases=[{id:'patong',index:0,title:'普吉岛',dates:'9/20—9/24 · 4 晚',text:'海滩、老街与第一次浮潜',city:'phuket'},{id:'pattayastay',index:4,title:'芭提雅',dates:'9/24—9/26 · 2 晚',text:'机场直达，真理寺与中天海滩',city:'pattaya'},{id:'asok',index:6,title:'曼谷',dates:'9/26—'+dateLabel(currentPlan().returnDate)+' · '+currentPlan().bangkokNights+' 晚',text:'周日市场、宫殿与城市漫游',city:'bangkok'}];
+  $('day-kicker').textContent=currentPlan().dayCount+' DAYS / '+currentPlan().nights+' NIGHTS';$('day-title').textContent=international?'上海出发，杭州返程':'先看整趟路线';$('day-intro').textContent='9C8521 到普吉住 4 晚；9/24 搭 DD525 到廊曼，再经 Mo Chit 转车去芭提雅。';
+  $('stay').innerHTML='<div class="stay"><small>实际路线</small>上海 → 普吉 → 廊曼机场 → Mo Chit → 芭提雅 → 曼谷 → 杭州</div>';
+  const phases=[{id:'hotel-phuket-orchid',index:0,title:'普吉岛',dates:'9/20—9/24 · 4 晚',text:'Phuket Orchid Resort and Spa',city:'phuket'},{id:'pattayastay',index:4,title:'芭提雅',dates:'9/24—9/26 · 2 晚',text:'A1 到 Mo Chit，再转车到芭提雅北站',city:'pattaya'},{id:'asok',index:6,title:'曼谷',dates:'9/26—'+dateLabel(currentPlan().returnDate)+' · '+currentPlan().bangkokNights+' 晚',text:'周日市场、宫殿与城市漫游',city:'bangkok'}];
   $('stops').innerHTML=phases.map(p=>'<button class="overview-card" data-day="'+p.index+'" style="--city:'+trip.colors[p.city]+'"><small>'+p.dates+'</small><b>'+p.title+' →</b><p>'+p.text+'</p></button>').join('');
   $('stops').querySelectorAll('[data-day]').forEach(b=>b.addEventListener('click',()=>showDay(Number(b.dataset.day))));
   addCatalogMarkers(catalogEntries().filter(item=>international||item.city!=='shanghai'));
-  state.lines=[line([trip.places.hkt.ll,trip.places[state.airports[24]].ll],'#008c84'),line([trip.places[state.airports[24]].ll,trip.places.pattayastay.ll,trip.places.asok.ll],'#ab7134')];
+  state.lines=[line([trip.places.hkt.ll,trip.places.dmk.ll],'#008c84'),line([trip.places.dmk.ll,trip.places.mochit.ll,trip.places.pattayabus.ll,trip.places.pattayastay.ll,trip.places.asok.ll],'#ab7134')];
   state.bounds=phases.map(p=>trip.places[p.id].ll);
   if(international){state.lines.push(line([trip.places.pvg.ll,trip.places.hkt.ll],'#6c829b'),line([trip.places[state.airports[currentPlan().returnDate]].ll,trip.places.hgh.ll],'#6c829b'));state.bounds.push(trip.places.pvg.ll,trip.places.hgh.ll);}
-  $('day-note').textContent='9/24 飞普吉→曼谷机场，当天转车去芭提雅；9/26 回曼谷；9/30 曼谷飞杭州萧山机场。机票和酒店尚未预订。';
+  $('day-note').textContent='已完成：9/20 搭 9C8521 到普吉；9/24 搭 DD525 到 DMK，坐 A1 到 Mo Chit，在 1 号窗口购票到芭提雅北站。';
   caption(international?'上海出发 · 杭州返程 · 三段飞机':'泰国境内 · 普吉→芭提雅→曼谷',dateLabel(currentPlan().returnDate)+' 返程 · 虚线不是实际道路／航线');
   activeControls();updateLines();fit();requestAnimationFrame(layoutLabels);document.querySelector('.sidebar-scroll').scrollTop=0;
  }
@@ -115,34 +115,29 @@
   state.mode='places';state.region=region;resetMap();
   const regions={all:'泰国全部地点',phuket:'普吉岛',bangkok:'曼谷',pattaya:'芭提雅',airports:'全部机场'};
   const entries=catalogEntries().filter(item=>region==='all'?!['shanghai','hangzhou'].includes(item.city):region==='airports'?item.kind==='airport':item.city===region);
-  $('day-kicker').textContent='AIRPORTS & PLACES';$('day-title').textContent=regions[region]+' · '+entries.length+' 个标记';$('day-intro').textContent='机场、景点、接驳和候选酒店均已标出。「美食地图」可按城市和日期查看餐厅；点上方日期，可一起看当天景点与吃饭备选。';
+  $('day-kicker').textContent='AIRPORTS & PLACES';$('day-title').textContent=regions[region]+' · '+entries.length+' 个标记';$('day-intro').textContent='机场、景点、实际交通节点和实际入住酒店均已标出。「美食地图」可按城市和日期查看餐厅。';
   $('stay').innerHTML='<nav class="place-regions" aria-label="按城市或机场查看">'+Object.entries(regions).map(([key,name])=>'<button data-region="'+key+'" aria-pressed="'+(key===region)+'" class="'+(key===region?'selected':'')+'">'+name+'</button>').join('')+'</nav><div class="place-key">'+Object.values(trip.categories).map(c=>'<span style="color:'+c.color+'">'+c.symbol+' '+c.name+'</span>').join('')+'</div>';
   $('stay').querySelectorAll('[data-region]').forEach(b=>b.addEventListener('click',()=>placesView(b.dataset.region)));
   $('stops').innerHTML=entries.map(item=>{const p=trip.places[item.id],c=trip.categories[item.kind];return '<article class="catalog-item"><span class="catalog-icon'+(item.optional?' optional':'')+'" style="--pin:'+c.color+'">'+c.symbol+'</span><div><button data-place="'+item.id+'">'+escape(p.name)+'</button><small>'+escape(item.when)+'</small><a href="'+searchURL(p)+'" target="_blank" rel="noopener noreferrer">Google 地图 ↗</a></div></article>';}).join('');
   $('stops').querySelectorAll('[data-place]').forEach(b=>b.addEventListener('click',()=>{const item=trip.catalog.find(x=>x.id===b.dataset.place);focus(trip.places[item.id],item.note||'行程安排：'+item.when+'。参考位置，实际入口请核对。',trip.categories[item.kind].name+' · '+item.when);}));
-  $('day-note').textContent=region==='airports'||region==='bangkok'?'BKK 与 DMK 均为曼谷候选机场，需按 9/24 和 '+dateLabel(currentPlan().returnDate)+' 各段机票分别确认。9/24 优先 BKK，方便当天直达芭提雅。':'虚线标记为备选项目。标记都位于原始参考坐标，密集处放大或悬停即可查看名称；列表始终保留全部地点。';
+  $('day-note').textContent=region==='airports'||region==='bangkok'?'9/24 已搭 DD525 抵达 DMK，并坐 A1 前往 Mo Chit；9/30 的返程机场仍按实际机票确认。':'标记位于参考坐标；密集处可放大或悬停查看名称。';
   addCatalogMarkers(entries);state.bounds=entries.map(item=>trip.places[item.id].ll);
   caption(regions[region]+' · 机场与计划景点',region==='all'?'上海与杭州机场在「全部机场」或国际行程中查看':'标记附有日期 · 放大查看密集地点名称');
   activeControls();updateLines();fit();requestAnimationFrame(layoutLabels);document.querySelector('.sidebar-scroll').scrollTop=0;
  }
  function showHotels(region='phuket',selectedId){
-  const regions={phuket:'普吉岛',bangkok:'曼谷',pattaya:'芭提雅',all:'全部酒店'};
-  if(!regions[region])region='phuket';
-  state.mode='hotels';state.hotelRegion=region;resetMap();
-  const entries=hotels.filter(h=>region==='all'||h.city===region);
-  $('day-kicker').textContent='THREE PEOPLE / THREE BEDS';$('day-title').textContent=regions[region]+' · '+entries.length+' 家候选';
-  $('day-intro').textContent='紫色 H 编号与网页酒店卡片对应。点击店名或地图标记查看房型、位置与日期；均未预订。';
-  $('stay').innerHTML='<nav class="place-regions" aria-label="选择酒店城市">'+Object.entries(regions).map(([id,name])=>'<button data-hotel-region="'+id+'" class="'+(region===id?'selected':'')+'" aria-pressed="'+(region===id)+'">'+name+'</button>').join('')+'</nav>';
-  $('stay').querySelectorAll('[data-hotel-region]').forEach(b=>b.addEventListener('click',()=>showHotels(b.dataset.hotelRegion)));
-  $('stops').innerHTML=entries.map(h=>'<article class="map-hotel-card"><span class="map-hotel-badge">H'+h.number+' · '+escape(h.badge)+'</span><button data-hotel="'+h.id+'">'+escape(h.name)+'</button><small>'+escape(h.area)+'</small><p>'+escape(h.room)+'<br>'+escape(h.beds)+' · '+escape(h.size)+'</p><div class="map-hotel-quotes">'+quotesFor(h).map(q=>'<span>'+escape(q.dates)+'<b>'+(q.price===null?'待询价':'展示 ¥'+q.price+' · 含税')+'</b></span>').join('')+'</div><a href="'+quotesFor(h)[0].url+'" target="_blank" rel="noopener noreferrer">飞猪查看 ↗</a><a href="'+searchURL(trip.places[h.id])+'" target="_blank" rel="noopener noreferrer">Google 地图 ↗</a></article>').join('');
-  function focusHotel(id){const h=hotels.find(h=>h.id===id);if(h)focus(trip.places[id],h.room+'；'+h.beds+'。'+h.tradeoff,'H'+h.number+' · 候选酒店，未预订');}
+  region='phuket';state.mode='hotels';state.hotelRegion=region;resetMap();const entries=hotels;
+  $('day-kicker').textContent='ACTUAL STAY';$('day-title').textContent='普吉岛 · 实际入住酒店';
+  $('day-intro').textContent='只保留 Phuket Orchid Resort and Spa：9/20 入住，9/24 退房，共 4 晚。';
+  $('stay').innerHTML='<div class="stay"><small>住宿记录</small>9/20—9/23 晚 · 卡伦海滩</div>';
+  $('stops').innerHTML=entries.map(h=>'<article class="map-hotel-card"><span class="map-hotel-badge">'+escape(h.badge)+'</span><button data-hotel="'+h.id+'">'+escape(h.name)+'</button><small>'+escape(h.area)+'</small><p>9/20 入住 · 9/24 退房<br>共 4 晚</p><a href="'+h.official+'" target="_blank" rel="noopener noreferrer">酒店官网 ↗</a><a href="'+searchURL(trip.places[h.id])+'" target="_blank" rel="noopener noreferrer">Google 地图 ↗</a></article>').join('');
+  function focusHotel(id){const h=hotels.find(h=>h.id===id);if(h)focus(trip.places[id],h.why,'实际入住酒店');}
   $('stops').querySelectorAll('[data-hotel]').forEach(b=>b.addEventListener('click',()=>focusHotel(b.dataset.hotel)));
   addCatalogMarkers(catalogEntries().filter(item=>item.kind==='hotel'&&(region==='all'||item.city===region)));
-  const contextIds=region==='phuket'?['patong']:region==='bangkok'?['asok','terminal21']:region==='pattaya'?['pattayastay','pattayabus']:[];
-  addCatalogMarkers(catalogEntries().filter(item=>contextIds.includes(item.id)));
+  addCatalogMarkers(catalogEntries().filter(item=>['karon','kata'].includes(item.id)));
   state.bounds=entries.map(h=>h.ll);
-  $('day-note').textContent=region==='bangkok'?'曼谷 9/26—'+dateLabel(currentPlan().returnDate)+' 连住 '+currentPlan().bangkokNights+' 晚，新日期三床房均待询价。H4 在是隆区；H5、H6 在 Asok。若选 H4，请调整附近早餐和交通起点。':'房型展示价不是已确认的订单总额。核对 3 位成人、三张床、税费、早餐和取消截止时间；酒店位置为参考，入口以订单为准。';
-  caption(regions[region]+' · 每人一张床','H 编号对应网页候选 · 灰色「宿」为原建议住宿区域');
+  $('day-note').textContent='这是已经完成的入住记录：9/20 入住，9/24 退房。';
+  caption('Phuket Orchid Resort and Spa · 实际入住','9/20 入住 · 9/24 退房 · 4 晚');
   activeControls();updateLines();fit();requestAnimationFrame(layoutLabels);document.querySelector('.sidebar-scroll').scrollTop=0;
   if(selectedId)focusHotel(selectedId);
  }
@@ -181,7 +176,7 @@
   $('stops').innerHTML=entries.length?entries.map(f=>'<article class="map-food-card"><span class="map-food-badge">F'+f.number+' · '+escape(foodDates(f,date))+'</span><button data-food="'+f.id+'">'+escape(f.name)+'</button><small>'+escape(f.area)+'</small><p>'+escape(f.locationNote)+'</p><div class="map-food-uses">'+foodUses(f,date).map(u=>'<details'+(date?' open':'')+'><summary>'+dateLabel(u.date)+' '+escape(u.meal)+' · '+u.option+'</summary><p>'+escape(u.dish)+'<br><b>'+escape(u.price)+'／人 · 规划额</b><br>'+escape(u.tip)+(u.mealNote?'<br>'+escape(u.mealNote):'')+'</p></details>').join('')+'</div><a href="'+searchURL(trip.places[f.id])+'" target="_blank" rel="noopener noreferrer">Google 地图查店 ↗</a><a href="'+escape(f.source)+'" target="_blank" rel="noopener noreferrer">位置来源 ↗</a></article>').join(''):'<p class="food-map-empty">这组筛选没有具体店铺。可选择「全部日期」或其他城市；出门前吃好、酒店早餐、团餐等方案保留在网页三餐卡片中。</p>';
   $('stops').querySelectorAll('[data-food]').forEach(b=>b.addEventListener('click',()=>focusFood(foods.find(f=>f.id===b.dataset.food),date)));
   addFoodMarkers(entries,date);state.bounds=entries.map(f=>f.ll);
-  if(!entries.length)state.bounds=[trip.places[region==='pattaya'?'pattayastay':region==='bangkok'?'asok':'patong'].ll];
+  if(!entries.length)state.bounds=[trip.places[region==='pattaya'?'pattayastay':region==='bangkok'?'asok':'hotel-phuket-orchid'].ll];
   $('day-note').textContent='这些是每餐 A／B／C 备选，不是全部必去。市场定位到市场，商场餐厅定位到建筑；先看楼层、适用条件与当天营业。家附近早餐、酒店早餐和团餐不另设店铺标记。';
   caption((date?dateLabel(date)+' · ':'')+regions[region]+' · 美食地图','F 编号对应餐厅 · 「食」可展开同一商场多家店 · 备选之间不连线');
   activeControls();updateLines();fit();requestAnimationFrame(layoutLabels);document.querySelector('.sidebar-scroll').scrollTop=0;
@@ -192,8 +187,8 @@
   $('stay').innerHTML='<div class="stay"><small>暂定出海日</small>9/22 · 可与 9/21 或 9/23 互换</div>';
   const stops=[{id:'chalongpier',number:'起',time:'出发区域参考',text:'查龙码头。集合地点和出发港以运营方通知为准。'},{id:'racha',number:'A',time:'主选 · 皇帝岛',text:'快艇约 40 分钟起的规划参考，实际由船型、路线与海况决定。岛屿标记不是入水点。'},{id:'coral',number:'B',time:'备选 · 珊瑚岛',text:'Banana Beach 区域，查龙出发通常约 15—20 分钟。短船程也不保证海况安全。',optional:true}].map(s=>({...s,p:trip.places[s.id]}));
   stopList(stops,trip.colors.phuket);stops.forEach(s=>marker(s.p,s.number,trip.colors.phuket,{optional:s.optional,text:s.text}));
-  marker(trip.places.patong,'宿','#566982',{text:'芭东住宿区域参考。酒店往返码头接送另需时间。'});
-  state.lines=[line([trip.places.chalongpier.ll,trip.places.racha.ll],'#008c84'),line([trip.places.chalongpier.ll,trip.places.coral.ll],'#b28440',true)];state.bounds=[...stops.map(s=>s.p.ll),trip.places.patong.ll];
+  marker(trip.places['hotel-phuket-orchid'],'宿','#566982',{text:'9/20—23 实际入住 Phuket Orchid Resort and Spa。'});
+  state.lines=[line([trip.places.chalongpier.ll,trip.places.racha.ll],'#008c84'),line([trip.places.chalongpier.ll,trip.places.coral.ll],'#b28440',true)];state.bounds=[...stops.map(s=>s.p.ll),trip.places['hotel-phuket-orchid'].ll];
   $('day-note').textContent='你们会游泳，但第一次浮潜：选有水中向导的团、穿救生衣、先练习。下水点由向导根据海况选定；不要拿地图岛屿坐标自行出海或下水。';
   caption('A 皇帝岛 / B 珊瑚岛','两个方案分别选择 · 虚线只是位置关系，船程以运营方为准');activeControls();updateLines();fit();document.querySelector('.sidebar-scroll').scrollTop=0;
  }

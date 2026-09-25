@@ -22,7 +22,7 @@ function FoodOption({option,index,date}:{option:Option;index:number;date:string}
 export default function FoodGuide(){
  return <section id="food" className="section food-section">
   <div className="section-title"><div><p className="eyebrow">EAT YOUR WAY THROUGH THAILAND</p><h2>每天三餐，顺着行程吃</h2></div><span className="tag"><Utensils size={16}/>33 餐 · 每餐 3 选 1</span></div>
-  <p className="food-intro">无忌口、能吃辣。先按芭东、曼谷 Asok、芭提雅北部住宿来挑；酒店确定后，优先选当天离你们最近的一项。</p>
+  <p className="food-intro">无忌口、能吃辣。普吉住宿已确定为卡伦海滩的 Phuket Orchid Resort and Spa；其他城市按当天实际位置选最近的一项。</p>
   <div className="food-overview"><div><strong>¥1,100</strong><span>每人餐饮与饮水参考预算</span></div><div><strong>฿ = 泰铢</strong><span>卡片是每人规划额，非实时菜单报价</span></div><div><strong>3 人合点</strong><span>海鲜餐：一份主菜＋一份肉菜＋青菜＋饭</span></div></div>
   <p className="food-reading">点日期展开早、午、晚餐。A／B／C 是替代选择，不用三家都去。餐厅会合理复用；航班日、出海日包含按实际行程选择的条件方案。</p>
   <div className="food-map-entry"><div><strong><MapPin size={19}/> {Object.keys(foodLocations).length} 处美食，已经落在地图上</strong><p>橙色 F 编号对应具体店铺、市场或美食广场。点卡片直接定位，也可以按城市、日期筛选。</p></div><a href="/trip-map.html#foods=phuket" data-food-region="phuket">打开美食地图 →</a></div>
@@ -41,7 +41,7 @@ export default function FoodGuide(){
   <details className="food-evidence"><summary>资料怎么选的 · 2026 年 9 月 6 日查阅</summary><div>
    <p>实际阅读了小红书关于普吉泰餐、曼谷 Ruathong、芭提雅 Dek Sen、兰坡海鲜市场和 One Chun 的笔记。用户体验有主观性，不能据此保证每个人都喜欢。</p>
    <p>大众点评站内搜索遇到验证限制；可读资料包括曼谷榜单中的 Ruathong 条目和 Briley 历史图片页。历史页仅作店名线索，未将旧价格、旧评分当作现状，也没有声称每家店都已获得两平台交叉验证。各店卡片分别链接实际使用的来源。</p>
-   <p>位置、营业参考结合店家／商场官方资料、旅游局、米其林及可读店铺资料；不能确认的营业时间已注明。酒店、航班和团餐未订，相关选项是待落实方案。</p>
+   <p>位置、营业参考结合店家／商场官方资料、旅游局、米其林及可读店铺资料；不能确认的营业时间已注明。9/20 与 9/24 的航班及转车路线已按实际经历更新。</p>
    <div className="food-evidence-links">{['xph','xboat','xdek','xsea','xone','dpboat','dpbriley','banana'].map(id=><a key={id} href={foodSources[id].url} target="_blank" rel="noreferrer">{foodSources[id].label} ↗</a>)}</div>
    <p className="footnote">小红书笔记可能需要登录。餐厅位置按 Google 店铺点核对；Kiss Food 北店采用 Wongnai 参考点并标为待核实。商场内餐厅共用商场参考位置，市场标记不代表具体摊位。每处标记附位置来源。攻略与地点标记离线可读，街道底图、外部地图与来源链接需要联网。</p>
   </div></details>

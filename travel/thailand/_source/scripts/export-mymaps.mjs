@@ -4,6 +4,7 @@ import assert from 'node:assert/strict';
 const root=new URL('../',import.meta.url),read=path=>fs.readFileSync(new URL(path,root),'utf8');
 const trip=JSON.parse(read('public/trip.json')),hotels=JSON.parse(read('public/hotels.json'));
 const foods=JSON.parse(read('public/food-data.js').replace(/^window.TRIP_FOOD = /,'').replace(/;\s*$/,''));
+for(const hotel of hotels)trip.places[hotel.id]={name:hotel.name,en:hotel.en,ll:hotel.ll,source:hotel.coordSource};
 const output=new URL('mymaps/',root);fs.mkdirSync(output,{recursive:true});
 const xml=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&apos;'}[c]));
 const date=d=>'9/'+d;
@@ -21,14 +22,14 @@ const plan=trip.plans.A;
 const days=[...trip.commonDays,...plan.days];
 const layers={transport:[],phuket:[],pattaya:[],bangkok:[]};
 const captions={transport:'01 机场与跨城交通',phuket:'02 普吉｜9/20—24',pattaya:'03 芭提雅｜9/24—26',bangkok:'04 曼谷｜9/26—30'};
-const resolve=(id,day)=>id==='airport'?(day.date===30?'bkk':'bkk'):id==='arrivalbus'?'pattayabus':id;
+const resolve=(id,day)=>id==='airport'?(day.date===30?'bkk':'bkk'):id;
 
 for(const item of trip.catalog){
  const place=trip.places[item.id];
  const related=days.filter(d=>d.stay===item.id||d.stops.some(s=>resolve(s.id,d)===item.id)||(item.id==='dmk'&&d.airport));
  const dates=['asok','patong','pattayastay'].includes(item.id)?item.when:related.map(d=>date(d.date)).join('、')||item.when;
  const details=related.flatMap(d=>d.stops.filter(s=>resolve(s.id,d)===item.id||(item.id==='dmk'&&s.id==='airport')).map(s=>date(d.date)+' '+s.time+'：'+s.text));
- const description=[trip.categories[item.kind].name,item.note??'',...details,item.kind==='airport'&&['bkk','dmk'].includes(item.id)?'曼谷机场二选一，以机票为准。9/24 优先 BKK，当天乘车去芭提雅；9/30 从实际出票机场返回杭州。':'','参考位置，入口和营业安排出发前复核。','坐标来源：'+(place.source||'https://www.openstreetmap.org/'+place.osm)].filter(Boolean).join('\n');
+ const description=[trip.categories[item.kind].name,item.note??'',...details,item.id==='dmk'?'9/24 搭乘 DD525 抵达，随后乘 A1 巴士前往 Mo Chit。':item.kind==='airport'&&item.id==='bkk'?'9/30 返程候选机场，以实际机票为准。':'','参考位置，入口和营业安排出发前复核。','坐标来源：'+(place.source||'https://www.openstreetmap.org/'+place.osm)].filter(Boolean).join('\n');
  const layer=item.kind==='airport'?'transport':item.city;
  layers[layer].push(feature(item.id,dates+'｜'+(item.optional?'备选 · ':'')+place.name,description,item.kind,place.ll));
 }
@@ -40,8 +41,8 @@ for(const f of foods){
 
 for(const h of hotels){
  const quote=h.quotes[0];
- const description=['H'+h.number+' · 候选酒店，未预订',h.en,h.area,h.room,h.beds+'；'+h.size,quote.dates+'；'+(quote.price===null?'新日期待询价':'9/6 历史展示价 ¥'+quote.price+'，计价口径及新订单总额待核实。'),'飞猪查询：'+quote.url,h.why,h.tradeoff,'酒店资料：'+h.official,'坐标来源：'+h.coordSource].join('\n');
- layers[h.city].push(feature(h.id,quote.dates+'｜H'+h.number+' '+h.name,description,'hotel',h.ll));
+ const description=['实际入住酒店',h.en,h.area,quote.dates,h.why,'酒店官网：'+h.official,'坐标来源：'+h.coordSource].join('\n');
+ layers[h.city].push(feature(h.id,quote.dates+'｜'+h.name,description,'hotel',h.ll));
 }
 
 for(const d of days){
@@ -55,7 +56,7 @@ for(const d of days){
 const report={mapId:'1m9-sFljOdplY_kBAH0FWX09AC2BiCms',mode:'single-itinerary',pointCount:trip.catalog.length+foods.length+hotels.length,colors:{route:'#6c829b'},layers:[]};
 for(const [key,features] of Object.entries(layers)){
  const filename=key+'.kml';
- const content='<?xml version="1.0" encoding="UTF-8"?><kml xmlns="http://www.opengis.net/kml/2.2"><Document><name>'+xml(captions[key])+'</name><description>9/20 上海出发，9/30 从曼谷返回杭州；F 为餐厅，H 为候选酒店。</description>'+styles+features.join('')+'</Document></kml>';
+ const content='<?xml version="1.0" encoding="UTF-8"?><kml xmlns="http://www.opengis.net/kml/2.2"><Document><name>'+xml(captions[key])+'</name><description>9/20 搭 9C8521 到普吉；9/24 搭 DD525 到 DMK，经 A1 与 Mo Chit 转车到芭提雅；9/30 返回杭州。F 为餐厅，住宿为实际入住记录。</description>'+styles+features.join('')+'</Document></kml>';
  fs.writeFileSync(new URL(filename,output),content);
  report.layers.push({key,name:captions[key],file:filename,features:features.length,bytes:Buffer.byteLength(content)});
 }

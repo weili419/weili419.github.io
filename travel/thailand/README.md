@@ -3,9 +3,9 @@
 唯一维护目录：本文件所在的 `travel/thailand`。桌面原“泰国旅游计划”目录仅保留备份，不再作为发布源。
 
 - `_source/app/page.tsx`：攻略正文、交通、预算和清单。
-- `_source/public/trip.json`：9/20—9/30 行程、景点与交通坐标。
+- `_source/public/trip.json`：9/20—9/30 行程、实际航班、转车节点、景点与交通坐标。
 - `_source/app/food-data.ts`：每天三餐及餐厅推荐；`public/food-locations.json`：餐厅坐标。
-- `_source/public/hotels.json`：酒店、床型与入住日期；历史报价仅供追溯。
+- `_source/public/hotels.json`：Phuket Orchid Resort and Spa 实际入住记录。
 - `_source/public/trip-map.js`：互动地图；`trip-guide.js`：主页面与地图的酒店、餐饮联动。
 - `index.html`、`map.html`、`assets/`：生成的发布文件，请通过源码修改。
 
@@ -26,7 +26,7 @@ node --experimental-strip-types scripts/check-plans.mjs
 
 静态发布不依赖桌面原目录或 Node 服务。地图街道图需要联网，加载失败时显示内置地理概览。Jekyll 不会发布以下划线开头的源码目录。
 
-行程：9/20—24 普吉 4 晚；9/24 机场直达芭提雅，住至 9/26；曼谷住至 9/30，当天返回杭州萧山国际机场。餐饮和酒店均为候选，机票、酒店及团均未预订。新日期酒店报价需重新查询。
+实际记录：9/20 搭乘 9C8521 到普吉，在 Phuket Orchid Resort and Spa 住 4 晚；9/24 搭乘 DD525 到廊曼机场，乘 A1 到 Mo Chit，在 1 号窗口购票前往 North Pattaya Bus Terminal。页面只保留这家实际入住酒店，不再展示酒店候选。
 
 Google My Maps 尚未接入：文件选择器被安全页面拦截。`_source/mymaps/README.md` 记录同一张地图的四个 KML 图层、待完成步骤与数据生成方式。当前线上地图保持 MapLibre/OpenFreeMap，不声称已完成 Google 替换。静态导出为地图与资源 URL 添加内容版本，避免缓存混用旧文件。
 

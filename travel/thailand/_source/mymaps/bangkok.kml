@@ -1,4 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?><kml xmlns="http://www.opengis.net/kml/2.2"><Document><name>04 曼谷｜9/26—30</name><description>9/20 上海出发，9/30 从曼谷返回杭州；F 为餐厅，H 为候选酒店。</description><Style id="airport"><IconStyle><color>ffc95d26</color><scale>1.1</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle><LineStyle><color>ffc95d26</color><width>3</width></LineStyle></Style><Style id="sight"><IconStyle><color>ff848c00</color><scale>1.1</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle><LineStyle><color>ff848c00</color><width>3</width></LineStyle></Style><Style id="stay"><IconStyle><color>ff856957</color><scale>1.1</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle><LineStyle><color>ff856957</color><width>3</width></LineStyle></Style><Style id="pier"><IconStyle><color>ff967808</color><scale>1.1</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle><LineStyle><color>ff967808</color><width>3</width></LineStyle></Style><Style id="bus"><IconStyle><color>ff256199</color><scale>1.1</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle><LineStyle><color>ff256199</color><width>3</width></LineStyle></Style><Style id="food"><IconStyle><color>ff2e58c8</color><scale>1.1</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle><LineStyle><color>ff2e58c8</color><width>3</width></LineStyle></Style><Style id="hotel"><IconStyle><color>ffb95680</color><scale>1.1</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle><LineStyle><color>ffb95680</color><width>3</width></LineStyle></Style><Style id="show"><IconStyle><color>ffad448e</color><scale>1.1</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle><LineStyle><color>ffad448e</color><width>3</width></LineStyle></Style><Style id="route"><IconStyle><color>ff9b826c</color><scale>1.1</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle><LineStyle><color>ff9b826c</color><width>3</width></LineStyle></Style><Placemark id="asok"><name>9/26—30 · 4 晚｜Asok／Sukhumvit 住宿区</name><description>住宿区域
+<?xml version="1.0" encoding="UTF-8"?><kml xmlns="http://www.opengis.net/kml/2.2"><Document><name>04 曼谷｜9/26—30</name><description>9/20 搭 9C8521 到普吉；9/24 搭 DD525 到 DMK，经 A1 与 Mo Chit 转车到芭提雅；9/30 返回杭州。F 为餐厅，住宿为实际入住记录。</description><Style id="airport"><IconStyle><color>ffc95d26</color><scale>1.1</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle><LineStyle><color>ffc95d26</color><width>3</width></LineStyle></Style><Style id="sight"><IconStyle><color>ff848c00</color><scale>1.1</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle><LineStyle><color>ff848c00</color><width>3</width></LineStyle></Style><Style id="stay"><IconStyle><color>ff856957</color><scale>1.1</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle><LineStyle><color>ff856957</color><width>3</width></LineStyle></Style><Style id="pier"><IconStyle><color>ff967808</color><scale>1.1</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle><LineStyle><color>ff967808</color><width>3</width></LineStyle></Style><Style id="bus"><IconStyle><color>ff256199</color><scale>1.1</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle><LineStyle><color>ff256199</color><width>3</width></LineStyle></Style><Style id="food"><IconStyle><color>ff2e58c8</color><scale>1.1</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle><LineStyle><color>ff2e58c8</color><width>3</width></LineStyle></Style><Style id="hotel"><IconStyle><color>ffb95680</color><scale>1.1</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle><LineStyle><color>ffb95680</color><width>3</width></LineStyle></Style><Style id="show"><IconStyle><color>ffad448e</color><scale>1.1</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle><LineStyle><color>ffad448e</color><width>3</width></LineStyle></Style><Style id="route"><IconStyle><color>ff9b826c</color><scale>1.1</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle><LineStyle><color>ff9b826c</color><width>3</width></LineStyle></Style><Placemark id="mochit"><name>9/24｜Mo Chit Bus Terminal · 曼谷北部汽车站</name><description>汽车站
+Mo Chit Bus Terminal／曼谷北部汽车站；在 1 号窗口购买前往 North Pattaya Bus Terminal 的车票。
+9/24 A1 巴士抵达后：在 Mo Chit Bus Terminal 的 1 号窗口购买前往芭提雅北站的车票。
+参考位置，入口和营业安排出发前复核。
+坐标来源：https://www.openstreetmap.org/way/31151623</description><styleUrl>#bus</styleUrl><Point><coordinates>100.5477552,13.8123644,0</coordinates></Point></Placemark><Placemark id="asok"><name>9/26—30 · 4 晚｜Asok／Sukhumvit 住宿区</name><description>住宿区域
 建议住宿区域，尚未确定酒店。
 9/26 下午：入住、午休；堵车或疲劳时延后河边活动。
 9/27 下午：回酒店午休、洗衣和整理行李。
@@ -152,37 +156,7 @@ Siam Paragon 商场参考位置，美食广场内按现场菜单选摊位。
 9/27 晚餐 选项C：泰式烩面／咖喱饭＋泰奶；฿150–250／人（规划额）。同在 Siam 商圈，按当日营业摊位选；排队累了就近坐下吃。
 9/29 午餐 选项C：泰式烩面／咖喱饭＋泰奶；฿150–250／人（规划额）。在 Siam 商场按现场菜单选。
 9/29 晚餐 选项C：泰式烩面／咖喱饭＋泰奶；฿150–250／人（规划额）。同在 Siam 商圈，按当日营业摊位选；排队累了就近坐下吃。
-位置来源：https://www.openstreetmap.org/way/781138575</description><styleUrl>#food</styleUrl><Point><coordinates>100.5349375,13.7468007,0</coordinates></Point></Placemark><Placemark id="hotel-koko-surawong"><name>9/26—30 · 4 晚｜H4 素里翁可可特尔酒店</name><description>H4 · 候选酒店，未预订
-Kokotel Bangkok Surawong
-是隆／素里翁 · 非 Asok 区
-Koko Family – Triple｜家庭三人房
-3 张单人床，通常紧邻摆放；19—21㎡
-9/26—30 · 4 晚；新日期待询价
-飞猪查询：https://hotel.fliggy.com/hotel_detail2.htm?shid=52196020&amp;city=904976&amp;checkIn=2026-09-26&amp;checkOut=2026-09-30&amp;roomNum=1&amp;aNum_1=3&amp;cNum_1=0
-旧日期查到三单床房型线索；新日期价格和余房待重新查询。附近有素里翁本地餐饮，去唐人街和河岸方向也可安排。
-房间紧凑，官网另有三床垫的 Ryokan 版本；请选常规单人床，若要床间有空隙需再确认。到轨道站需步行，去 Asok 吃饭要另计交通。
-酒店资料：https://www.kokotel.com/surawong/rooms/
-坐标来源：https://www.thaihotels.com/hotels/kokotel-surawong-hotel-bangkok-485921</description><styleUrl>#hotel</styleUrl><Point><coordinates>100.524505,13.727546,0</coordinates></Point></Placemark><Placemark id="hotel-arte"><name>9/26—30 · 4 晚｜H5 艺术酒店 · Arte</name><description>H5 · 候选酒店，未预订
-Arte Hotel Bangkok Sukhumvit 19
-Asok · Sukhumvit Soi 19
-Premier Triple Bed｜尊贵三床房
-3 张单人床；42㎡
-9/26—30 · 4 晚；新日期待询价
-飞猪查询：https://hotel.fliggy.com/hotel_detail2.htm?shid=52220382&amp;city=904976&amp;checkIn=2026-09-26&amp;checkOut=2026-09-30&amp;roomNum=1&amp;aNum_1=3&amp;cNum_1=0
-靠近原计划的 Asok 住宿区域，方便衔接 Terminal 21、BTS／MRT 与前往 Ekkamai 的交通。
-9/6 查询的旧日期仅看到家庭房／套房报价，没有看到 Premier Triple 对应报价。新日期待重新询价；不能据此认定三床已满，也不能承诺可订。
-酒店资料：https://www.artehotelbangkok.com/accommodations/premier-triple-bed
-坐标来源：https://findit.city/en/thailand/bangkok/places/hotels/arte-hotel-4956171632</description><styleUrl>#hotel</styleUrl><Point><coordinates>100.55954,13.74001,0</coordinates></Point></Placemark><Placemark id="hotel-jasmine"><name>9/26—30 · 4 晚｜H6 茉莉城市酒店</name><description>H6 · 候选酒店，未预订
-Jasmine City Hotel Bangkok
-Asok · Sukhumvit Soi 23
-Deluxe Triple Studio｜豪华三床一室房
-3 张单人床；40㎡
-9/26—30 · 4 晚；新日期待询价
-飞猪查询：https://hotel.fliggy.com/hotel_detail2.htm?shid=50345129&amp;city=904976&amp;checkIn=2026-09-26&amp;checkOut=2026-09-30&amp;roomNum=1&amp;aNum_1=3&amp;cNum_1=0
-适合想住 Asok、又希望三人房空间宽裕些的组合；靠近原计划中的交通换乘点和晚餐区域。
-官网明确有三单床房，但 9/6 查询的旧日期未显示该房型报价，新日期待重新询价。普通 Deluxe Studio 的双床说明不能当作已经含成人加床。
-酒店资料：https://jasminehotelgroup.com/jasmine-city-hotel-bangkok/accommodation/
-坐标来源：https://www.thaihotels.com/hotels/jasmine-city-hotel-bangkok-100673</description><styleUrl>#hotel</styleUrl><Point><coordinates>100.562778,13.73562,0</coordinates></Point></Placemark><Placemark id="route-27"><name>9/27｜乍都乍与 Siam 商圈（顺序示意）</name><description>把周末留给市场，下午回酒店休息洗衣。
+位置来源：https://www.openstreetmap.org/way/781138575</description><styleUrl>#food</styleUrl><Point><coordinates>100.5349375,13.7468007,0</coordinates></Point></Placemark><Placemark id="route-27"><name>9/27｜乍都乍与 Siam 商圈（顺序示意）</name><description>把周末留给市场，下午回酒店休息洗衣。
 乍都乍安排在周日。Jok Ruam Jai 的既有资料列周日休息，早餐改为 Took Lae Dee、酒店或市场。上午逛 2—3 小时，午后休息再去 Siam。
 连线只表示行程先后，不是实际道路、航线或导航。曼谷机场按 BKK 举例。</description><styleUrl>#route</styleUrl><LineString><tessellate>1</tessellate><coordinates>100.5503771,13.8003894,0 100.5603142,13.7370043,0 100.5349375,13.7468007,0</coordinates></LineString></Placemark><Placemark id="route-28"><name>9/28｜宫殿、寺庙与唐人街（顺序示意）</name><description>同一区域慢慢看。上午早点到，午间安排休息。
 上午宫殿、午后郑王庙、晚上唐人街，按体力取舍。周一以固定餐厅的实际营业为准，不依赖街边摊全部出摊。
