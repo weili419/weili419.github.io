@@ -33,7 +33,7 @@ for(const day of foodDays){
  }
 }
 
-assert.equal(Object.keys(venues).length,40);
+assert.equal(Object.keys(venues).length,0);
 assert.equal(hotels.length,1);
 const actualHotel=hotels[0];
 assert.equal(actualHotel.id,'hotel-phuket-orchid');

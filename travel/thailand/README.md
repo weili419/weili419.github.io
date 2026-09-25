@@ -4,7 +4,7 @@
 
 - `_source/app/page.tsx`：攻略正文、交通、预算和清单。
 - `_source/public/trip.json`：9/20—9/30 行程、实际航班、转车节点、景点与交通坐标。
-- `_source/app/food-data.ts`：每天三餐及餐厅推荐；`public/food-locations.json`：餐厅坐标。
+- `_source/app/food-data.ts`：实际吃过的餐食记录；未吃过的餐厅候选已删除。
 - `_source/public/hotels.json`：Phuket Orchid Resort and Spa 实际入住记录。
 - `_source/public/trip-map.js`：互动地图；`trip-guide.js`：主页面与地图的酒店、餐饮联动。
 - `index.html`、`map.html`、`assets/`：生成的发布文件，请通过源码修改。
