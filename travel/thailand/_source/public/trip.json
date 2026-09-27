@@ -230,13 +230,6 @@
       "when": "9/24 BKK 北站线路抵达 · 9/27 出发"
     },
     {
-      "id": "pattayastay",
-      "city": "pattaya",
-      "kind": "stay",
-      "when": "9/24—27 · 3 晚",
-      "note": "9/24—26 晚在芭提雅住宿；具体酒店名称尚未记录。"
-    },
-    {
       "id": "benhouse",
       "city": "pattaya",
       "kind": "sight",
@@ -529,15 +522,6 @@
       ],
       "osm": "way/195004474"
     },
-    "pattayastay": {
-      "name": "芭提雅 Terminal 21 周边",
-      "en": "Terminal 21 Pattaya",
-      "ll": [
-        100.8896924,
-        12.9498403
-      ],
-      "osm": "way/651015521"
-    },
     "benhouse": {
       "name": "Ben House Restaurant",
       "en": "Ben House Restaurant Pattaya",
@@ -746,7 +730,7 @@
       "short": "直达芭提雅",
       "title": "DD525 · 普吉 → 廊曼 → 芭提雅",
       "intro": "搭乘 DD525 抵达廊曼机场，再坐 A1 巴士到 Mo Chit，转车前往芭提雅北站。",
-      "stay": "pattayastay",
+      "stay": "hotel-kastel-pattaya",
       "stayText": "芭提雅 · 第 1 晚／共 3 晚",
       "note": "实际行程：先在 Kata Night Plaza 等机场大巴；旁边有酒店，可以询问酒店工作人员候车和上车位置。到 HKT 搭 DD525，抵达 DMK 后乘 A1 到 Mo Chit，在 1 号窗口购票前往 North Pattaya Bus Terminal。",
       "stops": [
@@ -776,7 +760,7 @@
           "text": "抵达 North Pattaya Bus Terminal。"
         },
         {
-          "id": "pattayastay",
+          "id": "hotel-kastel-pattaya",
           "time": "晚上",
           "text": "从芭提雅北站前往当晚住宿地点。"
         }
@@ -789,7 +773,7 @@
       "short": "雨天闲逛与海风",
       "title": "Ben House → Terminal 21 → 海边咖啡 → 夜市",
       "intro": "Ben House 吃早饭，等雨停后逛 Terminal 21；下午喝蜂蜜美式吹海风，晚饭去 Mae Wilai Market，之后逛酒吧。",
-      "stay": "pattayastay",
+      "stay": "hotel-kastel-pattaya",
       "stayText": "芭提雅 · 第 2 晚",
       "note": "实际经历：早饭后在酒店等雨停；在 Café Amazon 点了蜂蜜美式，一直坐着吹海风到晚饭。Mae Wilai Market 的打抛饭和菠萝炒饭都好吃。晚饭后逛酒吧，还捡到了大哥撒的钱，最后回酒店。",
       "stops": [
@@ -799,7 +783,7 @@
           "text": "起床后去 Ben House Restaurant 吃早饭。"
         },
         {
-          "id": "pattayastay",
+          "id": "hotel-kastel-pattaya",
           "time": "早饭后",
           "text": "回酒店等雨停。"
         },
@@ -819,7 +803,7 @@
           "text": "Mae Wilai Market Until Dawn 吃泰国菜；打抛饭和菠萝炒饭都好吃。"
         },
         {
-          "id": "pattayastay",
+          "id": "hotel-kastel-pattaya",
           "time": "晚上",
           "text": "吃完去酒吧逛，捡大哥撒的钱，最后回酒店。"
         }
@@ -832,12 +816,12 @@
       "short": "Dongtan 海边散步",
       "title": "7-Eleven → Dongtan Beach → 酒吧与演出",
       "intro": "早上吃 7-Eleven 和门口面摊，下午去 Dongtan Beach 喂松鼠、沿海散步，晚上听歌并看了一场秀。",
-      "stay": "pattayastay",
+      "stay": "hotel-kastel-pattaya",
       "stayText": "芭提雅 · 第 3 晚",
       "note": "实际经历：7-Eleven 门口的面摊看着干净卫生，但吃完就拉肚子了。Dongtan Beach 买瓜子喂松鼠，沿海岸线散步并在麦当劳休息。晚饭仍由 7-Eleven 解决；晚上酒吧里居然听到了古风中文歌，之后看了一场秀再回酒店。",
       "stops": [
         {
-          "id": "pattayastay",
+          "id": "hotel-kastel-pattaya",
           "time": "上午",
           "text": "去 7-Eleven 解决午饭；门口面摊看着干净卫生，但吃完后拉肚子。"
         },
@@ -847,7 +831,7 @@
           "text": "到 Dongtan Beach 买瓜子喂松鼠，沿海岸线散步，之后在麦当劳休息。"
         },
         {
-          "id": "pattayastay",
+          "id": "hotel-kastel-pattaya",
           "time": "晚上",
           "text": "晚饭继续吃 7-Eleven；之后去酒吧听歌，听到古风中文歌，再看一场秀，最后回酒店。"
         }

@@ -27,5 +27,34 @@
         "plan": "common"
       }
     ]
+  },
+  {
+    "id": "hotel-kastel-pattaya",
+    "number": 2,
+    "status": "actual",
+    "name": "Kastel Pattaya Hotel",
+    "en": "Kastel Pattaya Hotel",
+    "city": "pattaya",
+    "area": "南芭提雅 · Thep Prasit Road Soi 8",
+    "room": "实际入住酒店",
+    "beds": "9/24 入住",
+    "size": "9/27 退房",
+    "badge": "实际入住",
+    "why": "9/24、9/25、9/26 共住 3 晚，9/27 从酒店前往曼谷。",
+    "tradeoff": "",
+    "food": "南芭提雅周边",
+    "ll": [100.8805894, 12.9106457],
+    "coordSource": "https://www.google.com/maps/place/Kastel+Pattaya+Hotel/@12.9106457,100.8805894,17z",
+    "official": "https://kastel-pattaya.com/",
+    "bedSource": "https://kastel-pattaya.com/",
+    "quotes": [
+      {
+        "dates": "9/24 入住 · 9/27 退房 · 3 晚",
+        "price": null,
+        "cancel": "实际入住记录",
+        "url": "https://kastel-pattaya.com/",
+        "plan": "common"
+      }
+    ]
   }
 ]

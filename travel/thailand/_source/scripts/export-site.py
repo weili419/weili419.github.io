@@ -80,7 +80,7 @@ parser.feed(urlopen(os.environ.get('PREVIEW_URL','http://localhost:4176/'),timeo
 result=''.join(parser.out)
 assert parser.count==14, f'Expected 14 packing checkboxes, got {parser.count}'
 assert 'src="map.html"' in result and '9/22：皇帝岛水肺与珊瑚岛浮潜' in result
-assert '普吉岛实际住宿' in result and 'Phuket Orchid Resort and Spa' in result and result.count('data-hotel-map=')==1
+assert '这次实际入住的酒店' in result and 'Phuket Orchid Resort and Spa' in result and 'Kastel Pattaya Hotel' in result and result.count('data-hotel-map=')==2
 assert '9/30 返回杭州萧山机场' in result and '10/1 回上海' not in result
 assert '9C8521' in result and 'DD525' in result and '1 号窗口' in result
 assert 'assets/trip-guide.js' in result

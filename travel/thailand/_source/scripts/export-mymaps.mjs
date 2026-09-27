@@ -27,7 +27,7 @@ const resolve=(id,day)=>id==='airport'?(day.date===30?'bkk':'bkk'):id;
 for(const item of trip.catalog){
  const place=trip.places[item.id];
  const related=days.filter(d=>d.stay===item.id||d.stops.some(s=>resolve(s.id,d)===item.id)||(item.id==='dmk'&&d.airport));
- const dates=['asok','patong','pattayastay'].includes(item.id)?item.when:related.map(d=>date(d.date)).join('、')||item.when;
+ const dates=['asok','patong'].includes(item.id)?item.when:related.map(d=>date(d.date)).join('、')||item.when;
  const details=related.flatMap(d=>d.stops.filter(s=>resolve(s.id,d)===item.id||(item.id==='dmk'&&s.id==='airport')).map(s=>date(d.date)+' '+s.time+'：'+s.text));
  const description=[trip.categories[item.kind].name,item.note??'',...details,item.id==='dmk'?'9/24 搭乘 DD525 抵达，随后乘 A1 巴士前往 Mo Chit。':item.kind==='airport'&&item.id==='bkk'?'9/30 返程候选机场，以实际机票为准。':'','参考位置，入口和营业安排出发前复核。','坐标来源：'+(place.source||'https://www.openstreetmap.org/'+place.osm)].filter(Boolean).join('\n');
  const layer=item.kind==='airport'?'transport':item.city;

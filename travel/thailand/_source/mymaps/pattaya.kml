@@ -2,15 +2,7 @@
 9/24 当天：抵达 North Pattaya Bus Terminal。
 9/27 上午：从芭提雅北汽车站乘车前往曼谷。
 参考位置，入口和营业安排出发前复核。
-坐标来源：https://www.openstreetmap.org/way/195004474</description><styleUrl>#bus</styleUrl><Point><coordinates>100.9034026,12.9497299,0</coordinates></Point></Placemark><Placemark id="pattayastay"><name>9/24—27 · 3 晚｜芭提雅 Terminal 21 周边</name><description>住宿区域
-9/24—26 晚在芭提雅住宿；具体酒店名称尚未记录。
-9/24 晚上：从芭提雅北站前往当晚住宿地点。
-9/25 早饭后：回酒店等雨停。
-9/25 晚上：吃完去酒吧逛，捡大哥撒的钱，最后回酒店。
-9/26 上午：去 7-Eleven 解决午饭；门口面摊看着干净卫生，但吃完后拉肚子。
-9/26 晚上：晚饭继续吃 7-Eleven；之后去酒吧听歌，听到古风中文歌，再看一场秀，最后回酒店。
-参考位置，入口和营业安排出发前复核。
-坐标来源：https://www.openstreetmap.org/way/651015521</description><styleUrl>#stay</styleUrl><Point><coordinates>100.8896924,12.9498403,0</coordinates></Point></Placemark><Placemark id="benhouse"><name>9/25｜Ben House Restaurant</name><description>景点
+坐标来源：https://www.openstreetmap.org/way/195004474</description><styleUrl>#bus</styleUrl><Point><coordinates>100.9034026,12.9497299,0</coordinates></Point></Placemark><Placemark id="benhouse"><name>9/25｜Ben House Restaurant</name><description>景点
 Ben House Restaurant；9/25 早上实际用餐。
 9/25 上午：起床后去 Ben House Restaurant 吃早饭。
 参考位置，入口和营业安排出发前复核。
@@ -30,6 +22,12 @@ Mae Wilai Market Until Dawn；打抛饭和菠萝炒饭都好吃。
 Dongtan Beach；买瓜子喂松鼠，沿海岸线散步。
 9/26 下午：到 Dongtan Beach 买瓜子喂松鼠，沿海岸线散步，之后在麦当劳休息。
 参考位置，入口和营业安排出发前复核。
-坐标来源：https://www.google.com/maps/search/?api=1&amp;query=Dongtan%20Beach%20Pattaya</description><styleUrl>#sight</styleUrl><Point><coordinates>100.86318,12.90181,0</coordinates></Point></Placemark><Placemark id="route-25"><name>9/25｜Ben House → Terminal 21 → 海边咖啡 → 夜市（顺序示意）</name><description>Ben House 吃早饭，等雨停后逛 Terminal 21；下午喝蜂蜜美式吹海风，晚饭去 Mae Wilai Market，之后逛酒吧。
+坐标来源：https://www.google.com/maps/search/?api=1&amp;query=Dongtan%20Beach%20Pattaya</description><styleUrl>#sight</styleUrl><Point><coordinates>100.86318,12.90181,0</coordinates></Point></Placemark><Placemark id="hotel-kastel-pattaya"><name>9/24 入住 · 9/27 退房 · 3 晚｜Kastel Pattaya Hotel</name><description>实际入住酒店
+Kastel Pattaya Hotel
+南芭提雅 · Thep Prasit Road Soi 8
+9/24 入住 · 9/27 退房 · 3 晚
+9/24、9/25、9/26 共住 3 晚，9/27 从酒店前往曼谷。
+酒店官网：https://kastel-pattaya.com/
+坐标来源：https://www.google.com/maps/place/Kastel+Pattaya+Hotel/@12.9106457,100.8805894,17z</description><styleUrl>#hotel</styleUrl><Point><coordinates>100.8805894,12.9106457,0</coordinates></Point></Placemark><Placemark id="route-25"><name>9/25｜Ben House → Terminal 21 → 海边咖啡 → 夜市（顺序示意）</name><description>Ben House 吃早饭，等雨停后逛 Terminal 21；下午喝蜂蜜美式吹海风，晚饭去 Mae Wilai Market，之后逛酒吧。
 实际经历：早饭后在酒店等雨停；在 Café Amazon 点了蜂蜜美式，一直坐着吹海风到晚饭。Mae Wilai Market 的打抛饭和菠萝炒饭都好吃。晚饭后逛酒吧，还捡到了大哥撒的钱，最后回酒店。
-连线只表示行程先后，不是实际道路、航线或导航。曼谷机场按 BKK 举例。</description><styleUrl>#route</styleUrl><LineString><tessellate>1</tessellate><coordinates>100.879453125,12.9065375,0 100.8896924,12.9498403,0 100.8896924,12.9498403,0 100.8780487,12.9293076,0 100.8877885,12.9364621,0 100.8896924,12.9498403,0</coordinates></LineString></Placemark></Document></kml>
+连线只表示行程先后，不是实际道路、航线或导航。曼谷机场按 BKK 举例。</description><styleUrl>#route</styleUrl><LineString><tessellate>1</tessellate><coordinates>100.879453125,12.9065375,0 100.8805894,12.9106457,0 100.8896924,12.9498403,0 100.8780487,12.9293076,0 100.8877885,12.9364621,0 100.8805894,12.9106457,0</coordinates></LineString></Placemark></Document></kml>
