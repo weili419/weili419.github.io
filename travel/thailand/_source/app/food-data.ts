@@ -37,4 +37,25 @@ export const foodDays:FoodDay[]=[
    {name:'另一餐',options:[{name:'ร้านก๋วยเรือนรกแตก（Rin’s Kitchen）',dish:'按当天实际点餐',price:'按实际消费',tip:'本次实际体验，评价一般。'}]},
   ],
  },
+ {
+  date:'25',
+  city:'芭提雅实际用餐',
+  route:'Ben House → Café Amazon → Mae Wilai Market',
+  note:'实际经历：早饭后等雨停；下午喝蜂蜜美式吹海风，晚饭的打抛饭和菠萝炒饭都很好吃。',
+  meals:[
+   {name:'早餐',options:[{name:'Ben House Restaurant',dish:'当天实际早餐',price:'按实际消费',tip:'吃完回酒店等雨停。'}]},
+   {name:'下午咖啡',options:[{name:'Café Amazon · Royal Garden Plaza',dish:'蜂蜜美式',price:'按实际消费',tip:'点完坐着吹海风，一直到晚饭。'}]},
+   {name:'晚餐',options:[{name:'Mae Wilai Market Until Dawn',dish:'打抛饭、菠萝炒饭',price:'按实际消费',tip:'两样都好吃；之后去酒吧逛。'}]},
+  ],
+ },
+ {
+  date:'26',
+  city:'芭提雅实际用餐',
+  route:'7-Eleven／门口面摊 → Dongtan Beach → 麦当劳 → 7-Eleven',
+  note:'早上和晚饭都由 7-Eleven 解决；门口面摊看着干净卫生，但吃完后拉肚子。下午沿海散步后在麦当劳休息。',
+  meals:[
+   {name:'早午饭',options:[{name:'7-Eleven＋门口面摊',dish:'便利店食物和面条',price:'按实际消费',tip:'面摊看着干净卫生，但吃完后拉肚子。'}]},
+   {name:'晚餐',options:[{name:'7-Eleven',dish:'便利店食物',price:'按实际消费',tip:'当晚实际解决方式。'}]},
+  ],
+ },
 ];

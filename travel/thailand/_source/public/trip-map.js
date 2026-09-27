@@ -33,7 +33,7 @@
  function focus(p,text='',kicker='行程地点'){
   if(!map)return;
   if(state.popup)state.popup.remove();
-  map.easeTo({center:p.ll,zoom:Math.max(map.getZoom(),p===trip.places.racha||p===trip.places.kolan?12:14),padding:{top:85,bottom:0,left:0,right:0},duration:reduce?0:550});
+  map.easeTo({center:p.ll,zoom:Math.max(map.getZoom(),p===trip.places.racha?12:14),padding:{top:85,bottom:0,left:0,right:0},duration:reduce?0:550});
   state.popup=new maplibregl.Popup({offset:22,maxWidth:'280px'}).setLngLat(p.ll).setHTML('<span class="popup-kicker">'+escape(kicker)+'</span><h3>'+escape(p.name)+'</h3><p>'+escape(text||'参考位置；实际入口、车站候车区和集合点请再次核对。')+'</p><a href="'+searchURL(p)+'" target="_blank" rel="noopener noreferrer">打开地图导航 ↗</a><a class="coord-source" href="'+sourceURL(p)+'" target="_blank" rel="noopener noreferrer">坐标来源</a>').addTo(map);
  }
  function marker(p,label,color,options={}){
@@ -82,9 +82,9 @@
  }
  function overview(international=false){
   state.mode=international?'international':'overview';resetMap();
-  $('day-kicker').textContent=currentPlan().dayCount+' DAYS / '+currentPlan().nights+' NIGHTS';$('day-title').textContent=international?'上海出发，杭州返程':'先看整趟路线';$('day-intro').textContent='9C8521 到普吉住 4 晚；9/24 搭 DD525 到廊曼，再经 Mo Chit 转车去芭提雅。';
+  $('day-kicker').textContent=currentPlan().dayCount+' DAYS / '+currentPlan().nights+' NIGHTS';$('day-title').textContent=international?'上海出发，杭州返程':'先看整趟路线';$('day-intro').textContent='9C8521 到普吉住 4 晚；9/24 搭 DD525 到廊曼，再经 Mo Chit 转车去芭提雅住 3 晚。';
   $('stay').innerHTML='<div class="stay"><small>实际路线</small>上海 → 普吉 → 廊曼机场 → Mo Chit → 芭提雅 → 曼谷 → 杭州</div>';
-  const phases=[{id:'hotel-phuket-orchid',index:0,title:'普吉岛',dates:'9/20—9/24 · 4 晚',text:'Phuket Orchid Resort and Spa',city:'phuket'},{id:'pattayastay',index:4,title:'芭提雅',dates:'9/24—9/26 · 2 晚',text:'A1 到 Mo Chit，再转车到芭提雅北站',city:'pattaya'},{id:'asok',index:6,title:'曼谷',dates:'9/26—'+dateLabel(currentPlan().returnDate)+' · '+currentPlan().bangkokNights+' 晚',text:'周日市场、宫殿与城市漫游',city:'bangkok'}];
+  const phases=[{id:'hotel-phuket-orchid',index:0,title:'普吉岛',dates:'9/20—9/24 · 4 晚',text:'Phuket Orchid Resort and Spa',city:'phuket'},{id:'pattayastay',index:4,title:'芭提雅',dates:'9/24—9/27 · 3 晚',text:'雨天闲逛、海边咖啡、夜市与 Dongtan Beach',city:'pattaya'},{id:'asok',index:7,title:'曼谷',dates:'9/27—'+dateLabel(currentPlan().returnDate)+' · 3 晚',text:'周日市场、宫殿与城市漫游',city:'bangkok'}];
   $('stops').innerHTML=phases.map(p=>'<button class="overview-card" data-day="'+p.index+'" style="--city:'+trip.colors[p.city]+'"><small>'+p.dates+'</small><b>'+p.title+' →</b><p>'+p.text+'</p></button>').join('');
   $('stops').querySelectorAll('[data-day]').forEach(b=>b.addEventListener('click',()=>showDay(Number(b.dataset.day))));
   addCatalogMarkers(catalogEntries().filter(item=>international||item.city!=='shanghai'));

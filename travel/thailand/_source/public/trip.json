@@ -178,14 +178,14 @@
       "id": "asok",
       "city": "bangkok",
       "kind": "stay",
-      "when": "9/26—30 · 4 晚",
+      "when": "9/27—30 · 3 晚",
       "note": "建议住宿区域，尚未确定酒店。"
     },
     {
       "id": "terminal21",
       "city": "bangkok",
       "kind": "sight",
-      "when": "9/26 起用餐备选"
+      "when": "9/27 起"
     },
     {
       "id": "palace",
@@ -209,7 +209,7 @@
       "id": "chatuchak",
       "city": "bangkok",
       "kind": "sight",
-      "when": "9/27 周日上午"
+      "when": "9/27 周日下午 · 时间允许时"
     },
     {
       "id": "siam",
@@ -221,53 +221,55 @@
       "id": "ekkamai",
       "city": "bangkok",
       "kind": "bus",
-      "when": "9/26 从芭提雅抵达"
+      "when": "9/27 从芭提雅抵达"
     },
     {
       "id": "pattayabus",
       "city": "pattaya",
       "kind": "bus",
-      "when": "9/24 BKK 北站线路抵达 · 9/26 出发"
+      "when": "9/24 BKK 北站线路抵达 · 9/27 出发"
     },
     {
       "id": "pattayastay",
       "city": "pattaya",
       "kind": "stay",
-      "when": "9/24—26 · 2 晚",
-      "note": "Terminal 21 周边建议住宿区域，尚未确定酒店。"
+      "when": "9/24—27 · 3 晚",
+      "note": "9/24—26 晚在芭提雅住宿；具体酒店名称尚未记录。"
     },
     {
-      "id": "truth",
+      "id": "benhouse",
       "city": "pattaya",
       "kind": "sight",
-      "when": "9/25 上午"
+      "when": "9/25 · 实际早餐",
+      "note": "Ben House Restaurant；9/25 早上实际用餐。"
     },
     {
-      "id": "jomtien",
+      "id": "pattayaterminal21",
       "city": "pattaya",
       "kind": "sight",
-      "when": "9/25 午后"
+      "when": "9/25 · 实际到访",
+      "note": "等雨停后到 Terminal 21 Pattaya 闲逛。"
     },
     {
-      "id": "balihai",
-      "city": "pattaya",
-      "kind": "pier",
-      "when": "9/25 上岛备选",
-      "optional": true
-    },
-    {
-      "id": "kolan",
+      "id": "cafeamazonroyal",
       "city": "pattaya",
       "kind": "sight",
-      "when": "9/25 上岛备选",
-      "optional": true,
-      "note": "格兰岛为备选，需替换当天大部分陆地活动；岛屿参考点不是具体码头或下水点。"
+      "when": "9/25 · 实际用餐",
+      "note": "Café Amazon Royal Garden Plaza；点蜂蜜美式后坐着吹海风。"
     },
     {
-      "id": "iconsiam",
-      "city": "bangkok",
+      "id": "maewilai",
+      "city": "pattaya",
       "kind": "sight",
-      "when": "9/26 傍晚—晚上"
+      "when": "9/25 · 实际晚餐",
+      "note": "Mae Wilai Market Until Dawn；打抛饭和菠萝炒饭都好吃。"
+    },
+    {
+      "id": "dongtan",
+      "city": "pattaya",
+      "kind": "sight",
+      "when": "9/26 · 实际到访",
+      "note": "Dongtan Beach；买瓜子喂松鼠，沿海岸线散步。"
     },
     {
       "id": "bacc",
@@ -275,13 +277,6 @@
       "kind": "sight",
       "when": "9/29",
       "note": "文化艺术中心，看当天开放的展览。"
-    },
-    {
-      "id": "show99",
-      "city": "pattaya",
-      "kind": "show",
-      "when": "9/25 晚上 · 约 19:30 抵达",
-      "note": "99 Show／Big Eye Show 成人演出，未订票；约 19:30 是计划抵达时间，不是已确认开演场次。Pattaya Land 列 18:00—22:00、฿1,200／人起；携程列 18:00—22:30（21:30 停止入园），以所选日期订单和场馆确认为准。先核年龄要求、证件、换票与接送。地址：98/64，Pattaya；票务咨询 +66 38 422412。"
     }
   ],
   "places": {
@@ -543,41 +538,50 @@
       ],
       "osm": "way/651015521"
     },
-    "truth": {
-      "name": "真理寺",
-      "en": "Sanctuary of Truth Pattaya",
+    "benhouse": {
+      "name": "Ben House Restaurant",
+      "en": "Ben House Restaurant Pattaya",
       "ll": [
-        100.8891366,
-        12.9727895
+        100.879453125,
+        12.9065375
       ],
-      "osm": "way/223698118"
+      "source": "https://www.google.com/maps/search/?api=1&query=WV4H%2BJQ8%20Pattaya"
     },
-    "jomtien": {
-      "name": "中天海滩",
-      "en": "Jomtien Beach Pattaya",
+    "pattayaterminal21": {
+      "name": "Terminal 21 Pattaya",
+      "en": "Terminal 21 Pattaya",
       "ll": [
-        100.8826011,
-        12.8768835
+        100.8896924,
+        12.9498403
       ],
-      "osm": "way/1297672173"
+      "osm": "way/651015521"
     },
-    "balihai": {
-      "name": "Bali Hai 码头",
-      "en": "Bali Hai Pier Pattaya",
+    "cafeamazonroyal": {
+      "name": "Café Amazon · Royal Garden Plaza",
+      "en": "Cafe Amazon SC3346 Royal Garden Plaza Pattaya",
       "ll": [
-        100.8675573,
-        12.9278203
+        100.8780487,
+        12.9293076
       ],
-      "osm": "way/504916659"
+      "source": "https://www.google.com/maps/search/?api=1&query=Cafe%20Amazon%20SC3346%20Royal%20Garden%20Plaza%20Pattaya"
     },
-    "kolan": {
-      "name": "格兰岛 · Koh Larn",
-      "en": "Ko Lan Pattaya",
+    "maewilai": {
+      "name": "Mae Wilai Market Until Dawn",
+      "en": "Mae Wilai Market Until Dawn Pattaya",
       "ll": [
-        100.7783262,
-        12.9174911
+        100.8877885,
+        12.9364621
       ],
-      "osm": "way/23484541"
+      "osm": "way/452616481"
+    },
+    "dongtan": {
+      "name": "Dongtan Beach",
+      "en": "Dongtan Beach Pattaya",
+      "ll": [
+        100.86318,
+        12.90181
+      ],
+      "source": "https://www.google.com/maps/search/?api=1&query=Dongtan%20Beach%20Pattaya"
     },
     "iconsiam": {
       "name": "ICONSIAM 河畔商场",
@@ -605,15 +609,6 @@
         13.7314281
       ],
       "source": "https://www.google.com/maps/place/%E4%BC%A6%E6%8A%AB%E5%B0%BC%E5%85%AC%E5%9B%AD/@13.7314281,100.5416984,17z/data=!4m6!3m5!1s0x30e29f26ed4bb01b:0xac01b20801f96936!8m2!3d13.7314281!4d100.5416984!16zL20vMDlyeGN6"
-    },
-    "show99": {
-      "name": "99 Show Pattaya · 99秀王",
-      "en": "99 Show Pattaya (99 秀王)",
-      "ll": [
-        100.8910291,
-        12.9481946
-      ],
-      "source": "https://maps.app.goo.gl/fSAEpkowqM4MHdGx9"
     }
   },
   "commonDays": [
@@ -752,7 +747,7 @@
       "title": "DD525 · 普吉 → 廊曼 → 芭提雅",
       "intro": "搭乘 DD525 抵达廊曼机场，再坐 A1 巴士到 Mo Chit，转车前往芭提雅北站。",
       "stay": "pattayastay",
-      "stayText": "芭提雅 · 第 1 晚／共 2 晚",
+      "stayText": "芭提雅 · 第 1 晚／共 3 晚",
       "note": "实际行程：先在 Kata Night Plaza 等机场大巴；旁边有酒店，可以询问酒店工作人员候车和上车位置。到 HKT 搭 DD525，抵达 DMK 后乘 A1 到 Mo Chit，在 1 号窗口购票前往 North Pattaya Bus Terminal。",
       "stops": [
         {
@@ -791,77 +786,70 @@
       "date": 25,
       "week": "周五",
       "city": "pattaya",
-      "short": "真理寺与99秀",
-      "title": "真理寺 → 中天海滩 → 99秀",
-      "intro": "上午真理寺，午后中天海滩；16:00 左右离开海边，回北部吃晚饭，约 19:30 抵达 99秀场。",
+      "short": "雨天闲逛与海风",
+      "title": "Ben House → Terminal 21 → 海边咖啡 → 夜市",
+      "intro": "Ben House 吃早饭，等雨停后逛 Terminal 21；下午喝蜂蜜美式吹海风，晚饭去 Mae Wilai Market，之后逛酒吧。",
       "stay": "pattayastay",
       "stayText": "芭提雅 · 第 2 晚",
-      "note": "99秀为成人演出，未订票；19:30 为计划抵达时间，不是固定开演场次。营业时间、最晚入场、年龄和证件要求以所选日期订单及场馆确认为准。每人新增 ¥350 门票及晚间接驳规划额，已计入总预算。若改格兰岛，替换白天大部分陆地活动并提前回大陆，给返酒店、晚饭和入场留缓冲。",
+      "note": "实际经历：早饭后在酒店等雨停；在 Café Amazon 点了蜂蜜美式，一直坐着吹海风到晚饭。Mae Wilai Market 的打抛饭和菠萝炒饭都好吃。晚饭后逛酒吧，还捡到了大哥撒的钱，最后回酒店。",
       "stops": [
         {
-          "id": "truth",
+          "id": "benhouse",
           "time": "上午",
-          "text": "按现场导览和安全安排参观真理寺。"
-        },
-        {
-          "id": "jomtien",
-          "time": "午后—约 16:00",
-          "text": "中天海滩散步、午餐和休息。约 16:00 离开，按实际路况预留 45—60 分钟返回北部住宿区。"
+          "text": "起床后去 Ben House Restaurant 吃早饭。"
         },
         {
           "id": "pattayastay",
-          "time": "约 17:00—18:30",
-          "text": "回酒店休息、换衣服；在 Terminal 21 或 Naklua 北部就近吃晚饭，18:30 前尽量吃完。"
+          "time": "早饭后",
+          "text": "回酒店等雨停。"
         },
         {
-          "id": "show99",
-          "time": "约 19:30 抵达 · 待确认入场安排",
-          "text": "99 Show Pattaya 成人演出。先按电子票要求换票，参观及散场预留约 1.5—2 小时，再返回酒店；平台标注体验约 1 小时，不承诺固定开演或结束时刻。三人均需符合场馆年龄与证件要求。"
+          "id": "pattayaterminal21",
+          "time": "雨停后",
+          "text": "去 Terminal 21 Pattaya 闲逛。"
         },
         {
-          "id": "balihai",
-          "time": "可选 · 上岛码头",
-          "text": "只在决定用格兰岛替换当天陆地活动时前往。",
-          "optional": true
+          "id": "cafeamazonroyal",
+          "time": "下午",
+          "text": "在 Café Amazon รอยัลการ์เดนพัทยา 点一杯蜂蜜美式，坐着吹海风直到晚饭。"
         },
         {
-          "id": "kolan",
-          "time": "可选 · 替换陆地行程",
-          "text": "格兰岛天气与运营允许才去；参考点不是入水点。",
-          "optional": true
+          "id": "maewilai",
+          "time": "晚饭",
+          "text": "Mae Wilai Market Until Dawn 吃泰国菜；打抛饭和菠萝炒饭都好吃。"
+        },
+        {
+          "id": "pattayastay",
+          "time": "晚上",
+          "text": "吃完去酒吧逛，捡大哥撒的钱，最后回酒店。"
         }
       ]
     },
     {
       "date": 26,
       "week": "周六",
-      "city": "bangkok",
-      "short": "回曼谷住下",
-      "title": "芭提雅 → 曼谷",
-      "intro": "上午乘大巴回曼谷，下午入住，傍晚河畔慢游。",
-      "stay": "asok",
-      "stayText": "曼谷 · 第 1 晚／共 4 晚",
-      "note": "曼谷从今天起连住同一家。市场放到明天周日，今天不赶市场与宫殿。酒店未定，Asok 为住宿区域参考。",
+      "city": "pattaya",
+      "short": "Dongtan 海边散步",
+      "title": "7-Eleven → Dongtan Beach → 酒吧与演出",
+      "intro": "早上吃 7-Eleven 和门口面摊，下午去 Dongtan Beach 喂松鼠、沿海散步，晚上听歌并看了一场秀。",
+      "stay": "pattayastay",
+      "stayText": "芭提雅 · 第 3 晚",
+      "note": "实际经历：7-Eleven 门口的面摊看着干净卫生，但吃完就拉肚子了。Dongtan Beach 买瓜子喂松鼠，沿海岸线散步并在麦当劳休息。晚饭仍由 7-Eleven 解决；晚上酒吧里居然听到了古风中文歌，之后看了一场秀再回酒店。",
       "stops": [
         {
-          "id": "pattayabus",
+          "id": "pattayastay",
           "time": "上午",
-          "text": "芭提雅北汽车站 → 曼谷 Ekkamai，预留候车与行李时间。"
+          "text": "去 7-Eleven 解决午饭；门口面摊看着干净卫生，但吃完后拉肚子。"
         },
         {
-          "id": "ekkamai",
-          "time": "中午前后",
-          "text": "抵达后接驳酒店，先放行李和吃午餐。"
-        },
-        {
-          "id": "asok",
+          "id": "dongtan",
           "time": "下午",
-          "text": "入住、午休；堵车或疲劳时延后河边活动。"
+          "text": "到 Dongtan Beach 买瓜子喂松鼠，沿海岸线散步，之后在麦当劳休息。"
         },
         {
-          "id": "iconsiam",
-          "time": "傍晚—晚上",
-          "text": "河畔散步、晚餐与伴手礼。"
+          "id": "pattayastay",
+          "time": "晚上",
+          "text": "晚饭继续吃 7-Eleven；之后去酒吧听歌，听到古风中文歌，再看一场秀，最后回酒店。"
         }
       ]
     },
@@ -870,15 +858,25 @@
       "week": "周日",
       "city": "bangkok",
       "short": "周末市场",
-      "title": "乍都乍与 Siam 商圈",
-      "intro": "把周末留给市场，下午回酒店休息洗衣。",
+      "title": "芭提雅 → 曼谷 → 乍都乍",
+      "intro": "上午从芭提雅转往曼谷；抵达后视时间和体力逛乍都乍，晚上休息或去 Siam。",
       "stay": "asok",
-      "stayText": "曼谷 · 第 2 晚",
-      "note": "乍都乍安排在周日。Jok Ruam Jai 的既有资料列周日休息，早餐改为 Took Lae Dee、酒店或市场。上午逛 2—3 小时，午后休息再去 Siam。",
+      "stayText": "曼谷 · 第 1 晚／共 3 晚",
+      "note": "上午从芭提雅转往曼谷；抵达时间允许再去乍都乍，疲劳或堵车时直接去酒店休息。",
       "stops": [
         {
+          "id": "pattayabus",
+          "time": "上午",
+          "text": "从芭提雅北汽车站乘车前往曼谷。"
+        },
+        {
+          "id": "ekkamai",
+          "time": "中午前后",
+          "text": "抵达曼谷后先去酒店放行李。"
+        },
+        {
           "id": "chatuchak",
-          "time": "上午 · 约 2—3 小时",
+          "time": "下午 · 时间允许时",
           "text": "乍都乍市场，边逛边吃，记得喝水与防晒。"
         },
         {
@@ -901,7 +899,7 @@
       "title": "宫殿、寺庙与唐人街",
       "intro": "同一区域慢慢看。上午早点到，午间安排休息。",
       "stay": "asok",
-      "stayText": "曼谷 · 第 3 晚",
+      "stayText": "曼谷 · 第 2 晚",
       "note": "上午宫殿、午后郑王庙、晚上唐人街，按体力取舍。周一以固定餐厅的实际营业为准，不依赖街边摊全部出摊。",
       "stops": [
         {
@@ -928,7 +926,7 @@
       "returnDate": 30,
       "dayCount": 11,
       "nights": 10,
-      "bangkokNights": 4,
+      "bangkokNights": 3,
       "budget": 7450,
       "days": [
         {
@@ -939,7 +937,7 @@
           "title": "曼谷文化艺术中心与 Siam",
           "intro": "睡到自然醒，下午看展、咖啡店和商圈慢逛。",
           "stay": "asok",
-          "stayText": "曼谷 · 第 4 晚／最后一晚",
+          "stayText": "曼谷 · 第 3 晚／最后一晚",
           "note": "BACC 公开常规时间为周二至周日 10:00—21:00；实际展览、票价及临时闭馆出发前确认。晚上整理行李，核对明天的机场和起飞时刻。",
           "stops": [
             {

@@ -1,7 +1,7 @@
 {
   "mapId": "1m9-sFljOdplY_kBAH0FWX09AC2BiCms",
   "mode": "single-itinerary",
-  "pointCount": 38,
+  "pointCount": 37,
   "colors": {
     "route": "#6c829b"
   },
@@ -11,7 +11,7 @@
       "name": "01 机场与跨城交通",
       "file": "transport.kml",
       "features": 9,
-      "bytes": 7608
+      "bytes": 7805
     },
     {
       "key": "phuket",
@@ -22,17 +22,17 @@
     },
     {
       "key": "pattaya",
-      "name": "03 芭提雅｜9/24—26",
+      "name": "03 芭提雅｜9/24—27",
       "file": "pattaya.kml",
       "features": 8,
-      "bytes": 7183
+      "bytes": 7058
     },
     {
       "key": "bangkok",
-      "name": "04 曼谷｜9/26—30",
+      "name": "04 曼谷｜9/27—30",
       "file": "bangkok.kml",
-      "features": 14,
-      "bytes": 9294
+      "features": 13,
+      "bytes": 8867
     }
   ]
 }
