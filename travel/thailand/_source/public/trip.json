@@ -178,14 +178,14 @@
       "id": "asok",
       "city": "bangkok",
       "kind": "stay",
-      "when": "9/27—30 · 3 晚",
+      "when": "9/28—30 · 2 晚",
       "note": "建议住宿区域，尚未确定酒店。"
     },
     {
       "id": "terminal21",
       "city": "bangkok",
       "kind": "sight",
-      "when": "9/27 起"
+      "when": "9/28 起"
     },
     {
       "id": "palace",
@@ -206,28 +206,22 @@
       "when": "9/28 晚上"
     },
     {
-      "id": "chatuchak",
-      "city": "bangkok",
-      "kind": "sight",
-      "when": "9/27 周日下午 · 时间允许时"
-    },
-    {
       "id": "siam",
       "city": "bangkok",
       "kind": "sight",
-      "when": "9/27 晚上 · 9/29"
+      "when": "9/29"
     },
     {
       "id": "ekkamai",
       "city": "bangkok",
       "kind": "bus",
-      "when": "9/27 从芭提雅抵达"
+      "when": "9/28 计划从芭提雅抵达"
     },
     {
       "id": "pattayabus",
       "city": "pattaya",
       "kind": "bus",
-      "when": "9/24 BKK 北站线路抵达 · 9/27 出发"
+      "when": "9/24 BKK 北站线路抵达 · 9/28 计划出发"
     },
     {
       "id": "benhouse",
@@ -840,13 +834,36 @@
     {
       "date": 27,
       "week": "周日",
+      "city": "pattaya",
+      "short": "暴雨与酒店休息",
+      "title": "Ben House 二刷 → 暴雨 → 酒店休息",
+      "intro": "中午再次去 Ben House Restaurant；雨下得很大，下水道往外冒水，因此回 Kastel Pattaya Hotel 休息。",
+      "stay": "hotel-kastel-pattaya",
+      "stayText": "芭提雅 · 当天仍在酒店休息",
+      "note": "实际经历：9/27 中午二刷 Ben House Restaurant。当天雨很大，路面积水，下水道不断往外冒水，因此没有继续外出，直接回 Kastel Pattaya Hotel 休息。晚间及是否续住尚未记录。",
+      "stops": [
+        {
+          "id": "benhouse",
+          "time": "中午",
+          "text": "二刷 Ben House Restaurant。"
+        },
+        {
+          "id": "hotel-kastel-pattaya",
+          "time": "午后",
+          "text": "暴雨导致路面积水，下水道往外冒水，因此直接回酒店休息。"
+        }
+      ]
+    },
+    {
+      "date": 28,
+      "week": "周一",
       "city": "bangkok",
-      "short": "周末市场",
-      "title": "芭提雅 → 曼谷 → 乍都乍",
-      "intro": "上午从芭提雅转往曼谷；抵达后视时间和体力逛乍都乍，晚上休息或去 Siam。",
+      "short": "前往曼谷",
+      "title": "芭提雅 → 曼谷",
+      "intro": "计划从芭提雅前往曼谷，抵达后入住休息；后续按体力安排。",
       "stay": "asok",
-      "stayText": "曼谷 · 第 1 晚／共 3 晚",
-      "note": "上午从芭提雅转往曼谷；抵达时间允许再去乍都乍，疲劳或堵车时直接去酒店休息。",
+      "stayText": "曼谷 · 第 1 晚／共 2 晚",
+      "note": "9/27 因暴雨仍留在芭提雅；9/28 计划转往曼谷。具体车辆、发车站和住宿衔接出发前确认。",
       "stops": [
         {
           "id": "pattayabus",
@@ -856,50 +873,12 @@
         {
           "id": "ekkamai",
           "time": "中午前后",
-          "text": "抵达曼谷后先去酒店放行李。"
-        },
-        {
-          "id": "chatuchak",
-          "time": "下午 · 时间允许时",
-          "text": "乍都乍市场，边逛边吃，记得喝水与防晒。"
+          "text": "抵达曼谷后前往住宿区域。"
         },
         {
           "id": "asok",
           "time": "下午",
-          "text": "回酒店午休、洗衣和整理行李。"
-        },
-        {
-          "id": "siam",
-          "time": "晚上",
-          "text": "Siam 商圈晚餐、商场与购物，按预算控制消费。"
-        }
-      ]
-    },
-    {
-      "date": 28,
-      "week": "周一",
-      "city": "bangkok",
-      "short": "曼谷老城",
-      "title": "宫殿、寺庙与唐人街",
-      "intro": "同一区域慢慢看。上午早点到，午间安排休息。",
-      "stay": "asok",
-      "stayText": "曼谷 · 第 2 晚",
-      "note": "上午宫殿、午后郑王庙、晚上唐人街，按体力取舍。周一以固定餐厅的实际营业为准，不依赖街边摊全部出摊。",
-      "stops": [
-        {
-          "id": "palace",
-          "time": "上午",
-          "text": "大皇宫与玉佛寺，留意防晒和着装。"
-        },
-        {
-          "id": "watarun",
-          "time": "下午",
-          "text": "午餐休息后过河参观郑王庙，按现场渡船安排走。"
-        },
-        {
-          "id": "chinatown",
-          "time": "晚上",
-          "text": "耀华力路逛吃；人多路窄，三人约好集合位置。"
+          "text": "入住并休息，后续行程按体力安排。"
         }
       ]
     }
@@ -910,7 +889,7 @@
       "returnDate": 30,
       "dayCount": 11,
       "nights": 10,
-      "bangkokNights": 3,
+      "bangkokNights": 2,
       "budget": 7450,
       "days": [
         {
@@ -921,7 +900,7 @@
           "title": "曼谷文化艺术中心与 Siam",
           "intro": "睡到自然醒，下午看展、咖啡店和商圈慢逛。",
           "stay": "asok",
-          "stayText": "曼谷 · 第 3 晚／最后一晚",
+          "stayText": "曼谷 · 第 2 晚／最后一晚",
           "note": "BACC 公开常规时间为周二至周日 10:00—21:00；实际展览、票价及临时闭馆出发前确认。晚上整理行李，核对明天的机场和起飞时刻。",
           "stops": [
             {

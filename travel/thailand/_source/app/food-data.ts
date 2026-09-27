@@ -58,4 +58,13 @@ export const foodDays:FoodDay[]=[
    {name:'晚餐',options:[{name:'7-Eleven',dish:'便利店食物',price:'按实际消费',tip:'当晚实际解决方式。'}]},
   ],
  },
+ {
+  date:'27',
+  city:'芭提雅实际用餐',
+  route:'Ben House Restaurant → Kastel Pattaya Hotel',
+  note:'中午二刷 Ben House Restaurant；随后暴雨导致路面积水、下水道往外冒水，因此直接回酒店休息。',
+  meals:[
+   {name:'午餐',options:[{name:'Ben House Restaurant（二刷）',dish:'当天实际午餐',price:'按实际消费',tip:'吃完遇到暴雨，随后回酒店休息。'}]},
+  ],
+ },
 ];

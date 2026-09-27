@@ -13,7 +13,7 @@ assert.equal(plan.label,'9/30 曼谷 → 杭州');
 assert.equal(plan.returnDate,30);
 assert.equal(plan.dayCount,11);
 assert.equal(plan.nights,10);
-assert.equal(plan.bangkokNights,3);
+assert.equal(plan.bangkokNights,2);
 assert.equal(plan.budget,7450);
 assert.deepEqual(days.map(d=>d.date),[20,21,22,23,24,25,26,27,28,29,30]);
 assert.equal(days.filter(d=>d.stay).length,10);
@@ -23,8 +23,8 @@ assert.equal(days.at(-1).stops.at(-1).id,'hgh');
 assert.ok(!JSON.stringify(trip).includes('1001'));
 assert.ok(!JSON.stringify(trip).includes('返回上海'));
 
-assert.deepEqual(foodDays.map(d=>Number(d.date)),[21,22,23,25,26]);
-assert.equal(foodDays.flatMap(d=>d.meals).length,10);
+assert.deepEqual(foodDays.map(d=>Number(d.date)),[21,22,23,25,26,27]);
+assert.equal(foodDays.flatMap(d=>d.meals).length,11);
 for(const day of foodDays){
  assert.equal(day.plan,undefined);
  for(const meal of day.meals){
@@ -49,11 +49,11 @@ assert.ok(hotels.every(h=>h.ll.every(Number.isFinite)));
 assert.ok(trip.places.hgh.ll.every(Number.isFinite));
 assert.equal(trip.places.hgh.name,'杭州萧山国际机场 HGH');
 assert.equal(trip.catalog.find(item=>item.id==='hgh').kind,'airport');
-assert.equal(trip.catalog.length,35);
+assert.equal(trip.catalog.length,34);
 assert.deepEqual(trip.places.chuanxiangju.ll,[98.299984375,7.8884875]);
 assert.deepEqual(trip.places.padthaishop.ll,[98.300068,7.8315528]);
 assert.deepEqual(trip.places.linskitchen.ll,[98.3014356,7.8291012]);
-const arrivalDay=days.find(d=>d.date===20),marketDay=days.find(d=>d.date===21),diveDay=days.find(d=>d.date===22),restDay=days.find(d=>d.date===23),transferDay=days.find(d=>d.date===24),pattayaDayOne=days.find(d=>d.date===25),pattayaDayTwo=days.find(d=>d.date===26);
+const arrivalDay=days.find(d=>d.date===20),marketDay=days.find(d=>d.date===21),diveDay=days.find(d=>d.date===22),restDay=days.find(d=>d.date===23),transferDay=days.find(d=>d.date===24),pattayaDayOne=days.find(d=>d.date===25),pattayaDayTwo=days.find(d=>d.date===26),rainDay=days.find(d=>d.date===27),bangkokTransfer=days.find(d=>d.date===28);
 assert.match(arrivalDay.title,/9C8521/);
 assert.equal(arrivalDay.stay,'hotel-phuket-orchid');
 assert.deepEqual(marketDay.stops.map(stop=>stop.id),['banzaan','chuanxiangju','letsrelax','patong']);
@@ -72,6 +72,12 @@ assert.match(pattayaDayOne.note,/蜂蜜美式/);
 assert.match(pattayaDayOne.note,/菠萝炒饭/);
 assert.deepEqual(pattayaDayTwo.stops.map(stop=>stop.id),['hotel-kastel-pattaya','dongtan','hotel-kastel-pattaya']);
 assert.match(pattayaDayTwo.note,/古风中文歌/);
+assert.equal(rainDay.city,'pattaya');
+assert.equal(rainDay.stay,'hotel-kastel-pattaya');
+assert.deepEqual(rainDay.stops.map(stop=>stop.id),['benhouse','hotel-kastel-pattaya']);
+assert.match(rainDay.note,/下水道/);
+assert.deepEqual(bangkokTransfer.stops.map(stop=>stop.id),['pattayabus','ekkamai','asok']);
+assert.ok(!JSON.stringify(rainDay).includes('乍都乍'));
 assert.ok(!JSON.stringify(trip).includes('show99'));
 assert.ok(!JSON.stringify(trip).includes('真理寺'));
 
@@ -103,4 +109,4 @@ for(const file of ['public/trip.json','public/hotels.json','public/trip-map.html
  for(const text of forbidden)assert.ok(!content.includes(text),file+' still contains '+text);
 }
 
-console.log('PASS: actual 9/20—26 Phuket and Pattaya experiences, food notes, map points, transfers and the HGH return plan are consistent.');
+console.log('PASS: actual 9/20—27 Phuket and Pattaya experiences, food notes, map points, transfers and the HGH return plan are consistent.');

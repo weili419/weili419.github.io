@@ -82,16 +82,16 @@
  }
  function overview(international=false){
   state.mode=international?'international':'overview';resetMap();
-  $('day-kicker').textContent=currentPlan().dayCount+' DAYS / '+currentPlan().nights+' NIGHTS';$('day-title').textContent=international?'上海出发，杭州返程':'先看整趟路线';$('day-intro').textContent='9C8521 到普吉住 4 晚；9/24 搭 DD525 到廊曼，再经 Mo Chit 转车去芭提雅住 3 晚。';
+  $('day-kicker').textContent=currentPlan().dayCount+' DAYS / '+currentPlan().nights+' NIGHTS';$('day-title').textContent=international?'上海出发，杭州返程':'先看整趟路线';$('day-intro').textContent='9C8521 到普吉住 4 晚；9/24 搭 DD525 到廊曼，再经 Mo Chit 转车去芭提雅；实际行程已更新到 9/27。';
   $('stay').innerHTML='<div class="stay"><small>实际路线</small>上海 → 普吉 → 廊曼机场 → Mo Chit → 芭提雅 → 曼谷 → 杭州</div>';
-  const phases=[{id:'hotel-phuket-orchid',index:0,title:'普吉岛',dates:'9/20—9/24 · 4 晚',text:'Phuket Orchid Resort and Spa',city:'phuket'},{id:'hotel-kastel-pattaya',index:4,title:'芭提雅',dates:'9/24—9/27 · 3 晚',text:'Kastel Pattaya Hotel',city:'pattaya'},{id:'asok',index:7,title:'曼谷',dates:'9/27—'+dateLabel(currentPlan().returnDate)+' · 3 晚',text:'周日市场、宫殿与城市漫游',city:'bangkok'}];
+  const phases=[{id:'hotel-phuket-orchid',index:0,title:'普吉岛',dates:'9/20—9/24 · 4 晚',text:'Phuket Orchid Resort and Spa',city:'phuket'},{id:'hotel-kastel-pattaya',index:4,title:'芭提雅',dates:'9/24—9/27 · 实际行程',text:'Kastel Pattaya Hotel · 9/27 暴雨休息',city:'pattaya'},{id:'asok',index:8,title:'曼谷',dates:'9/28—'+dateLabel(currentPlan().returnDate)+' · 2 晚',text:'9/28 计划抵达 · 9/29 艺术与商圈',city:'bangkok'}];
   $('stops').innerHTML=phases.map(p=>'<button class="overview-card" data-day="'+p.index+'" style="--city:'+trip.colors[p.city]+'"><small>'+p.dates+'</small><b>'+p.title+' →</b><p>'+p.text+'</p></button>').join('');
   $('stops').querySelectorAll('[data-day]').forEach(b=>b.addEventListener('click',()=>showDay(Number(b.dataset.day))));
   addCatalogMarkers(catalogEntries().filter(item=>international||item.city!=='shanghai'));
   state.lines=[line([trip.places.hkt.ll,trip.places.dmk.ll],'#008c84'),line([trip.places.dmk.ll,trip.places.mochit.ll,trip.places.pattayabus.ll,trip.places['hotel-kastel-pattaya'].ll,trip.places.asok.ll],'#ab7134')];
   state.bounds=phases.map(p=>trip.places[p.id].ll);
   if(international){state.lines.push(line([trip.places.pvg.ll,trip.places.hkt.ll],'#6c829b'),line([trip.places[state.airports[currentPlan().returnDate]].ll,trip.places.hgh.ll],'#6c829b'));state.bounds.push(trip.places.pvg.ll,trip.places.hgh.ll);}
-  $('day-note').textContent='已完成：9/20 搭 9C8521 到普吉；9/24 搭 DD525 到 DMK，坐 A1 到 Mo Chit，在 1 号窗口购票到芭提雅北站。';
+  $('day-note').textContent='已完成：9/20 搭 9C8521 到普吉；9/24 搭 DD525 到 DMK，经 Mo Chit 到芭提雅；9/27 二刷 Ben House 后因暴雨回酒店休息。';
   caption(international?'上海出发 · 杭州返程 · 三段飞机':'泰国境内 · 普吉→芭提雅→曼谷',dateLabel(currentPlan().returnDate)+' 返程 · 虚线不是实际道路／航线');
   activeControls();updateLines();fit();requestAnimationFrame(layoutLabels);document.querySelector('.sidebar-scroll').scrollTop=0;
  }

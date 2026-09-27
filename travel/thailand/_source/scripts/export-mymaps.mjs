@@ -21,7 +21,7 @@ function feature(id,name,description,kind,ll,points){
 const plan=trip.plans.A;
 const days=[...trip.commonDays,...plan.days];
 const layers={transport:[],phuket:[],pattaya:[],bangkok:[]};
-const captions={transport:'01 机场与跨城交通',phuket:'02 普吉｜9/20—24',pattaya:'03 芭提雅｜9/24—27',bangkok:'04 曼谷｜9/27—30'};
+const captions={transport:'01 机场与跨城交通',phuket:'02 普吉｜9/20—24',pattaya:'03 芭提雅｜9/24—27',bangkok:'04 曼谷｜9/28—30'};
 const resolve=(id,day)=>id==='airport'?(day.date===30?'bkk':'bkk'):id;
 
 for(const item of trip.catalog){
