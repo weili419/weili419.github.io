@@ -26,7 +26,6 @@ for name in names:
     map_html = map_html.replace('src="' + name + '"', 'src="assets/' + name + '"')
 css = '\n'.join(p.read_text() for p in (ROOT / 'dist/client/_next/static/css').glob('*.css'))
 assert css, 'Run the site build before exporting.'
-css += '.pack-item input[type=checkbox]{appearance:auto;accent-color:#185adb;width:18px;height:18px;flex-shrink:0;margin-top:6px}.pack-item:has(input:checked) span{color:#8291a1;text-decoration:line-through}'
 (ASSETS / 'guide.css').write_text(css)
 VOID = {'area','base','br','col','embed','hr','img','input','link','meta','param','source','track','wbr'}
 
@@ -78,8 +77,8 @@ class Exporter(HTMLParser):
 parser=Exporter()
 parser.feed(urlopen(os.environ.get('PREVIEW_URL','http://localhost:4176/'),timeout=60).read().decode())
 result=''.join(parser.out)
-assert parser.count==14, f'Expected 14 packing checkboxes, got {parser.count}'
-assert 'src="map.html"' in result and '9/22：皇帝岛水肺与珊瑚岛浮潜' in result
+assert parser.count==0, f'Expected no packing checkboxes, got {parser.count}'
+assert 'src="map.html"' in result and '已经走过的航班与转车路线' in result
 assert '这次实际入住的酒店' in result and all(name in result for name in ['Phuket Orchid Resort and Spa','Kastel Pattaya Hotel','Teja Hotel','Don Muang Hotel']) and result.count('data-hotel-map=')==4
 assert 'FD496' in result and '杭州萧山机场' in result and '10/1 回上海' not in result
 assert '9C8521' in result and 'DD525' in result and '1 号窗口' in result and '30 泰铢' in result
@@ -96,4 +95,4 @@ map_version = hashlib.sha256(map_html.encode()).hexdigest()[:12]
 result = result.replace('src="map.html"', 'src="map.html?v=' + map_version + '"')
 OUTPUT.write_text(result)
 MAP_OUTPUT.write_text(map_html)
-print(f'Exported {OUTPUT.name}: {OUTPUT.stat().st_size:,} bytes; {MAP_OUTPUT.name}; {len(names)+1} assets; {parser.count} packing checkboxes.')
+print(f'Exported {OUTPUT.name}: {OUTPUT.stat().st_size:,} bytes; {MAP_OUTPUT.name}; {len(names)+1} assets.')

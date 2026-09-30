@@ -1,24 +1,10 @@
-import { ArrowUpRight, Plane, Waves, MapPin, CalendarDays, LifeBuoy, Fish, Clock3, CloudRain, Wallet, Backpack, ShieldCheck } from 'lucide-react';
+import { ArrowUpRight, Plane, Waves, MapPin, CalendarDays } from 'lucide-react';
 
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
-import { Checkbox } from '@/components/ui/checkbox';
-import FoodGuide from './food-guide';
 import HotelGuide from './hotel-guide';
 import TripPlan from './trip-plan';
-import ShowGuide from './show-guide';
 import trip from '../public/trip.json';
 
 const sources = [["weather","9 月季风与出海","https://www.tourismthailand.org/Articles/thailand-september"],["racha","皇帝岛官方介绍","https://www.thailandtravel.or.jp/mu-ko-racha/"],["coral","珊瑚岛官方介绍","https://www.thailandtravel.or.jp/coral-island-ko-hey/"],["safety","首次浮潜安全要点","https://oceansafety.hawaii.gov/snorkeling-safety/"],["banana","Banana Beach 浮潜套餐","https://bananabeachkohhey.com/packages/snorkeling"],["visa","2026 年 9 月免签调整","https://th.china-embassy.gov.cn/sgxw/202609/t20260902_12014753.html"],["entry","中国使馆入境准备提醒","https://th.china-embassy.gov.cn/zgqz/1w1/202606/t20260609_11940509.html"],["tdac","TDAC 官方填写与规则","https://tdac.immigration.go.th/manual/en/faq.html"],["bus","曼谷—芭提雅大巴官网","https://airportpattayabus.com/bangkok-terminal-pattaya/"],["grand","大皇宫票价与时间","https://www.royalgrandpalace.th/en/visit/faq"],["market","乍都乍周末市场","https://www.tourismthailand.org/Articles/get-unique-experience-with-5-wallet-friendly-shopping-hubs"],["similan","斯米兰开放季","https://thai.tourismthailand.org/Articles/similan-th"],["maya","2026 玛雅湾关闭通知（运营方）","https://www.asiantrails.travel/latest-news/annual-closure-of-iconic-island-bay/"],["travel","中国使馆旅游提醒","https://th.china-embassy.gov.cn/chn/sgxw/202407/t20240730_11463065.html"],["power","泰国民航局充电宝规定","https://www.caat.or.th/caat-media/203652/"],["dress","宫殿着装要求","https://www.tourismthailand.org/Articles/dressing-to-visit-royal-palaces-in-thailand"],["funds","泰国使馆免签资金说明","https://doha.thaiembassy.org/en/publicservice/tourist-visa-exemption-visa-on-arrival"]];
-function Ref({id,children}:{id:string;children?:React.ReactNode}) { const s=sources.find(s=>s[0]===id)!; return <a className="source-ref" href={s[2]} target="_blank" rel="noreferrer">{children || s[1]} ↗</a>; }
-const packing = [
- ['证件与支付',['护照原件、复印件与离线备份','TDAC 确认页、三段机票及全部酒店订单','旅行保险、救援电话、足额现金和银行卡']],
- ['衣物与防晒',['T 恤 4—5 件、短裤 2—3 条，内衣袜子 5—6 套','轻薄长裤、有袖上衣、薄外套各 1 件','运动鞋、防滑凉鞋、帽子、太阳镜']],
- ['浮潜当天',['泳裤、防晒泳衣、速干毛巾与一套干衣服','合适的面镜／呼吸管（可租），近视者确认度数面镜','防晒、驱蚊、手机防水袋和干湿分离袋']],
- ['电子与洗护',['手机、充电线、旅行转换插头','手机卡／漫游覆盖 11 天；先确认 eSIM 支持','合规充电宝随身携带，标识清晰且不超过 100Wh','牙刷、剃须用品、雨衣／伞、纸巾和洗衣片','个人常备药及必要处方、创可贴']]
-];
-const budget = {
- A:[['三段机票（含税与所需行李）',2600],['10 晚住宿分摊',1500],['吃饭与饮水',1100],['机场、市内交通与大巴',450],['一次有向导的浮潜',550],['宫殿、寺庙等门票',300],['演出与晚间出行',350],['手机卡与旅行保险等',150],['机动金',450]],
-} as const;
 const days = trip.commonDays;
 export default function Home() {
  return <div className="site-shell">
@@ -26,23 +12,16 @@ export default function Home() {
   <main>
    <TripPlan/>
    <section id="travel-map" className="travel-map-section"><p className="map-version-note">地图已更新完整实际行程：芭提雅到曼谷、RCA 海鲜自助、两家酒店、BTS／A1 与 FD496 返杭路线均已标注。</p><iframe title="泰国旅行每日行程地图" src="/trip-map.html" className="travel-map-frame" /></section>
-   <nav className="section-nav" aria-label="攻略导航"><a href="#travel-map">旅行地图</a><a href="#food">每天吃什么 <ArrowUpRight size={15}/></a><a href="#shows">酒吧与演出</a><a href="#hotels">实际住宿 <ArrowUpRight size={15}/></a><a href="#itinerary">每日行程</a><a href="#snorkeling">普吉浮潜 <ArrowUpRight size={15}/></a><a href="#transport">实际交通</a><a href="#budget">旅行预算</a><a href="#packing">出发准备</a></nav>
+   <nav className="section-nav" aria-label="攻略导航"><a href="#travel-map">旅行地图</a><a href="#hotels">实际住宿 <ArrowUpRight size={15}/></a><a href="#itinerary">每日行程</a><a href="#transport">实际交通</a></nav>
    <section className="trip-heading guide-heading"><div><p className="eyebrow">09.20 — 09.30 · 11 天 10 晚</p><h1>泰国旅行手记<span>先普吉，再芭提雅，最后曼谷</span></h1><p className="intro">3 人同行 · 各睡一张床 · 普吉进，曼谷出</p></div><div className="date-stamp"><CalendarDays/><span>START</span><strong>09.20</strong></div></section>
    <div className="route-strip"><span>上海 <Plane size={15}/><small>9C8521</small></span><span><b>普吉岛</b><small>Orchid · 4 晚</small></span><i>→</i><span><b>廊曼机场</b><small>DD525 · A1</small></span><i>→</i><span><b>Mo Chit</b><small>1 号窗口转车</small></span><i>→</i><span><b>芭提雅</b><small>9/24—27</small></span><i>→</i><span><b>曼谷</b><small>Teja · Don Muang</small></span><span><Plane size={15}/> FD496 · 杭州萧山</span></div>
    <section id="itinerary" className="section"><div className="section-title"><div><p className="eyebrow">THE ITINERARY</p><h2>11 天每日安排</h2></div><span className="subtle">泰国时间比北京时间慢 1 小时</span></div>
-    <div className="itinerary-layout"><div className="days">{[...days,...trip.plans.A.days].map(d=><article className="day" key={d.date}><div className="day-date"><strong>{d.date}</strong><span>9 月 · {d.week}</span></div><div className="day-content"><h3>{d.title}</h3><p>{d.intro}</p><small><MapPin size={13}/>{d.stayText}</small></div></article>)}</div><aside className="trip-note"><Waves size={32}/><p className="eyebrow">这次旅行的实际体验</p><h3>水肺很好玩，<br/>浮潜比较一般。</h3><p>9 月 22 日参加皇帝岛水肺潜水＋珊瑚岛浮潜，三人共 10,000 泰铢。下次更想尝试船潜找鱼。</p><a href="#snorkeling">看当天记录 <ArrowUpRight size={17}/></a><hr/><p>这次水肺是从岸边走到较深处，并不是船潜。</p></aside></div>
+    <div className="itinerary-layout"><div className="days">{[...days,...trip.plans.A.days].map(d=><article className="day" key={d.date}><div className="day-date"><strong>{d.date}</strong><span>9 月 · {d.week}</span></div><div className="day-content"><h3>{d.title}</h3><p>{d.intro}</p><small><MapPin size={13}/>{d.stayText}</small></div></article>)}</div></div>
     <p className="footnote">9/28 从芭提雅北站抵达 Ekkamai，吃过 RCA 海鲜自助后入住 Teja Hotel；9/29 办电话卡并搭 BTS、A1 前往廊曼，入住 Don Muang Hotel。</p>
     <div className="quiet-note"><b>9/30 · FD496 返回杭州萧山机场</b><p>上午从 Don Muang Hotel 步行约 15 分钟到廊曼机场，搭乘泰国亚洲航空 FD496 返回杭州萧山国际机场。</p><a href="#plans">查看返程摘要 ↑</a></div>
    </section>
 
-<ShowGuide/>
-<FoodGuide/>
 <HotelGuide/>
-<section id="snorkeling" className="section snorkel-section">
- <div className="section-title"><div><p className="eyebrow">PHUKET / DIVING DAY</p><h2>9/22：皇帝岛水肺与珊瑚岛浮潜</h2></div><span className="tag"><Fish size={16}/> 实际体验</span></div>
- <div className="snorkel-lead"><div className="snorkel-copy"><p className="number-label">当天记录</p><h3>水肺潜水很好玩，<br/>浮潜感觉比较一般。</h3><p>行程在<strong>酒店对面的旅行社</strong>购买，三个人合计 10,000 泰铢，包含皇帝岛水肺潜水与珊瑚岛浮潜。</p><p>这次水肺是从岸边走到更深一些的位置；如果以后再去，更想尝试从船上出发、寻找鱼群的船潜。</p><div className="mini-facts"><span><Clock3 size={17}/> 9/22 一整天</span><span><Wallet size={17}/> ฿10,000／3 人</span></div></div></div>
- <div className="quiet-note"><b>普吉实际住宿</b><p>9/20—23 晚入住卡伦海滩的 Phuket Orchid Resort and Spa，9/24 退房后前往普吉机场。</p></div>
-</section>
 <section id="transport" className="section">
  <div className="section-title"><div><p className="eyebrow">ACTUAL TRANSFERS</p><h2>已经走过的航班与转车路线</h2></div><Plane size={25}/></div>
  <div className="transport-grid">
@@ -51,21 +30,6 @@ export default function Home() {
   <article><h3>9/28 · 芭提雅 → Ekkamai</h3><p><b>芭提雅北站 → 曼谷：</b>乘车抵达汽车东站 สถานีขนส่งผู้โดยสารเอกมัย，之后打车前往 RCA 吃海鲜自助，再入住 Teja Hotel。</p></article>
   <article><h3>9/29—30 · BTS、A1 与 FD496</h3><p><b>Nana → Mo Chit：</b>搭 BTS 到 Mo Chit，1 号口出站后乘 30 泰铢 A1 大巴直达廊曼机场。</p><p><b>DMK → HGH：</b>入住 Don Muang Hotel 一晚，次日上午步行约 15 分钟到机场，搭 FD496 返回杭州。</p></article>
  </div>
-</section>
-<section id="budget" className="section">
- <div className="section-title"><div><p className="eyebrow">THE BUDGET</p><h2>为浮潜多留一点预算</h2></div><span className="tag neutral">全部为人民币规划额</span></div>
- <div className="budget-layout"><div className="budget-total"><Wallet size={26}/><p>每人参考总额</p><strong>¥{trip.plans.A.budget.toLocaleString()}</strong><span>三人合计 ¥{(trip.plans.A.budget*3).toLocaleString()}</span><hr/><p>住宿按 {trip.plans.A.nights} 晚、平均 ¥450／间／晚、三人分摊。一次浮潜以及演出和晚间出行的规划额已计入；机票是规划基准，以 9/30 飞往杭州的实际报价为准。</p></div><Table className="trip-table budget-table"><TableHeader><TableRow><TableHead>项目</TableHead><TableHead className="text-right">每人</TableHead></TableRow></TableHeader><TableBody>{budget.A.map(([name,amount])=><TableRow key={name}><TableCell>{name}</TableCell><TableCell className="text-right">¥{amount.toLocaleString()}</TableCell></TableRow>)}</TableBody></Table></div>
- <p className="footnote">购物、酒精和额外体验不包含。返程机票和酒店仍需按 9/30 的实际价格重新核算。</p>
-</section>
-<section id="packing" className="section">
- <div className="section-title"><div><p className="eyebrow">BEFORE YOU GO</p><h2>出发准备与行李清单</h2></div><Backpack size={26}/></div>
- <div className="entry-grid"><article><ShieldCheck size={23}/><h3>护照与免签</h3><p>按三人均持中国大陆普通护照赴泰旅游安排。9/15 起双边免签仍有效，单次不超过 30 天、每 180 天累计不超过 90 天。检查护照至少 6 个月有效期，带好订单与资金证明。</p><Ref id="visa"/> <Ref id="entry"/></article><article><CalendarDays size={23}/><h3>9/18—19 填 TDAC</h3><p>以 9/20 泰国当地落地为前提，在官方 3 天申报窗口内免费填写。每人填写真实航班、护照及首晚酒店，离线保存确认页；普吉飞曼谷不用再填。</p><a className="source-ref" href="https://tdac.immigration.go.th/" target="_blank" rel="noreferrer">官方填写入口 ↗</a> <Ref id="tdac">填写规则</Ref></article></div>
- <p className="footnote">现金：官方页面存在个人 1 万／2 万泰铢不同口径，建议出发前复核。资金允许时可按每人等值 2 万泰铢现金备查，这是保守准备建议；三位朋友分别准备，备查现金不等于额外收费或必须花完。<Ref id="entry"/> <Ref id="funds"/></p>
- <div className="packing-grid">{packing.map(([title,items],group)=><article key={title as string}><h3>{title}</h3>{(items as string[]).map((item,index)=><label className="pack-item" key={item}><Checkbox id={'pack-'+group+'-'+index} aria-label={item}/><span>{item}</span></label>)}</article>)}</div>
- <p className="footnote">清单勾选用于本次页面核对，刷新后重置。三人可共用部分洗护、转换插头与急救用品；证件、现金、通信和个人药物各自准备。</p>
- <div className="practical-grid"><article><h3>充电宝与行李</h3><p>充电宝随身携带、不得托运。泰国规定最多两个，机上不得使用／充电或放头顶行李架；建议每人只带一个标识清晰且不超过 100Wh 的型号。逐段核对航司行李和液体要求。</p><Ref id="power"/></article><article><h3>着装与当地出行</h3><p>宫殿当天穿长裤、有袖上衣。不要带电子烟、肉制品或新鲜果蔬跨境。不抵押护照，不在当地临时学骑摩托；三人分摊合规车辆，点海鲜先问计价方式。</p><Ref id="dress"/> <Ref id="travel"/></article></div>
- <div className="departure-order"><h3>最后三天的实际顺序</h3><ol><li><b>9/28</b>芭提雅北站 → Ekkamai → Kodtalay RCA → Teja Hotel。</li><li><b>9/29</b>暹罗百丽宫办电话卡 → Nana 搭 BTS → Mo Chit 1 号口 → A1 到廊曼 → Don Muang Hotel。</li><li><b>9/30</b>步行约 15 分钟到廊曼机场 → 搭 FD496 返回杭州萧山机场。</li></ol></div>
- <div className="emergency"><div><LifeBuoy size={24}/><h3>存好这几个电话</h3></div><div className="phone-grid"><a href="tel:1155"><b>1155</b><span>旅游警察 · 中文服务</span></a><a href="tel:191"><b>191</b><span>泰国报警</span></a><a href="tel:1669"><b>1669</b><span>泰国急救</span></a><a href="tel:+6622457010"><b>+66 2 245 7010</b><span>中国驻泰使馆领保</span></a><a href="tel:+66945956158"><b>+66 94 595 6158</b><span>驻普吉领事办公室</span></a></div><Ref id="visa">使馆联系信息</Ref> <Ref id="travel">急救电话来源</Ref></div>
 </section>
 <section id="sources" className="sources-section"><h2>查询来源</h2><p>实际航班、住宿、转车和用餐经历根据本次亲历更新至 2026 年 9 月 30 日；地图地点坐标另按酒店官网、地图与地点资料核对。</p><div>{sources.map(([id,title,url])=><a href={url} key={id} target="_blank" rel="noreferrer">{title} ↗</a>)}</div></section>
 
