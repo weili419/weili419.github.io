@@ -1,49 +1,49 @@
-<?xml version="1.0" encoding="UTF-8"?><kml xmlns="http://www.opengis.net/kml/2.2"><Document><name>02 普吉｜9/20—24</name><description>9/20 搭 9C8521 到普吉；9/24 搭 DD525 到 DMK，经 A1 与 Mo Chit 转车到芭提雅；9/30 返回杭州。F 为餐厅，住宿为实际入住记录。</description><Style id="airport"><IconStyle><color>ffc95d26</color><scale>1.1</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle><LineStyle><color>ffc95d26</color><width>3</width></LineStyle></Style><Style id="sight"><IconStyle><color>ff848c00</color><scale>1.1</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle><LineStyle><color>ff848c00</color><width>3</width></LineStyle></Style><Style id="stay"><IconStyle><color>ff856957</color><scale>1.1</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle><LineStyle><color>ff856957</color><width>3</width></LineStyle></Style><Style id="pier"><IconStyle><color>ff967808</color><scale>1.1</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle><LineStyle><color>ff967808</color><width>3</width></LineStyle></Style><Style id="bus"><IconStyle><color>ff256199</color><scale>1.1</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle><LineStyle><color>ff256199</color><width>3</width></LineStyle></Style><Style id="food"><IconStyle><color>ff2e58c8</color><scale>1.1</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle><LineStyle><color>ff2e58c8</color><width>3</width></LineStyle></Style><Style id="hotel"><IconStyle><color>ffb95680</color><scale>1.1</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle><LineStyle><color>ffb95680</color><width>3</width></LineStyle></Style><Style id="show"><IconStyle><color>ffad448e</color><scale>1.1</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle><LineStyle><color>ffad448e</color><width>3</width></LineStyle></Style><Style id="route"><IconStyle><color>ff9b826c</color><scale>1.1</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle><LineStyle><color>ff9b826c</color><width>3</width></LineStyle></Style><Placemark id="banzaan"><name>9/21｜班赞海鲜市场</name><description>景点
+<?xml version="1.0" encoding="UTF-8"?><kml xmlns="http://www.opengis.net/kml/2.2"><Document><name>02 普吉｜9/20—24</name><description>9/20 搭 9C8521 到普吉；9/24 搭 DD525 到 DMK 后转往芭提雅；9/28 抵达曼谷；9/30 搭 FD496 返回杭州。F 为餐厅，住宿为实际入住记录。</description><Style id="airport"><IconStyle><color>ffc95d26</color><scale>1.1</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle><LineStyle><color>ffc95d26</color><width>3</width></LineStyle></Style><Style id="sight"><IconStyle><color>ff848c00</color><scale>1.1</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle><LineStyle><color>ff848c00</color><width>3</width></LineStyle></Style><Style id="stay"><IconStyle><color>ff856957</color><scale>1.1</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle><LineStyle><color>ff856957</color><width>3</width></LineStyle></Style><Style id="pier"><IconStyle><color>ff967808</color><scale>1.1</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle><LineStyle><color>ff967808</color><width>3</width></LineStyle></Style><Style id="bus"><IconStyle><color>ff256199</color><scale>1.1</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle><LineStyle><color>ff256199</color><width>3</width></LineStyle></Style><Style id="food"><IconStyle><color>ff2e58c8</color><scale>1.1</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle><LineStyle><color>ff2e58c8</color><width>3</width></LineStyle></Style><Style id="hotel"><IconStyle><color>ffb95680</color><scale>1.1</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle><LineStyle><color>ffb95680</color><width>3</width></LineStyle></Style><Style id="show"><IconStyle><color>ffad448e</color><scale>1.1</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle><LineStyle><color>ffad448e</color><width>3</width></LineStyle></Style><Style id="route"><IconStyle><color>ff9b826c</color><scale>1.1</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle><LineStyle><color>ff9b826c</color><width>3</width></LineStyle></Style><Placemark id="banzaan"><name>9/21｜班赞海鲜市场</name><description>景点
 班赞海鲜市场买海鲜并砍价，随后拿到川香居加工。
 9/21 上午—中午：在班赞海鲜市场挑海鲜并砍价。
-参考位置，入口和营业安排出发前复核。
+实际入口和候车区以现场为准。
 坐标来源：https://www.openstreetmap.org/way/557157422</description><styleUrl>#sight</styleUrl><Point><coordinates>98.3017412,7.8912856,0</coordinates></Point></Placemark><Placemark id="chuanxiangju"><name>9/21｜川香居（四川菜馆）</name><description>景点
 川香居（四川菜馆）；海鲜麻辣加工 ฿200／公斤。
 9/21 中午：把海鲜拿到川香居加工；一公斤 200 泰铢，选麻辣口味，比市场二楼便宜。
-参考位置，入口和营业安排出发前复核。
+实际入口和候车区以现场为准。
 坐标来源：https://www.waze.com/live-map/directions/th/จ.ภูเก็ต/pa-tong/川香居(四川菜馆)chinatown?to=place.ChIJ8TWCeqU6UDAR17GvUUq_nH0</description><styleUrl>#sight</styleUrl><Point><coordinates>98.299984375,7.8884875,0</coordinates></Point></Placemark><Placemark id="letsrelax"><name>9/21｜Let&apos;s Relax Spa · 芭东</name><description>景点
 两小时泰式按摩；个人体验是时间偏久、没什么意思。
 9/21 下午：Let&apos;s Relax Spa 做两小时泰式按摩；实际感受是时间太久、体验比较一般。
-参考位置，入口和营业安排出发前复核。
+实际入口和候车区以现场为准。
 坐标来源：https://www.openstreetmap.org/node/3296373816</description><styleUrl>#sight</styleUrl><Point><coordinates>98.2952841,7.8867828,0</coordinates></Point></Placemark><Placemark id="padthaishop"><name>9/23｜The Pad Thai Shop</name><description>景点
 The Pad Thai Shop，实际体验非常推荐。
 9/23 吃饭：The Pad Thai Shop：实际体验非常推荐。
-参考位置，入口和营业安排出发前复核。
+实际入口和候车区以现场为准。
 坐标来源：https://www.openstreetmap.org/node/4172708889</description><styleUrl>#sight</styleUrl><Point><coordinates>98.300068,7.8315528,0</coordinates></Point></Placemark><Placemark id="linskitchen"><name>9/23｜ร้านก๋วยเรือนรกแตก（Rin’s Kitchen）</name><description>景点
 ร้านก๋วยเรือนรกแตก（Rin’s Kitchen）；实际体验评价一般。
 9/23 吃饭：ร้านก๋วยเรือนรกแตก（Rin’s Kitchen）：实际体验感觉一般。
-参考位置，入口和营业安排出发前复核。
+实际入口和候车区以现场为准。
 坐标来源：https://www.google.com/maps/search/?api=1&amp;query=202%2F8%20Patak%20Rd%2C%20Karon%2C%20Phuket%2083100</description><styleUrl>#sight</styleUrl><Point><coordinates>98.3014356,7.8291012,0</coordinates></Point></Placemark><Placemark id="katanight"><name>9/24｜Kata Night Plaza · 机场大巴候车区域</name><description>汽车站
 Kata Night Plaza 等机场大巴；旁边酒店工作人员可以帮助确认候车和上车位置。
 9/24 前往机场：在 Kata Night Plaza 等机场大巴；不确定位置时可询问旁边酒店工作人员。
-参考位置，入口和营业安排出发前复核。
+实际入口和候车区以现场为准。
 坐标来源：https://www.openstreetmap.org/relation/20745348</description><styleUrl>#bus</styleUrl><Point><coordinates>98.2982168,7.8246443,0</coordinates></Point></Placemark><Placemark id="karon"><name>9/23｜卡伦海滩</name><description>景点
 9/23 晚上：Karon Beach 闲逛后回酒店休息，准备第二天前往机场。
-参考位置，入口和营业安排出发前复核。
+实际入口和候车区以现场为准。
 坐标来源：https://www.openstreetmap.org/way/134394729</description><styleUrl>#sight</styleUrl><Point><coordinates>98.2917816,7.8439856,0</coordinates></Point></Placemark><Placemark id="kata"><name>9/21｜卡塔海滩</name><description>景点
-参考位置，入口和营业安排出发前复核。
+实际入口和候车区以现场为准。
 坐标来源：https://www.openstreetmap.org/relation/4235947</description><styleUrl>#sight</styleUrl><Point><coordinates>98.2960258,7.8193895,0</coordinates></Point></Placemark><Placemark id="viewpoint"><name>9/21 · 按体力取舍｜卡伦观景台</name><description>景点
-参考位置，入口和营业安排出发前复核。
+实际入口和候车区以现场为准。
 坐标来源：https://www.openstreetmap.org/node/1562239992</description><styleUrl>#sight</styleUrl><Point><coordinates>98.3021839,7.7972523,0</coordinates></Point></Placemark><Placemark id="chalongpier"><name>9/22 · 浮潜出发区域｜查龙码头</name><description>码头
 实际码头与集合点以团方通知为准。
-参考位置，入口和营业安排出发前复核。
+实际入口和候车区以现场为准。
 坐标来源：https://www.openstreetmap.org/node/270986823</description><styleUrl>#pier</styleUrl><Point><coordinates>98.350993,7.8193895,0</coordinates></Point></Placemark><Placemark id="racha"><name>9/22｜皇帝岛 · Racha Yai</name><description>景点
 9/21—23 按海况互换；岛屿参考位置，不是指定入水点。
 9/22 白天：皇帝岛体验岸潜式水肺潜水，水肺很好玩；下次更想试从船上出发、寻找鱼群的船潜。
-参考位置，入口和营业安排出发前复核。
+实际入口和候车区以现场为准。
 坐标来源：https://www.openstreetmap.org/relation/5660749</description><styleUrl>#sight</styleUrl><Point><coordinates>98.3663641,7.6024567,0</coordinates></Point></Placemark><Placemark id="coral"><name>9/22｜备选 · 珊瑚岛 · Banana Beach</name><description>景点
 珊瑚岛 Banana Beach，替代皇帝岛的备选方案。
 9/22 白天：珊瑚岛浮潜；这次个人感受比较一般。
-参考位置，入口和营业安排出发前复核。
+实际入口和候车区以现场为准。
 坐标来源：https://www.openstreetmap.org/relation/5660833</description><styleUrl>#sight</styleUrl><Point><coordinates>98.3820778,7.7451031,0</coordinates></Point></Placemark><Placemark id="oldtown"><name>9/23｜普吉老街</name><description>景点
-参考位置，入口和营业安排出发前复核。
+实际入口和候车区以现场为准。
 坐标来源：https://www.openstreetmap.org/node/4395955589</description><styleUrl>#sight</styleUrl><Point><coordinates>98.3892206,7.8847774,0</coordinates></Point></Placemark><Placemark id="chalong"><name>9/23｜查龙寺</name><description>景点
-参考位置，入口和营业安排出发前复核。
+实际入口和候车区以现场为准。
 坐标来源：https://www.openstreetmap.org/way/242673271</description><styleUrl>#sight</styleUrl><Point><coordinates>98.3370972,7.8462522,0</coordinates></Point></Placemark><Placemark id="hotel-phuket-orchid"><name>9/20 入住 · 9/24 退房 · 4 晚｜普吉岛兰花温泉度假酒店</name><description>实际入住酒店
 Phuket Orchid Resort and Spa
 卡伦海滩 · 34 Luang Por Chuan Road

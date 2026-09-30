@@ -67,4 +67,13 @@ export const foodDays:FoodDay[]=[
    {name:'午餐',options:[{name:'Ben House Restaurant（二刷）',dish:'当天实际午餐',price:'按实际消费',tip:'吃完遇到暴雨，随后回酒店休息。'}]},
   ],
  },
+ {
+  date:'28',
+  city:'曼谷实际用餐',
+  route:'Ekkamai → Kodtalay Seafood Buffet RCA Rama 9 → Teja Hotel',
+  note:'从汽车东站打车前往 Kodtalay Seafood Buffet RCA Rama 9；螃蟹看着很活，但蒸出来有臭味，整体感觉一般。',
+  meals:[
+   {name:'海鲜自助',options:[{name:'Kodtalay Seafood Buffet · RCA Rama 9',dish:'海鲜自助、螃蟹',price:'按实际消费',tip:'螃蟹看着很活，但蒸出来有臭味；本次实际评价一般。'}]},
+  ],
+ },
 ];

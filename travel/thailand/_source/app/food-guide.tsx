@@ -15,7 +15,7 @@ function FoodOption({option}:{option:Option}) {
 export default function FoodGuide(){
  return <section id="food" className="section food-section">
   <div className="section-title"><div><p className="eyebrow">ACTUAL FOOD NOTES</p><h2>这次实际吃过的店</h2></div><span className="tag"><Utensils size={16}/> 只保留真实经历</span></div>
-  <p className="food-intro">所有未吃过的餐厅和食物候选都已删除，只记录 9/21—9/27 实际吃过或明确提到的餐食。</p>
+  <p className="food-intro">所有未吃过的餐厅和食物候选都已删除，只记录 9/21—9/28 实际吃过或明确提到的餐食。</p>
   <div className="food-days">
    {foodDays.map(day=><details className="food-day" key={day.date} name="meal-date" open={day.date==='21'} data-food-date={day.date}>
     <summary><span className="food-date">09.<b>{day.date}</b></span><span className="food-day-title"><strong>{day.city}</strong><small>{day.route}</small></span><span className="food-day-count">实际记录<small>{day.meals.length} 条</small></span><ChevronDown className="food-chevron" size={21}/></summary>

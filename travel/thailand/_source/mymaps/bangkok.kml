@@ -1,32 +1,41 @@
-<?xml version="1.0" encoding="UTF-8"?><kml xmlns="http://www.opengis.net/kml/2.2"><Document><name>04 曼谷｜9/28—30</name><description>9/20 搭 9C8521 到普吉；9/24 搭 DD525 到 DMK，经 A1 与 Mo Chit 转车到芭提雅；9/30 返回杭州。F 为餐厅，住宿为实际入住记录。</description><Style id="airport"><IconStyle><color>ffc95d26</color><scale>1.1</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle><LineStyle><color>ffc95d26</color><width>3</width></LineStyle></Style><Style id="sight"><IconStyle><color>ff848c00</color><scale>1.1</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle><LineStyle><color>ff848c00</color><width>3</width></LineStyle></Style><Style id="stay"><IconStyle><color>ff856957</color><scale>1.1</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle><LineStyle><color>ff856957</color><width>3</width></LineStyle></Style><Style id="pier"><IconStyle><color>ff967808</color><scale>1.1</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle><LineStyle><color>ff967808</color><width>3</width></LineStyle></Style><Style id="bus"><IconStyle><color>ff256199</color><scale>1.1</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle><LineStyle><color>ff256199</color><width>3</width></LineStyle></Style><Style id="food"><IconStyle><color>ff2e58c8</color><scale>1.1</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle><LineStyle><color>ff2e58c8</color><width>3</width></LineStyle></Style><Style id="hotel"><IconStyle><color>ffb95680</color><scale>1.1</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle><LineStyle><color>ffb95680</color><width>3</width></LineStyle></Style><Style id="show"><IconStyle><color>ffad448e</color><scale>1.1</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle><LineStyle><color>ffad448e</color><width>3</width></LineStyle></Style><Style id="route"><IconStyle><color>ff9b826c</color><scale>1.1</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle><LineStyle><color>ff9b826c</color><width>3</width></LineStyle></Style><Placemark id="mochit"><name>9/24｜Mo Chit Bus Terminal · 曼谷北部汽车站</name><description>汽车站
+<?xml version="1.0" encoding="UTF-8"?><kml xmlns="http://www.opengis.net/kml/2.2"><Document><name>04 曼谷｜9/28—30</name><description>9/20 搭 9C8521 到普吉；9/24 搭 DD525 到 DMK 后转往芭提雅；9/28 抵达曼谷；9/30 搭 FD496 返回杭州。F 为餐厅，住宿为实际入住记录。</description><Style id="airport"><IconStyle><color>ffc95d26</color><scale>1.1</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle><LineStyle><color>ffc95d26</color><width>3</width></LineStyle></Style><Style id="sight"><IconStyle><color>ff848c00</color><scale>1.1</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle><LineStyle><color>ff848c00</color><width>3</width></LineStyle></Style><Style id="stay"><IconStyle><color>ff856957</color><scale>1.1</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle><LineStyle><color>ff856957</color><width>3</width></LineStyle></Style><Style id="pier"><IconStyle><color>ff967808</color><scale>1.1</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle><LineStyle><color>ff967808</color><width>3</width></LineStyle></Style><Style id="bus"><IconStyle><color>ff256199</color><scale>1.1</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle><LineStyle><color>ff256199</color><width>3</width></LineStyle></Style><Style id="food"><IconStyle><color>ff2e58c8</color><scale>1.1</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle><LineStyle><color>ff2e58c8</color><width>3</width></LineStyle></Style><Style id="hotel"><IconStyle><color>ffb95680</color><scale>1.1</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle><LineStyle><color>ffb95680</color><width>3</width></LineStyle></Style><Style id="show"><IconStyle><color>ffad448e</color><scale>1.1</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle><LineStyle><color>ffad448e</color><width>3</width></LineStyle></Style><Style id="route"><IconStyle><color>ff9b826c</color><scale>1.1</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle><LineStyle><color>ff9b826c</color><width>3</width></LineStyle></Style><Placemark id="mochit"><name>9/24｜Mo Chit Bus Terminal · 曼谷北部汽车站</name><description>汽车站
 Mo Chit Bus Terminal／曼谷北部汽车站；在 1 号窗口购买前往 North Pattaya Bus Terminal 的车票。
 9/24 A1 巴士抵达后：在 Mo Chit Bus Terminal 的 1 号窗口购买前往芭提雅北站的车票。
-参考位置，入口和营业安排出发前复核。
-坐标来源：https://www.openstreetmap.org/way/31151623</description><styleUrl>#bus</styleUrl><Point><coordinates>100.5477552,13.8123644,0</coordinates></Point></Placemark><Placemark id="asok"><name>9/28—30 · 2 晚｜Asok／Sukhumvit 住宿区</name><description>住宿区域
-建议住宿区域，尚未确定酒店。
-9/28 下午：入住并休息，后续行程按体力安排。
-9/30 按航班倒推：酒店退房、检查证件和行李。早班机可调整为机场住宿。
-参考位置，入口和营业安排出发前复核。
-坐标来源：https://www.openstreetmap.org/relation/2108210</description><styleUrl>#stay</styleUrl><Point><coordinates>100.5603142,13.7370043,0</coordinates></Point></Placemark><Placemark id="terminal21"><name>9/28 起｜Terminal 21 Asok</name><description>景点
-参考位置，入口和营业安排出发前复核。
-坐标来源：https://www.openstreetmap.org/way/157656710</description><styleUrl>#sight</styleUrl><Point><coordinates>100.5604208,13.7379237,0</coordinates></Point></Placemark><Placemark id="palace"><name>9/28 周一上午｜大皇宫／玉佛寺</name><description>景点
-参考位置，入口和营业安排出发前复核。
-坐标来源：https://www.openstreetmap.org/way/23482754</description><styleUrl>#sight</styleUrl><Point><coordinates>100.4917924,13.7495708,0</coordinates></Point></Placemark><Placemark id="watarun"><name>9/28 下午｜郑王庙</name><description>景点
-参考位置，入口和营业安排出发前复核。
-坐标来源：https://www.openstreetmap.org/way/23481741</description><styleUrl>#sight</styleUrl><Point><coordinates>100.4884885,13.7438235,0</coordinates></Point></Placemark><Placemark id="chinatown"><name>9/28 晚上｜唐人街 · 耀华力路</name><description>景点
-参考位置，入口和营业安排出发前复核。
-坐标来源：https://www.openstreetmap.org/node/340165036</description><styleUrl>#sight</styleUrl><Point><coordinates>100.5089484,13.741907,0</coordinates></Point></Placemark><Placemark id="siam"><name>9/29｜Siam 商圈 · 暹罗百丽宫</name><description>景点
-9/29 下午—晚上：Siam 商圈、咖啡、泰餐；想休息就回酒店。
-参考位置，入口和营业安排出发前复核。
+实际入口和候车区以现场为准。
+坐标来源：https://www.openstreetmap.org/way/31151623</description><styleUrl>#bus</styleUrl><Point><coordinates>100.5477552,13.8123644,0</coordinates></Point></Placemark><Placemark id="siam"><name>9/29｜Siam 商圈 · 暹罗百丽宫</name><description>景点
+暹罗百丽宫四楼办理本地电话卡，希望回国后仍可使用。
+9/29 中午—下午：打摩的到暹罗百丽宫四楼办理本地电话卡，之后在曼谷闲逛。
+实际入口和候车区以现场为准。
 坐标来源：https://www.openstreetmap.org/way/781138575</description><styleUrl>#sight</styleUrl><Point><coordinates>100.5349375,13.7468007,0</coordinates></Point></Placemark><Placemark id="ekkamai"><name>9/28｜曼谷 Ekkamai 汽车站</name><description>汽车站
-9/28 中午前后：抵达曼谷后前往住宿区域。
-参考位置，入口和营业安排出发前复核。
-坐标来源：https://www.openstreetmap.org/relation/20443105</description><styleUrl>#bus</styleUrl><Point><coordinates>100.5840204,13.7194034,0</coordinates></Point></Placemark><Placemark id="bacc"><name>9/29｜曼谷文化艺术中心 BACC</name><description>景点
-文化艺术中心，看当天开放的展览。
-9/29 上午偏晚—下午：看当天开放的展览，按兴趣逛 1—2 小时。
-参考位置，入口和营业安排出发前复核。
-坐标来源：https://www.google.com/maps/place/%E6%9B%BC%E8%B0%B7%E6%96%87%E5%8C%96%E8%89%BA%E6%9C%AF%E4%B8%AD%E5%BF%83/@13.7467339,100.5302168,17z/data=!4m6!3m5!1s0x30e29ecd506f6c7d:0x1ed0028ba796150b!8m2!3d13.7467339!4d100.5302168!16s%2Fm%2F043rs1m</description><styleUrl>#sight</styleUrl><Point><coordinates>100.5302168,13.7467339,0</coordinates></Point></Placemark><Placemark id="route-28"><name>9/28｜芭提雅 → 曼谷（顺序示意）</name><description>计划从芭提雅前往曼谷，抵达后入住休息；后续按体力安排。
-9/27 因暴雨仍留在芭提雅；9/28 计划转往曼谷。具体车辆、发车站和住宿衔接出发前确认。
-连线只表示行程先后，不是实际道路、航线或导航。曼谷机场按 BKK 举例。</description><styleUrl>#route</styleUrl><LineString><tessellate>1</tessellate><coordinates>100.9034026,12.9497299,0 100.5840204,13.7194034,0 100.5603142,13.7370043,0</coordinates></LineString></Placemark><Placemark id="route-29"><name>9/29｜曼谷文化艺术中心与 Siam（顺序示意）</name><description>睡到自然醒，下午看展、咖啡店和商圈慢逛。
-BACC 公开常规时间为周二至周日 10:00—21:00；实际展览、票价及临时闭馆出发前确认。晚上整理行李，核对明天的机场和起飞时刻。
-连线只表示行程先后，不是实际道路、航线或导航。曼谷机场按 BKK 举例。</description><styleUrl>#route</styleUrl><LineString><tessellate>1</tessellate><coordinates>100.5302168,13.7467339,0 100.5349375,13.7468007,0</coordinates></LineString></Placemark></Document></kml>
+从芭提雅北汽车站乘车抵达汽车东站 สถานีขนส่งผู้โดยสารเอกมัย。
+9/28 抵达曼谷：抵达汽车东站 สถานีขนส่งผู้โดยสารเอกมัย，随后打车去 RCA。
+实际入口和候车区以现场为准。
+坐标来源：https://www.openstreetmap.org/relation/20443105</description><styleUrl>#bus</styleUrl><Point><coordinates>100.5840204,13.7194034,0</coordinates></Point></Placemark><Placemark id="kodtalay-rca"><name>9/28｜Kodtalay Seafood Buffet · RCA Rama 9</name><description>实际用餐
+Kodtalay Seafood Buffet RCA Rama 9；螃蟹看着很活，但蒸出来有臭味，整体感觉一般。
+9/28 晚餐：吃海鲜自助；螃蟹很活，但蒸出来有臭味，整体评价一般。
+实际入口和候车区以现场为准。
+坐标来源：https://www.wongnai.com/restaurants/3289571BJ-kodtalay-seafood-buffet-rca-rama9-%E0%B9%82%E0%B8%84%E0%B8%95%E0%B8%A3%E0%B8%97%E0%B8%B0%E0%B9%80%E0%B8%A5-kodtalay-seafood-buffet-rca</description><styleUrl>#food</styleUrl><Point><coordinates>100.57470453951325,13.752873841839934,0</coordinates></Point></Placemark><Placemark id="nana-bts"><name>9/29｜Nana BTS Station</name><description>汽车站
+从 Nana 站搭 BTS 前往 Mo Chit。
+9/29 傍晚：从 Nana 站乘 BTS 前往 Mo Chit。
+实际入口和候车区以现场为准。
+坐标来源：https://www.openstreetmap.org/relation/2108211</description><styleUrl>#bus</styleUrl><Point><coordinates>100.5554295,13.7405426,0</coordinates></Point></Placemark><Placemark id="mochit-bts"><name>9/29｜Mo Chit BTS Station · A1 上车点</name><description>汽车站
+Mo Chit BTS Station 1 号口出站，乘 30 泰铢 A1 大巴直达廊曼机场。
+9/29 换乘 A1：从 1 号口出站，乘 30 泰铢的 A1 大巴直达廊曼机场。
+实际入口和候车区以现场为准。
+坐标来源：https://www.openstreetmap.org/way/157661473</description><styleUrl>#bus</styleUrl><Point><coordinates>100.5538887,13.8027222,0</coordinates></Point></Placemark><Placemark id="hotel-teja-bangkok"><name>9/28 入住 · 9/29 退房 · 1 晚｜Teja Hotel</name><description>实际入住酒店
+Teja Hotel Bangkok
+Sukhumvit Soi 4 · 167 Soi 4
+9/28 入住 · 9/29 退房 · 1 晚
+9/28 从 RCA 吃完海鲜自助后打车入住，住 1 晚；当晚步行去附近广场见见世面。
+酒店官网：https://www.tejahotel.com/
+坐标来源：https://www.tejahotel.com/contact-us</description><styleUrl>#hotel</styleUrl><Point><coordinates>100.55529,13.73541,0</coordinates></Point></Placemark><Placemark id="hotel-don-muang"><name>9/29 入住 · 9/30 退房 · 1 晚｜Don Muang Hotel</name><description>实际入住酒店
+Don Muang Hotel Bangkok
+廊曼机场附近 · 5 Saranakhom 3 Alley
+9/29 入住 · 9/30 退房 · 1 晚
+9/29 搭 A1 到廊曼机场后入住，住 1 晚；9/30 上午步行约 15 分钟前往廊曼机场。
+酒店官网：https://www.google.com/travel/hotels/entity/ChkIle_LsLWD_IR0Gg0vZy8xMWJ3NHk0EAE
+坐标来源：https://www.google.com/maps/search/?api=1&amp;query=Don%20Muang%20Hotel%20Bangkok</description><styleUrl>#hotel</styleUrl><Point><coordinates>100.5984167,13.9256333,0</coordinates></Point></Placemark><Placemark id="route-28"><name>9/28｜芭提雅北站 → Ekkamai → RCA 海鲜自助（顺序示意）</name><description>从芭提雅北汽车站乘车抵达曼谷汽车东站，打车去吃 Kodtalay 海鲜自助，再入住 Teja Hotel。
+实际经历：从芭提雅北汽车站出发，抵达汽车东站 สถานีขนส่งผู้โดยสารเอกมัย；打车去 Kodtalay Seafood Buffet RCA Rama 9。螃蟹看着很活，但蒸出来有臭味，整体感觉一般。之后打车入住 Teja Hotel，再步行去附近广场见见世面；具体广场名称未记录。
+连线只表示行程先后，不是实际道路、航线或导航。曼谷机场按 BKK 举例。</description><styleUrl>#route</styleUrl><LineString><tessellate>1</tessellate><coordinates>100.9034026,12.9497299,0 100.5840204,13.7194034,0 100.57470453951325,13.752873841839934,0 100.55529,13.73541,0</coordinates></LineString></Placemark><Placemark id="route-29"><name>9/29｜暹罗百丽宫 → Nana → Mo Chit → 廊曼（顺序示意）</name><description>中午起床，去暹罗百丽宫办理本地电话卡；闲逛后搭 BTS 与 A1 大巴前往廊曼。
+实际经历：中午起床后打摩的到暹罗百丽宫四楼办理本地电话卡，希望回国后还能使用。曼谷闲逛后，从 Nana 站搭 BTS 到 Mo Chit BTS Station；1 号口出站乘 A1 大巴，票价 30 泰铢，直达廊曼机场，之后入住 Don Muang Hotel。
+连线只表示行程先后，不是实际道路、航线或导航。曼谷机场按 BKK 举例。</description><styleUrl>#route</styleUrl><LineString><tessellate>1</tessellate><coordinates>100.5349375,13.7468007,0 100.5554295,13.7405426,0 100.5538887,13.8027222,0 100.6040594,13.9126385,0 100.5984167,13.9256333,0</coordinates></LineString></Placemark></Document></kml>

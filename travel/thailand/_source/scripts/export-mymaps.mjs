@@ -22,14 +22,14 @@ const plan=trip.plans.A;
 const days=[...trip.commonDays,...plan.days];
 const layers={transport:[],phuket:[],pattaya:[],bangkok:[]};
 const captions={transport:'01 机场与跨城交通',phuket:'02 普吉｜9/20—24',pattaya:'03 芭提雅｜9/24—27',bangkok:'04 曼谷｜9/28—30'};
-const resolve=(id,day)=>id==='airport'?(day.date===30?'bkk':'bkk'):id;
+const resolve=id=>id==='airport'?'dmk':id;
 
 for(const item of trip.catalog){
  const place=trip.places[item.id];
- const related=days.filter(d=>d.stay===item.id||d.stops.some(s=>resolve(s.id,d)===item.id)||(item.id==='dmk'&&d.airport));
- const dates=['asok','patong'].includes(item.id)?item.when:related.map(d=>date(d.date)).join('、')||item.when;
- const details=related.flatMap(d=>d.stops.filter(s=>resolve(s.id,d)===item.id||(item.id==='dmk'&&s.id==='airport')).map(s=>date(d.date)+' '+s.time+'：'+s.text));
- const description=[trip.categories[item.kind].name,item.note??'',...details,item.id==='dmk'?'9/24 搭乘 DD525 抵达，随后乘 A1 巴士前往 Mo Chit。':item.kind==='airport'&&item.id==='bkk'?'9/30 返程候选机场，以实际机票为准。':'','参考位置，入口和营业安排出发前复核。','坐标来源：'+(place.source||'https://www.openstreetmap.org/'+place.osm)].filter(Boolean).join('\n');
+ const related=days.filter(d=>d.stay===item.id||d.stops.some(s=>resolve(s.id)===item.id));
+ const dates=['patong'].includes(item.id)?item.when:related.map(d=>date(d.date)).join('、')||item.when;
+ const details=related.flatMap(d=>d.stops.filter(s=>resolve(s.id)===item.id).map(s=>date(d.date)+' '+s.time+'：'+s.text));
+ const description=[trip.categories[item.kind].name,item.note??'',...details,item.id==='dmk'?'9/24 搭乘 DD525 抵达；9/29 搭 A1 返回机场；9/30 搭 FD496 飞往杭州。':'','实际入口和候车区以现场为准。','坐标来源：'+(place.source||'https://www.openstreetmap.org/'+place.osm)].filter(Boolean).join('\n');
  const layer=item.kind==='airport'?'transport':item.city;
  layers[layer].push(feature(item.id,dates+'｜'+(item.optional?'备选 · ':'')+place.name,description,item.kind,place.ll));
 }
@@ -46,7 +46,7 @@ for(const h of hotels){
 }
 
 for(const d of days){
- const points=d.stops.filter(s=>!s.optional).map(s=>trip.places[resolve(s.id,d)].ll);
+ const points=d.stops.filter(s=>!s.optional).map(s=>trip.places[resolve(s.id)].ll);
  if(points.length<2)continue;
  const cross=d.date===20||d.date===24||d.date===26||d.date===30;
  const layer=cross?'transport':d.city;
@@ -56,7 +56,7 @@ for(const d of days){
 const report={mapId:'1m9-sFljOdplY_kBAH0FWX09AC2BiCms',mode:'single-itinerary',pointCount:trip.catalog.length+foods.length+hotels.length,colors:{route:'#6c829b'},layers:[]};
 for(const [key,features] of Object.entries(layers)){
  const filename=key+'.kml';
- const content='<?xml version="1.0" encoding="UTF-8"?><kml xmlns="http://www.opengis.net/kml/2.2"><Document><name>'+xml(captions[key])+'</name><description>9/20 搭 9C8521 到普吉；9/24 搭 DD525 到 DMK，经 A1 与 Mo Chit 转车到芭提雅；9/30 返回杭州。F 为餐厅，住宿为实际入住记录。</description>'+styles+features.join('')+'</Document></kml>';
+ const content='<?xml version="1.0" encoding="UTF-8"?><kml xmlns="http://www.opengis.net/kml/2.2"><Document><name>'+xml(captions[key])+'</name><description>9/20 搭 9C8521 到普吉；9/24 搭 DD525 到 DMK 后转往芭提雅；9/28 抵达曼谷；9/30 搭 FD496 返回杭州。F 为餐厅，住宿为实际入住记录。</description>'+styles+features.join('')+'</Document></kml>';
  fs.writeFileSync(new URL(filename,output),content);
  report.layers.push({key,name:captions[key],file:filename,features:features.length,bytes:Buffer.byteLength(content)});
 }

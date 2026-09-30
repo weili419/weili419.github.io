@@ -1,36 +1,36 @@
-<?xml version="1.0" encoding="UTF-8"?><kml xmlns="http://www.opengis.net/kml/2.2"><Document><name>03 芭提雅｜9/24—27</name><description>9/20 搭 9C8521 到普吉；9/24 搭 DD525 到 DMK，经 A1 与 Mo Chit 转车到芭提雅；9/30 返回杭州。F 为餐厅，住宿为实际入住记录。</description><Style id="airport"><IconStyle><color>ffc95d26</color><scale>1.1</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle><LineStyle><color>ffc95d26</color><width>3</width></LineStyle></Style><Style id="sight"><IconStyle><color>ff848c00</color><scale>1.1</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle><LineStyle><color>ff848c00</color><width>3</width></LineStyle></Style><Style id="stay"><IconStyle><color>ff856957</color><scale>1.1</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle><LineStyle><color>ff856957</color><width>3</width></LineStyle></Style><Style id="pier"><IconStyle><color>ff967808</color><scale>1.1</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle><LineStyle><color>ff967808</color><width>3</width></LineStyle></Style><Style id="bus"><IconStyle><color>ff256199</color><scale>1.1</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle><LineStyle><color>ff256199</color><width>3</width></LineStyle></Style><Style id="food"><IconStyle><color>ff2e58c8</color><scale>1.1</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle><LineStyle><color>ff2e58c8</color><width>3</width></LineStyle></Style><Style id="hotel"><IconStyle><color>ffb95680</color><scale>1.1</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle><LineStyle><color>ffb95680</color><width>3</width></LineStyle></Style><Style id="show"><IconStyle><color>ffad448e</color><scale>1.1</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle><LineStyle><color>ffad448e</color><width>3</width></LineStyle></Style><Style id="route"><IconStyle><color>ff9b826c</color><scale>1.1</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle><LineStyle><color>ff9b826c</color><width>3</width></LineStyle></Style><Placemark id="pattayabus"><name>9/24、9/28｜芭提雅北汽车站</name><description>汽车站
+<?xml version="1.0" encoding="UTF-8"?><kml xmlns="http://www.opengis.net/kml/2.2"><Document><name>03 芭提雅｜9/24—27</name><description>9/20 搭 9C8521 到普吉；9/24 搭 DD525 到 DMK 后转往芭提雅；9/28 抵达曼谷；9/30 搭 FD496 返回杭州。F 为餐厅，住宿为实际入住记录。</description><Style id="airport"><IconStyle><color>ffc95d26</color><scale>1.1</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle><LineStyle><color>ffc95d26</color><width>3</width></LineStyle></Style><Style id="sight"><IconStyle><color>ff848c00</color><scale>1.1</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle><LineStyle><color>ff848c00</color><width>3</width></LineStyle></Style><Style id="stay"><IconStyle><color>ff856957</color><scale>1.1</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle><LineStyle><color>ff856957</color><width>3</width></LineStyle></Style><Style id="pier"><IconStyle><color>ff967808</color><scale>1.1</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle><LineStyle><color>ff967808</color><width>3</width></LineStyle></Style><Style id="bus"><IconStyle><color>ff256199</color><scale>1.1</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle><LineStyle><color>ff256199</color><width>3</width></LineStyle></Style><Style id="food"><IconStyle><color>ff2e58c8</color><scale>1.1</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle><LineStyle><color>ff2e58c8</color><width>3</width></LineStyle></Style><Style id="hotel"><IconStyle><color>ffb95680</color><scale>1.1</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle><LineStyle><color>ffb95680</color><width>3</width></LineStyle></Style><Style id="show"><IconStyle><color>ffad448e</color><scale>1.1</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle><LineStyle><color>ffad448e</color><width>3</width></LineStyle></Style><Style id="route"><IconStyle><color>ff9b826c</color><scale>1.1</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle><LineStyle><color>ff9b826c</color><width>3</width></LineStyle></Style><Placemark id="pattayabus"><name>9/24、9/28｜芭提雅北汽车站</name><description>汽车站
 9/24 当天：抵达 North Pattaya Bus Terminal。
-9/28 上午：从芭提雅北汽车站乘车前往曼谷。
-参考位置，入口和营业安排出发前复核。
+9/28 出发：从芭提雅北汽车站乘车前往曼谷汽车东站。
+实际入口和候车区以现场为准。
 坐标来源：https://www.openstreetmap.org/way/195004474</description><styleUrl>#bus</styleUrl><Point><coordinates>100.9034026,12.9497299,0</coordinates></Point></Placemark><Placemark id="benhouse"><name>9/25、9/27｜Ben House Restaurant</name><description>景点
 Ben House Restaurant；9/25 早上实际用餐。
 9/25 上午：起床后去 Ben House Restaurant 吃早饭。
 9/27 中午：二刷 Ben House Restaurant。
-参考位置，入口和营业安排出发前复核。
+实际入口和候车区以现场为准。
 坐标来源：https://www.google.com/maps/search/?api=1&amp;query=WV4H%2BJQ8%20Pattaya</description><styleUrl>#sight</styleUrl><Point><coordinates>100.879453125,12.9065375,0</coordinates></Point></Placemark><Placemark id="pattayaterminal21"><name>9/25｜Terminal 21 Pattaya</name><description>景点
 等雨停后到 Terminal 21 Pattaya 闲逛。
 9/25 雨停后：去 Terminal 21 Pattaya 闲逛。
-参考位置，入口和营业安排出发前复核。
+实际入口和候车区以现场为准。
 坐标来源：https://www.openstreetmap.org/way/651015521</description><styleUrl>#sight</styleUrl><Point><coordinates>100.8896924,12.9498403,0</coordinates></Point></Placemark><Placemark id="cafeamazonroyal"><name>9/25｜Café Amazon · Royal Garden Plaza</name><description>景点
 Café Amazon Royal Garden Plaza；点蜂蜜美式后坐着吹海风。
 9/25 下午：在 Café Amazon รอยัลการ์เดนพัทยา 点一杯蜂蜜美式，坐着吹海风直到晚饭。
-参考位置，入口和营业安排出发前复核。
+实际入口和候车区以现场为准。
 坐标来源：https://www.google.com/maps/search/?api=1&amp;query=Cafe%20Amazon%20SC3346%20Royal%20Garden%20Plaza%20Pattaya</description><styleUrl>#sight</styleUrl><Point><coordinates>100.8780487,12.9293076,0</coordinates></Point></Placemark><Placemark id="maewilai"><name>9/25｜Mae Wilai Market Until Dawn</name><description>景点
 Mae Wilai Market Until Dawn；打抛饭和菠萝炒饭都好吃。
 9/25 晚饭：Mae Wilai Market Until Dawn 吃泰国菜；打抛饭和菠萝炒饭都好吃。
-参考位置，入口和营业安排出发前复核。
+实际入口和候车区以现场为准。
 坐标来源：https://www.openstreetmap.org/way/452616481</description><styleUrl>#sight</styleUrl><Point><coordinates>100.8877885,12.9364621,0</coordinates></Point></Placemark><Placemark id="dongtan"><name>9/26｜Dongtan Beach</name><description>景点
 Dongtan Beach；买瓜子喂松鼠，沿海岸线散步。
 9/26 下午：到 Dongtan Beach 买瓜子喂松鼠，沿海岸线散步，之后在麦当劳休息。
-参考位置，入口和营业安排出发前复核。
-坐标来源：https://www.google.com/maps/search/?api=1&amp;query=Dongtan%20Beach%20Pattaya</description><styleUrl>#sight</styleUrl><Point><coordinates>100.86318,12.90181,0</coordinates></Point></Placemark><Placemark id="hotel-kastel-pattaya"><name>9/24 入住 · 9/27 退房 · 3 晚｜Kastel Pattaya Hotel</name><description>实际入住酒店
+实际入口和候车区以现场为准。
+坐标来源：https://www.google.com/maps/search/?api=1&amp;query=Dongtan%20Beach%20Pattaya</description><styleUrl>#sight</styleUrl><Point><coordinates>100.86318,12.90181,0</coordinates></Point></Placemark><Placemark id="hotel-kastel-pattaya"><name>9/24 入住 · 9/28 退房 · 4 晚｜Kastel Pattaya Hotel</name><description>实际入住酒店
 Kastel Pattaya Hotel
 南芭提雅 · Thep Prasit Road Soi 8
-9/24 入住 · 9/27 退房 · 3 晚
-原记录为 9/24 入住、9/27 退房、共 3 晚；9/27 因暴雨仍回到酒店休息，晚间是否续住尚未记录。
+9/24 入住 · 9/28 退房 · 4 晚
+9/24、9/25、9/26、9/27 共住 4 晚；9/28 从芭提雅北汽车站前往曼谷。
 酒店官网：https://kastel-pattaya.com/
 坐标来源：https://www.google.com/maps/place/Kastel+Pattaya+Hotel/@12.9106457,100.8805894,17z</description><styleUrl>#hotel</styleUrl><Point><coordinates>100.8805894,12.9106457,0</coordinates></Point></Placemark><Placemark id="route-25"><name>9/25｜Ben House → Terminal 21 → 海边咖啡 → 夜市（顺序示意）</name><description>Ben House 吃早饭，等雨停后逛 Terminal 21；下午喝蜂蜜美式吹海风，晚饭去 Mae Wilai Market，之后逛酒吧。
 实际经历：早饭后在酒店等雨停；在 Café Amazon 点了蜂蜜美式，一直坐着吹海风到晚饭。Mae Wilai Market 的打抛饭和菠萝炒饭都好吃。晚饭后逛酒吧，还捡到了大哥撒的钱，最后回酒店。
 连线只表示行程先后，不是实际道路、航线或导航。曼谷机场按 BKK 举例。</description><styleUrl>#route</styleUrl><LineString><tessellate>1</tessellate><coordinates>100.879453125,12.9065375,0 100.8805894,12.9106457,0 100.8896924,12.9498403,0 100.8780487,12.9293076,0 100.8877885,12.9364621,0 100.8805894,12.9106457,0</coordinates></LineString></Placemark><Placemark id="route-27"><name>9/27｜Ben House 二刷 → 暴雨 → 酒店休息（顺序示意）</name><description>中午再次去 Ben House Restaurant；雨下得很大，下水道往外冒水，因此回 Kastel Pattaya Hotel 休息。
-实际经历：9/27 中午二刷 Ben House Restaurant。当天雨很大，路面积水，下水道不断往外冒水，因此没有继续外出，直接回 Kastel Pattaya Hotel 休息。晚间及是否续住尚未记录。
+实际经历：9/27 中午二刷 Ben House Restaurant。当天雨很大，路面积水，下水道不断往外冒水，因此没有继续外出，直接回 Kastel Pattaya Hotel 休息并住最后一晚；9/28 再从芭提雅北汽车站前往曼谷。
 连线只表示行程先后，不是实际道路、航线或导航。曼谷机场按 BKK 举例。</description><styleUrl>#route</styleUrl><LineString><tessellate>1</tessellate><coordinates>100.879453125,12.9065375,0 100.8805894,12.9106457,0</coordinates></LineString></Placemark></Document></kml>

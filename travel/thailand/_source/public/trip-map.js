@@ -11,7 +11,7 @@
  const escape=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
  const searchURL=p=>p.source?.startsWith('https://www.google.com/maps')||p.source?.startsWith('https://www.waze.com')?p.source:'https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(p.en);
  const sourceURL=p=>p.source||'https://www.openstreetmap.org/'+p.osm;
- const state={plan:'A',mode:'overview',index:0,region:'phuket',hotelRegion:'all',airports:{30:'bkk'},markers:[],popup:null,lines:[],bounds:[]};
+ const state={plan:'A',mode:'overview',index:0,region:'phuket',hotelRegion:'all',airports:{30:'dmk'},markers:[],popup:null,lines:[],bounds:[]};
  const branchColors={A:'#3268d8',common:'#6c829b'};
  const currentPlan=()=>trip.plans[state.plan];
  const quotesFor=h=>h.quotes.filter(q=>q.plan==='common'||q.plan===state.plan);
@@ -82,16 +82,16 @@
  }
  function overview(international=false){
   state.mode=international?'international':'overview';resetMap();
-  $('day-kicker').textContent=currentPlan().dayCount+' DAYS / '+currentPlan().nights+' NIGHTS';$('day-title').textContent=international?'上海出发，杭州返程':'先看整趟路线';$('day-intro').textContent='9C8521 到普吉住 4 晚；9/24 搭 DD525 到廊曼，再经 Mo Chit 转车去芭提雅；实际行程已更新到 9/27。';
+  $('day-kicker').textContent=currentPlan().dayCount+' DAYS / '+currentPlan().nights+' NIGHTS';$('day-title').textContent=international?'上海出发，杭州返程':'先看整趟路线';$('day-intro').textContent='9C8521 到普吉，DD525 到廊曼后转往芭提雅；最后经曼谷返回廊曼，搭 FD496 到杭州。';
   $('stay').innerHTML='<div class="stay"><small>实际路线</small>上海 → 普吉 → 廊曼机场 → Mo Chit → 芭提雅 → 曼谷 → 杭州</div>';
-  const phases=[{id:'hotel-phuket-orchid',index:0,title:'普吉岛',dates:'9/20—9/24 · 4 晚',text:'Phuket Orchid Resort and Spa',city:'phuket'},{id:'hotel-kastel-pattaya',index:4,title:'芭提雅',dates:'9/24—9/27 · 实际行程',text:'Kastel Pattaya Hotel · 9/27 暴雨休息',city:'pattaya'},{id:'asok',index:8,title:'曼谷',dates:'9/28—'+dateLabel(currentPlan().returnDate)+' · 2 晚',text:'9/28 计划抵达 · 9/29 艺术与商圈',city:'bangkok'}];
+  const phases=[{id:'hotel-phuket-orchid',index:0,title:'普吉岛',dates:'9/20—9/24 · 4 晚',text:'Phuket Orchid Resort and Spa',city:'phuket'},{id:'hotel-kastel-pattaya',index:4,title:'芭提雅',dates:'9/24—9/27',text:'Kastel Pattaya Hotel · 餐饮、海边与暴雨休息',city:'pattaya'},{id:'hotel-teja-bangkok',index:8,title:'曼谷市区',dates:'9/28—9/29 · 1 晚',text:'Ekkamai、RCA 海鲜自助与 Teja Hotel',city:'bangkok'},{id:'hotel-don-muang',index:9,title:'廊曼',dates:'9/29—9/30 · 1 晚',text:'A1、Don Muang Hotel 与 FD496',city:'bangkok'}];
   $('stops').innerHTML=phases.map(p=>'<button class="overview-card" data-day="'+p.index+'" style="--city:'+trip.colors[p.city]+'"><small>'+p.dates+'</small><b>'+p.title+' →</b><p>'+p.text+'</p></button>').join('');
   $('stops').querySelectorAll('[data-day]').forEach(b=>b.addEventListener('click',()=>showDay(Number(b.dataset.day))));
   addCatalogMarkers(catalogEntries().filter(item=>international||item.city!=='shanghai'));
-  state.lines=[line([trip.places.hkt.ll,trip.places.dmk.ll],'#008c84'),line([trip.places.dmk.ll,trip.places.mochit.ll,trip.places.pattayabus.ll,trip.places['hotel-kastel-pattaya'].ll,trip.places.asok.ll],'#ab7134')];
+  state.lines=[line([trip.places.hkt.ll,trip.places.dmk.ll],'#008c84'),line([trip.places.dmk.ll,trip.places.mochit.ll,trip.places.pattayabus.ll,trip.places['hotel-kastel-pattaya'].ll,trip.places.ekkamai.ll,trip.places['kodtalay-rca'].ll,trip.places['hotel-teja-bangkok'].ll,trip.places['mochit-bts'].ll,trip.places.dmk.ll,trip.places['hotel-don-muang'].ll],'#ab7134')];
   state.bounds=phases.map(p=>trip.places[p.id].ll);
   if(international){state.lines.push(line([trip.places.pvg.ll,trip.places.hkt.ll],'#6c829b'),line([trip.places[state.airports[currentPlan().returnDate]].ll,trip.places.hgh.ll],'#6c829b'));state.bounds.push(trip.places.pvg.ll,trip.places.hgh.ll);}
-  $('day-note').textContent='已完成：9/20 搭 9C8521 到普吉；9/24 搭 DD525 到 DMK，经 Mo Chit 到芭提雅；9/27 二刷 Ben House 后因暴雨回酒店休息。';
+  $('day-note').textContent='完整实录：9/28 抵达 Ekkamai 后吃 RCA 海鲜自助；9/29 经 BTS 与 30 泰铢 A1 到廊曼；9/30 搭 FD496 返回杭州。';
   caption(international?'上海出发 · 杭州返程 · 三段飞机':'泰国境内 · 普吉→芭提雅→曼谷',dateLabel(currentPlan().returnDate)+' 返程 · 虚线不是实际道路／航线');
   activeControls();updateLines();fit();requestAnimationFrame(layoutLabels);document.querySelector('.sidebar-scroll').scrollTop=0;
  }
@@ -112,9 +112,9 @@
   $('stay').querySelectorAll('[data-region]').forEach(b=>b.addEventListener('click',()=>placesView(b.dataset.region)));
   $('stops').innerHTML=entries.map(item=>{const p=trip.places[item.id],c=trip.categories[item.kind];return '<article class="catalog-item"><span class="catalog-icon'+(item.optional?' optional':'')+'" style="--pin:'+c.color+'">'+c.symbol+'</span><div><button data-place="'+item.id+'">'+escape(p.name)+'</button><small>'+escape(item.when)+'</small><a href="'+searchURL(p)+'" target="_blank" rel="noopener noreferrer">地图导航 ↗</a></div></article>';}).join('');
   $('stops').querySelectorAll('[data-place]').forEach(b=>b.addEventListener('click',()=>{const item=trip.catalog.find(x=>x.id===b.dataset.place);focus(trip.places[item.id],item.note||'行程安排：'+item.when+'。参考位置，实际入口请核对。',trip.categories[item.kind].name+' · '+item.when);}));
-  $('day-note').textContent=region==='airports'||region==='bangkok'?'9/24 已搭 DD525 抵达 DMK，并坐 A1 前往 Mo Chit；9/30 的返程机场仍按实际机票确认。':'标记位于参考坐标；密集处可放大或悬停查看名称。';
+  $('day-note').textContent=region==='airports'||region==='bangkok'?'9/24 搭 DD525 抵达 DMK；9/29 搭 A1 返回廊曼，9/30 搭 FD496 飞往杭州。':'标记位于参考坐标；密集处可放大或悬停查看名称。';
   addCatalogMarkers(entries);state.bounds=entries.map(item=>trip.places[item.id].ll);
-  caption(regions[region]+' · 机场与计划景点',region==='all'?'上海与杭州机场在「全部机场」或国际行程中查看':'标记附有日期 · 放大查看密集地点名称');
+  caption(regions[region]+' · 实际地点',region==='all'?'上海与杭州机场在「全部机场」或国际行程中查看':'标记附有日期 · 放大查看密集地点名称');
   activeControls();updateLines();fit();requestAnimationFrame(layoutLabels);document.querySelector('.sidebar-scroll').scrollTop=0;
  }
  function showHotels(region='all',selectedId){

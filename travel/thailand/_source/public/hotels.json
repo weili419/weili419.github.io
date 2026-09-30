@@ -38,9 +38,9 @@
     "area": "南芭提雅 · Thep Prasit Road Soi 8",
     "room": "实际入住酒店",
     "beds": "9/24 入住",
-    "size": "原记录 9/27 退房",
+    "size": "9/28 退房",
     "badge": "实际入住",
-    "why": "原记录为 9/24 入住、9/27 退房、共 3 晚；9/27 因暴雨仍回到酒店休息，晚间是否续住尚未记录。",
+    "why": "9/24、9/25、9/26、9/27 共住 4 晚；9/28 从芭提雅北汽车站前往曼谷。",
     "tradeoff": "",
     "food": "南芭提雅周边",
     "ll": [100.8805894, 12.9106457],
@@ -49,10 +49,68 @@
     "bedSource": "https://kastel-pattaya.com/",
     "quotes": [
       {
-        "dates": "9/24 入住 · 9/27 退房 · 3 晚",
+        "dates": "9/24 入住 · 9/28 退房 · 4 晚",
         "price": null,
         "cancel": "实际入住记录",
         "url": "https://kastel-pattaya.com/",
+        "plan": "common"
+      }
+    ]
+  },
+  {
+    "id": "hotel-teja-bangkok",
+    "number": 3,
+    "status": "actual",
+    "name": "Teja Hotel",
+    "en": "Teja Hotel Bangkok",
+    "city": "bangkok",
+    "area": "Sukhumvit Soi 4 · 167 Soi 4",
+    "room": "实际入住酒店",
+    "beds": "9/28 入住",
+    "size": "9/29 退房",
+    "badge": "实际入住",
+    "why": "9/28 从 RCA 吃完海鲜自助后打车入住，住 1 晚；当晚步行去附近广场见见世面。",
+    "tradeoff": "",
+    "food": "Sukhumvit／Nana 周边",
+    "ll": [100.55529, 13.73541],
+    "coordSource": "https://www.tejahotel.com/contact-us",
+    "official": "https://www.tejahotel.com/",
+    "bedSource": "https://www.tejahotel.com/",
+    "quotes": [
+      {
+        "dates": "9/28 入住 · 9/29 退房 · 1 晚",
+        "price": null,
+        "cancel": "实际入住记录",
+        "url": "https://www.tejahotel.com/",
+        "plan": "common"
+      }
+    ]
+  },
+  {
+    "id": "hotel-don-muang",
+    "number": 4,
+    "status": "actual",
+    "name": "Don Muang Hotel",
+    "en": "Don Muang Hotel Bangkok",
+    "city": "bangkok",
+    "area": "廊曼机场附近 · 5 Saranakhom 3 Alley",
+    "room": "实际入住酒店",
+    "beds": "9/29 入住",
+    "size": "9/30 退房",
+    "badge": "实际入住",
+    "why": "9/29 搭 A1 到廊曼机场后入住，住 1 晚；9/30 上午步行约 15 分钟前往廊曼机场。",
+    "tradeoff": "",
+    "food": "廊曼机场周边",
+    "ll": [100.5984167, 13.9256333],
+    "coordSource": "https://www.google.com/maps/search/?api=1&query=Don%20Muang%20Hotel%20Bangkok",
+    "official": "https://www.google.com/travel/hotels/entity/ChkIle_LsLWD_IR0Gg0vZy8xMWJ3NHk0EAE",
+    "bedSource": "https://www.google.com/travel/hotels/entity/ChkIle_LsLWD_IR0Gg0vZy8xMWJ3NHk0EAE",
+    "quotes": [
+      {
+        "dates": "9/29 入住 · 9/30 退房 · 1 晚",
+        "price": null,
+        "cancel": "实际入住记录",
+        "url": "https://www.google.com/travel/hotels/entity/ChkIle_LsLWD_IR0Gg0vZy8xMWJ3NHk0EAE",
         "plan": "common"
       }
     ]
